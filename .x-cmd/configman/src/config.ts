@@ -37,4 +37,7 @@ Where is URL?
 Where is checkversion?
 -- Version will be maintained by static-build community.
 -- The actual checkversion facility will be used by maintainer, not user.
+
+Design of Fea should refer type defined in release note.
+
 */
