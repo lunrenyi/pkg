@@ -24,9 +24,13 @@ type Version = {
 type Config = {
     name:   string,
     desc:   string,
-    home:   string,
-    lic:    string,
-    ver:    Version[]
+    ver:    Version[],
+    option: {
+        home:   string
+        lic:    string
+        extract_dir: string
+        bin: string[]
+    }
 }
 
 /*
