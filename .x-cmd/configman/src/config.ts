@@ -7,11 +7,18 @@ type Markdown = any
 type Version = {
     ver: string,
     desc: string,
+    lic?: string,
     over: {
         add: string,
         del: string
     },
-    fea: Feature | Markdown
+    fea: Feature | Markdown,
+    sb: {
+        [name: string]: {
+            md5: string,
+            sha512: string
+        }
+    }
 }
 
 type Config = {
@@ -40,13 +47,3 @@ type Config = {
     }
     
 }
-
-var a = "aaa"
-
-const a1 = {
-    [a]: 5
-}
-
-type b = { [str: string]: {a: number} }
-
-type d = typeof a1
