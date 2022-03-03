@@ -26,13 +26,7 @@ type Config = {
     desc:   string,
     home:   string,
     lic:    string,
-    arch:   {
-        [name: string]: {
-            url: string,
-            md5: string,
-            sha512: string
-        }
-    }
+    ver:    Version[]
 }
 
 /*
