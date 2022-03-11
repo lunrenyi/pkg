@@ -27,6 +27,6 @@ gen(){
 
 json_path="dist/candidate/sdk"
 
-gen python > "$json_path/python.json"
-gen java > "$json_path/java.json"
-gen node > "$json_path/node.json"
+gen python > "$json_path/python/python.json"
+gen java > "$json_path/java/java.json"
+gen node > "$json_path/node/node.json"
