@@ -1,0 +1,51 @@
+# shellcheck shell=sh disable=SC2039,SC2142,SC3043
+
+recrec(){
+    local candidate="$1"
+    local codename="$2"
+    cat | awk '{  split($0,arr,"."); vmap[arr[1]]=1 } END{ for(key in vmap){print key}  }' \
+        | while read vv ; do
+            printf "      %s\n" "\"$vv\":["
+            x env ls -r "$candidate" | grep "$codename" | grep -w "^$vv" | while read vvv ; do
+                printf "        %s\n" "\"$vvv\","
+            done
+            printf "%s\n" '      ],'
+        done
+}
+
+rec(){
+    local candidate=$1
+    cat | while read line ; do
+        printf "%s\n" "    \"$line\":{"
+        x env ls -r "$candidate" | grep "$line" | recrec "$candidate" "$line"
+        printf "%s\n" '    },'
+    done
+}
+
+gen_python(){
+    printf "%s\n" '  "python":{'
+    echo "py" | rec python
+    printf "%s\n" '  },'
+}
+
+gen_java(){
+    printf "%s\n" '  "java":{'
+    x env ls -r java \
+        | awk '{  split($0,arr,"-"); vmap[arr[2]]=1 } END{ for(key in vmap){print key}  }' \
+        | rec java
+    printf "%s\n" '  },'
+}
+
+gen_node(){
+    printf "%s\n" '  "node":{'
+    x env ls -r node \
+        | awk '{  split($0,arr," "); vmap[arr[2]]=1 } END{ for(key in vmap){print key}  }' \
+        | rec node
+    printf "%s\n" '  }'
+}
+
+printf "%s\n" "{"
+gen_python
+gen_java
+gen_node
+printf "%s\n" "}"
