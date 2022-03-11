@@ -1,51 +1,32 @@
-# shellcheck shell=sh disable=SC2039,SC2142,SC3043
-
-recrec(){
-    local candidate="$1"
-    local codename="$2"
-    cat | awk '{  split($0,arr,"."); vmap[arr[1]]=1 } END{ for(key in vmap){print key}  }' \
-        | while read vv ; do
-            printf "      %s\n" "\"$vv\":["
-            x env ls -r "$candidate" | grep "$codename" | grep -w "^$vv" | while read vvv ; do
-                printf "        %s\n" "\"$vvv\","
-            done
-            printf "%s\n" '      ],'
-        done
-}
+# shellcheck shell=sh disable=SC2039,SC2142,SC3043 #source
 
 rec(){
-    local candidate=$1
-    cat | while read line ; do
-        printf "%s\n" "    \"$line\":{"
-        x env ls -r "$candidate" | grep "$line" | recrec "$candidate" "$line"
-        printf "%s\n" '    },'
+    local cmd="$1"
+    local space="${2:-""}"
+    eval "$cmd" | while read -r line ; do
+        if [ -n "$line" ] ; then
+            CODE="${CODE}
+${space}  \"$line\":{"
+
+            rec "$cmd $line" "$space  "
+
+            CODE="${CODE%,}
+${space}  },"
+        fi
     done
 }
 
-gen_python(){
-    printf "%s\n" '  "python":{'
-    echo "py" | rec python
-    printf "%s\n" '  },'
+gen(){
+    local CODE="{"
+    local candidate="$1"
+    cmd="x env ___x_cmd_ui_catsel $candidate"
+    rec "$cmd"
+    printf "%s" "${CODE%,}
+}"
 }
 
-gen_java(){
-    printf "%s\n" '  "java":{'
-    x env ls -r java \
-        | awk '{  split($0,arr,"-"); vmap[arr[2]]=1 } END{ for(key in vmap){print key}  }' \
-        | rec java
-    printf "%s\n" '  },'
-}
+json_path="dist/candidate/sdk"
 
-gen_node(){
-    printf "%s\n" '  "node":{'
-    x env ls -r node \
-        | awk '{  split($0,arr," "); vmap[arr[2]]=1 } END{ for(key in vmap){print key}  }' \
-        | rec node
-    printf "%s\n" '  }'
-}
-
-printf "%s\n" "{"
-gen_python
-gen_java
-gen_node
-printf "%s\n" "}"
+gen python > "$json_path/python.json"
+gen java > "$json_path/java.json"
+gen node > "$json_path/node.json"
