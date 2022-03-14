@@ -1,0 +1,20 @@
+#!/bin/sh #xsh
+
+candidate="java"
+
+for platform in mingw64_nt_10x86_64 mingw64_nt_10x86 mingw64_nt_10x64 mingw64_nt_10arm64 linuxarm64 linuxx64 darwinx64 darwinarm64 ; do
+    all_url="https://api.sdkman.io/2/candidates/java/$platform/versions/all"
+    printf "\n%s\n" "Downloading $platform"
+
+    mkdir -p sdk/${platform}/pre
+    mkdir -p sdk/${platform}/post
+    mkdir -p sdk/${platform}/headers
+
+    curl "$all_url" 2>/dev/null | awk 'BEGIN{ RS=","; FS="-" } map[$2] != 1 { map[$2] = 1 ;print $0}' \
+    | while read -r version ; do
+        printf "%s\n" "Version: $version"
+        curl --silent --location "https://api.sdkman.io/2/hooks/pre/$candidate/${version}/${platform}" > "sdk/$platform/pre/pre-${version}.sh"
+        curl --silent --location "https://api.sdkman.io/2/hooks/post/$candidate/${version}/${platform}" > "sdk/$platform/post/post-${version}.sh"
+        curl --silent -I "https://api.sdkman.io/2/broker/download/$candidate/${version}/${platform}" > "sdk/$platform/headers/headers-${version}.txt"
+    done
+done
