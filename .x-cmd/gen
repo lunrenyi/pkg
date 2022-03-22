@@ -25,8 +25,13 @@ gen(){
 }"
 }
 
-json_path="dist/candidate/sdk"
+# json_path="dist/candidate/sdk"
+json_path="$___X_CMD_ROOT/.env/"
 
-gen python > "$json_path/python/python.json"
-gen java > "$json_path/java/java.json"
-gen node > "$json_path/node/node.json"
+# gen python > "$json_path/python/python.json"
+# gen java > "$json_path/java/java.json"
+# gen node > "$json_path/node/node.json"
+
+gen python > "$json_path/python/cache/python.json"
+gen java   > "$json_path/java/cache/java.json"
+gen node   > "$json_path/node/cache/node.json"
