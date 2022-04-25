@@ -1,0 +1,7 @@
+(
+# xws gen-index
+x gen
+cd "$(x wsroot)" || return 1
+x z "dist/info.tgz" info
+rm -rf info
+)
