@@ -1,12 +1,12 @@
 {
-    "homepage": "https://golang.google.cn",
+    "homepage": "https://github.com/denoland/deno/",
     "license": "MIT",
     "rely": [],
     "os-arch": {
-        "linux-arm64": {
+        "linux-aarch64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.linux-arm64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.linux-arm64.tar.gz"
+                "_": "https://github.com/denoland/deno/releases/download/v{version}}/deno-aarch64-apple-darwin.zip",
+                "cn": ""
             }
         },
         "darwin-arm64": {
@@ -17,20 +17,20 @@
         },
         "linux-x64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.linux-amd64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.linux-amd64.tar.gz"
+                "_": "https://github.com/denoland/deno/releases/download/v{version}deno-x86_64-unknown-linux-gnu.zip",
+                "cn": ""
             }
         },
         "darwin-x64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.darwin-amd64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.darwin-amd64.tar.gz"
+                "_": "https://github.com/denoland/deno/releases/download/v{version}/deno-x86_64-apple-darwin.zip",
+                "cn": ""
             }
         },
         "win-x64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.windows-amd64.zip",
-                "cn": "https://gomirros.org/dl/go%{version}.windows-amd64.zip"
+                "_": "https://github.com/denoland/deno/releases/download/v{version}/deno-x86_64-pc-windows-msvc.zip",
+                "cn": ""
             }
         }
     }
