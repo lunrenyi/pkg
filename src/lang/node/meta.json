@@ -1,37 +1,27 @@
 {
-    "homepage": "https://golang.google.cn",
+    "homepage": "https://nodejs.org",
     "license": "MIT",
     "rely": [],
+    "bin": {},
+    "const": {
+        "node_source": "https://nodejs.org/dist",
+        "tuna_source": "https://mirrors.tuna.tsinghua.edu.cn/nodejs-release"
+    },
+    "url": {
+        "_": "%{node_source}/%{version}/node-%{version}-%{os}-%{arch}.tar.gz",
+        "cn": "%{tuna_source}/%{version}/node-%{version}-%{os}-%{arch}.tar.gz"
+    },
     "os-arch": {
-        "linux-arm64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.linux-arm64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.linux-arm64.tar.gz"
-            }
-        },
+        "linux-arm64": {},
         "darwin-arm64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.darwin-arm64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.darwin-arm64.tar.gz"
+                "_": "%{node_source}/node-%{version}-darwin-x64.tar.gz",
+                "cn": "%{tuna_source}/node-%{version}-darwin-x64.tar.gz"
             }
         },
-        "linux-x64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.linux-amd64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.linux-amd64.tar.gz"
-            }
-        },
-        "darwin-x64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.darwin-amd64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.darwin-amd64.tar.gz"
-            }
-        },
-        "win-x64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.windows-amd64.zip",
-                "cn": "https://gomirros.org/dl/go%{version}.windows-amd64.zip"
-            }
-        }
+        "linux-x64": {},
+        "darwin-x64": {},
+        "win-x64": {},
+        "win-arm64": {}
     }
 }
