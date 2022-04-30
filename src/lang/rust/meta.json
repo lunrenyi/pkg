@@ -1,48 +1,34 @@
 {
-    "homepage": "https://golang.google.cn",
+    "homepage": "https://rust-lang.org",
     "license": "MIT",
     "rely": [],
-    "bin": {
-        "nmap": "nmap.${osarch}.${osname}",
-        "nping": "nping.${osarch}.${osname}"
-    },
     "const": {
-        "github_source": "https://raw.githubusercontent.com/static-build/nmap/main/bin",
-        "gitee_source": "https://gitee.com/static-build/nmap/raw/main/bin"
+        "rust_source": "https://static.rust-lang.org/dist",
+        "cn_source": ""
     },
     "url": {
-        "_": "%{github_source}/nmap.%{os}.%{arch}.7z",
-        "cn": "%{gitee_source}/nmap.%{os}.%{arch}.7z"
+        "_": "%{rust_source}/rust-%{version}-%{arch}-%{os}.tar.gz",
+        "cn": "%{cn_source}/rust-%{version}-%{arch}-%{os}.tar.gz"
     },
     "hook": {
         "pre-install": "",
         "post-install": ". post-install-rust.sh"
     },
     "os-arch": {
-        "linux-arm64": {
-
-        },
+        "linux-arm64": {},
         "darwin-arm64": {},
         "linux-x64": {},
         "darwin-x64": {},
         "win-x64": {
             "url": {
-                "_": "%{github_source}/nmap.x64.exe.7z",
-                "cn": "%{gitee_source}/nmap.x64.exe.7z"
-            },
-            "bin": {
-                "nmap": "nmap.x64.win.exe",
-                "nping": "nping.x64.win.exe"
+                "_": "%{rust_source}/rust-%{version}-%{arch}-%{os}.zip",
+                "cn": "%{cn_source}/rust-%{version}-%{arch}-%{os}.zip"
             }
         },
         "win-arm64": {
             "url": {
-                "_": "%{github_source}/nmap.arm64.exe.7z",
-                "cn": "%{gitee_source}/nmap.arm64.exe.7z"
-            },
-            "bin": {
-                "nmap": "nmap.arm64.win.exe",
-                "nping": "nping.arm64.win.exe"
+                "_": "%{rust_source}/rust-%{version}-%{arch}-%{os}.zip",
+                "cn": "%{cn_source}/rust-%{version}-%{arch}-%{os}.zip"
             }
         }
     }
