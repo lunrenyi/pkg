@@ -5,31 +5,31 @@
     "os-arch": {
         "linux-arm64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.linux-arm64.tar.gz",
-                "cn": "https://golang.google.cn/dl/go%{version}.linux-arm64.tar.gz"
+                "_": "https://api.sdkman.io/2/candidates/java/linuxarm64/versions/all",
+                "cn": "https://api.sdkman.io/2/candidates/java/linuxarm64/versions/all"
             }
         },
         "darwin-arm64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.darwin-arm64.tar.gz",
-                "cn": "https://golang.google.cn/dl/go%{version}.darwin-arm64.tar.gz"
+                "_": "https://api.sdkman.io/2/candidates/java/darwinarm64/versions/all",
+                "cn": "https://api.sdkman.io/2/candidates/java/darwinarm64/versions/all",
             }
         },
         "linux-x64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.linux-amd64.tar.gz",
-                "cn": "https://golang.google.cn/dl/go%{version}.linux-amd64.tar.gz"
+                "_": "https://api.sdkman.io/2/candidates/java/linuxx64/versions/all",
+                "cn": "https://api.sdkman.io/2/candidates/java/linuxx64/versions/all",
             }
         },
         "darwin-x64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.darwin-amd64.tar.gz",
-                "cn": "https://golang.google.cn/dl/go%{version}.darwin-amd64.tar.gz"
+                "_": "https://api.sdkman.io/2/candidates/java/darwinx64/versions/all",
+                "cn": "https://api.sdkman.io/2/candidates/java/darwinx64/versions/all",
             }
         },
         "win-x64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.windows-amd64.zip",
+                "_": "https://api.sdkman.io/2/candidates/java/mingw64_nt_10.0/versions/all",
                 "cn": "https://golang.google.cn/dl/go%{version}.windows-amd64.zip"
             }
         }
