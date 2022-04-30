@@ -27,6 +27,15 @@
             "bin": {
                 "nmap": "nmap/nmap.x64.win.exe"
             }
+        },
+        "win-arm64": {
+            "url": {
+                "_": "%{github_source}/nmap.arm64.exe.7z",
+                "cn": "%{gitee_source}/nmap.arm64.exe.7z"
+            },
+            "bin": {
+                "nmap": "nmap/nmap.arm64.win.exe"
+            }
         }
     }
 }
