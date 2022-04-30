@@ -36,7 +36,7 @@
                 "cn": "https://gitee.com/static-build/dust/raw/main/bin/dust.x64.exe.7z"
             },
             "bin": {
-                "ffplay": "dust/dust.${osarch}.${osname}.exe"
+                "dust": "dust/dust.x64.win.exe"
             }
         }
     }

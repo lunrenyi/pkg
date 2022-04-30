@@ -3,7 +3,7 @@
     "license": "MIT",
     "rely": [],
     "bin": {
-        "ffplay": "exa/exa.${osarch}.${osname}"
+        "exa": "exa/exa.${osarch}.${osname}"
     },
     "os-arch": {
         "linux-arm64": {
@@ -36,7 +36,7 @@
                 "cn": "https://gitee.com/static-build/exa/raw/main/bin/exa.x64.exe.7z"
             },
             "bin": {
-                "ffplay": "exa/exa.${osarch}.${osname}.exe"
+                "exa": "exa/exa.x64.win.exe"
             }
         }
     }

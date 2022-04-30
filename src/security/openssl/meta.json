@@ -36,7 +36,7 @@
                 "cn": "https://gitee.com/static-build/openssl/raw/main/bin/openssl.x64.exe.7z"
             },
             "bin": {
-                "ffplay": "openssl/openssl.${osarch}.${osname}.exe"
+                "ffplay": "openssl/openssl.x64.win.exe"
             }
         }
     }

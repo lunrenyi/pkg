@@ -2,9 +2,6 @@
     "homepage": "https://golang.google.cn",
     "license": "MIT",
     "rely": [],
-    "bin": {
-        "ffplay": "abc/bin/ffplay"
-    },
     "os-arch": {
         "linux-arm64": {
             "url": {
@@ -34,9 +31,6 @@
             "url": {
                 "_": "https://github.com/junegunn/fzf/releases/download/%{version}/fzf-%{version}-windows_amd64.zip",
                 "cn": "https://download.fastgit.org/junegunn/fzf/releases/download/%{version}/fzf-%{version}-windows_amd64.zip"
-            },
-            "bin": {
-                "ffplay": "abc/bin/ffplay.exe"
             }
         }
     }

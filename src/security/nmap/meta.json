@@ -36,7 +36,7 @@
                 "cn": "https://gitee.com/static-build/nmap/raw/main/bin/nmap.x64.exe.7z"
             },
             "bin": {
-                "ffplay": "nmap/nmap.${osarch}.${osname}.exe"
+                "ffplay": "nmap/nmap.x64.win.exe"
             }
         }
     }
