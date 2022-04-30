@@ -16,7 +16,7 @@
     },
     "hook": {
         "pre-install": "",
-        "post-install": ":;\n:;"
+        "post-install": ". post-install-rust.sh"
     },
     "os-arch": {
         "linux-arm64": {
