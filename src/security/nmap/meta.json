@@ -3,40 +3,29 @@
     "license": "MIT",
     "rely": [],
     "bin": {
-        "ffplay": "nmap/nmap.${osarch}.${osname}"
+        "nmap": "nmap/nmap.${osarch}.${osname}",
+        "nping": "nmap/nmap.${osarch}.${osname}"
+    },
+    "const": {
+        "github_source": "https://raw.githubusercontent.com/static-build/nmap/main/bin",
+        "gitee_source": "https://gitee.com/static-build/nmap/raw/main/bin"
+    },
+    "url": {
+        "_": "%{github_source}/nmap.%{os}.%{arch}.7z",
+        "cn": "%{gitee_source}/nmap.%{os}.%{arch}.7z"
     },
     "os-arch": {
-        "linux-arm64": {
-            "url": {
-                "_": "https://raw.githubusercontent.com/static-build/nmap/main/bin/nmap.linux.arm64.7z",
-                "cn": "https://gitee.com/static-build/nmap/raw/main/bin/nmap.linux.arm64.7z"
-            }
-        },
-        "darwin-arm64": {
-            "url": {
-                "_": "https://raw.githubusercontent.com/static-build/nmap/main/bin/nmap.darwin.arm64.7z",
-                "cn": "https://gitee.com/static-build/nmap/raw/main/bin/nmap.darwin.arm64.7z"
-            }
-        },
-        "linux-x64": {
-            "url": {
-                "_": "https://raw.githubusercontent.com/static-build/nmap/main/bin/nmap.darwin.x64.7z",
-                "cn": "https://gitee.com/static-build/nmap/raw/main/bin/nmap.darwin.x64.7z"
-            }
-        },
-        "darwin-x64": {
-            "url": {
-                "_": "https://raw.githubusercontent.com/static-build/nmap/main/bin/nmap.darwin.x64.7z",
-                "cn": "https://gitee.com/static-build/nmap/raw/main/bin/nmap.darwin.x64.7z"
-            }
-        },
+        "linux-arm64": {},
+        "darwin-arm64": {},
+        "linux-x64": {},
+        "darwin-x64": {},
         "win-x64": {
             "url": {
-                "_": "https://raw.githubusercontent.com/static-build/nmap/main/bin/nmap.x64.exe.7z",
-                "cn": "https://gitee.com/static-build/nmap/raw/main/bin/nmap.x64.exe.7z"
+                "_": "%{github_source}/nmap.x64.exe.7z",
+                "cn": "%{gitee_source}/nmap.x64.exe.7z"
             },
             "bin": {
-                "ffplay": "nmap/nmap.x64.win.exe"
+                "nmap": "nmap/nmap.x64.win.exe"
             }
         }
     }
