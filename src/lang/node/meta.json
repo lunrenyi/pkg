@@ -21,7 +21,17 @@
         },
         "linux-x64": {},
         "darwin-x64": {},
-        "win-x64": {},
-        "win-arm64": {}
+        "win-x64": {
+            "url": {
+                "_": "%{node_source}/%{version}/node-%{version}-%{os}-%{arch}.zip",
+                "cn": "%{tuna_source}/%{version}/node-%{version}-%{os}-%{arch}.zip"
+            }
+        },
+        "win-arm64": {
+            "url": {
+                "_": "%{node_source}/%{version}/node-%{version}-%{os}-%{arch}.zip",
+                "cn": "%{tuna_source}/%{version}/node-%{version}-%{os}-%{arch}.zip"
+            }
+        }
     }
 }
