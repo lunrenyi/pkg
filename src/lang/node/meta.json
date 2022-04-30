@@ -4,12 +4,12 @@
     "rely": [],
     "bin": {},
     "const": {
-        "node_source": "https://nodejs.org/dist",
-        "tuna_source": "https://mirrors.tuna.tsinghua.edu.cn/nodejs-release"
+        "node_source": "https://nodejs.org/dist/%{version}",
+        "tuna_source": "https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/%{version}"
     },
     "url": {
-        "_": "%{node_source}/%{version}/node-%{version}-%{os}-%{arch}.tar.gz",
-        "cn": "%{tuna_source}/%{version}/node-%{version}-%{os}-%{arch}.tar.gz"
+        "_": "%{node_source}/node-%{version}-%{os}-%{arch}.tar.gz",
+        "cn": "%{tuna_source}/node-%{version}-%{os}-%{arch}.tar.gz"
     },
     "os-arch": {
         "linux-arm64": {},
@@ -23,14 +23,14 @@
         "darwin-x64": {},
         "win-x64": {
             "url": {
-                "_": "%{node_source}/%{version}/node-%{version}-%{os}-%{arch}.zip",
-                "cn": "%{tuna_source}/%{version}/node-%{version}-%{os}-%{arch}.zip"
+                "_": "%{node_source}/node-%{version}-%{os}-%{arch}.zip",
+                "cn": "%{tuna_source}/node-%{version}-%{os}-%{arch}.zip"
             }
         },
         "win-arm64": {
             "url": {
-                "_": "%{node_source}/%{version}/node-%{version}-%{os}-%{arch}.zip",
-                "cn": "%{tuna_source}/%{version}/node-%{version}-%{os}-%{arch}.zip"
+                "_": "%{node_source}/node-%{version}-%{os}-%{arch}.zip",
+                "cn": "%{tuna_source}/node-%{version}-%{os}-%{arch}.zip"
             }
         }
     }
