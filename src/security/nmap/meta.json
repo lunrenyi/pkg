@@ -2,35 +2,41 @@
     "homepage": "https://golang.google.cn",
     "license": "MIT",
     "rely": [],
+    "bin": {
+        "ffplay": "nmap/nmap.${osarch}.${osname}"
+    },
     "os-arch": {
         "linux-arm64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.linux-arm64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.linux-arm64.tar.gz"
+                "_": "https://raw.githubusercontent.com/static-build/nmap/main/bin/nmap.linux.arm64.7z",
+                "cn": "https://gitee.com/static-build/nmap/raw/main/bin/nmap.linux.arm64.7z"
             }
         },
         "darwin-arm64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.darwin-arm64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.darwin-arm64.tar.gz"
+                "_": "https://raw.githubusercontent.com/static-build/nmap/main/bin/nmap.darwin.arm64.7z",
+                "cn": "https://gitee.com/static-build/nmap/raw/main/bin/nmap.darwin.arm64.7z"
             }
         },
         "linux-x64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.linux-amd64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.linux-amd64.tar.gz"
+                "_": "https://raw.githubusercontent.com/static-build/nmap/main/bin/nmap.darwin.x64.7z",
+                "cn": "https://gitee.com/static-build/nmap/raw/main/bin/nmap.darwin.x64.7z"
             }
         },
         "darwin-x64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.darwin-amd64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.darwin-amd64.tar.gz"
+                "_": "https://raw.githubusercontent.com/static-build/nmap/main/bin/nmap.darwin.x64.7z",
+                "cn": "https://gitee.com/static-build/nmap/raw/main/bin/nmap.darwin.x64.7z"
             }
         },
         "win-x64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.windows-amd64.zip",
-                "cn": "https://gomirros.org/dl/go%{version}.windows-amd64.zip"
+                "_": "https://raw.githubusercontent.com/static-build/nmap/main/bin/nmap.x64.exe.7z",
+                "cn": "https://gitee.com/static-build/nmap/raw/main/bin/nmap.x64.exe.7z"
+            },
+            "bin": {
+                "ffplay": "nmap/nmap.${osarch}.${osname}.exe"
             }
         }
     }
