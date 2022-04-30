@@ -1,32 +1,37 @@
 {
-    "homepage": "https://github.com/sharkdp/fd",
+    "homepage": "https://golang.google.cn",
     "license": "MIT",
     "rely": [],
-    "arch-os": {
-        "arm64-linux": {
-            "url": "https://github.com/sharkdp/fd/releases/download/%%version%%/fd-%%version%%-arm-unknown-linux-musleabihf.tar.gz",
-            "extract_dir": "fd-%%version%%-i686-pc-windows-msvc",
-            "bin": "fd"
+    "os-arch": {
+        "linux-arm64": {
+            "url": {
+                "_": "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-x86_64-linux.tar.gz"
+            }
         },
-        "arm64-darwin": {
-            "url": "",
-            "extract_dir": "",
-            "bin": ""
+        "linux-x64": {
+            "url": {
+                "_": "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-x86_64-linux.tar.gz"
+            }
         },
-        "x64-linux": {
-            "url": "",
-            "extract_dir": "",
-            "bin": ""
+        "darwin-arm64": {
+            "url": {
+                "_": "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-darwin-2level.tar.gz"
+            }
         },
-        "x64-darwin": {
-            "url": "",
-            "extract_dir": "",
-            "bin": ""
+        "darwin-x64": {
+            "url": {
+                "_": "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-darwin-2level.tar.gz"
+            }
         },
-        "x64-win": {
-            "url": "",
-            "extract_dir": "",
-            "bin": ""
+        "win-x32": {
+            "url": {
+                "_": "https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-32bit.zip"
+            }
+        },
+        "win-x64": {
+            "url": {
+                "_": "https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-64bit.zip"
+            }
         }
     }
 }
