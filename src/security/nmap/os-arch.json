@@ -1,0 +1,24 @@
+{
+    "linux-arm64": {},
+    "darwin-arm64": {},
+    "linux-x64": {},
+    "darwin-x64": {},
+    "win-x64": {
+        "url": {
+            "_": "%{github_source}/nmap.x64.exe.7z",
+            "cn": "%{gitee_source}/nmap.x64.exe.7z"
+        },
+        "bin": {
+            "nmap": "nmap/nmap.x64.win.exe"
+        }
+    },
+    "win-arm64": {
+        "url": {
+            "_": "%{github_source}/nmap.arm64.exe.7z",
+            "cn": "%{gitee_source}/nmap.arm64.exe.7z"
+        },
+        "bin": {
+            "nmap": "nmap/nmap.arm64.win.exe"
+        }
+    }
+}

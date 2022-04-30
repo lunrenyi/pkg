@@ -15,7 +15,9 @@
         "cn": "%{gitee_source}/nmap.%{os}.%{arch}.7z"
     },
     "os-arch": {
-        "linux-arm64": {},
+        "linux-arm64": {
+
+        },
         "darwin-arm64": {},
         "linux-x64": {},
         "darwin-x64": {},

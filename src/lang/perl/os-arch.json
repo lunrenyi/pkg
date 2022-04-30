@@ -1,0 +1,32 @@
+{
+    "linux-arm64": {
+        "url": {
+            "_": "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-x86_64-linux.tar.gz"
+        }
+    },
+    "linux-x64": {
+        "url": {
+            "_": "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-x86_64-linux.tar.gz"
+        }
+    },
+    "darwin-arm64": {
+        "url": {
+            "_": "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-darwin-2level.tar.gz"
+        }
+    },
+    "darwin-x64": {
+        "url": {
+            "_": "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-darwin-2level.tar.gz"
+        }
+    },
+    "win-x32": {
+        "url": {
+            "_": "https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-32bit.zip"
+        }
+    },
+    "win-x64": {
+        "url": {
+            "_": "https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-64bit.zip"
+        }
+    }
+}
