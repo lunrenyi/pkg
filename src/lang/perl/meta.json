@@ -1,5 +1,37 @@
 {
-    "homepage": "https://golang.google.cn",
+    "homepage": "https://strawberryperl.com/releases.html",
     "license": "MIT",
-    "rely": []
+    "rely": [],
+    "os-arch": {
+        "linux-arrch": {
+            "url": {
+                "_": "https://github.com/skaji/relocatable-perl/releases/download/{version}/perl-aarch64-linux.tar.gz",
+                "cn": ""
+            }
+        },
+        "darwin-arm64": {
+            "url": {
+                "_": "https://golang.google.cn/dl/go{version}.darwin-arm64.tar.gz",
+                "cn": ""
+            }
+        },
+        "linux-x64": {
+            "url": {
+                "_": "https://github.com/skaji/relocatable-perl/releases/download/{version}/perl-x86_64-linux.tar.gz",
+                "cn": ""
+            }
+        },
+        "darwin-x64": {
+            "url": {
+                "_": "https://github.com/skaji/relocatable-perl/releases/download/{version}/perl-x86_64-darwin.tar.gz",
+                "cn": ""
+            }
+        },
+        "win-x64": {
+            "url": {
+                "_": "https://strawberryperl.com/download/{version}/strawberry-perl-{version}-64bit.msi",
+                "cn": ""
+            }
+        }
+    }
 }
