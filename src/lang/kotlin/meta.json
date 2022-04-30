@@ -1,37 +1,12 @@
 {
-    "homepage": "https://golang.google.cn",
+    "homepage": "https://api.sdkman.io/2/candidates/kotlin/LINUX64/versions/all",
     "license": "MIT",
     "rely": [],
-    "os-arch": {
-        "linux-arm64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.linux-arm64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.linux-arm64.tar.gz"
-            }
-        },
-        "darwin-arm64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.darwin-arm64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.darwin-arm64.tar.gz"
-            }
-        },
-        "linux-x64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.linux-amd64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.linux-amd64.tar.gz"
-            }
-        },
-        "darwin-x64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.darwin-amd64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.darwin-amd64.tar.gz"
-            }
-        },
-        "win-x64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.windows-amd64.zip",
-                "cn": "https://gomirros.org/dl/go%{version}.windows-amd64.zip"
-            }
-        }
+    "const": {
+        "github_source": "https://github.com/JetBrains/kotlin/releases/download"
+    },
+    "url": {
+        "_": "%{github_source}/v%{version}/kotlin-compiler-%{version}.zip",
+        "cn": ""
     }
 }
