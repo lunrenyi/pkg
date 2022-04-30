@@ -1,36 +1,31 @@
 {
-    "homepage": "https://golang.google.cn",
+    "homepage": "https://repo.anaconda.com/miniconda",
     "license": "MIT",
     "rely": [],
+    "bin": {},
+    "const": {
+        "anaconda_source": "https://repo.anaconda.com/miniconda/%{version}",
+        "tuna_source": "https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/%{version}"
+    },
+    "url": {
+        "_": "%{anaconda_source}/Miniconda3-%{version}-%{os}-%{arch}.sh",
+        "cn": "%{tuna_source}/Miniconda3-%{version}-%{os}-%{arch}.sh"
+    },
     "os-arch": {
-        "linux-arm64": {
-            "url": {
-                "_": "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-x86_64-linux.tar.gz"
-            }
-        },
-        "linux-x64": {
-            "url": {
-                "_": "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-x86_64-linux.tar.gz"
-            }
-        },
-        "darwin-arm64": {
-            "url": {
-                "_": "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-darwin-2level.tar.gz"
-            }
-        },
-        "darwin-x64": {
-            "url": {
-                "_": "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-darwin-2level.tar.gz"
-            }
-        },
-        "win-x32": {
-            "url": {
-                "_": "https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-32bit.zip"
-            }
-        },
+        "linux-arm64": {},
+        "darwin-arm64": {},
+        "linux-x64": {},
+        "darwin-x64": {},
         "win-x64": {
             "url": {
-                "_": "https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-64bit.zip"
+                "_": "%{anaconda_source}/Miniconda3-%{version}-%{os}-%{arch}.exe",
+                "cn": "%{tuna_source}/Miniconda3-%{version}-%{os}-%{arch}.exe"
+            }
+        },
+        "win-arm64": {
+            "url": {
+                "_": "%{anaconda_source}/Miniconda3-%{version}-%{os}-%{arch}.exe",
+                "cn": "%{tuna_source}/Miniconda3-%{version}-%{os}-%{arch}.exe"
             }
         }
     }
