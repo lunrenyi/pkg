@@ -5,31 +5,31 @@
     "os-arch": {
         "linux-arm64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go{version}.linux-arm64.tar.gz",
+                "_": "https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.tar.gz",
                 "cn": ""
             }
         },
         "darwin-arm64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go{version}.darwin-arm64.tar.gz",
+                "_": "https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.tar.gz",
                 "cn": ""
             }
         },
-        "linux-x64": {
+        "linux-amd64": {
             "url": {
-                "_": "",
+                "_": "https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.tar.gz",
                 "cn": ""
             }
         },
-        "darwin-x64": {
+        "darwin-amd64": {
             "url": {
-                "_": "",
+                "_": "https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.tar.gz",
                 "cn": ""
             }
         },
-        "win-x64": {
+        "win-amd64": {
             "url": {
-                "_": "",
+                "_": "https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.zip",
                 "cn": ""
             }
         }

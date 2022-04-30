@@ -5,31 +5,31 @@
     "os-arch": {
         "linux-aarch64": {
             "url": {
-                "_": "https://github.com/denoland/deno/releases/download/v{version}}/deno-aarch64-apple-darwin.zip",
+                "_": "https://github.com/denoland/deno/releases/download/v%{version}/deno-%{os}-%{arch}.zip",
                 "cn": ""
             }
         },
         "darwin-arm64": {
             "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.darwin-arm64.tar.gz",
+                "_": "https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.tar.gz",
                 "cn": "https://gomirros.org/dl/go%{version}.darwin-arm64.tar.gz"
             }
         },
         "linux-x64": {
             "url": {
-                "_": "https://github.com/denoland/deno/releases/download/v{version}deno-x86_64-unknown-linux-gnu.zip",
+                "_": "https://github.com/denoland/deno/releases/download/v%{version}/deno-%{arch}-%{os}.zip",
                 "cn": ""
             }
         },
         "darwin-x64": {
             "url": {
-                "_": "https://github.com/denoland/deno/releases/download/v{version}/deno-x86_64-apple-darwin.zip",
+                "_": "https://github.com/denoland/deno/releases/download/v%{version}/deno-%{arch}-%{os}.zip",
                 "cn": ""
             }
         },
         "win-x64": {
             "url": {
-                "_": "https://github.com/denoland/deno/releases/download/v{version}/deno-x86_64-pc-windows-msvc.zip",
+                "_": "https://github.com/denoland/deno/releases/download/v{version}/deno-%{arch}-%{os}.zip",
                 "cn": ""
             }
         }

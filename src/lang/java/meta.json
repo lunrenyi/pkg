@@ -5,27 +5,27 @@
     "os-arch": {
         "linux-arm64": {
             "url": {
-                "_": "https://api.sdkman.io/2/broker/download/java/{version}/LINUX-arm64"
+                "_": "https://api.sdkman.io/2/broker/download/java/{version}/%{os}-%{arch}"
             }
         },
         "darwin-arm64": {
             "url": {
-                "_": "https://api.sdkman.io/2/broker/download/java/{version}/Darwin-arm64"
+                "_": "https://api.sdkman.io/2/broker/download/java/{version}/%{os}-%{arch}"
             }
         },
         "linux-x64": {
             "url": {
-                "_": "https://api.sdkman.io/2/broker/download/java/{version}/LINUX-x64"
+                "_": "https://api.sdkman.io/2/broker/download/java/{version}/%{os}-%{arch}"
             }
         },
         "darwin-x64": {
             "url": {
-                "_": "https://api.sdkman.io/2/broker/download/java/{version}//Darwin-x64"
+                "_": "https://api.sdkman.io/2/broker/download/java/{version}/%{os}-%{arch}"
             }
         },
         "win-x64": {
             "url": {
-                "_": "https://api.sdkman.io/2/broker/download/java/{version}/win-x64"
+                "_": "https://api.sdkman.io/2/broker/download/java/{version}/%{os}-%{arch}"
             }
         }
     }
