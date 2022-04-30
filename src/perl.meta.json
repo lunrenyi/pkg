@@ -1,0 +1,32 @@
+{
+    "homepage": "https://github.com/sharkdp/fd",
+    "license": "MIT",
+    "rely": [],
+    "arch-os": {
+        "arm64-linux": {
+            "url": "https://github.com/sharkdp/fd/releases/download/%%version%%/fd-%%version%%-arm-unknown-linux-musleabihf.tar.gz",
+            "extract_dir": "fd-%%version%%-i686-pc-windows-msvc",
+            "bin": "fd"
+        },
+        "arm64-darwin": {
+            "url": "",
+            "extract_dir": "",
+            "bin": ""
+        },
+        "x64-linux": {
+            "url": "",
+            "extract_dir": "",
+            "bin": ""
+        },
+        "x64-darwin": {
+            "url": "",
+            "extract_dir": "",
+            "bin": ""
+        },
+        "x64-win": {
+            "url": "",
+            "extract_dir": "",
+            "bin": ""
+        }
+    }
+}
