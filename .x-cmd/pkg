@@ -29,7 +29,10 @@ pkg_yml2tgz()(
         pp="$tgtprefix/$line"
         ppd="${pp%/*}"
         [ -d "$ppd" ] || mkdir -p "$ppd"
-        cat $line | x yq -o json e -P | x ja t "\t" >"${pp%.yml}.tt.json"
+        {
+            cat $line | x yq -o json e -P | x ja t "\t"
+            printf "\n"
+        } >"${pp%.yml}.tt.json"
     done
     cd $(x ws root)/.tmp
     x z env.7z *
