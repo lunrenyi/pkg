@@ -31,6 +31,10 @@ pkg_yml2tgz()(
         [ -d "$ppd" ] || mkdir -p "$ppd"
         cat $line | x yq -o json e -P | x ja t "\t" >"${pp%.yml}.tt.json"
     done
+    cd $(x ws root)/.tmp
+    x z env.7z *
+    mv env.7z ../dist/env.7z
+    cd  $(x ws root) && x rmrf .tmp
 )
 
 [ "$#" -gt 0 ] && pkg "$@"
