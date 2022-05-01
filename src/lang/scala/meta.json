@@ -1,37 +1,10 @@
 {
-    "homepage": "https://golang.google.cn",
+    "homepage": "https://www.scala-lang.org/download/all.html",
     "license": "MIT",
     "rely": [],
-    "os-arch": {
-        "linux-arm64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.linux-arm64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.linux-arm64.tar.gz"
-            }
-        },
-        "darwin-arm64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.darwin-arm64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.darwin-arm64.tar.gz"
-            }
-        },
-        "linux-x64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.linux-amd64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.linux-amd64.tar.gz"
-            }
-        },
-        "darwin-x64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.darwin-amd64.tar.gz",
-                "cn": "https://gomirros.org/dl/go%{version}.darwin-amd64.tar.gz"
-            }
-        },
-        "win-x64": {
-            "url": {
-                "_": "https://golang.google.cn/dl/go%{version}.windows-amd64.zip",
-                "cn": "https://gomirros.org/dl/go%{version}.windows-amd64.zip"
-            }
-        }
+    "url": {
+        // TODO: 2.9.* ?
+        "_": "",
+        "cn": ""
     }
 }

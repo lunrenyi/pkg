@@ -1,31 +1,31 @@
 {
-    "homepage": "https://golang.google.cn",
+    "homepage": "https://sdkman.io/",
     "license": "MIT",
     "rely": [],
     "os-arch": {
         "linux-arm64": {
             "url": {
-                "_": "https://api.sdkman.io/2/candidates/java/linuxarm64/versions/all"
+                "_": "https://api.sdkman.io/2/broker/download/java/{version}/%{os}%{arch}"
             }
         },
         "darwin-arm64": {
             "url": {
-                "_": "https://api.sdkman.io/2/candidates/java/darwinarm64/versions/all"
+                "_": "https://api.sdkman.io/2/broker/download/java/{version}/%{os}%{arch}"
             }
         },
         "linux-x64": {
             "url": {
-                "_": "https://api.sdkman.io/2/candidates/java/linuxx64/versions/all"
+                "_": "https://api.sdkman.io/2/broker/download/java/{version}/%{os}%{arch}"
             }
         },
         "darwin-x64": {
             "url": {
-                "_": "https://api.sdkman.io/2/candidates/java/darwinx64/versions/all"
+                "_": "https://api.sdkman.io/2/broker/download/java/{version}/%{os}%{arch}"
             }
         },
-        "win-x64": {
+        "mingw64_nt_10.0-x64": {
             "url": {
-                "_": "https://api.sdkman.io/2/candidates/java/mingw64_nt_10.0/versions/all"
+                "_": "https://api.sdkman.io/2/broker/download/java/{version}/%{os}%{arch}"
             }
         }
     }
