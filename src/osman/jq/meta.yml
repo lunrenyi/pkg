@@ -1,0 +1,28 @@
+homepage: https://golang.google.cn
+license: MIT
+rely: []
+bin:
+  jq: jq/jq.${osarch}.${osname}
+os-arch:
+  linux-arm64:
+    url:
+      _: https://raw.githubusercontent.com/static-build/jq/main/bin/jq.linux.arm64.7z
+      cn: https://gitee.com/static-build/jq/raw/main/bin/jq.linux.arm64.7z
+  darwin-arm64:
+    url:
+      _: https://raw.githubusercontent.com/static-build/jq/main/bin/jq.darwin.arm64.7z
+      cn: https://gitee.com/static-build/jq/raw/main/bin/jq.darwin.arm64.7z
+  linux-x64:
+    url:
+      _: https://raw.githubusercontent.com/static-build/jq/main/bin/jq.darwin.x64.7z
+      cn: https://gitee.com/static-build/jq/raw/main/bin/jq.darwin.x64.7z
+  darwin-x64:
+    url:
+      _: https://raw.githubusercontent.com/static-build/jq/main/bin/jq.darwin.x64.7z
+      cn: https://gitee.com/static-build/jq/raw/main/bin/jq.darwin.x64.7z
+  win-x64:
+    url:
+      _: https://raw.githubusercontent.com/static-build/jq/main/bin/jq.x64.exe.7z
+      cn: https://gitee.com/static-build/jq/raw/main/bin/jq.x64.exe.7z
+    bin:
+      jq: jq/jq.x64.win.exe

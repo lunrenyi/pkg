@@ -1,0 +1,24 @@
+homepage: https://golang.google.cn/dl/
+license: MIT
+rely: []
+os-arch:
+  linux-arm64:
+    url:
+      _: https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.tar.gz
+      cn: ""
+  darwin-arm64:
+    url:
+      _: https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.tar.gz
+      cn: ""
+  linux-amd64:
+    url:
+      _: https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.tar.gz
+      cn: ""
+  darwin-amd64:
+    url:
+      _: https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.tar.gz
+      cn: ""
+  win-amd64:
+    url:
+      _: https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.zip
+      cn: ""
