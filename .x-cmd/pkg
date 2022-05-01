@@ -2,7 +2,7 @@
 pkg(){
     local op="$1";  shift
     case "$op" in
-        ls|json2yml)             "pkg_$op" "$@" ;;
+        ls|json2yml|yml2tgz)             "pkg_$op" "$@" ;;
     esac
 }
 
@@ -13,12 +13,23 @@ pkg_ls()(
 )
 
 pkg_json2yml()(
-    echo hi
     cd $(x ws root)/src
     find . -name '*.json' | while read -r line; do
         p=${line%.json}.yml
         cat $line | x yq -o yaml e -P >$p
         rm "$line"
+    done
+)
+
+pkg_yml2tgz()(
+    local tgtprefix="$(x ws root)/.tmp"
+    mkdir -p "$tgtprefix"
+    cd $(x ws root)/src
+    find . -name '*.yml' | while read -r line; do
+        pp="$tgtprefix/$line"
+        ppd="${pp%/*}"
+        [ -d "$ppd" ] || mkdir -p "$ppd"
+        cat $line | x yq -o json e -P | x ja t "\t" >"${pp%.yml}.tt.json"
     done
 )
 
