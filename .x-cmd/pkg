@@ -1,0 +1,23 @@
+
+pkg(){
+    local op="$1";  shift
+    case "$op" in
+        ls)     "pkg_$op" "$@" ;;
+    esac
+}
+
+
+pkg_ls()(
+    echo hi
+    cd $(x ws root)/src
+    find . -name '*.json'
+)
+
+pkg_json_to_yml()(
+    echo hi
+    cd $(x ws root)/src
+    find . -name '*.json'
+)
+
+[ "$#" -gt 0 ] && pkg "$@"
+
