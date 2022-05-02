@@ -18,6 +18,9 @@ os-arch:
     url:
       _: https://api.sdkman.io/2/broker/download/java/{version}/%{os}%{arch}
 version:
+  "*-v18.*":
+    hook:
+      post-install: special.v18.sh
   "graal-v*":
     hook:
       post-install: graal.sh
