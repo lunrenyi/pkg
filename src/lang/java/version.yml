@@ -1,7 +1,7 @@
 openjdk-latest:
   ___link___: openjdk-v18.0.1
 openjdk-lts:
-  ___link___: openjdk-v18.0.1
+  ___link___: openjdk-v16.0.1
 
 18-open: {}
 21.3.1.r8-grl: {}
