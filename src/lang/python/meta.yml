@@ -3,7 +3,7 @@ license: MIT
 rely: []
 bin: {}
 
-minoconda_sh_file: Miniconda3-%{version}-%{os}-%{arch}.sh
+minoconda_sh_file: Miniconda3-%{version}-%{os_name}-%{arch_name}.sh
 anaconda_source: https://repo.anaconda.com/miniconda/%{version}
 tuna_source: https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/%{version}
 url:
@@ -12,13 +12,13 @@ url:
 
 rule:
   v*/linux-*:
-    os: Linux
+    os_name: Linux
   v*/darwin-*:
-    os: MacOSX
+    os_name: MacOSX
   v*/win-*:
-    os: Windows
+    os_name: Windows
 
   v*/*-arm64:
-    arch: arm64
+    arch_name: arm64
   v*/*-x64:
-    arch: x86_64
+    arch_name: x86_64

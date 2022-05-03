@@ -3,26 +3,22 @@ license: MIT
 rely: []
 bin:
   ffplay: ffmpeg/ffmpeg.${osarch}.${osname}
+
+gh_url: https://raw.githubusercontent.com/static-build/ffmpeg/main/bin
+gc_url: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin
+url:
+  _: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
 os-arch:
   linux-arm64:
-    url:
-      _: https://raw.githubusercontent.com/static-build/ffmpeg/main/bin/ffmpeg.linux.arm64.7z
-      cn: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin/ffmpeg.linux.arm64.7z
+    zipname: ffmpeg.linux.arm64.7z
   darwin-arm64:
-    url:
-      _: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin/ffmpeg.darwin.arm64.7z
-      cn: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin/ffmpeg.darwin.arm64.7z
+    zipname: ffmpeg.darwin.arm64.7z
   linux-x64:
-    url:
-      _: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin/ffmpeg.linux.x64.7z
-      cn: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin/ffmpeg.linux.x64.7z
+    zipname: ffmpeg.linux.x64.7z
   darwin-x64:
-    url:
-      _: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin/ffmpeg.darwin.x64.7z
-      cn: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin/ffmpeg.darwin.x64.7z
+    zipname: ffmpeg.darwin.x64.7z
   win-x64:
-    url:
-      _: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin/ffmpeg.x64.exe.7z
-      cn: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin/ffmpeg.x64.exe.7z
+    zipname: ffmpeg.x64.exe.7z
     bin:
       ffplay: ffmpeg/ffmpeg.${osarch}.${osname}.exe
