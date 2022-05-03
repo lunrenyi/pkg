@@ -2,7 +2,7 @@
 pkg(){
     local op="$1";  shift
     case "$op" in
-        ls|json2yml|yml2tgz)             "pkg_$op" "$@" ;;
+        *)             "pkg_$op" "$@" ;;
     esac
 }
 
@@ -22,6 +22,14 @@ pkg_json2yml()(
 )
 
 pkg_yml2tgz()(
+    pkg_yml2json
+    cd $(x ws root)/.tmp
+    x z env.7z *
+    mv env.7z ../dist/env.7z
+    cd  $(x ws root) && x rmrf .tmp
+)
+
+pkg_yml2json()(
     local tgtprefix="$(x ws root)/.tmp"
     mkdir -p "$tgtprefix"
     cd $(x ws root)/src
@@ -34,11 +42,14 @@ pkg_yml2tgz()(
             printf "\n"
         } >"${pp%.yml}.tt.json"
     done
-    cd $(x ws root)/.tmp
-    x z env.7z *
-    mv env.7z ../dist/env.7z
-    cd  $(x ws root) && x rmrf .tmp
 )
+
+pkg_install(){
+    pkg_yml2json
+    x rmrf "$___X_CMD_ROOT_TMP/env/raw"
+    mkdir -p "$___X_CMD_ROOT_TMP/env"
+    cp -rf "$(x ws root)/.tmp" "$___X_CMD_ROOT_TMP/env/raw"
+}
 
 [ "$#" -gt 0 ] && pkg "$@"
 
