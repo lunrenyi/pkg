@@ -5,22 +5,10 @@ bin: {}
 const:
   node_source: https://nodejs.org/dist/%{version}
   tuna_source: https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/%{version}
+file_suffix: tar.gz
 url:
-  _: '%{node_source}/node-%{version}-%{os}-%{arch}.tar.gz'
-  cn: '%{tuna_source}/node-%{version}-%{os}-%{arch}.tar.gz'
-os-arch:
-  linux-arm64: {}
-  darwin-arm64:
-    url:
-      _: '%{node_source}/node-%{version}-darwin-x64.tar.gz'
-      cn: '%{tuna_source}/node-%{version}-darwin-x64.tar.gz'
-  linux-x64: {}
-  darwin-x64: {}
-  win-x64:
-    url:
-      _: '%{node_source}/node-%{version}-%{os}-%{arch}.zip'
-      cn: '%{tuna_source}/node-%{version}-%{os}-%{arch}.zip'
-  win-arm64:
-    url:
-      _: '%{node_source}/node-%{version}-%{os}-%{arch}.zip'
-      cn: '%{tuna_source}/node-%{version}-%{os}-%{arch}.zip'
+  _: '%{node_source}/node-%{version}-%{os}-%{arch}.${file_suffix}'
+  cn: '%{tuna_source}/node-%{version}-%{os}-%{arch}.${file_suffix}'
+rule:
+  v*/win*:
+    file_suffix: zip

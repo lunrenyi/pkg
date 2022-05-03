@@ -2,31 +2,23 @@ homepage: https://repo.anaconda.com/miniconda
 license: MIT
 rely: []
 bin: {}
-const:
-  anaconda_source: https://repo.anaconda.com/miniconda/%{version}
-  tuna_source: https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/%{version}
+
+minoconda_sh_file: Miniconda3-%{version}-%{os}-%{arch}.sh
+anaconda_source: https://repo.anaconda.com/miniconda/%{version}
+tuna_source: https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/%{version}
+url:
+  _: "%{anaconda_source}/%{minoconda_sh_file}"
+  cn: "%{tuna_source}/%{minoconda_sh_file}"
+
 os-arch:
-  linux-arm64:
-    url:
-      _: '%{anaconda_source}/Miniconda3-%{version}-Linux-arm64.sh'
-      cn: '%{tuna_source}/Miniconda3-%{version}-Linux-arm64.sh'
-  linux-x64:
-    url:
-      _: '%{anaconda_source}/Miniconda3-%{version}-Linux-x86_64.sh'
-      cn: '%{tuna_source}/Miniconda3-%{version}-Linux-x86_64.sh'
-  darwin-arm64:
-    url:
-      _: '%{anaconda_source}/Miniconda3-%{version}-MacOSX-arm64.sh'
-      cn: '%{tuna_source}/Miniconda3-%{version}-MacOSX-arm64.sh'
-  darwin-x64:
-    url:
-      _: '%{anaconda_source}/Miniconda3-%{version}-MacOSX-x86_64.sh'
-      cn: '%{tuna_source}/Miniconda3-%{version}-MacOSX-x86_64.sh'
-  win-x64:
-    url:
-      _: '%{anaconda_source}/Miniconda3-%{version}-Windows-x86_64.exe'
-      cn: '%{tuna_source}/Miniconda3-%{version}-Windows-x86_64.exe'
-  win-arm64:
-    url:
-      _: '%{anaconda_source}/Miniconda3-%{version}-Windows-arm64.exe'
-      cn: '%{tuna_source}/Miniconda3-%{version}-Windows-arm64.exe'
+  v*/linux-*:
+    os: Linux
+  v*/darwin-*:
+    os: MacOSX
+  v*/win-*:
+    os: Windows
+
+  v*/*-arm64:
+    arch: arm64
+  v*/*-x64:
+    arch: x86_64
