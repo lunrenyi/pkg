@@ -1,24 +1,25 @@
 homepage: https://github.com/denoland/deno/
 license: MIT
 rely: []
-os-arch:
-  linux-aarch64:
+rule:
+  v*.linux-aarch64:
     url:
-      _: https://github.com/denoland/deno/releases/download/v%{version}/deno-%{os}-%{arch}.zip
+      _: https://github.com/denoland/deno/releases/download/v%{version}/deno-linux-aarh64.zip
       cn: ""
-  darwin-arm64:
+  v*.darwin-arm64:
     url:
-      _: https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.tar.gz
+      _: https://golang.google.cn/dl/deno%{version}.darwin-arm64.tar.gz
       cn: ""
-  linux-x64:
-    url:
-      _: https://github.com/denoland/deno/releases/download/v%{version}/deno-%{arch}-%{os}.zip
-      cn: ""
-  darwin-x64:
+  v*.linux-x64:
     url:
       _: https://github.com/denoland/deno/releases/download/v%{version}/deno-%{arch}-%{os}.zip
       cn: ""
-  win-x64:
+  v*.darwin-x64:
+    url:
+      _: https://github.com/denoland/deno/releases/download/v%{version}/deno-%{arch}-%{os}.zip
+      cn: ""
+  v*.win-x64:
     url:
       _: https://github.com/denoland/deno/releases/download/v{version}/deno-%{arch}-%{os}.zip
       cn: ""
+
