@@ -10,7 +10,7 @@ url:
   _: "%{anaconda_source}/%{minoconda_sh_file}"
   cn: "%{tuna_source}/%{minoconda_sh_file}"
 
-os-arch:
+rule:
   v*/linux-*:
     os: Linux
   v*/darwin-*:
