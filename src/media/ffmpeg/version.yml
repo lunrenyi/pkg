@@ -3,6 +3,7 @@
 lts:
   ___link___: v11.0.0
   activate_timestamp: 20220505
+
 v11:
   ___link___: v11.0.0
   activate_timestamp: 20220505
@@ -14,6 +15,7 @@ v11-statble:
   activate_timestamp: 20220505
 
 v11.0.0:
+  ___version___: v11.0.0
   darwin-arm64:
     sha256: 73da680b5581d0cd8bd53276ead6152a84aca2d0
 
