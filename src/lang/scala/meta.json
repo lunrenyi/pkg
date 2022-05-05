@@ -2,12 +2,9 @@
     "homepage": "https://www.scala-lang.org/download/all.html",
     "license": "MIT",
     "rely": [],
-    "const": {
-        "2_source": "https://downloads.lightbend.com/scala/https://downloads.lightbend.com/scala/%{version}",
-        "2.11_source": "https://downloads.lightbend.com/scala/https://downloads.lightbend.com/scala/%{version}"
-    },
     "url": {
-        "_": "https://golang.google.cn/dl/go%{version}.darwin-arm64.tar.gz",
-        "cn": "https://gomirros.org/dl/go%{version}.darwin-arm64.tar.gz"
+        // TODO: 2.9.* ?
+        "_": "",
+        "cn": ""
     }
 }

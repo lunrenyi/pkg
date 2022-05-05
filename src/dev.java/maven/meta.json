@@ -1,37 +1,9 @@
 {
-    "homepage": "https://golang.google.cn",
+    "homepage": "https://archive.apache.org/dist/maven/maven-3",
     "license": "MIT",
     "rely": [],
-    "os-arch": {
-        "linux-arm64": {
-            "url": {
-                "_": "https://archive.apache.org/dist/maven/maven-3/%{version}/binaries/apache-maven-%{version}s-bin.zip",
-                "cn": ""
-            }
-        },
-        "darwin-arm64": {
-            "url": {
-                "_": "https://archive.apache.org/dist/maven/maven-3/%{version}/binaries/apache-maven-%{version}s-bin.zip",
-                "cn": ""
-            }
-        },
-        "linux-x64": {
-            "url": {
-                "_": "https://archive.apache.org/dist/maven/maven-3/%{version}/binaries/apache-maven-%{version}s-bin.zip",
-                "cn": ""
-            }
-        },
-        "darwin-x64": {
-            "url": {
-                "_": "https://archive.apache.org/dist/maven/maven-3/%{version}/binaries/apache-maven-%{version}s-bin.zip",
-                "cn": ""
-            }
-        },
-        "win-x64": {
-            "url": {
-                "_": "https://archive.apache.org/dist/maven/maven-3/%{version}/binaries/apache-maven-%{version}s-bin.zip",
-                "cn": ""
-            }
-        }
+    "url": {
+        "_": "https://archive.apache.org/dist/maven/maven-3/%{version}/binaries/apache-maven-%{version}-bin.zip",
+        "cn": ""
     }
 }
