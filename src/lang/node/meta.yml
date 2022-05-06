@@ -1,0 +1,14 @@
+homepage: https://nodejs.org
+license: MIT
+rely: []
+bin: {}
+const:
+  node_source: https://nodejs.org/dist/%{version}
+  tuna_source: https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/%{version}
+file_suffix: tar.gz
+url:
+  _: '%{node_source}/node-%{version}-%{os}-%{arch}.${file_suffix}'
+  cn: '%{tuna_source}/node-%{version}-%{os}-%{arch}.${file_suffix}'
+rule:
+  v*/win*:
+    file_suffix: zip

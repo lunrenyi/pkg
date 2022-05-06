@@ -1,0 +1,32 @@
+
+
+lts:
+  ___version___:
+    - v10.0.0
+    - v8.0.0
+    - v6.0.0
+  activate_timestamp: 20220505
+
+latest:
+  ___version___: v11.0.0
+
+stable:
+  ___version___:
+    - v11.0.0
+    - v10.0.0
+    - v9.0.0
+
+v11:
+  ___version___: v11.0.0
+  activate_timestamp: 20220505
+v11.0:
+  ___version___: v11.0.0
+  activate_timestamp: 20220505
+v11-statble:
+  ___version___: v11.0.0
+  activate_timestamp: 20220505
+
+v11.0.0:
+  release_date: 20220505
+  darwin-arm64:
+    sha256: 73da680b5581d0cd8bd53276ead6152a84aca2d0

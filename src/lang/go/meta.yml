@@ -1,0 +1,12 @@
+homepage: https://golang.google.cn/dl/
+license: MIT
+rely: []
+
+google_site: https://golang.google.cn/dl
+file_suffix: tar.gz
+url:
+  _: "%{google_site}/go%{version}.%{os}-%{arch}.${file_suffix}"
+  cn: ""
+rule:
+  v*/win*:
+    file_suffix: zip
