@@ -1,0 +1,16 @@
+# shellcheck shell=sh disable=SC2039,SC2142,SC3043 #source
+
+if ! [ -f tmp/a ] ; then
+    mkdir tmp
+    curl https://nodejs.org/dist/index.json > tmp/a
+fi
+
+# x jq -r '.[]' < tmp/a
+x jq -r '.[] | {
+    (.version) : {
+        security: (.security),
+        (.files[]): {
+            sha: ""
+        }
+    }
+}' < tmp/a | x jq -s add |  x yq -o yaml e -P >src/lang/node/version.yml
