@@ -1,2 +1,18 @@
-py38_4.10.1: {}
-py39_4.11.0: {}
+
+py27_4.8.3-Minicond3:  {}
+py37_4.10.1-Minicond3: {}
+py37_4.10.3-Minicond3: {}
+py37_4.11.0-Minicond3: {}
+py37_4.8.2-Minicond3:  {}
+py37_4.8.3-Minicond3:  {}
+py37_4.9.2-Minicond3:  {}
+py38_4.10.1-Minicond3: {}
+py38_4.10.3-Minicond3: {}
+py38_4.11.0-Minicond3: {}
+py38_4.8.2-Minicond3:  {}
+py38_4.8.3-Minicond3:  {}
+py38_4.9.2-Minicond3:  {}
+py39_4.10.1-Minicond3: {}
+py39_4.10.3-Minicond3: {}
+py39_4.11.0-Minicond3: {}
+py39_4.9.2-Minicond3:  {}
