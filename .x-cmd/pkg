@@ -60,9 +60,9 @@ pkg_yml2json()(
                         x:error "Unexisted version.sh and version.yml: $tgtprefix/$dir/$pkg" >&2
                     fi
 
-                    if [ -d lib ]; then
-                        x:info "Copy lib to $tgtprefix/$dir/$pkg"
-                        cp -r lib "$tgtprefix/$dir/$pkg"
+                    if [ -d .x-cmd ]; then
+                        x:info "Copy .x-cmd to $tgtprefix/$dir/$pkg"
+                        cp -r .x-cmd "$tgtprefix/$dir/$pkg"
                     fi
                 )
             done
