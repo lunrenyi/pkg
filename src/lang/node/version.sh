@@ -11,13 +11,13 @@ if ! [ -f tmp/a ] ; then
     curl https://nodejs.org/dist/index.json > "tmp/a"
 fi
 
-aaa(){
+get_node_version(){
     cat tmp/a | ___x_cmd_jo env .\* .version .files .security  -- 'echo "$version
 $security
 $files"'
 }
 
-aaa | awk '
+get_node_version | awk '
 BEGIN{
     DATA_VERSION = 0
     DATA_SECURITY = 1
