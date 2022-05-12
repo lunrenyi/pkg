@@ -29,5 +29,3 @@ rule:
     osarch: darwin-x64
   "v14.*/darwin-arm64":
     osarch: darwin-x64
-
-
