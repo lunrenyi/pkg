@@ -9,6 +9,7 @@ file_suffix: tar.gz
 url:
   _: '%{node_source}/node-%{version}-%{os}-%{arch}.${file_suffix}'
   cn: '%{tuna_source}/node-%{version}-%{os}-%{arch}.${file_suffix}'
+
 rule:
   v*/win*:
     file_suffix: zip
@@ -16,7 +17,6 @@ rule:
   stable/*:
     version: v14.0.3
 
-  # "v(1[0-4]|[0-9])(\\..+)?/darwin":
   "!v1*.*/darwin-arm64":
     osarch: darwin-x64
   "v10.*/darwin-arm64":
