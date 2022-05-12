@@ -12,7 +12,7 @@ if ! [ -f tmp/a ] ; then
 fi
 
 get_node_version(){
-    cat tmp/a | ___x_cmd_jo env .\* .version .files .security  -- 'echo "$version
+    cat tmp/a | x jo env .\* .version .files .security  -- 'echo "$version
 $security
 $files"'
 }
