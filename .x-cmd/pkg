@@ -50,12 +50,15 @@ pkg_yml2json()(
 
 
                     if [ -f version.sh ]; then
-                        . ./version.sh >"$tgtprefix/$dir/$pkg/version.tt.json"
+                        (
+                            . $HOME/.x-cmd/xrc/latest
+                            . ./version.sh
+                        )>"$tgtprefix/$dir/$pkg/version.tt.json"
                     elif [ -f version.yml ]; then
                         echo "Generate: $tgtprefix/$dir/$pkg/version.tt.json" >&2
                         x yq -o json e -P <version.yml | x ja t "\t" >"$tgtprefix/$dir/$pkg/version.tt.json"
                     else
-                        echo "Not Right: $tgtprefix/$dir/$pkg" >&2
+                        echo "Unexisted version.sh and version.yml: $tgtprefix/$dir/$pkg" >&2
                     fi
                 )
             done
