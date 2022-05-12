@@ -38,7 +38,7 @@ pkg_yml2json()(
         ppd="${pp%/*}"
         [ -d "$ppd" ] || mkdir -p "$ppd"
         {
-            cat $line | x yq -o json e -P | x ja t "\t"
+            cat "$line" | x yq -o json e -P | x ja t "\t"
             printf "\n"
         } >"${pp%.yml}.tt.json"
     done

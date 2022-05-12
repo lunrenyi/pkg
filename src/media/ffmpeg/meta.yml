@@ -3,7 +3,7 @@ license: MIT
 rely: []
 
 bin:
-  ffplay: ffmpeg/ffmpeg.${osarch}.${osname}
+  ffplay: ffmpeg/ffmpeg.%{osarch}.%{osname}
 
 gh_url: https://raw.githubusercontent.com/static-build/ffmpeg/main/bin
 gc_url: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin
@@ -12,6 +12,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 rule:
+
   "*/linux-arm64":
     zipname:    ffmpeg.linux.arm64.7z
   "*/darwin-arm64":
@@ -23,7 +24,7 @@ rule:
   "*/win-x64":
     zipname:    ffmpeg.x64.exe.7z
     bin:
-      ffplay: ffmpeg/ffmpeg.${osarch}.${osname}.exe
+      ffplay: ffmpeg/ffmpeg.%{osarch}.%{osname}.exe
 
   default/*:
     version: latest
