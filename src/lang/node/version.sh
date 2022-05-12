@@ -62,4 +62,4 @@ function unique(line,       lastvalue, arr, l, _, i){
     return _
 }
 
-'
+' | x yq -o json e -P

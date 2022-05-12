@@ -51,7 +51,7 @@ pkg_yml2json()(
 
                     if [ -f version.sh ]; then
                         (
-                            . ./version.sh
+                            . ./version.sh | x ja t "\t"
                         ) >"$tgtprefix/$dir/$pkg/version.tt.json"
                     elif [ -f version.yml ]; then
                         echo "Generate: $tgtprefix/$dir/$pkg/version.tt.json" >&2
