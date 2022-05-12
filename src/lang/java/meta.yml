@@ -4,6 +4,10 @@ rely: []
 sdkmam_url: https://api.sdkman.io/2/broker/download/java
 url:
   _: "%{sdkman_url}/{version}/%{os}%{arch}"
+
+hook:
+  env-init: env-init.sh
+
 rule:
   v*/linux-arm64:
   v*/darwin-arm64:
