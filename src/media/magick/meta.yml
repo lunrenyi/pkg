@@ -18,7 +18,7 @@ rule:
     version: latest
 
   latest/*:
-    version: 8.3.2
+    version: 7.1.0
 
   "*.*.*/linux-arm64":
     zipname:    magick.linux.arm64.7z
