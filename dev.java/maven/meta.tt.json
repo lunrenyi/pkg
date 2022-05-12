@@ -1,0 +1,1 @@
+{	"homepage"	:	"https://archive.apache.org/dist/maven/maven-3"	,	"license"	:	"MIT"	,	"rely"	:	[	]	,	"url"	:	{	"_"	:	"https://archive.apache.org/dist/maven/maven-3/%{version}/binaries/apache-maven-%{version}-bin.zip"	,	"cn"	:	""	}	}	

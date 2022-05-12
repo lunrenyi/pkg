@@ -1,0 +1,26 @@
+fff(){
+    echo "$version
+$files" | awk '
+NR==1{
+    data= $0 ":\n"
+}
+NR==2{
+    if ($0 == "[src]") {
+        data=""
+        next
+    }
+    line=substr($0,2 ,length($0)-2 )
+    gsub("src,", "",line)
+    gsub(",", ":\n  ", line)
+    data = data "  "  line ":"
+}
+END{
+    if (data != "") print data
+}
+'
+}
+if ! [ -f tmp/a ] ; then
+    mkdir tmp
+    curl https://nodejs.org/dist/index.json | ___x_cmd_jo env .\* .version .files  -- fff;
+fi
+
