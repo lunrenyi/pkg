@@ -15,9 +15,9 @@ url:
 
 rule:
   default/*:
-    version: 8.3.2
+    version: latest
 
-  latest:
+  latest/*:
     version: 8.3.2
 
   "*.*.*/linux-arm64":
