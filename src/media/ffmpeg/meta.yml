@@ -30,5 +30,5 @@ rule:
     version: latest
 
   latest/*:
-    version: v
+    version: v5.0.1
 
