@@ -14,10 +14,13 @@ rule:
   v*/win*:
     file_suffix: zip
 
-  stable/*:
+  default/*:
+    version: latest
+
+  latest/*:
     version: v14.0.3
 
-  "!v1*.*/darwin-arm64":
+  "v?.*/darwin-arm64":
     osarch: darwin-x64
   "v10.*/darwin-arm64":
     osarch: darwin-x64
@@ -28,4 +31,6 @@ rule:
   "v13.*/darwin-arm64":
     osarch: darwin-x64
   "v14.*/darwin-arm64":
+    osarch: darwin-x64
+  "v15.*/darwin-arm64":
     osarch: darwin-x64
