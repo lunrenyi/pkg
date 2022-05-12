@@ -6,14 +6,14 @@ os-arch:
     url:
       _: https://github.com/junegunn/fzf/releases/download/%{version}/fzf-%{version}-linux_arm64.tar.gz
       cn: https://download.fastgit.org/junegunn/fzf/releases/download/%{version}/fzf-%{version}-linux_arm64.tar.gz
-  darwin-arm64:
-    url:
-      _: https://github.com/junegunn/fzf/releases/download/%{version}/fzf-%{version}-darwin_arm64.zip
-      cn: https://download.fastgit.org/junegunn/fzf/releases/download/%{version}/fzf-%{version}-darwin_arm64.zip
   linux-x64:
     url:
       _: https://github.com/junegunn/fzf/releases/download/%{version}/fzf-%{version}-linux_amd64.tar.gz
       cn: https://download.fastgit.org/junegunn/fzf/releases/download/%{version}/fzf-%{version}-linux_amd64.tar.gz
+  darwin-arm64:
+    url:
+      _: https://github.com/junegunn/fzf/releases/download/%{version}/fzf-%{version}-darwin_arm64.zip
+      cn: https://download.fastgit.org/junegunn/fzf/releases/download/%{version}/fzf-%{version}-darwin_arm64.zip
   darwin-x64:
     url:
       _: https://github.com/junegunn/fzf/releases/download/%{version}/fzf-%{version}-darwin_amd64.zip
