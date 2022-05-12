@@ -51,7 +51,6 @@ pkg_yml2json()(
 
                     if [ -f version.sh ]; then
                         (
-                            . $HOME/.x-cmd/xrc/latest
                             . ./version.sh
                         ) >"$tgtprefix/$dir/$pkg/version.tt.json"
                     elif [ -f version.yml ]; then
