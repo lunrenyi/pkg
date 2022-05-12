@@ -1,256 +1,256 @@
 
 1.6.0-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 1.6.2-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 1.9.1-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 2.0.0-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 2.0.3-Miniconda:
-	MacOSX-x86:
-		sha:
+  MacOSX-x86:
+    sha:
 2.2.2-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 2.2.2-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 2.2.2-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 2.2.8-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 2.2.8-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.0.0-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.0.0-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.0.0-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.0.0-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.0.0-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.0.4-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.0.4-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.0.4-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.0.4-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.0.4-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.0.5-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.0.5-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.0.5-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.0.5-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.0.5-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.10.1-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.10.1-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.10.1-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.10.1-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.10.1-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.16.0-Miniconda:
-	Linux-armv7l:
-		sha:
+  Linux-armv7l:
+    sha:
 3.16.0-Miniconda:
-	Linux-ppc64le:
-		sha:
+  Linux-ppc64le:
+    sha:
 3.16.0-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.16.0-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.16.0-Miniconda:
-	MacOSX-x86:
-		sha:
+  MacOSX-x86:
+    sha:
 3.16.0-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.16.0-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.16.0-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.3.0-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.3.0-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.3.0-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.3.0-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.3.0-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.4.2-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.4.2-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.4.2-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.4.2-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.4.2-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.5.2-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.5.2-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.5.2-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.5.2-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.5.2-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.5.5-Miniconda:
-	Linux-armv6l:
-		sha:
+  Linux-armv6l:
+    sha:
 3.5.5-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.5.5-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.5.5-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.5.5-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.5.5-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.6.0-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.6.0-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.6.0-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.6.0-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.6.0-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.7.0-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.7.0-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.7.0-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.7.0-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.7.0-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.7.3-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.7.3-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.7.3-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.7.3-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.7.3-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.8.3-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.8.3-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.8.3-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.8.3-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.8.3-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 3.9.1-Miniconda:
-	Linux-x86:
-		sha:
+  Linux-x86:
+    sha:
 3.9.1-Miniconda:
-	Linux-x86_64:
-		sha:
+  Linux-x86_64:
+    sha:
 3.9.1-Miniconda:
-	MacOSX-x86_64:
-		sha:
+  MacOSX-x86_64:
+    sha:
 3.9.1-Miniconda:
-	Windows-x86:
-		sha:
+  Windows-x86:
+    sha:
 3.9.1-Miniconda:
-	Windows-x86_64:
-		sha:
+  Windows-x86_64:
+    sha:
 v7.3.9-pypy3.7:
   aarch64:
     sha256:
