@@ -1,1 +1,6 @@
-x yanfa mod "$@"
+# xrc
+
+case "$1" in
+    pkg)        .x-cmd/pkg "$@" ;;
+    *)          x yanfa mod "$@" ;;
+esac

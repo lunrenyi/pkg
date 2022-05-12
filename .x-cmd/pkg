@@ -8,12 +8,12 @@ pkg(){
 
 
 pkg_ls()(
-    cd $(x ws root)/src
+    cd $(x wsroot)/src
     find . -name '*.json'
 )
 
 pkg_json2yml()(
-    cd $(x ws root)/src
+    cd $(x wsroot)/src
     find . -name '*.json' | while read -r line; do
         p=${line%.json}.yml
         cat $line | x yq -o yaml e -P >$p
@@ -23,16 +23,16 @@ pkg_json2yml()(
 
 pkg_yml2tgz()(
     pkg_yml2json
-    cd $(x ws root)/.tmp
+    cd $(x wsroot)/.tmp
     x z env.7z *
     mv env.7z ../dist/env.7z
-    cd  $(x ws root) && x rmrf .tmp
+    cd  $(x wsroot) && x rmrf .tmp
 )
 
 pkg_yml2json()(
-    local tgtprefix="$(x ws root)/.tmp"
+    local tgtprefix="$(x wsroot)/.tmp"
     mkdir -p "$tgtprefix"
-    cd $(x ws root)/src
+    cd $(x wsroot)/src
     find . -name '*.yml' | while read -r line; do
         pp="$tgtprefix/$line"
         ppd="${pp%/*}"
@@ -48,7 +48,7 @@ pkg_install(){
     pkg_yml2json
     x rmrf "$___X_CMD_ROOT_TMP/env/raw"
     mkdir -p "$___X_CMD_ROOT_TMP/env"
-    cp -rf "$(x ws root)/.tmp" "$___X_CMD_ROOT_TMP/env/raw"
+    cp -rf "$(x wsroot)/.tmp" "$___X_CMD_ROOT_TMP/env/raw"
 }
 
 [ "$#" -gt 0 ] && pkg "$@"
