@@ -1,4 +1,3 @@
-# xrc
 
 case "$1" in
     pkg)        .x-cmd/pkg "$@" ;;
