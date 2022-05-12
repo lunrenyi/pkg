@@ -82,9 +82,9 @@ pkg_yml2json()(
 
 pkg_install(){
     pkg_yml2json
-    x rmrf "$___X_CMD_ROOT_TMP/env/raw"
-    mkdir -p "$___X_CMD_ROOT_TMP/env"
-    cp -rf "$(x wsroot)/.tmp" "$___X_CMD_ROOT_TMP/env/raw"
+    x rmrf "$___X_CMD_ROOT_TMP/pkg/raw"
+    mkdir -p "$___X_CMD_ROOT_TMP/pkg"
+    cp -rf "$(x wsroot)/.tmp" "$___X_CMD_ROOT_TMP/pkg/raw"
 }
 
 [ "$#" -gt 0 ] && pkg "$@"
