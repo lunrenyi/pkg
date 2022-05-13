@@ -2,7 +2,7 @@
 
 candidate="${1:-java}"
 
-for platform in mingw64_nt_10 linuxarm64 linuxx64 darwinx64 darwinarm64 ; do
+for platform in darwinx64 darwinarm64 mingw64_nt_10 linuxarm64 linuxx64 ; do
     all_url="https://api.sdkman.io/2/candidates/${candidate}/${platform}/versions/all"
     printf "\n%s\n" "Downloading $platform"
 
