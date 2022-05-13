@@ -1,4 +1,3 @@
-
 if ! [ -f tmp/py_miniconda ] ; then
   mkdir tmp
   curl https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ > "tmp/py_miniconda"
