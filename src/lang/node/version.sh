@@ -34,7 +34,7 @@ DATA_STATUS==DATA_FILES{
     line=substr($0,2 ,length($0)-2 )
     gsub(/src,|-tar|-pkg|-7z|-exe|-msi|-zip|headers,/, "",line)
     line = unique(line)
-    data = data version "  security: "security "  " line ":\n"
+    data = data version "  security: "security "  " line "\n"
     next
 }
 END{
@@ -45,11 +45,11 @@ function unique(line,       lastvalue, arr, l, _, i){
     l = split(line, arr, ",")
     for(i = 1; i <= l; i++){
         if(arr[i] != lastvalue){
-            _ = (_ != "") ? _ ":\n  " arr[i] : arr[i]
+            _ = (_ != "") ? _ "\n  " arr[i] ":\n    sha:" : arr[i] ":\n    sha:"
         }
         lastvalue = arr[i]
     }
     return _
 }
 
-' | x yq -o json e -P
+'| x yq -o json e -P
