@@ -1,12 +1,10 @@
 get_perl_version(){
    curl https://api.github.com/repos/skaji/relocatable-perl/releases 2>/dev/null | awk ' {
      if(match($0, /"name": "[0-9.]+"/)){
-       version = substr($0,RSTART+9,RLENGTH-10)
        lastosarch = ""
-       print version ":"
+       print substr($0,RSTART+9,RLENGTH-10) ":"
      } else if(match($0, /"name": "perl-[a-z0-9]*-[a-z0-9]*/)){   #"
-       osarch = substr($0,RSTART+14,RLENGTH-14)
-       print_osarch(osarch)
+       print_osarch(substr($0,RSTART+14,RLENGTH-14))
      }
    }
    function print_osarch(osarch){
