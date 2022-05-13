@@ -1,36 +1,18 @@
 # shellcheck shell=sh disable=SC2039,SC2142,SC3043 #source
 
 get_info_to_yml(){
-    awk '{
-        if (match($0, "<td class=\"filename\"><a class=\"download[^>]+>"  version "[^<]" )) {
-            if ($0 ~ "src") next
-            _osarch = substr($0, RSTART+RLENGTH)
-            gsub(/\.tar|\.gz|\.pkg|\.7z|\.exe|\.msi|\.zip|<\/a><\/td>/, "",_osarch)
-            _osarch_list= (_osarch_list != "") ? _osarch_list "," _osarch : _osarch
-        }
-        else if ($0 ~ "</table>") {
-            print unique(_osarch_list )
-            _osarch_list=""
-            version=""
-        }
-        else if ($0 ~ "<div class=\"collapsed\">") INFO_VERSION = 1
-        else if ($0 ~ "<div class=\"expanded\">") INFO_VERSION = 0
-        else if (INFO_VERSION == 1) {
-            if (match($0, ">go[^ ]+")) {
-                version =  substr($0, RSTART+1, RLENGTH-1)
-                print version ":"
-            }
-        } else next
+    awk 'match($0, "/dl/go[0-9.]+.(windows|linux|darwin|freebsd)-(amd64|arm64|armv6l|ppc64l|386|s390x|ppc64le)" ) {
+        all = substr($0, RSTART+6, RLENGTH-6)
+        match($0, "/dl/go[0-9.]+")
+        version = substr($0, RSTART+6, RLENGTH-7)
+        print version " " substr(all, RLENGTH-5)
     }
-    function unique(line,       lastvalue, arr, l, _, i){
-        l = split(line, arr, ",")
-        for(i = 1; i <= l; i++){
-            if(arr[i] != lastvalue){
-                _ = (_ != "") ? _ "\n  " arr[i] ":\n    sha:" : "  " arr[i] ":\n    sha:"
-            }
-            lastvalue = arr[i]
+    ' | sort -V -u -r | awk '{
+        if(last != $1){
+            print $1 ":"
         }
-        return _
+        print "  " $2 ":"
+        last = $1
     }'
 }
 
@@ -38,4 +20,4 @@ get_go_version(){
     curl "https://golang.google.cn/dl/" 2>/dev/null | get_info_to_yml
 }
 
-get_go_version | x yq -o json e -P
+get_go_version |  x yq -o json e -P
