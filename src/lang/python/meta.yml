@@ -11,6 +11,9 @@ tuna_source: https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/%{version}
 url:
   _: "%{anaconda_source}/%{minoconda_sh_file}"
   cn: "%{tuna_source}/%{minoconda_sh_file}"
+hook:
+  pre-install: ""
+  post-install: . post-install-python.sh
 
 rule:
   v*/linux-*:

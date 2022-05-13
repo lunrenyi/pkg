@@ -10,6 +10,10 @@ url:
   _: '%{node_source}/node-%{version}-%{os}-%{arch}.${file_suffix}'
   cn: '%{tuna_source}/node-%{version}-%{os}-%{arch}.${file_suffix}'
 
+hook:
+  pre-install: ""
+  post-install: . post-install-node.sh
+
 rule:
   v*/win*:
     file_suffix: zip

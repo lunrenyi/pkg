@@ -1,6 +1,11 @@
 homepage: https://github.com/denoland/deno/
 license: MIT
 rely: []
+
+hook:
+  pre-install: ""
+  post-install: . post-install-deno.sh
+
 rule:
   v*.linux-aarch64:
     url:

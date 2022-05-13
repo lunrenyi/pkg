@@ -7,6 +7,8 @@ url:
 
 hook:
   env-init: env-init.sh
+  pre-install: ""
+  post-install: . post-install-java.sh
 
 rule:
   v*/linux-arm64:
