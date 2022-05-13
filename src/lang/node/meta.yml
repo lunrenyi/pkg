@@ -12,7 +12,7 @@ url:
 
 hook:
   pre-install: ""
-  post-install: . post-install-node.sh
+  post-install: . post-install.sh
 
 rule:
   v*/win*:

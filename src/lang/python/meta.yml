@@ -13,7 +13,7 @@ url:
   cn: "%{tuna_source}/%{minoconda_sh_file}"
 hook:
   pre-install: ""
-  post-install: . post-install-python.sh
+  post-install: . post-install.sh
 
 rule:
   v*/linux-*:

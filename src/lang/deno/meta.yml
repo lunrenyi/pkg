@@ -4,7 +4,7 @@ rely: []
 
 hook:
   pre-install: ""
-  post-install: . post-install-deno.sh
+  post-install: . post-install.sh
 
 rule:
   v*.linux-aarch64:

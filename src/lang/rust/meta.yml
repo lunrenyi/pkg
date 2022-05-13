@@ -11,7 +11,7 @@ url:
 
 hook:
   pre-install: ""
-  post-install: . post-install-rust.sh
+  post-install: . post-install.sh
 
 rule:
   darwin-arm64:

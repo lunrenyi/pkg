@@ -1,9 +1,7 @@
 homepage: https://strawberryperl.com/releases.html
 license: MIT
 rely: []
-hook:
-  pre-install: ""
-  post-install: . post-install-perl.sh
+
 os-arch:
   linux-arrch:
     url:
