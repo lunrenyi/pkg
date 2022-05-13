@@ -20,4 +20,4 @@ get_go_version(){
     curl "https://golang.google.cn/dl/" 2>/dev/null | get_info_to_yml
 }
 
-get_go_version  | x yq -o json e -P
+get_go_version | x yq -o json e -P

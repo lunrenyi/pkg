@@ -10,9 +10,9 @@ done  | sort -V -u -r | awk '{
         if(last != $1){
             print $1 ":"
         }
-        print "  " $2 ":"
+        print "  " $2 ":\n    sha:"
         last = $1
     }'
 }
 
-get_java_version
+get_java_version | x yq -o json e -P
