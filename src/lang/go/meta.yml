@@ -9,4 +9,5 @@ url:
   cn: ""
 rule:
   v*/win*:
+    os: windows
     file_suffix: zip

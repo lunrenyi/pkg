@@ -1,3 +1,5 @@
+# shellcheck shell=sh disable=SC2039,SC2142,SC3043 #source
+
 get_perl_version(){
    curl https://api.github.com/repos/skaji/relocatable-perl/releases 2>/dev/null | awk ' {
      if(match($0, /"name": "[0-9.]+"/)){
@@ -21,4 +23,5 @@ curl https://strawberryperl.com/releases.html 2>/dev/null |awk '
 }
 '
 }
-get_perl_version |  x yq -o json e -P
+
+get_perl_version  | x yq -o json e -P
