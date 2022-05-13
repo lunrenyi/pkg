@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-if ! [ -f tmp/py_miniconda ] ; then
-  mkdir tmp
-  curl https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ > "tmp/py_miniconda"
-fi
-
-if ! [ -f tmp/py_miniconda ] ; then
-  mkdir tmp
-  curl -H "Accept-Encoding: gzip" https://downloads.python.org/pypy/ | gunzip | more > "tmp/py_pypy"
-fi
-=======
 # shellcheck shell=sh #source
->>>>>>> 0ba142e5f9954e2059c16a1ffe90e38fa710476c
 
 get_py_version(){
 curl https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 2>/dev/null | awk 'match($0,"Miniconda" "-" "[0-9.]+" "-" "[A-Za-z]+" "-" "[A-Za-z0-9_]+") { a = substr($0,RSTART,RLENGTH)
@@ -22,7 +10,5 @@ curl -H "Accept-Encoding: gzip" https://downloads.python.org/pypy/ 2>/dev/null |
   a = substr($0,RSTART,RLENGTH)
   split(a,b,"-")
   if(b[3] != "src"){print b[2] "-" b[1] ":\n  " b[3] ":\n  sha:" }
-} '
+} ' | x yq -o json e -P
 }
-
-get_py_version | x yq -o json e -P
