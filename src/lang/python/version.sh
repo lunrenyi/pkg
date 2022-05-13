@@ -10,5 +10,7 @@ curl -H "Accept-Encoding: gzip" https://downloads.python.org/pypy/ 2>/dev/null |
   a = substr($0,RSTART,RLENGTH)
   split(a,b,"-")
   if(b[3] != "src"){print b[2] "-" b[1] ":\n  " b[3] ":\n  sha:" }
-} ' | x yq -o json e -P
+} '
 }
+
+get_py_version | x yq -o json e -P
