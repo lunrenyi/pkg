@@ -6,4 +6,4 @@ ___x_cmd_env_java_copy_to_unpackdir(){
 	fi
 }
 
-___x_cmd_env_java_copy_to_unpackdir 
+___x_cmd_env_java_copy_to_unpackdir
