@@ -25,6 +25,7 @@ pkg_yml2tgz()(
     pkg_yml2json
     cd $(x wsroot)/.tmp
     x z env.7z *
+    mkdir -p ../dist
     mv env.7z ../dist/env.7z
     cd  $(x wsroot) && x rmrf .tmp
 )
