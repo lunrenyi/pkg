@@ -96,9 +96,29 @@ pkg_ins(){
     cp -rf "$(x wsroot)/.tmp" "$___X_CMD_ROOT_TMP/pkg/raw"
 }
 
-pkg_binmod(){
+pkg_json2binmod()(
     :
-}
+    # step 1: list all json
+    # step 2: get xbin attribute
+    cd "$(x wsroot)/.tmp" || return
+    find . -name meta.tt.json | while read -r line; do
+        # TODO: if it is a value.
+        pkg_name="${line%/meta.tt.json}"
+        pkg_name="${pkg_name##*/}"
+
+        {
+        x ja '
+END{
+    v = get("xbin")
+    if ( v != "{" )   print ""
+    # traverse all of the dict, print keys
+
+}'
+        } <"$line" | while read -r name; do
+            printf ":%s:%s" "${name:-$pkg_name}" "$pkg_name"
+        done
+    done > binmod.txt
+)
 
 
 [ "$#" -gt 0 ] && pkg "$@"
