@@ -10,6 +10,16 @@ hook:
   install: . post-install.sh
 
 rule:
+
+  /*:
+    version: stable
+
+  stable/*:
+    version: openjdk-v8.3.2
+
+  latest/*:
+    version: openjdk-v8.3.2
+
   v*/linux/arm64:
   v*/darwin/arm64:
   v*/linux/x64:
