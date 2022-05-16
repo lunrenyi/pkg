@@ -5,8 +5,7 @@ rely: []
 bin:
   ffplay: dust/dust.%{osarch}.%{osname}
 
-xbin:
-  dust: dust.%{bin_suffix}
+xbin: dust.%{bin_suffix}
 
 gh_url: https://raw.githubusercontent.com/static-build/dust/main/bin
 gc_url: https://gitee.com/static-build/dust/raw/main/bin
