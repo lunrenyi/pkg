@@ -94,7 +94,6 @@ pkg_ins(){
     cp -rf "$(x wsroot)/.tmp" "$___X_CMD_ROOT_TMP/pkg/raw"
 }
 
-echo hi
 
 [ "$#" -gt 0 ] && pkg "$@"
 
