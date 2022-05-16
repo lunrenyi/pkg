@@ -24,17 +24,17 @@ rule:
   latest/*:
     version: v14.0.3
 
-  "v?.*/darwin-arm64":
-    osarch: darwin-x64
-  "v10.*/darwin-arm64":
-    osarch: darwin-x64
-  "v11.*/darwin-arm64":
-    osarch: darwin-x64
-  "v12.*/darwin-arm64":
-    osarch: darwin-x64
-  "v13.*/darwin-arm64":
-    osarch: darwin-x64
-  "v14.*/darwin-arm64":
-    osarch: darwin-x64
-  "v15.*/darwin-arm64":
-    osarch: darwin-x64
+  "v?.*/darwin/arm64":
+    osarch: darwin/x64
+  "v10.*/darwin/arm64":
+    osarch: darwin/x64
+  "v11.*/darwin/arm64":
+    osarch: darwin/x64
+  "v12.*/darwin/arm64":
+    osarch: darwin/x64
+  "v13.*/darwin/arm64":
+    osarch: darwin/x64
+  "v14.*/darwin/arm64":
+    osarch: darwin/x64
+  "v15.*/darwin/arm64":
+    osarch: darwin/x64

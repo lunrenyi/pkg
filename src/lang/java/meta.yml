@@ -6,28 +6,27 @@ url:
   _: "%{sdkman_url}/{version}/%{os}%{arch}"
 
 hook:
-  env-init: env-init.sh
-  pre-install: ""
-  post-install: . post-install.sh
+  setup: env-init.sh
+  install: . post-install.sh
 
 rule:
-  v*/linux-arm64:
-  v*/darwin-arm64:
-  v*/linux-x64:
-  v*/darwin-x64:
+  v*/linux/arm64:
+  v*/darwin/arm64:
+  v*/linux/x64:
+  v*/darwin/x64:
   v*/mingw64_nt_10.0-x64:
 
   graal-v*:
     hook:
-      post-install: graal.sh
+      install: graal.sh
   openjdk-v*:
     hook:
-      post-install: openjdk.sh
+      install: openjdk.sh
   zulu-v*:
     hook:
-      post-install: zulu.sh
+      install: zulu.sh
 
   "*-v18.*":
     hook:
-      post-install: special.v18.sh
+      install: special.v18.sh
 
