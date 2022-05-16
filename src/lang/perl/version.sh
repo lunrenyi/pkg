@@ -1,3 +1,4 @@
+
 get_perl_version(){
    curl https://api.github.com/repos/skaji/relocatable-perl/releases 2>/dev/null | awk ' {
      if(match($0, /"name": "[0-9.]+"/)){

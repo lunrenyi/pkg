@@ -42,6 +42,7 @@ pkg_yml2json()(
             cd "$dir" || continue
             for pkg in *; do
                 (
+                    x:info "pkg: $pkg"
                     cd "$pkg" || exit
                     if [ ! -f meta.yml ]; then
                         x:warn  "Not Existed: $dir/$pkg/meta.yml"

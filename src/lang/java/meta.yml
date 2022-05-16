@@ -1,10 +1,10 @@
 homepage: https://sdkman.io/
 license: MIT
 rely: []
-sdkmam_url: https://api.sdkman.io/2/broker/download/java
+sdkman_url: https://api.sdkman.io/2/broker/download/java
 url:
-  _: "%{sdkman_url}/{version}/%{os}%{arch}"
-  cn: "%{sdkman_url}/{version}/%{os}%{arch}"
+  _: "%{sdkman_url}/%{version}/%{os}%{arch}"
+  cn: "%{sdkman_url}/%{version}/%{os}%{arch}"
 
 hook:
   setup: env-init.sh
