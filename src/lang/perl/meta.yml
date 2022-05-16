@@ -7,15 +7,15 @@ os-arch:
     url:
       _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{arch}-%{os}.tar.gz
       cn: ""
-  darwin-arm64:
+  darwin/arm64:
     url:
       _: https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.tar.gz
       cn: ""
-  linux-x64:
+  linux/x64:
     url:
       _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{arch}-%{os}.tar.gz
       cn: ""
-  darwin-x64:
+  darwin/x64:
     url:
       _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{arch}-%{os}.tar.gz
       cn: ""

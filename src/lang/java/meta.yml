@@ -10,10 +10,10 @@ hook:
   install: . post-install.sh
 
 rule:
-  v*/linux-arm64:
-  v*/darwin-arm64:
-  v*/linux-x64:
-  v*/darwin-x64:
+  v*/linux/arm64:
+  v*/darwin/arm64:
+  v*/linux/x64:
+  v*/darwin/x64:
   v*/mingw64_nt_10.0-x64:
 
   graal-v*:
