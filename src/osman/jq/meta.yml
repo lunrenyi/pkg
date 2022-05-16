@@ -12,6 +12,14 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 1.6-dirty
+
+  latest/*:
+    version: 1.6-dirty
 
   "*/linux/arm64":
     zipname:    jq.linux.arm64.7z
@@ -25,10 +33,3 @@ rule:
     zipname:    jq.x64.exe.7z
     bin:
       ffplay: jq/jq.%{osarch}.%{osname}.exe
-
-  default/*:
-    version: latest
-
-  latest/*:
-    version: 1.6-dirty
-

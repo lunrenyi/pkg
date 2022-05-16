@@ -14,6 +14,14 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v5.0.1
+
+  latest/*:
+    version: v5.0.1
 
   "*/linux/arm64":
     zipname:    ffmpeg.linux.arm64.7z
@@ -27,10 +35,4 @@ rule:
     zipname:    ffmpeg.x64.exe.7z
     bin:
       ffplay: ffmpeg/ffmpeg.%{osarch}.%{osname}.exe
-
-  default/*:
-    version: latest
-
-  latest/*:
-    version: v5.0.1
 

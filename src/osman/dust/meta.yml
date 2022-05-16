@@ -12,7 +12,15 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 rule:
+  /*:
+    version: stable
 
+  stable/*:
+    version: 0.6.0
+
+  latest/*:
+    version: 0.6.0
+    
   "*/linux/arm64":
     zipname:    dust.linux.arm64.7z
   "*/darwin/arm64":
@@ -26,9 +34,4 @@ rule:
     bin:
       ffplay: dust/dust.%{osarch}.%{osname}.exe
 
-  default/*:
-    version: latest
-
-  latest/*:
-    version: 0.6.0
 
