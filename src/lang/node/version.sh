@@ -1,8 +1,11 @@
-# shellcheck shell=sh disable=SC2039,SC2142,SC3043 #source
-
+# shellcheck shell=sh  #source
+if ! [ -f tmp/a ] ; then
+    mkdir tmp
+    curl https://nodejs.org/dist/index.json 2>/dev/null > tmp/a
+fi
 
 get_node_version(){
-    curl "https://nodejs.org/dist/index.json" 2>/dev/null | x jo env .\* .version .files .security  -- 'echo "$version
+    cat tmp/a | x jo env .\* .version .files .security  -- 'echo "$version
 $security
 $files"'
 }
