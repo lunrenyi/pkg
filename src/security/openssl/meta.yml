@@ -1,28 +1,35 @@
 homepage: https://golang.google.cn
 license: MIT
 rely: []
+
 bin:
   ffplay: openssl/openssl.${osarch}.${osname}
-os-arch:
-  linux/arm64:
-    url:
-      _: https://raw.githubusercontent.com/static-build/openssl/main/bin/openssl.linux.arm64.7z
-      cn: https://gitee.com/static-build/openssl/raw/main/bin/openssl.linux.arm64.7z
-  darwin/arm64:
-    url:
-      _: https://raw.githubusercontent.com/static-build/openssl/main/bin/openssl.darwin.arm64.7z
-      cn: https://gitee.com/static-build/openssl/raw/main/bin/openssl.darwin.arm64.7z
-  linux/x64:
-    url:
-      _: https://raw.githubusercontent.com/static-build/openssl/main/bin/openssl.darwin.x64.7z
-      cn: https://gitee.com/static-build/openssl/raw/main/bin/openssl.darwin.x64.7z
-  darwin/x64:
-    url:
-      _: https://raw.githubusercontent.com/static-build/openssl/main/bin/openssl.darwin.x64.7z
-      cn: https://gitee.com/static-build/openssl/raw/main/bin/openssl.darwin.x64.7z
-  win/x64:
-    url:
-      _: https://raw.githubusercontent.com/static-build/openssl/main/bin/openssl.x64.exe.7z
-      cn: https://gitee.com/static-build/openssl/raw/main/bin/openssl.x64.exe.7z
+
+gh_url: https://raw.githubusercontent.com/static-build/openssl/main/bin
+gc_url: https://gitee.com/static-build/openssl/raw/main/bin
+url:
+  _: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.10.1
+
+  latest/*:
+    version: v0.10.1
+
+  "*/linux/arm64":
+    zipname:    openssl.linux.arm64.7z
+  "*/darwin/arm64":
+    zipname:    openssl.darwin.arm64.7z
+  "*/linux/x64":
+    zipname:    openssl.linux.x64.7z
+  "*/darwin/x64":
+    zipname:    openssl.darwin.x64.7z
+  "*/win/x64":
+    zipname:    openssl.x64.exe.7z
     bin:
       ffplay: openssl/openssl.x64.win.exe

@@ -12,6 +12,14 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.10.1
+
+  latest/*:
+    version: v0.10.1
 
   "*/linux/arm64":
     zipname:    fzf-%{version}-linux_arm64.tar.gz
@@ -25,9 +33,3 @@ rule:
     zipname:    fzf-%{version}-windows_amd64.zip
     bin:
       ffplay: fzf/fzf.%{osarch}.%{osname}.exe
-
-  default/*:
-    version: latest
-
-  latest/*:
-    version: v0.10.1

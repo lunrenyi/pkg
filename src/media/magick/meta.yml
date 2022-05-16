@@ -14,8 +14,11 @@ url:
 # EndSection
 
 rule:
-  default/*:
-    version: latest
+  /*:
+    version: stable
+
+  stable/*:
+    version: 7.1.0
 
   latest/*:
     version: 7.1.0
