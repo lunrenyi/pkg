@@ -4,10 +4,11 @@ rely: []
 sdkmam_url: https://api.sdkman.io/2/broker/download/java
 url:
   _: "%{sdkman_url}/{version}/%{os}%{arch}"
+  cn: "%{sdkman_url}/{version}/%{os}%{arch}"
 
 hook:
   setup: env-init.sh
-  install: . post-install.sh
+  install: post-install.sh
 
 rule:
 

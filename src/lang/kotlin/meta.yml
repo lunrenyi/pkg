@@ -5,4 +5,4 @@ const:
   github_source: https://github.com/JetBrains/kotlin/releases/download
 url:
   _: '%{github_source}/v%{version}/kotlin-compiler-%{version}.zip'
-  cn: ""
+  cn: '%{github_source}/v%{version}/kotlin-compiler-%{version}.zip'
