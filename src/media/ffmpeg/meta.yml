@@ -8,7 +8,9 @@ bin:
 gh_url: https://raw.githubusercontent.com/static-build/ffmpeg/main/bin
 gc_url: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin
 url:
-  _: "%{gh_url}/%{zipname}"
+  _:
+    - "%{gh_url}/%{zipname}"
+    - "%{gc_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 rule:
