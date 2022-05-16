@@ -3,7 +3,10 @@ license: MIT
 rely: []
 
 bin:
-  ffplay: dust/dust.${osarch}.${osname}
+  ffplay: dust/dust.%{osarch}.%{osname}
+
+xbin:
+  dust: dust.%{bin_suffix}
 
 gh_url: https://raw.githubusercontent.com/static-build/dust/main/bin
 gc_url: https://gitee.com/static-build/dust/raw/main/bin
@@ -20,7 +23,7 @@ rule:
 
   latest/*:
     version: 0.6.0
-    
+
   "*/linux/arm64":
     zipname:    dust.linux.arm64.7z
   "*/darwin/arm64":
@@ -31,7 +34,4 @@ rule:
     zipname:    dust.darwin.x64.7z
   "*/win/x64":
     zipname:    dust.x64.exe.7z
-    bin:
-      ffplay: dust/dust.%{osarch}.%{osname}.exe
-
-
+    bin_suffix: .exe

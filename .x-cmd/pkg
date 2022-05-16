@@ -96,6 +96,10 @@ pkg_ins(){
     cp -rf "$(x wsroot)/.tmp" "$___X_CMD_ROOT_TMP/pkg/raw"
 }
 
+pkg_binmod(){
+    :
+}
+
 
 [ "$#" -gt 0 ] && pkg "$@"
 
