@@ -2,6 +2,7 @@ homepage: https://sdkman.io/
 license: MIT
 rely: []
 sdkman_url: https://api.sdkman.io/2/broker/download/java
+file_suffix: tar.gz
 url:
   _: "%{sdkman_url}/%{version}/%{os}%{arch}"
   cn: "%{sdkman_url}/%{version}/%{os}%{arch}"
@@ -26,6 +27,7 @@ rule:
   v*/linux/x64:
   v*/darwin/x64:
   v*/mingw64_nt_10.0-x64:
+    file_suffix: zip
 
   graal-v*:
     hook:
