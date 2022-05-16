@@ -1,5 +1,5 @@
 
 case "$1" in
-    pkg)        shift; . "$(x wsroot)/pkg" "$@" ;;
+    pkg)        shift; . "$(x wsroot)/.x-cmd/pkg" "$@" ;;
     *)          x yanfa mod "$@" ;;
 esac
