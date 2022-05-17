@@ -5,13 +5,13 @@ rely: []
 bin:
   ffplay: jq/jq.${osarch}.${osname}
 
-xbin: jq.%{osarch}.%{osname}%{bin_suffix}
-
 gh_url: https://raw.githubusercontent.com/static-build/jq/main/bin/%{version}
 gc_url: https://gitee.com/static-build/jq/raw/main/bin/%{version}
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
+
+xbin: jq.%{osarch}.%{osname}%{bin_suffix}
 
 rule:
   /*:

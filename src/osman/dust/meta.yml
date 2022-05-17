@@ -2,13 +2,13 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-xbin: dust.%{bin_suffix}
-
 gh_url: https://raw.githubusercontent.com/static-build/dust/main/bin
 gc_url: https://gitee.com/static-build/dust/raw/main/bin
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
+
+xbin: dust%{bin_suffix}
 
 rule:
   /*:

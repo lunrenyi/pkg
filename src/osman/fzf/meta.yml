@@ -1,15 +1,14 @@
 homepage: https://golang.google.cn
 license: MIT
-rely: []
 
-bin:
-  ffplay: fzf/fzf.${osarch}.${osname}
 
 gh_url: https://github.com/junegunn/fzf/releases/download/%{version}
 gc_url: https://download.fastgit.org/junegunn/fzf/releases/download/%{version}
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
+
+xbin: fzf%{bin_suffix}
 
 rule:
   /*:
@@ -31,5 +30,4 @@ rule:
     zipname:    fzf-%{version}-darwin_amd64.zip
   "*/win/x64":
     zipname:    fzf-%{version}-windows_amd64.zip
-    bin:
-      ffplay: fzf/fzf.%{osarch}.%{osname}.exe
+    bin_suffix: .exe

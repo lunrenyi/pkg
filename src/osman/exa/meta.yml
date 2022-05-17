@@ -1,15 +1,13 @@
 homepage: https://golang.google.cn
 license: MIT
-rely: []
-
-bin:
-  ffplay: exa/exa.${osarch}.${osname}
 
 gh_url: https://raw.githubusercontent.com/static-build/exa/main/bin
 gc_url: https://gitee.com/static-build/exa/raw/main/bin
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
+
+xbin: exa%{bin_suffix}
 
 rule:
   /*:
@@ -31,5 +29,4 @@ rule:
     zipname:    exa.darwin.x64.7z
   "*/win/x64":
     zipname:    exa.x64.exe.7z
-    bin:
-      ffplay: exa/exa.%{osarch}.%{osname}.exe
+    bin_suffix: .exe
