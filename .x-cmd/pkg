@@ -107,8 +107,10 @@ pkg_json2binmod()(
 
         {
         x ja '
-    _[1]~/xbin/{
-        if(v() != "}"&& v() != "{"){print ((k()=="xbin") ? "" : k()) SUBSEP v()}
+_[1]~/xbin/{
+    if (v() != "}" && v() != "{"){
+        print ((k()=="xbin") ? "" : k()) SUBSEP v()
+    }
 }
 '
     } <"$line" | while read -r name; do
