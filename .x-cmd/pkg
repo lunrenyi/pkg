@@ -114,7 +114,8 @@ _[1]~/xbin/{
 }
 '
     } <"$line" | while read -r name; do
-            printf ":%s:%s\n" "${${name%%*}:-$pkg_name}" ${name#*}
+            key="${name%%""*}"
+            printf ":%s:%s\n" "${key:-$pkg_name}" "${name#*}"
         done
     done > binmod.txt
 )
