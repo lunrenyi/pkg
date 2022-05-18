@@ -8,7 +8,7 @@ file_suffix: 7z
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
-file_suffix: tar.7z
+
 xbin:
   pzip: 7za.%{osname}.%{osarch}%{bin_suffix}
   7z: 7za.%{osname}.%{osarch}%{bin_suffix}

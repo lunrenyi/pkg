@@ -9,8 +9,6 @@ url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
-file_suffix: tar.7z
-
 xbin: nmap.%{osname}.%{osarch}%{bin_suffix}
 
 rule:
