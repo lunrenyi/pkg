@@ -5,8 +5,8 @@ rely: []
 gh_url: https://raw.githubusercontent.com/static-build/sqlite/main/bin
 gc_url: https://gitee.com/static-build/sqlite/raw/main/bin
 url:
-  _: "%{gh_url}/%{zipname}"
-  cn: "%{gc_url}/%{zipname}"
+  _: "static-build://%{pkg_name}"
+  cn: "static-build://%{pkg_name}"
 
 xbin: sqlite.%{osname}.%{osarch}%{bin_suffix}
 
