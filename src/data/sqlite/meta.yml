@@ -1,6 +1,4 @@
 homepage: https://golang.google.cn
 license: MIT
 
-static-build:
-  repo: sqlite3
-  app: sqlite
+static-build: sqlite3/sqlite
