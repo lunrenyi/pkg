@@ -8,6 +8,8 @@ url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
+file_suffix: tar.7z
+
 xbin:
   exa: exa.%{osname}.%{osarch}%{bin_suffix}
   ll: exa.%{osname}.%{osarch}%{bin_suffix}
@@ -33,3 +35,4 @@ rule:
   "*/win/x64":
     zipname:    exa.x64.exe.7z
     bin_suffix: .exe
+    file_suffix: zip
