@@ -4,9 +4,12 @@ rely: []
 
 gh_url: https://raw.githubusercontent.com/static-build/nmap/main/bin
 gc_url: https://gitee.com/static-build/nmap/raw/main/bin
+file_suffix: 7z
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
+
+file_suffix: tar.7z
 
 xbin: nmap.%{osname}.%{osarch}%{bin_suffix}
 
@@ -30,5 +33,6 @@ rule:
     zipname:    nmap.darwin.x64.7z
   "*/win/x64":
     zipname:    nmap.x64.exe.7z
+    file_suffix: zip
     bin:
       ffplay: .exe

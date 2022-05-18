@@ -4,6 +4,7 @@ license: MIT
 
 gh_url: https://github.com/junegunn/fzf/releases/download/%{version}
 gc_url: https://download.fastgit.org/junegunn/fzf/releases/download/%{version}
+file_suffix: 7z
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"

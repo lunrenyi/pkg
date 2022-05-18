@@ -3,9 +3,12 @@ license: MIT
 
 gh_url: https://raw.githubusercontent.com/static-build/exa/main/bin
 gc_url: https://gitee.com/static-build/exa/raw/main/bin
+file_suffix: 7z
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
+
+file_suffix: tar.7z
 
 xbin:
   exa: exa.%{osname}.%{osarch}%{bin_suffix}
@@ -32,3 +35,4 @@ rule:
   "*/win/x64":
     zipname:    exa.x64.exe.7z
     bin_suffix: .exe
+    file_suffix: zip
