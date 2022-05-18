@@ -2,8 +2,9 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/7za/main/bin
-gc_url: https://gitee.com/static-build/7za/raw/main/bin
+gh_url: https://raw.githubusercontent.com/static-build/p7zip/main/bin
+gc_url: https://gitee.com/static-build/p7zip/raw/main/bin
+file_suffix: 7z
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
