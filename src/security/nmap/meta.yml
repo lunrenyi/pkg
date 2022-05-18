@@ -8,6 +8,8 @@ url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
+file_suffix: tar.7z
+
 xbin: nmap.%{osname}.%{osarch}%{bin_suffix}
 
 rule:
@@ -30,5 +32,6 @@ rule:
     zipname:    nmap.darwin.x64.7z
   "*/win/x64":
     zipname:    nmap.x64.exe.7z
+    file_suffix: zip
     bin:
       ffplay: .exe
