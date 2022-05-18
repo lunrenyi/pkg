@@ -1,27 +1,6 @@
 homepage: https://golang.google.cn
 license: MIT
-rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/sqlite/main/bin
-gc_url: https://gitee.com/static-build/sqlite/raw/main/bin
-url:
-  _:  "static-build://sqlite/%{zipname}"
-  cn: "static-build://sqlite/%{zipname}"
-
-xbin: sqlite.%{osname}.%{osarch}%{bin_suffix}
-
-zipname: sqlite.%{os}.%{arch}.7z
-
-rule:
-  /*:
-    version: stable
-
-  stable/*:
-    version: 1.6-dirty
-
-  latest/*:
-    version: 1.6-dirty
-
-  "*/win/x64":
-    zipname:    sqlite.x64.exe.7z
-    bin_suffix: .exe
+static-build:
+  repo: sqlite3
+  app: sqlite
