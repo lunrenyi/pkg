@@ -17,7 +17,6 @@
 :ssl:openssl.%{osname}.%{osarch}%{bin_suffix}
 :traceroute:traceroute.%{osname}.%{osarch}%{bin_suffix}
 :redis:jq.%{osname}.%{osarch}%{bin_suffix}
-:sqlite:sqlite.%{osname}.%{osarch}%{bin_suffix}
 :yq:yq.%{osname}.%{osarch}%{bin_suffix}
 :jq:jq.%{osname}.%{osarch}%{bin_suffix}
 :exa:exa.%{osname}.%{osarch}%{bin_suffix}
