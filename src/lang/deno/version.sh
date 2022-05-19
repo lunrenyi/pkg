@@ -1,10 +1,6 @@
 # shellcheck shell=sh #source
-if ! [ -f tmp/a ] ; then
-    mkdir tmp
-    curl https://api.github.com/repos/denoland/deno/releases 2>/dev/null > tmp/a
-fi
 get_deno_version(){
-  cat tmp/a | awk ' {
+  curl https://api.github.com/repos/denoland/deno/releases 2>/dev/null | awk ' {
     if(match($0, /"name": "[v0-9.]+"/)){
         lastosarch = ""
         print substr($0,RSTART+9,RLENGTH-10) ":"
@@ -20,4 +16,8 @@ get_deno_version(){
   }
 '
 }
-get_deno_version | x yq -o json e -P
+if ! [ -f tmp/a ] ; then
+    mkdir tmp
+    get_deno_version > tmp/a
+fi
+cat tmp/a | x yq -o json e -P

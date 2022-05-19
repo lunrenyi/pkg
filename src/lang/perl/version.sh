@@ -1,13 +1,7 @@
 # shellcheck shell=sh  #source
 
-if ! [ -f tmp/a ] ; then
-    mkdir tmp
-    curl https://api.github.com/repos/skaji/relocatable-perl/releases 2>/dev/null > tmp/a
-    curl https://strawberryperl.com/releases.html 2>/dev/null > tmp/b
-fi
-
 get_perl_version(){
-  cat tmp/a 2>/dev/null | awk '
+  curl https://api.github.com/repos/skaji/relocatable-perl/releases 2>/dev/null | awk '
 {
   if(match($0, /"name": "[0-9.]+"/)){
     lastosarch = ""
@@ -23,7 +17,7 @@ function print_osarch(osarch){
     print version " " osarch
 }
 '
-  cat tmp/b |awk '
+  curl https://strawberryperl.com/releases.html 2>/dev/null |awk '
 match($0, /<td><b>[0-9.]+<\/b><\/td>/) {
   version = substr($0,RSTART+7,RLENGTH-16)
   print version " 32bit"
@@ -32,11 +26,19 @@ match($0, /<td><b>[0-9.]+<\/b><\/td>/) {
 '
 }
 
-get_perl_version  | sort -V -u -r | awk '{
+get_perl_info_to_yml(){
+  get_perl_version  | sort -V -u -r | awk '{
     if(last != $1){
         print $1 ":"
     }
     print "  " $2 ":\n    sha:"
     last = $1
-}' | x yq -o json e -P
+}'
+}
 
+# if ! [ -f tmp/a ] ; then
+#     mkdir tmp
+#     get_perl_info_to_yml > tmp/a
+# fi
+
+cat tmp/a  | x yq -o json e -P
