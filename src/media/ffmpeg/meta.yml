@@ -4,6 +4,7 @@ rely: []
 
 gh_url: https://raw.githubusercontent.com/static-build/ffmpeg/main/bin
 gc_url: https://gitcode.net/x-bash/ffmpeg/-/raw/master/bin
+static-build: ffmpeg/ffmpeg
 file_suffix: 7z
 url:
   _:

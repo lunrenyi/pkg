@@ -3,6 +3,7 @@ license: MIT
 
 gh_url: https://raw.githubusercontent.com/static-build/exa/main/bin
 gc_url: https://gitee.com/static-build/exa/raw/main/bin
+static-build: exa/exa
 file_suffix: 7z
 url:
   _: "%{gh_url}/%{zipname}"

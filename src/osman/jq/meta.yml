@@ -5,6 +5,7 @@ rely: []
 gh_url: https://raw.githubusercontent.com/static-build/jq/main/bin
 gc_url: https://gitee.com/static-build/jq/raw/main/bin
 file_suffix: 7z
+static-build: jq/jq
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
