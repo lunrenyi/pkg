@@ -32,6 +32,5 @@ rule:
     zipname:    nmap.darwin.x64.7z
   "*/win/x64":
     zipname:    nmap.x64.exe.7z
-    file_suffix: zip
-    bin:
-      ffplay: .exe
+    bin_suffix: .exe
+

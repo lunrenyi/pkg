@@ -32,5 +32,4 @@ rule:
     zipname:    traceroute.darwin.x64.7z
   "*/win/x64":
     zipname:    traceroute.x64.exe.7z
-    bin:
-      ffplay: .exe
+    bin_suffix: .exe
