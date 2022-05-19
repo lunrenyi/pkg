@@ -5,13 +5,13 @@ rely: []
 gh_url: https://raw.githubusercontent.com/static-build/p7zip/main/bin
 gc_url: https://gitee.com/static-build/p7zip/raw/main/bin
 file_suffix: 7z
-static-build: p7zip/p7zip
+static-build: p7zip/7za
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  pzip: 7za.%{os}.%{arch}%{bin_:suffix}
+  p7zip: 7za.%{os}.%{arch}%{bin_:suffix}
   7z: 7za.%{os}.%{arch}%{bin_:suffix}
 
 rule:
