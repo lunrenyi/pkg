@@ -1,4 +1,8 @@
 # shellcheck shell=sh disable=SC2039,SC2142,SC3043 #source
+if ! [ -f tmp/a ] ; then
+    mkdir tmp
+    curl https://golang.google.cn/dl/ 2>/dev/null > tmp/a
+fi
 
 get_info_to_yml(){
     awk 'match($0, "/dl/go[0-9.]+.(windows|linux|darwin|freebsd)-(amd64|arm64|armv6l|ppc64l|386|s390x|ppc64le)" ) {
@@ -17,7 +21,7 @@ get_info_to_yml(){
 }
 
 get_go_version(){
-    curl "https://golang.google.cn/dl/" 2>/dev/null | get_info_to_yml
+    cat tmp/a | get_info_to_yml
 }
 
 get_go_version | x yq -o json e -P
