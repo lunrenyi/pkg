@@ -17,10 +17,10 @@ rule:
     version: stable
 
   stable/*:
-    version: 1.6-dirty
+    version: 4.15.1
 
   latest/*:
-    version: 1.6-dirty
+    version: 4.15.1
 
   "*/linux/arm64":
     zipname:    yq.linux.arm64.7z
