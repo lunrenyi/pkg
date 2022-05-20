@@ -17,7 +17,7 @@ rule:
     version: stable
 
   stable/*:
-    version: v0.10.1
+    version: 7.92
 
   latest/*:
     version: v0.10.1
