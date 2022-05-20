@@ -19,10 +19,10 @@ rule:
     version: stable
 
   stable/*:
-    version: v5.0.1
+    version: N-105323-gdd17c86aa1-tessus
 
   latest/*:
-    version: v5.0.1
+    version: N-105323-gdd17c86aa1-tessus 
 
   "*/linux/arm64":
     zipname:    ffmpeg.linux.arm64.7z
