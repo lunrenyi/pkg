@@ -19,7 +19,7 @@ rule:
     version: stable
 
   stable/*:
-    version: 1.6-dirty
+    version: 16.02
 
   latest/*:
     version: 1.6-dirty

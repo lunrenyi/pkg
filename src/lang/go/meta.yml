@@ -4,12 +4,27 @@ rely: []
 
 google_site: https://golang.google.cn/dl
 file_suffix: tar.gz
+_os: "%{os}"
+_arch: "%{arch}"
 url:
-  _: "%{google_site}/go%{version}.%{os}-%{arch}.${file_suffix}"
-  cn: ""
+  _: "%{google_site}/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
+  cn: "%{google_site}/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
+hook:
+  setup: zzzz
 xbin:
   gobin: go%{bin_suffix}
+
 rule:
-  v*/win*:
-    os: windows
+  "*/win*":
+    _os: windows
     file_suffix: zip
+
+  "*/linux/x64":
+    _arch: 386
+    file_suffix: tar.gz
+
+
+
+  go-*:
+    hook:
+      install:
