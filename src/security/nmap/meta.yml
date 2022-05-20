@@ -10,7 +10,7 @@ url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
-xbin: nmap.%{os}.%{arch}%{bin_:suffix}
+xbin: nmap.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:

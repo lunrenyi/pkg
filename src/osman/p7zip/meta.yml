@@ -11,8 +11,8 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  p7zip: 7za.%{os}.%{arch}%{bin_:suffix}
-  7z: 7za.%{os}.%{arch}%{bin_:suffix}
+  p7zip: 7za.%{os}.%{arch}%{bin_suffix}
+  7z: 7za.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:

@@ -10,8 +10,8 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  exa: exa.%{os}.%{arch}%{bin_:suffix}
-  ll: exa.%{os}.%{arch}%{bin_:suffix}
+  exa: exa.%{os}.%{arch}%{bin_suffix}
+  ll: exa.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:

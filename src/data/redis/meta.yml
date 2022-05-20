@@ -8,7 +8,7 @@ url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
-xbin: jq.%{os}.%{arch}%{bin_:suffix}
+xbin: jq.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:

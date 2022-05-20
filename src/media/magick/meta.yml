@@ -10,7 +10,7 @@ url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
-xbin: magick.%{os}.%{arch}%{bin_:suffix}
+xbin: magick.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:

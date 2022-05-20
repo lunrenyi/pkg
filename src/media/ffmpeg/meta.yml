@@ -12,7 +12,7 @@ url:
     - "%{gc_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
-xbin: ffmpeg.%{os}.%{arch}%{bin_:suffix}
+xbin: ffmpeg.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:
@@ -22,7 +22,7 @@ rule:
     version: N-105323-gdd17c86aa1-tessus
 
   latest/*:
-    version: N-105323-gdd17c86aa1-tessus 
+    version: N-105323-gdd17c86aa1-tessus
 
   "*/linux/arm64":
     zipname:    ffmpeg.linux.arm64.7z

@@ -11,7 +11,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  du: dust.%{os}.%{arch}%{bin_:suffix}
+  du: dust.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:
