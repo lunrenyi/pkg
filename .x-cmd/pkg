@@ -25,6 +25,7 @@ pkg_yml2tgz()(
     cd  $(x wsroot) && x rmrf .tmp
 
     pkg_yml2json
+    pkg_json2binmod
     cd $(x wsroot)/.tmp
     x z all.7z *
     mkdir -p ../dist
