@@ -1,14 +1,12 @@
 homepage: https://nodejs.org
 license: MIT
 rely: []
-bin: {}
-const:
-  node_source: https://nodejs.org/dist/%{version}
-  tuna_source: https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/%{version}
+node_source: https://nodejs.org/dist/%{version}
+tuna_source: https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/%{version}
 file_suffix: tar.gz
 url:
   _: "%{node_source}/node-%{version}-%{os}-%{arch}"
-  cn: "%{tuna_source}/node-%{version}-%{os}-%{arch}"
+  cn: "%{tuna_source}/node-%{version}-%{os}-%{arch}.%{file_suffix}"
 xbin:
   node: node%{bin_suffix}
 
@@ -19,6 +17,7 @@ hook:
 rule:
   v*/win*:
     file_suffix: zip
+    bin_suffix: exe
 
   default/*:
     version: latest
