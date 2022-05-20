@@ -36,9 +36,9 @@ get_perl_info_to_yml(){
 }'
 }
 
-# if ! [ -f tmp/a ] ; then
-#     mkdir tmp
-#     get_perl_info_to_yml > tmp/a
-# fi
+if ! [ -f tmp/a ] ; then
+    mkdir tmp
+    get_perl_info_to_yml > tmp/a
+fi
 
 cat tmp/a  | x yq -o json e -P

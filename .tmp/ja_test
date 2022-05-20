@@ -1,0 +1,5 @@
+cat /home/linux/work/x-cmd/pkg/.tmp/lang/deno/meta.tt.json | x ja '_[1]~/xbin/{
+ print v()
+}
+
+'
