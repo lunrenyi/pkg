@@ -14,11 +14,14 @@ url:
   _: "%{anaconda_source}/%{minoconda_sh_file}"
   cn: "%{tuna_source}"
 xbin:
-  python: python%{bin_suffix}
+  python: bin/pip
 hook:
   install: install.sh
 
 rule:
+
+  /*:
+    version: py39_4.9.2
   py*/linux/*:
     _os: Linux
     _arch: x86_64

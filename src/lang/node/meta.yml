@@ -8,35 +8,36 @@ url:
   _: "%{node_source}/node-%{version}-%{os}-%{arch}"
   cn: "%{tuna_source}/node-%{version}-%{os}-%{arch}.%{file_suffix}"
 xbin:
-  node: node%{bin_suffix}
+  node: bin/node
+  npm: bin/npm
 
 hook:
   setup: env-init.sh
   install: post-install.sh
 
 rule:
-  v*/win*:
-    file_suffix: zip
-    bin_suffix: exe
 
-  default/*:
+  /*:
     version: latest
 
   latest/*:
-    version: v14.0.3
+    version: v18.2.0
 
-  "v?.*/darwin/arm64":
+  v?.*/darwin/arm64:
     osarch: darwin/x64
-  "v10.*/darwin/arm64":
+  v10.*/darwin/arm6:
     osarch: darwin/x64
-  "v11.*/darwin/arm64":
+  v11.*/darwin/arm64:
     osarch: darwin/x64
-  "v12.*/darwin/arm64":
+  v12.*/darwin/arm64:
     osarch: darwin/x64
-  "v13.*/darwin/arm64":
+  v13.*/darwin/arm64:
     osarch: darwin/x64
-  "v14.*/darwin/arm64":
+  v14.*/darwin/arm64:
     osarch: darwin/x64
-  "v15.*/darwin/arm64":
+  v15.*/darwin/arm64:
     osarch: darwin/x64
 
+  v*/win*:
+    file_suffix: zip
+    bin_suffix: exe

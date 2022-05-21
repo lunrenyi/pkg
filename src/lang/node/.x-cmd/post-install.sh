@@ -6,6 +6,8 @@ ___x_cmd_env_node_copy_to_unpackdir(){
         mv -f "$PWD"/* "${unpack_dir}/tmp/bin"
         x rmrf "$PWD"
     )
+    else
+        ___x_cmd_pkg_install___unzip "$pkg_name" "$version" "$osarch"
     fi
 }
 

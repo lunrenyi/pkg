@@ -11,16 +11,17 @@ url:
   cn: '%{cn_source}/rust-%{version}-%{_arch}-%{_os}.%{file_suffix}'
 
 xbin:
-    rust: rust%{bin_suffix}
+    rustc: bin/rustc
+    rust: bin/rustc
 
 hook:
   pre-install: ""
-  post-install: install.sh
+  install: install.sh
 
 rule:
 
   /*:
-    version: stable
+    version: 1.60.0
 
   "*/darwin/arm64":
     _arch: aarch64
