@@ -26,12 +26,13 @@ pkg_yml2tgz()(
 
     pkg_yml2json
     pkg_json2binmod
+    pkg_ins
     cd $(x wsroot)/.tmp
-    x z all.7z *
+    x 7za a all.7z *
+    # x 7 all.7z *
     mkdir -p ../dist
     mv all.7z ../dist/all.7z
-    cd  $(x wsroot) && pkg_ins
-    # cd  $(x wsroot) && x rmrf .tmp
+    cd  $(x wsroot) && x rmrf .tmp
 )
 
 pkg_yml2json()(
