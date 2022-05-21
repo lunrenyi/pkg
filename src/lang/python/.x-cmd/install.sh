@@ -1,4 +1,4 @@
-___x_cmd_env_python_unpack(){
+___x_cmd_pkg_python_unpack(){
     if [ -x $ball ] ; then
         local file_suffix
         ___x_cmd_pkg___attr "$pkg_name" "$version" "$osarch" file_suffix
@@ -12,4 +12,4 @@ ___x_cmd_env_python_unpack(){
     fi
 }
 
-___x_cmd_env_python_unpack
+___x_cmd_pkg_python_unpack
