@@ -11,8 +11,8 @@ xbin:
   node: node%{bin_suffix}
 
 hook:
-  pre-install: ""
-  post-install: post-install.sh
+  setup: env-init.sh
+  install: post-install.sh
 
 rule:
   v*/win*:
