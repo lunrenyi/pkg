@@ -11,7 +11,7 @@ xbin:
 
 hook:
   setup: env-init.sh
-  install: install.sh
+  install: post-install.sh
 
 rule:
 
