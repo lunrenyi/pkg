@@ -9,8 +9,6 @@ _arch: "%{arch}"
 url:
   _: "%{google_site}/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
   cn: "%{google_site}/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
-hook:
-  setup: env-init.sh
 xbin:
   go: bin/go
 

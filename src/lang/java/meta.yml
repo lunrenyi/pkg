@@ -9,8 +9,6 @@ url:
 xbin:
   java: bin/javac
 
-hook:
-  setup: env-init.sh
   install: post-install.sh
 
 rule:

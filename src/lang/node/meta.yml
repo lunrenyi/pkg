@@ -12,7 +12,6 @@ xbin:
   npm: bin/npm
 
 hook:
-  setup: env-init.sh
   install: post-install.sh
 
 rule:
