@@ -10,7 +10,7 @@ url:
   _: "%{google_site}/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
   cn: "%{google_site}/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
 xbin:
-  go: bin/go
+  go: bin/gofmt
 
 rule:
   "*/win*":
