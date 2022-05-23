@@ -17,12 +17,13 @@ rule:
     _os: windows
     file_suffix: zip
 
+  "*/linux/*/":
+    _os: "%{os}"
+    _arch: "%{arch}"
+
   "*/linux/x64":
     _arch: 386
-    file_suffix: tar.gz
-
-
-
-  go-*:
-    hook:
-      install:
+  
+  "*/darwin/*/":
+    _os: "%{os}"
+    _arch: "%{arch}"
