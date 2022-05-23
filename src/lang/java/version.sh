@@ -15,8 +15,4 @@ done  | sort -V -u -r | awk '{
     }'
 }
 
-if ! [ -f tmp/a ] ; then
-    mkdir tmp
-    get_java_version > tmp/a
-fi
-cat tmp/a | x yq -o json e -P
+get_java_version | x yq -o json e -P

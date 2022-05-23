@@ -1,0 +1,30 @@
+homepage: https://www.scala-lang.org/download/all.html
+license: MIT
+rely: []
+file_suffix: tgz
+scala_source: "https://downloads.lightbend.com/scala/"
+cn_source: "https://downloads.lightbend.com/scala/"
+_os: "%{os}"
+_arch: "%{arch}"
+url:
+  _: '%{scala_source}/%{version}/scala-%{version}.%{file_suffix}'
+  cn: '%{cn_source}/%{version}/scala-%{version}.%{file_suffix}'
+
+xbin:
+    rustc: bin/scala
+    rust: bin/scala
+
+hook:
+  pre-install: ""
+  install: install.sh
+
+rule:
+
+  /*:
+    version: 2.13.8
+
+
+  win/*:
+    file_suffix: zip
+
+

@@ -14,12 +14,17 @@ url:
   _: "%{anaconda_source}/%{minoconda_sh_file}"
   cn: "%{tuna_source}"
 xbin:
-  python: python%{bin_suffix}
+  python: bin/pip
 hook:
   install: install.sh
+  activate: activate.sh
+  deactivate: deactivate.sh
 
 rule:
-  py*/linux/*:
+
+  /*:
+    version: py39_4.9.2
+  py*/linux/x86:
     _os: Linux
     _arch: x86_64
 
@@ -29,8 +34,6 @@ rule:
   py*/win/*:
     _os: Windows
     file_suffix: exe
-  py*/*/arm64:
-    _arch: arm64
-  py*/*/x64:
-    _arch: x86_64
+
+
 

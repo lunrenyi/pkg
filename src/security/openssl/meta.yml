@@ -12,6 +12,7 @@ url:
 
 xbin:
   ssl: openssl.%{os}.%{arch}%{bin_suffix}
+  openssl: openssl.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:

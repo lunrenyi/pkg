@@ -16,8 +16,5 @@ get_deno_version(){
   }
 '
 }
-if ! [ -f tmp/a ] ; then
-    mkdir tmp
-    get_deno_version > tmp/a
-fi
-cat tmp/a | x yq -o json e -P
+
+get_deno_version | x yq -o json e -P

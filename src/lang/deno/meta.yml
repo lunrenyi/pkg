@@ -1,34 +1,38 @@
 homepage: https://github.com/denoland/deno/
 license: MIT
 rely: []
-
+_os: "%{os}"
+_arch: "%{arch}"
 hook:
-  pre-install: ""
-  post-install: post-install.sh
+  install: install.sh
+url:
+    _: https://github.com/denoland/deno/releases/download/%{version}/deno-%{_arch}-%{_os}.%{file_suffix}
+    cn: https://github.com/denoland/deno/releases/download/%{version}/deno-%{_arch}-%{_os}.%{file_suffix}
+xbin:
+  deno: deno
+
+file_suffix: zip
 
 rule:
-  v*.linux-aarch64:
-    url:
-      _: https://github.com/denoland/deno/releases/download/v%{version}/deno-linux-aarh64.zip
-      cn: https://github.com/denoland/deno/releases/download/v%{version}/deno-linux-aarh64.zip
-  v*.darwin/arm64:
-    url:
-      _: https://golang.google.cn/dl/deno%{version}.darwin/arm64.tar.gz
-      cn: https://golang.google.cn/dl/deno%{version}.darwin/arm64.tar.gz
-  v*.linux/x64:
-    url:
-      _: https://github.com/denoland/deno/releases/download/v%{version}/deno-%{arch}-%{os}.zip
-      cn: ""
-  v*.darwin/x64:
-    url:
-      _: https://github.com/denoland/deno/releases/download/v%{version}/deno-%{arch}-%{os}.zip
-      cn: ""
-  v*.win/x64:
-    url:
-      _: https://github.com/denoland/deno/releases/download/v{version}/deno-%{arch}-%{os}.zip
-      cn: ""
-xbin:
-  denobin: deno%{bin_suffix}
-  a123: deno%{bin_suffix}
-  a1234: deno%{bin_suffix}
+  /*:
+    version: v1.22.0
+  v*/linux/x64:
+    _arch: x86_64
+    _os: unknown-linux-gnu
+
+  v*/darwin/arch64:
+    _arch: aarch64
+    _os: apple-darwin
+
+  v*/darwin/x86:
+    _arch: x86_64
+    _os: unknown-linux-gnu
+
+  v*/win/x86:
+    _arch: x86_64
+    _os: windows-msvc
+
+
+
+
 
