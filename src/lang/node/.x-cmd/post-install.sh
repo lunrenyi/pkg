@@ -19,5 +19,4 @@ ___x_cmd_pkg_node_unpack(){
     fi
 }
 
-___x_cmd_env_node_copy_to_unpackdir
-
+___x_cmd_pkg_node_unpack
