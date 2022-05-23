@@ -18,8 +18,4 @@ get_rust_version(){
     }'
 }
 
-if ! [ -f tmp/a ] ; then
-    mkdir tmp
-    get_rust_version > tmp/a
-fi
-cat tmp/a | x yq -o json e -P
+get_rust_version | x yq -o json e -P

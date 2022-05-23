@@ -7,9 +7,4 @@ get_kotlin_version(){
   sha:"'
 }
 
-if ! [ -f tmp/a ] ; then
-    mkdir tmp
-    get_kotlin_version > tmp/a
-fi
-
-cat tmp/a | x yq -o json e -P
+get_kotlin_version | x yq -o json e -P

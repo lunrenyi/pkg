@@ -13,8 +13,4 @@ curl -H "Accept-Encoding: gzip" https://downloads.python.org/pypy/ 2>/dev/null |
 } '
 }
 
-if ! [ -f tmp/a ] ; then
-    mkdir tmp
-    get_py_version > tmp/a
-fi
-cat tmp/a | x yq -o json e -P
+get_py_version | x yq -o json e -P
