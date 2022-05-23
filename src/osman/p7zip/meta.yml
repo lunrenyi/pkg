@@ -22,7 +22,7 @@ rule:
     version: 16.02
 
   latest/*:
-    version: 1.6-dirty
+    version: 16.02
 
   "*/linux/arm64":
     zipname:    7za.linux.arm64.7z
