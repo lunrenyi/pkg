@@ -5,7 +5,7 @@ node_source: https://nodejs.org/dist/%{version}
 tuna_source: https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/%{version}
 file_suffix: tar.gz
 url:
-  _: "%{node_source}/node-%{version}-%{os}-%{arch}"
+  _: "%{node_source}/node-%{version}-%{os}-%{arch}.%{file_suffix}"
   cn: "%{tuna_source}/node-%{version}-%{os}-%{arch}.%{file_suffix}"
 xbin:
   node: bin/node
@@ -24,6 +24,6 @@ rule:
   latest/*:
     version: v18.2.0
 
-  v*/win*:
+  v*/win:
     file_suffix: zip
     bin_suffix: exe
