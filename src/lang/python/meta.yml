@@ -17,6 +17,8 @@ xbin:
   python: bin/pip
 hook:
   install: install.sh
+  activate: activate.sh
+  deactivate: deactivate.sh
 
 rule:
 

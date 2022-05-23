@@ -12,6 +12,8 @@ xbin:
   npm: bin/npm
 
 hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
   install: post-install.sh
 
 rule:
