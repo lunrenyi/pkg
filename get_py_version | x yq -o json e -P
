@@ -1,0 +1,1958 @@
+[?1h=[?1l>[?1h=[?1l>[?1h=[?1l>[?1h=[?1h=[?1l>2.2.2-Miniconda3:
+  Linux-x86:
+    sha:
+2.2.2-Miniconda3:
+  Linux-x86_64:
+    sha:
+2.2.2-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+2.2.8-Miniconda3:
+  Windows-x86:
+    sha:
+2.2.8-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.0.0-Miniconda3:
+  Linux-x86:
+    sha:
+3.0.0-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.0.0-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.0.0-Miniconda3:
+  Windows-x86:
+    sha:
+3.0.0-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.0.4-Miniconda3:
+  Linux-x86:
+    sha:
+3.0.4-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.0.4-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.0.4-Miniconda3:
+  Windows-x86:
+    sha:
+3.0.4-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.0.5-Miniconda3:
+  Linux-x86:
+    sha:
+3.0.5-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.0.5-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.0.5-Miniconda3:
+  Windows-x86:
+    sha:
+3.0.5-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.10.1-Miniconda3:
+  Linux-x86:
+    sha:
+3.10.1-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.10.1-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.10.1-Miniconda3:
+  Windows-x86:
+    sha:
+3.10.1-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.16.0-Miniconda3:
+  Linux-armv7l:
+    sha:
+3.16.0-Miniconda3:
+  Linux-ppc64le:
+    sha:
+3.16.0-Miniconda3:
+  Linux-x86:
+    sha:
+3.16.0-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.16.0-Miniconda3:
+  MacOSX-x86:
+    sha:
+3.16.0-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.16.0-Miniconda3:
+  Windows-x86:
+    sha:
+3.16.0-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.18.3-Miniconda3:
+  Linux-x86:
+    sha:
+3.18.3-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.18.3-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.18.3-Miniconda3:
+  Windows-x86:
+    sha:
+3.18.3-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.18.8-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.18.9-Miniconda3:
+  Linux-x86:
+    sha:
+3.18.9-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.18.9-Miniconda3:
+  Windows-x86:
+    sha:
+3.18.9-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.19.0-Miniconda3:
+  Linux-x86:
+    sha:
+3.19.0-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.19.0-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.19.0-Miniconda3:
+  Windows-x86:
+    sha:
+3.19.0-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.3.0-Miniconda3:
+  Linux-x86:
+    sha:
+3.3.0-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.3.0-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.3.0-Miniconda3:
+  Windows-x86:
+    sha:
+3.3.0-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.4.2-Miniconda3:
+  Linux-x86:
+    sha:
+3.4.2-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.4.2-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.4.2-Miniconda3:
+  Windows-x86:
+    sha:
+3.4.2-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.5.2-Miniconda3:
+  Linux-x86:
+    sha:
+3.5.2-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.5.2-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.5.2-Miniconda3:
+  Windows-x86:
+    sha:
+3.5.2-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.5.5-Miniconda3:
+  Linux-x86:
+    sha:
+3.5.5-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.5.5-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.5.5-Miniconda3:
+  Windows-x86:
+    sha:
+3.5.5-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.6.0-Miniconda3:
+  Linux-x86:
+    sha:
+3.6.0-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.6.0-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.6.0-Miniconda3:
+  Windows-x86:
+    sha:
+3.6.0-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.7.0-Miniconda3:
+  Linux-x86:
+    sha:
+3.7.0-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.7.0-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.7.0-Miniconda3:
+  Windows-x86:
+    sha:
+3.7.0-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.7.3-Miniconda3:
+  Linux-x86:
+    sha:
+3.7.3-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.7.3-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.7.3-Miniconda3:
+  Windows-x86:
+    sha:
+3.7.3-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.8.3-Miniconda3:
+  Linux-x86:
+    sha:
+3.8.3-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.8.3-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.8.3-Miniconda3:
+  Windows-x86:
+    sha:
+3.8.3-Miniconda3:
+  Windows-x86_64:
+    sha:
+3.9.1-Miniconda3:
+  Linux-x86:
+    sha:
+3.9.1-Miniconda3:
+  Linux-x86_64:
+    sha:
+3.9.1-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+3.9.1-Miniconda3:
+  Windows-x86:
+    sha:
+3.9.1-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.0.5-Miniconda3:
+  Linux-x86:
+    sha:
+4.0.5-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.0.5-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.0.5-Miniconda3:
+  Windows-x86:
+    sha:
+4.0.5-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.1.11-Miniconda3:
+  Linux-x86:
+    sha:
+4.1.11-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.1.11-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.1.11-Miniconda3:
+  Windows-x86:
+    sha:
+4.1.11-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.2.11-Miniconda3:
+  Linux-x86:
+    sha:
+4.2.11-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.2.11-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.2.11-Miniconda3:
+  Windows-x86:
+    sha:
+4.2.11-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.2.12-Miniconda3:
+  Linux-ppc64le:
+    sha:
+4.2.12-Miniconda3:
+  Linux-x86:
+    sha:
+4.2.12-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.2.12-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.2.12-Miniconda3:
+  Windows-x86:
+    sha:
+4.2.12-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.3.11-Miniconda3:
+  Linux-x86:
+    sha:
+4.3.11-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.3.11-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.3.11-Miniconda3:
+  Windows-x86:
+    sha:
+4.3.11-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.3.14-Miniconda3:
+  Linux-ppc64le:
+    sha:
+4.3.14-Miniconda3:
+  Linux-x86:
+    sha:
+4.3.14-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.3.14-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.3.14-Miniconda3:
+  Windows-x86:
+    sha:
+4.3.14-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.3.21-Miniconda3:
+  Linux-x86:
+    sha:
+4.3.21-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.3.21-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.3.21-Miniconda3:
+  Windows-x86:
+    sha:
+4.3.21-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.3.27-Miniconda3:
+  Linux-ppc64le:
+    sha:
+4.3.27-Miniconda3:
+  Linux-x86:
+    sha:
+4.3.27-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.3.27-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.3.27-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.3.27-Miniconda3:
+  Windows-x86:
+    sha:
+4.3.27-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.3.27.1-Miniconda3:
+  Linux-x86:
+    sha:
+4.3.27.1-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.3.30-Miniconda3:
+  Linux-x86:
+    sha:
+4.3.30-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.3.30-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.3.30-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.3.30-Miniconda3:
+  Windows-x86:
+    sha:
+4.3.30-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.3.30.1-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.3.30.1-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.3.30.2-Miniconda3:
+  Windows-x86:
+    sha:
+4.3.30.2-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.3.31-Miniconda3:
+  Linux-x86:
+    sha:
+4.3.31-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.3.31-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.3.31-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.3.31-Miniconda3:
+  Windows-x86:
+    sha:
+4.3.31-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.4.10-Miniconda3:
+  Linux-ppc64le:
+    sha:
+4.4.10-Miniconda3:
+  Linux-x86:
+    sha:
+4.4.10-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.4.10-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.4.10-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.4.10-Miniconda3:
+  Windows-x86:
+    sha:
+4.4.10-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.5.1-Miniconda3:
+  Linux-ppc64le:
+    sha:
+4.5.1-Miniconda3:
+  Linux-x86:
+    sha:
+4.5.1-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.5.1-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.5.1-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.5.1-Miniconda3:
+  Windows-x86:
+    sha:
+4.5.1-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.5.11-Miniconda3:
+  Linux-ppc64le:
+    sha:
+4.5.11-Miniconda3:
+  Linux-x86:
+    sha:
+4.5.11-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.5.11-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.5.11-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.5.11-Miniconda3:
+  Windows-x86:
+    sha:
+4.5.11-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.5.12-Miniconda3:
+  Linux-x86:
+    sha:
+4.5.12-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.5.12-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.5.12-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.5.12-Miniconda3:
+  Windows-x86:
+    sha:
+4.5.12-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.5.4-Miniconda3:
+  Linux-ppc64le:
+    sha:
+4.5.4-Miniconda3:
+  Linux-x86:
+    sha:
+4.5.4-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.5.4-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.5.4-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.5.4-Miniconda3:
+  Windows-x86:
+    sha:
+4.5.4-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.6.14-Miniconda3:
+  Linux-ppc64le:
+    sha:
+4.6.14-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.6.14-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.6.14-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.6.14-Miniconda3:
+  Windows-x86:
+    sha:
+4.6.14-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.7.10-Miniconda3:
+  Linux-ppc64le:
+    sha:
+4.7.10-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.7.10-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.7.10-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.7.10-Miniconda3:
+  Windows-x86:
+    sha:
+4.7.10-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.7.12-Miniconda3:
+  Linux-ppc64le:
+    sha:
+4.7.12-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.7.12-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.7.12-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.7.12-Miniconda3:
+  Windows-x86:
+    sha:
+4.7.12-Miniconda3:
+  Windows-x86_64:
+    sha:
+4.7.12.1-Miniconda3:
+  Linux-ppc64le:
+    sha:
+4.7.12.1-Miniconda3:
+  Linux-x86_64:
+    sha:
+4.7.12.1-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.7.12.1-Miniconda3:
+  MacOSX-x86_64:
+    sha:
+4.7.12.1-Miniconda3:
+  Windows-x86:
+    sha:
+4.7.12.1-Miniconda3:
+  Windows-x86_64:
+    sha:
+v7.3.9-pypy3.7:
+  aarch64:
+    sha:
+v7.3.9-pypy3.7:
+  linux32:
+    sha:
+v7.3.9-pypy3.7:
+  linux64:
+    sha:
+v7.3.9-pypy3.7:
+  osx64:
+    sha:
+v7.3.9-pypy3.7:
+  s390x:
+    sha:
+v7.3.9-pypy3.7:
+  win64:
+    sha:
+v7.3.9-pypy2.7:
+  aarch64:
+    sha:
+v7.3.9-pypy2.7:
+  linux32:
+    sha:
+v7.3.9-pypy2.7:
+  linux64:
+    sha:
+v7.3.9-pypy2.7:
+  osx64:
+    sha:
+v7.3.9-pypy2.7:
+  s390x:
+    sha:
+v7.3.9-pypy2.7:
+  win64:
+    sha:
+v7.3.9-pypy3.8:
+  aarch64:
+    sha:
+v7.3.9-pypy3.8:
+  linux32:
+    sha:
+v7.3.9-pypy3.8:
+  linux64:
+    sha:
+v7.3.9-pypy3.8:
+  osx64:
+    sha:
+v7.3.9-pypy3.8:
+  s390x:
+    sha:
+v7.3.9-pypy3.8:
+  win64:
+    sha:
+v7.3.9-pypy3.9:
+  aarch64:
+    sha:
+v7.3.9-pypy3.9:
+  linux32:
+    sha:
+v7.3.9-pypy3.9:
+  linux64:
+    sha:
+v7.3.9-pypy3.9:
+  osx64:
+    sha:
+v7.3.9-pypy3.9:
+  s390x:
+    sha:
+v7.3.9-pypy3.9:
+  win64:
+    sha:
+v7.3.8-pypy3.7:
+  aarch64:
+    sha:
+v7.3.8-pypy3.7:
+  aarch64:
+    sha:
+v7.3.8-pypy3.7:
+  linux32:
+    sha:
+v7.3.8-pypy3.7:
+  linux64:
+    sha:
+v7.3.8-pypy3.7:
+  osx64:
+    sha:
+v7.3.8-pypy3.7:
+  s390x:
+    sha:
+v7.3.8-pypy3.7:
+  win64:
+    sha:
+v7.3.8-pypy2.7:
+  aarch64:
+    sha:
+v7.3.8-pypy2.7:
+  aarch64:
+    sha:
+v7.3.8-pypy2.7:
+  linux32:
+    sha:
+v7.3.8-pypy2.7:
+  linux64:
+    sha:
+v7.3.8-pypy2.7:
+  osx64:
+    sha:
+v7.3.8-pypy2.7:
+  s390x:
+    sha:
+v7.3.8-pypy2.7:
+  win64:
+    sha:
+v7.3.8-pypy3.8:
+  aarch64:
+    sha:
+v7.3.8-pypy3.8:
+  aarch64:
+    sha:
+v7.3.8-pypy3.8:
+  linux32:
+    sha:
+v7.3.8-pypy3.8:
+  linux64:
+    sha:
+v7.3.8-pypy3.8:
+  osx64:
+    sha:
+v7.3.8-pypy3.8:
+  s390x:
+    sha:
+v7.3.8-pypy3.8:
+  win64:
+    sha:
+v7.3.8-pypy3.9:
+  aarch64:
+    sha:
+v7.3.8-pypy3.9:
+  aarch64:
+    sha:
+v7.3.8-pypy3.9:
+  linux32:
+    sha:
+v7.3.8-pypy3.9:
+  linux64:
+    sha:
+v7.3.8-pypy3.9:
+  osx64:
+    sha:
+v7.3.8-pypy3.9:
+  s390x:
+    sha:
+v7.3.8-pypy3.9:
+  win64:
+    sha:
+v7.3.7-pypy3.7:
+  aarch64:
+    sha:
+v7.3.7-pypy3.7:
+  linux32:
+    sha:
+v7.3.7-pypy3.7:
+  linux64:
+    sha:
+v7.3.7-pypy3.7:
+  osx64:
+    sha:
+v7.3.7-pypy3.7:
+  s390x:
+    sha:
+v7.3.7-pypy3.7:
+  win64:
+    sha:
+v7.3.7-pypy3.8:
+  aarch64:
+    sha:
+v7.3.7-pypy3.8:
+  linux32:
+    sha:
+v7.3.7-pypy3.8:
+  linux64:
+    sha:
+v7.3.7-pypy3.8:
+  osx64:
+    sha:
+v7.3.7-pypy3.8:
+  s390x:
+    sha:
+v7.3.7-pypy3.8:
+  win64:
+    sha:
+v7.3.6-pypy3.7:
+  aarch64:
+    sha:
+v7.3.6-pypy3.7:
+  linux32:
+    sha:
+v7.3.6-pypy3.7:
+  linux64:
+    sha:
+v7.3.6-pypy3.7:
+  osx64:
+    sha:
+v7.3.6-pypy3.7:
+  s390x:
+    sha:
+v7.3.6-pypy3.7:
+  win64:
+    sha:
+v7.3.6-pypy2.7:
+  aarch64:
+    sha:
+v7.3.6-pypy2.7:
+  linux32:
+    sha:
+v7.3.6-pypy2.7:
+  linux64:
+    sha:
+v7.3.6-pypy2.7:
+  osx64:
+    sha:
+v7.3.6-pypy2.7:
+  s390x:
+    sha:
+v7.3.6-pypy2.7:
+  win64:
+    sha:
+v7.3.6-pypy3.8:
+  aarch64:
+    sha:
+v7.3.6-pypy3.8:
+  linux32:
+    sha:
+v7.3.6-pypy3.8:
+  linux64:
+    sha:
+v7.3.6-pypy3.8:
+  osx64:
+    sha:
+v7.3.6-pypy3.8:
+  s390x:
+    sha:
+v7.3.6-pypy3.8:
+  win64:
+    sha:
+v7.3.5-pypy3.7:
+  aarch64:
+    sha:
+v7.3.5-pypy3.7:
+  linux32:
+    sha:
+v7.3.5-pypy3.7:
+  linux64:
+    sha:
+v7.3.5-pypy3.7:
+  osx64:
+    sha:
+v7.3.5-pypy3.7:
+  s390x:
+    sha:
+v7.3.5-pypy3.7:
+  win64:
+    sha:
+v7.3.5-pypy2.7:
+  aarch64:
+    sha:
+v7.3.5-pypy2.7:
+  linux32:
+    sha:
+v7.3.5-pypy2.7:
+  linux64:
+    sha:
+v7.3.5-pypy2.7:
+  osx64:
+    sha:
+v7.3.5-pypy2.7:
+  s390x:
+    sha:
+v7.3.5-pypy2.7:
+  win64:
+    sha:
+v7.3.4-pypy3.7:
+  aarch64:
+    sha:
+v7.3.4-pypy3.7:
+  linux32:
+    sha:
+v7.3.4-pypy3.7:
+  linux64:
+    sha:
+v7.3.4-pypy3.7:
+  osx64:
+    sha:
+v7.3.4-pypy3.7:
+  s390x:
+    sha:
+v7.3.4-pypy3.7:
+  win64:
+    sha:
+v7.3.4-pypy2.7:
+  aarch64:
+    sha:
+v7.3.4-pypy2.7:
+  linux32:
+    sha:
+v7.3.4-pypy2.7:
+  linux64:
+    sha:
+v7.3.4-pypy2.7:
+  osx64:
+    sha:
+v7.3.4-pypy2.7:
+  s390x:
+    sha:
+v7.3.4-pypy2.7:
+  win64:
+    sha:
+v7.3.3-pypy3.6:
+  aarch64:
+    sha:
+v7.3.3-pypy3.6:
+  linux32:
+    sha:
+v7.3.3-pypy3.6:
+  linux64:
+    sha:
+v7.3.3-pypy3.6:
+  osx64:
+    sha:
+v7.3.3-pypy3.6:
+  s390x:
+    sha:
+v7.3.3-pypy3.6:
+  win32:
+    sha:
+v7.3.3-pypy3.7:
+  aarch64:
+    sha:
+v7.3.3-pypy3.7:
+  linux32:
+    sha:
+v7.3.3-pypy3.7:
+  linux64:
+    sha:
+v7.3.3-pypy3.7:
+  osx64:
+    sha:
+v7.3.3-pypy3.7:
+  s390x:
+    sha:
+v7.3.3-pypy3.7:
+  win32:
+    sha:
+v7.3.3-pypy2.7:
+  aarch64:
+    sha:
+v7.3.3-pypy2.7:
+  linux32:
+    sha:
+v7.3.3-pypy2.7:
+  linux64:
+    sha:
+v7.3.3-pypy2.7:
+  osx64:
+    sha:
+v7.3.3-pypy2.7:
+  s390x:
+    sha:
+v7.3.3-pypy2.7:
+  win32:
+    sha:
+v7.3.2-pypy3.6:
+  aarch64:
+    sha:
+v7.3.2-pypy3.6:
+  linux32:
+    sha:
+v7.3.2-pypy3.6:
+  linux64:
+    sha:
+v7.3.2-pypy3.6:
+  osx64:
+    sha:
+v7.3.2-pypy3.6:
+  s390x:
+    sha:
+v7.3.2-pypy3.6:
+  win32:
+    sha:
+v7.3.2-pypy3.7:
+  aarch64:
+    sha:
+v7.3.2-pypy3.7:
+  linux32:
+    sha:
+v7.3.2-pypy3.7:
+  linux64:
+    sha:
+v7.3.2-pypy3.7:
+  osx64:
+    sha:
+v7.3.2-pypy3.7:
+  s390x:
+    sha:
+v7.3.2-pypy3.7:
+  win32:
+    sha:
+v7.3.2-pypy2.7:
+  aarch64:
+    sha:
+v7.3.2-pypy2.7:
+  linux32:
+    sha:
+v7.3.2-pypy2.7:
+  linux64:
+    sha:
+v7.3.2-pypy2.7:
+  osx64:
+    sha:
+v7.3.2-pypy2.7:
+  s390x:
+    sha:
+v7.3.2-pypy2.7:
+  win32:
+    sha:
+v7.3.1-pypy3.6:
+  aarch64:
+    sha:
+v7.3.1-pypy3.6:
+  linux32:
+    sha:
+v7.3.1-pypy3.6:
+  linux64:
+    sha:
+v7.3.1-pypy3.6:
+  osx64:
+    sha:
+v7.3.1-pypy3.6:
+  ppc64:
+    sha:
+v7.3.1-pypy3.6:
+  ppc64le:
+    sha:
+v7.3.1-pypy3.6:
+  s390x:
+    sha:
+v7.3.1-pypy3.6:
+  win32:
+    sha:
+v7.3.1-pypy2.7:
+  aarch64:
+    sha:
+v7.3.1-pypy2.7:
+  linux32:
+    sha:
+v7.3.1-pypy2.7:
+  linux64:
+    sha:
+v7.3.1-pypy2.7:
+  osx64:
+    sha:
+v7.3.1-pypy2.7:
+  ppc64:
+    sha:
+v7.3.1-pypy2.7:
+  ppc64le:
+    sha:
+v7.3.1-pypy2.7:
+  s390x:
+    sha:
+v7.3.1-pypy2.7:
+  win32:
+    sha:
+v7.3.0-pypy3.6:
+  aarch64:
+    sha:
+v7.3.0-pypy3.6:
+  linux32:
+    sha:
+v7.3.0-pypy3.6:
+  linux64:
+    sha:
+v7.3.0-pypy3.6:
+  osx64:
+    sha:
+v7.3.0-pypy3.6:
+  ppc64:
+    sha:
+v7.3.0-pypy3.6:
+  ppc64le:
+    sha:
+v7.3.0-pypy3.6:
+  s390x:
+    sha:
+v7.3.0-pypy3.6:
+  win32:
+    sha:
+v7.3.0-pypy2.7:
+  aarch64:
+    sha:
+v7.3.0-pypy2.7:
+  linux32:
+    sha:
+v7.3.0-pypy2.7:
+  linux64:
+    sha:
+v7.3.0-pypy2.7:
+  osx64:
+    sha:
+v7.3.0-pypy2.7:
+  ppc64:
+    sha:
+v7.3.0-pypy2.7:
+  ppc64le:
+    sha:
+v7.3.0-pypy2.7:
+  s390x:
+    sha:
+v7.3.0-pypy2.7:
+  win32:
+    sha:
+v7.2.0-pypy3.6:
+  aarch64:
+    sha:
+v7.2.0-pypy3.6:
+  linux32:
+    sha:
+v7.2.0-pypy3.6:
+  linux64:
+    sha:
+v7.2.0-pypy3.6:
+  osx64:
+    sha:
+v7.2.0-pypy3.6:
+  ppc64:
+    sha:
+v7.2.0-pypy3.6:
+  ppc64le:
+    sha:
+v7.2.0-pypy3.6:
+  s390x:
+    sha:
+v7.2.0-pypy3.6:
+  win32:
+    sha:
+v7.2.0-pypy2.7:
+  aarch64:
+    sha:
+v7.2.0-pypy2.7:
+  linux32:
+    sha:
+v7.2.0-pypy2.7:
+  linux64:
+    sha:
+v7.2.0-pypy2.7:
+  osx64:
+    sha:
+v7.2.0-pypy2.7:
+  ppc64:
+    sha:
+v7.2.0-pypy2.7:
+  ppc64le:
+    sha:
+v7.2.0-pypy2.7:
+  s390x:
+    sha:
+v7.2.0-pypy2.7:
+  win32:
+    sha:
+v7.1.1-pypy3.6:
+  linux32:
+    sha:
+v7.1.1-pypy3.6:
+  linux64:
+    sha:
+v7.1.1-pypy3.6:
+  osx64:
+    sha:
+v7.1.1-pypy3.6:
+  ppc64:
+    sha:
+v7.1.1-pypy3.6:
+  ppc64le:
+    sha:
+v7.1.1-pypy3.6:
+  s390x:
+    sha:
+v7.1.1-pypy3.6:
+  win32:
+    sha:
+v7.1.1-pypy2.7:
+  linux32:
+    sha:
+v7.1.1-pypy2.7:
+  linux64:
+    sha:
+v7.1.1-pypy2.7:
+  osx64:
+    sha:
+v7.1.1-pypy2.7:
+  ppc64:
+    sha:
+v7.1.1-pypy2.7:
+  ppc64le:
+    sha:
+v7.1.1-pypy2.7:
+  s390x:
+    sha:
+v7.1.1-pypy2.7:
+  win32:
+    sha:
+v7.1.0-pypy3.6:
+  linux32:
+    sha:
+v7.1.0-pypy3.6:
+  linux64:
+    sha:
+v7.1.0-pypy3.6:
+  osx64:
+    sha:
+v7.1.0-pypy3.6:
+  ppc64:
+    sha:
+v7.1.0-pypy3.6:
+  ppc64le:
+    sha:
+v7.1.0-pypy3.6:
+  s390x:
+    sha:
+v7.1.0-pypy3.6:
+  win32:
+    sha:
+v7.1.0-pypy2.7:
+  linux32:
+    sha:
+v7.1.0-pypy2.7:
+  linux64:
+    sha:
+v7.1.0-pypy2.7:
+  osx64:
+    sha:
+v7.1.0-pypy2.7:
+  ppc64:
+    sha:
+v7.1.0-pypy2.7:
+  ppc64le:
+    sha:
+v7.1.0-pypy2.7:
+  s390x:
+    sha:
+v7.1.0-pypy2.7:
+  win32:
+    sha:
+v7.0.0-pypy3.6:
+  linux64:
+    sha:
+v7.0.0-pypy3.6:
+  osx64:
+    sha:
+v7.0.0-pypy3.6:
+  win32:
+    sha:
+v7.0.0-pypy3.5:
+  linux32:
+    sha:
+v7.0.0-pypy3.5:
+  linux64:
+    sha:
+v7.0.0-pypy3.5:
+  osx64:
+    sha:
+v7.0.0-pypy3.5:
+  ppc64:
+    sha:
+v7.0.0-pypy3.5:
+  ppc64le:
+    sha:
+v7.0.0-pypy3.5:
+  s390x:
+    sha:
+v7.0.0-pypy3.5:
+  win32:
+    sha:
+v7.0.0-pypy2.7:
+  linux32:
+    sha:
+v7.0.0-pypy2.7:
+  linux64:
+    sha:
+v7.0.0-pypy2.7:
+  osx64:
+    sha:
+v7.0.0-pypy2.7:
+  ppc64:
+    sha:
+v7.0.0-pypy2.7:
+  ppc64le:
+    sha:
+v7.0.0-pypy2.7:
+  s390x:
+    sha:
+v7.0.0-pypy2.7:
+  win32:
+    sha:
+v6.0.0-pypy3:
+  linux:
+    sha:
+v6.0.0-pypy3:
+  linux:
+    sha:
+v6.0.0-pypy3:
+  linux32:
+    sha:
+v6.0.0-pypy3:
+  linux64:
+    sha:
+v6.0.0-pypy3:
+  osx64:
+    sha:
+v6.0.0-pypy3:
+  ppc64:
+    sha:
+v6.0.0-pypy3:
+  ppc64le:
+    sha:
+v6.0.0-pypy3:
+  s390x:
+    sha:
+v6.0.0-pypy3:
+  win32:
+    sha:
+v6.0.0-pypy2:
+  linux:
+    sha:
+v6.0.0-pypy2:
+  linux:
+    sha:
+v6.0.0-pypy2:
+  linux32:
+    sha:
+v6.0.0-pypy2:
+  linux64:
+    sha:
+v6.0.0-pypy2:
+  osx64:
+    sha:
+v6.0.0-pypy2:
+  ppc64:
+    sha:
+v6.0.0-pypy2:
+  ppc64le:
+    sha:
+v6.0.0-pypy2:
+  s390x:
+    sha:
+v6.0.0-pypy2:
+  win32:
+    sha:
+v5.10.1-pypy3:
+  linux:
+    sha:
+v5.10.1-pypy3:
+  linux:
+    sha:
+v5.10.1-pypy3:
+  linux32:
+    sha:
+v5.10.1-pypy3:
+  linux64:
+    sha:
+v5.10.1-pypy3:
+  osx64:
+    sha:
+v5.10.1-pypy3:
+  s390x:
+    sha:
+v5.10.1-pypy3:
+  win32:
+    sha:
+v5.10.0-pypy3:
+  linux:
+    sha:
+v5.10.0-pypy3:
+  linux:
+    sha:
+v5.10.0-pypy3:
+  linux32:
+    sha:
+v5.10.0-pypy3:
+  linux64:
+    sha:
+v5.10.0-pypy3:
+  osx64:
+    sha:
+v5.10.0-pypy3:
+  osx64:
+    sha:
+v5.10.0-pypy3:
+  ppc64:
+    sha:
+v5.10.0-pypy3:
+  ppc64le:
+    sha:
+v5.10.0-pypy3:
+  s390x:
+    sha:
+v5.10.0-pypy3:
+  win32:
+    sha:
+v5.10.0-pypy2:
+  linux:
+    sha:
+v5.10.0-pypy2:
+  linux:
+    sha:
+v5.10.0-pypy2:
+  linux32:
+    sha:
+v5.10.0-pypy2:
+  linux64:
+    sha:
+v5.10.0-pypy2:
+  osx64:
+    sha:
+v5.10.0-pypy2:
+  ppc64:
+    sha:
+v5.10.0-pypy2:
+  ppc64le:
+    sha:
+v5.10.0-pypy2:
+  s390x:
+    sha:
+v5.10.0-pypy2:
+  win32:
+    sha:
+v5.9.0-pypy3:
+  linux64:
+    sha:
+v5.9.0-pypy2:
+  linux:
+    sha:
+v5.9.0-pypy2:
+  linux:
+    sha:
+v5.9.0-pypy2:
+  linux:
+    sha:
+v5.9.0-pypy2:
+  linux32:
+    sha:
+v5.9.0-pypy2:
+  linux64:
+    sha:
+v5.9.0-pypy2:
+  osx64:
+    sha:
+v5.9.0-pypy2:
+  s390x:
+    sha:
+v5.9.0-pypy2:
+  win32:
+    sha:
+v5.8.0-pypy3:
+  linux64:
+    sha:
+v5.8.0-pypy2:
+  linux:
+    sha:
+v5.8.0-pypy2:
+  linux:
+    sha:
+v5.8.0-pypy2:
+  linux:
+    sha:
+v5.8.0-pypy2:
+  linux32:
+    sha:
+v5.8.0-pypy2:
+  linux64:
+    sha:
+v5.8.0-pypy2:
+  osx64:
+    sha:
+v5.8.0-pypy2:
+  ppc64:
+    sha:
+v5.8.0-pypy2:
+  ppc64le:
+    sha:
+v5.8.0-pypy2:
+  s390x:
+    sha:
+v5.8.0-pypy2:
+  win32:
+    sha:
+v5.7.1-pypy3:
+  linux64:
+    sha:
+v5.7.1-pypy2:
+  linux:
+    sha:
+v5.7.1-pypy2:
+  linux:
+    sha:
+v5.7.1-pypy2:
+  linux:
+    sha:
+v5.7.1-pypy2:
+  linux32:
+    sha:
+v5.7.1-pypy2:
+  linux64:
+    sha:
+v5.7.1-pypy2:
+  osx64:
+    sha:
+v5.7.1-pypy2:
+  ppc64:
+    sha:
+v5.7.1-pypy2:
+  ppc64le:
+    sha:
+v5.7.1-pypy2:
+  s390x:
+    sha:
+v5.7.1-pypy2:
+  win32:
+    sha:
+v5.7.0-pypy3:
+  linux64:
+    sha:
+v5.7.0-pypy2:
+  linux:
+    sha:
+v5.7.0-pypy2:
+  linux:
+    sha:
+v5.7.0-pypy2:
+  linux:
+    sha:
+v5.7.0-pypy2:
+  linux32:
+    sha:
+v5.7.0-pypy2:
+  linux64:
+    sha:
+v5.7.0-pypy2:
+  osx64:
+    sha:
+v5.7.0-pypy2:
+  ppc64:
+    sha:
+v5.7.0-pypy2:
+  ppc64le:
+    sha:
+v5.7.0-pypy2:
+  s390x:
+    sha:
+v5.7.0-pypy2:
+  win32:
+    sha:
+v5.6.0-pypy2:
+  linux:
+    sha:
+v5.6.0-pypy2:
+  linux:
+    sha:
+v5.6.0-pypy2:
+  linux:
+    sha:
+v5.6.0-pypy2:
+  linux32:
+    sha:
+v5.6.0-pypy2:
+  linux64:
+    sha:
+v5.6.0-pypy2:
+  osx64:
+    sha:
+v5.6.0-pypy2:
+  ppc64:
+    sha:
+v5.6.0-pypy2:
+  ppc64le:
+    sha:
+v5.6.0-pypy2:
+  s390x:
+    sha:
+v5.6.0-pypy2:
+  win32:
+    sha:
+v5.5.0-pypy3.3:
+  alpha:
+    sha:
+v5.5.0-pypy3.3:
+  alpha:
+    sha:
+v5.5.0-pypy3.3:
+  alpha:
+    sha:
+v5.5.0-pypy3.3:
+  alpha:
+    sha:
+v5.5.0-pypy3.3:
+  alpha:
+    sha:
+v5.5.0-pypy3.3:
+  alpha:
+    sha:
+v5.5.0-pypy3.3:
+  alpha:
+    sha:
+v5.5.0-pypy3.3:
+  alpha:
+    sha:
+v5.4.1-pypy2:
+  linux:
+    sha:
+v5.4.1-pypy2:
+  linux:
+    sha:
+v5.4.1-pypy2:
+  linux:
+    sha:
+v5.4.1-pypy2:
+  linux32:
+    sha:
+v5.4.1-pypy2:
+  linux64:
+    sha:
+v5.4.1-pypy2:
+  osx64:
+    sha:
+v5.4.1-pypy2:
+  ppc64:
+    sha:
+v5.4.1-pypy2:
+  ppc64le:
+    sha:
+v5.4.1-pypy2:
+  s390x:
+    sha:
+v5.4.1-pypy2:
+  win32:
+    sha:
+v5.4.0-pypy2:
+  linux:
+    sha:
+v5.4.0-pypy2:
+  linux:
+    sha:
+v5.4.0-pypy2:
+  linux:
+    sha:
+v5.4.0-pypy2:
+  linux32:
+    sha:
+v5.4.0-pypy2:
+  linux64:
+    sha:
+v5.4.0-pypy2:
+  osx64:
+    sha:
+v5.4.0-pypy2:
+  ppc64:
+    sha:
+v5.4.0-pypy2:
+  ppc64le:
+    sha:
+v5.4.0-pypy2:
+  s390x:
+    sha:
+v5.4.0-pypy2:
+  win32:
+    sha:
+v5.3.1-pypy2:
+  linux:
+    sha:
+v5.3.1-pypy2:
+  linux:
+    sha:
+v5.3.1-pypy2:
+  linux:
+    sha:
+v5.3.1-pypy2:
+  linux32:
+    sha:
+v5.3.1-pypy2:
+  linux64:
+    sha:
+v5.3.1-pypy2:
+  osx64:
+    sha:
+v5.3.1-pypy2:
+  s390x:
+    sha:
+v5.3.1-pypy2:
+  win32:
+    sha:
+v5.3.0-pypy2:
+  linux:
+    sha:
+v5.3.0-pypy2:
+  linux:
+    sha:
+v5.3.0-pypy2:
+  linux:
+    sha:
+v5.3.0-pypy2:
+  linux32:
+    sha:
+v5.3.0-pypy2:
+  linux64:
+    sha:
+v5.3.0-pypy2:
+  osx64:
+    sha:
+v5.3.0-pypy2:
+  s390x:
+    sha:
+v5.3.0-pypy2:
+  win32:
+    sha:
+v5.2.0-pypy3.3:
+  alpha1:
+    sha:
+v5.2.0-pypy3.3:
+  alpha1:
+    sha:
+v5.2.0-pypy3.3:
+  alpha1:
+    sha:
+v5.2.0-pypy3.3:
+  alpha1:
+    sha:
+v5.2.0-pypy3.3:
+  alpha1:
+    sha:
+v5.2.0-pypy3.3:
+  alpha1:
+    sha:
+v5.2.0-pypy3.3:
+  alpha1:
+    sha:
+v5.2.0-pypy3.3:
+  alpha1:
+    sha:
+v5.2.0-pypy3.3:
+  alpha1:
+    sha:
+[?1h=[?1l>{
+  "rust-1.60.0": {
+    "aarch64-apple-darwin": {
+      "sha": null
+    },
+    "aarch64-pc-windows-msvc": {
+      "sha": null
+    },
+    "aarch64-unknown-linux-gnu": {
+      "sha": null
+    },
+    "aarch64-unknown-linux-musl": {
+      "sha": null
+    },
+    "arm-unknown-linux-gnueabi": {
+      "sha": null
+    },
+    "arm-unknown-linux-gnueabihf": {
+      "sha": null
+    },
+    "armv7-unknown-linux-gnueabihf": {
+      "sha": null
+    },
+    "i686-pc-windows-gnu": {
+      "sha": null
+    },
+    "i686-pc-windows-msvc": {
+      "sha": null
+    },
+    "i686-unknown-linux-gnu": {
+      "sha": null
+    },
+    "mips-unknown-linux-gnu": {
+      "sha": null
+    },
+    "mips64-unknown-linux-gnuabi64": {
+      "sha": null
+    },
+    "mips64el-unknown-linux-gnuabi64": {
+      "sha": null
+    },
+    "mipsel-unknown-linux-gnu": {
+      "sha": null
+    },
+    "powerpc-unknown-linux-gnu": {
+      "sha": null
+    },
+    "powerpc64-unknown-linux-gnu": {
+      "sha": null
+    },
+    "powerpc64le-unknown-linux-gnu": {
+      "sha": null
+    },
+    "riscv64gc-unknown-linux-gnu": {
+      "sha": null
+    },
+    "s390x-unknown-linux-gnu": {
+      "sha": null
+    },
+    "x86_64-apple-darwin": {
+      "sha": null
+    },
+    "x86_64-pc-windows-gnu": {
+      "sha": null
+    },
+    "x86_64-pc-windows-msvc": {
+      "sha": null
+    },
+    "x86_64-unknown-freebsd": {
+      "sha": null
+    },
+    "x86_64-unknown-illumos": {
+      "sha": null
+    },
+    "x86_64-unknown-linux-gnu": {
+      "sha": null
+    },
+    "x86_64-unknown-linux-musl": {
+      "sha": null
+    },
+    "x86_64-unknown-netbsd": {
+      "sha": null
+    }
+  }
+}
+[?1h=[?1l>
+7-Zip (a) [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+p7zip Version 16.02 (locale=C.UTF-8,Utf16=on,HugeFiles=on,64 bits,6 CPUs x64)
+
+Scanning the drive:
+49 folders, 81 files, 361727 bytes (354 KiB)
+
+Creating archive: all.7z
+
+Items to compress: 130
+
+
+Files read from disk: 81
+Archive size: 11131 bytes (11 KiB)
+Everything is Ok
+[?1h=[?1l>
+7-Zip (a) [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+p7zip Version 16.02 (locale=C.UTF-8,Utf16=on,HugeFiles=on,64 bits,6 CPUs x64)
+
+Scanning the drive:
+49 folders, 81 files, 361738 bytes (354 KiB)
+
+Creating archive: all.7z
+
+Items to compress: 130
+
+
+Files read from disk: 81
+Archive size: 11118 bytes (11 KiB)
+Everything is Ok
+[?1h=[?1l>[?1h=[?1l>Updating 3d4225f..1e831a1
+Fast-forward
+ src/media/ffmpeg/version.yml        |  9 +++++++--
+ src/media/magick/version.yml        |  4 ++++
+ src/osman/dust/version.yml          |  8 ++++++++
+ src/osman/exa/version.yml           |  8 ++++++++
+ src/osman/jq/version.yml            |  8 ++++++++
+ src/osman/p7zip/meta.yml            |  2 +-
+ src/osman/p7zip/version.yml         | 12 ++++++++++--
+ src/osman/yq/version.yml            | 10 +++++++++-
+ src/security/ncat/meta.yml          |  2 +-
+ src/security/ncat/version.yml       | 13 ++++++++-----
+ src/security/nmap/version.yml       | 13 ++++++++-----
+ src/security/nping/version.yml      | 13 ++++++++-----
+ src/security/openssl/version.yml    | 12 ++++++++----
+ src/security/traceroute/version.yml |  9 ++++-----
+ 14 files changed, 92 insertions(+), 31 deletions(-)
+[?1h=[?1l>[?1h=[?1l>Already up to date.
+[?1h=[?1l>[?1h=[?1l>diff --git "a/get_py_version | x yq -o json e -P\n" "b/get_py_version | x yq -o json e -P\n"
+index bb5e74d..cd3269f 100644
+--- "a/get_py_version | x yq -o json e -P\n"	
++++ "b/get_py_version | x yq -o json e -P\n"	
+@@ -1922,4 +1922,4 @@ Fast-forward
+  src/security/traceroute/version.yml |  9 ++++-----
+  14 files changed, 92 insertions(+), 31 deletions(-)
+ [?1h=[?1l>[?1h=[?1l>Already up to date.
+-[?1h=[?1l>
+\ No newline at end of file
++[?1h=[?1l>[?1h=[?1l>
+\ No newline at end of file
+[?1h=[?1l>On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   aa
+	modified:   dist/all.7z
+	new file:   "get_py_version | x yq -o json e -P\n"
+	new file:   src/lang/java/.x-cmd/activate.sh
+	new file:   src/lang/java/.x-cmd/deactivate.sh
+	modified:   src/lang/java/meta.yml
+	modified:   src/lang/python/meta.yml
+	modified:   src/lang/python/version.sh
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   "get_py_version | x yq -o json e -P\n"
+
+[?1h=[?1l>Already up to date.
+[?1h=[?1l>Already up to date.
+[?1h=

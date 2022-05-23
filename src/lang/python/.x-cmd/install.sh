@@ -6,8 +6,7 @@ ___x_cmd_pkg_python_unpack(){
     chmod +x "${archive_path}" && \
     "${archive_path}" -b -u -p "${archive_path%/*}" 1>&2
 }
-echo "222"
+
 ___x_cmd_pkg_python_unpack
-echo "333"
-___x_cmd_python_activate
-echo "111"
+
+

@@ -13,4 +13,3 @@ ___x_cmd_env_node_copy_to_unpackdir(){
 
 ___x_cmd_env_node_copy_to_unpackdir
 
-___x_cmd_python_activate
