@@ -20,7 +20,7 @@ rule:
     version: 7.92
 
   latest/*:
-    version: v0.10.1
+    version: 7.92
 
   "*/linux/arm64":
     zipname:    ncat.linux.arm64.7z
