@@ -54,8 +54,4 @@ function unique(line,       lastvalue, arr, l, _, i){
 
 '
 }
-if ! [ -f tmp/a ] ; then
-    mkdir tmp
-    get_node_info_toyml > tmp/a
-fi
-cat tmp/a | x yq -o json e -P
+get_node_info_toyml | x yq -o json e -P

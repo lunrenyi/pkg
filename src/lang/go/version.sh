@@ -19,9 +19,4 @@ get_info_to_yml(){
 get_go_version(){
     curl https://golang.google.cn/dl/ 2>/dev/null | get_info_to_yml
 }
-
-if ! [ -f tmp/a ] ; then
-    mkdir tmp
-    get_go_version > tmp/a
-fi
-cat tmp/a | x yq -o json e -P
+get_go_version | x yq -o json e -P
