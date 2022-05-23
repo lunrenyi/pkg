@@ -19,3 +19,20 @@ rule:
   v*/linux/x64:
     _arch: x86_64
     _os: unknown-linux-gnu
+
+  v*/darwin/arch64:
+    _arch: aarch64
+    _os: apple-darwin
+
+  v*/darwin/x86:
+    _arch: x86_64
+    _os: unknown-linux-gnu
+
+  v*/win/x86:
+    _arch: x86_64
+    _os: windows-msvc
+
+
+
+
+

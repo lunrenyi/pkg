@@ -24,21 +24,6 @@ rule:
   latest/*:
     version: v18.2.0
 
-  v?.*/darwin/arm64:
-    osarch: darwin/x64
-  v10.*/darwin/arm6:
-    osarch: darwin/x64
-  v11.*/darwin/arm64:
-    osarch: darwin/x64
-  v12.*/darwin/arm64:
-    osarch: darwin/x64
-  v13.*/darwin/arm64:
-    osarch: darwin/x64
-  v14.*/darwin/arm64:
-    osarch: darwin/x64
-  v15.*/darwin/arm64:
-    osarch: darwin/x64
-
   v*/win*:
     file_suffix: zip
     bin_suffix: exe

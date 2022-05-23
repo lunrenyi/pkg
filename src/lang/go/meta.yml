@@ -17,13 +17,13 @@ rule:
     _os: windows
     file_suffix: zip
 
-  "*/linux/*/":
+  "*/linux/*":
     _os: "%{os}"
     _arch: "%{arch}"
 
   "*/linux/x64":
     _arch: 386
-  
-  "*/darwin/*/":
+
+  "*/darwin/*":
     _os: "%{os}"
     _arch: "%{arch}"

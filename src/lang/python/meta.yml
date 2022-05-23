@@ -24,7 +24,7 @@ rule:
 
   /*:
     version: py39_4.9.2
-  py*/linux/*:
+  py*/linux/x86:
     _os: Linux
     _arch: x86_64
 
@@ -34,8 +34,6 @@ rule:
   py*/win/*:
     _os: Windows
     file_suffix: exe
-  py*/*/arm64:
-    _arch: arm64
-  py*/*/x64:
-    _arch: x86_64
+
+
 
