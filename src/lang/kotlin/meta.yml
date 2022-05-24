@@ -2,11 +2,11 @@ homepage: https://api.sdkman.io/2/candidates/kotlin/LINUX64/versions/all
 license: MIT
 rely: []
 const:
-  github_source: https://github.com/JetBrains/kotlin/releases/download
+github_source: https://github.com/JetBrains/kotlin/releases/download
 file_suffix: tar.gz
 url:
-  _: '%{github_source}/v%{version}/kotlin-compiler-%{version}.%{file_suffix}'
-  cn: '%{github_source}/v%{version}/kotlin-compiler-%{version}.%{file_suffix}'
+  _: '%{github_source}/%{version}/kotlin-compiler-%{version}.%{file_suffix}'
+  cn: '%{github_source}/%{version}/kotlin-compiler-%{version}.%{file_suffix}'
 xbin:
   kotlin: kotlin%{bin_suffix}
 
