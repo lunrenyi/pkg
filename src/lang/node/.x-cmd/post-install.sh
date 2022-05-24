@@ -6,7 +6,7 @@ ___x_cmd_pkg_node_unpack(){
         local tgt="$___X_CMD_PKG_INSTALL_PATH/$pkg_name/$version"
 
         mkdir -p "$tgt"
-        x uz "$ball" "$tgt" || {
+        unzip -d "$tgt" "$ball" || {
         pkg:warn "Fail to unzip $ball"
     }
 
