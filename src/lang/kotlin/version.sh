@@ -7,4 +7,4 @@ get_kotlin_version(){
   sha:"'
 }
 
-get_kotlin_version | x yq -o json e -P
+get_kotlin_version | x yq -o json e -P 

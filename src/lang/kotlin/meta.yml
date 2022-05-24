@@ -3,8 +3,21 @@ license: MIT
 rely: []
 const:
   github_source: https://github.com/JetBrains/kotlin/releases/download
+file_suffix: tar.gz
 url:
-  _: '%{github_source}/v%{version}/kotlin-compiler-%{version}.zip'
-  cn: '%{github_source}/v%{version}/kotlin-compiler-%{version}.zip'
+  _: '%{github_source}/v%{version}/kotlin-compiler-%{version}.%{file_suffix}'
+  cn: '%{github_source}/v%{version}/kotlin-compiler-%{version}.%{file_suffix}'
 xbin:
   kotlin: kotlin%{bin_suffix}
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v1.7.0-RC
+
+  "*/win/*":
+    file_suffix: zip
+
+
