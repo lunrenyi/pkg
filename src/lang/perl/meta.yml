@@ -21,7 +21,8 @@ os-arch:
       cn: ""
   win-64bit:
     url:
-      _: https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{os}.msi
-      cn: ""
+      _: https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{os}.zip
+      cn: "https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{os}.zip"
+
 xbin:
   perl: perl%{bin_suffix}

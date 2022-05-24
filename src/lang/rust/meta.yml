@@ -32,10 +32,11 @@ rule:
     _os: unknown-linux-gnu
     file_suffix: tar.gz
 
-  win/x64:
-    file_suffix: zip
+  "*/win/x64":
+    file_suffix: tar.gz
+    _os: pc-windows-msvc
+    _arch: x86_64
 
-  win-arm64:
-    file_suffix: aarch64-pc-windows-msvc.zip
+
 
 
