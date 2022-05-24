@@ -12,6 +12,10 @@ url:
 xbin:
   go: bin/gofmt
 
+hook:
+  install: post-install.sh
+
+
 rule:
   /*:
     version: latest
