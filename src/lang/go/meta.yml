@@ -32,6 +32,7 @@ rule:
   "*/linux/x64":
     _arch: 386
 
+
   "*/darwin/*":
     _os: "%{os}"
     _arch: "%{arch}"
