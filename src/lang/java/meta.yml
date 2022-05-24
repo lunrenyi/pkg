@@ -3,9 +3,11 @@ license: MIT
 rely: []
 sdkman_url: https://api.sdkman.io/2/broker/download/java
 file_suffix: tar.gz
+_os: "%{os}"
+_arch: "%{arch}"
 url:
-  _: "%{sdkman_url}/%{version}/%{os}%{arch}"
-  cn: "%{sdkman_url}/%{version}/%{os}%{arch}"
+  _: "%{sdkman_url}/%{version}/%{_os}%{_arch}"
+  cn: "%{sdkman_url}/%{version}/%{_os}%{_arch}"
 xbin:
   java: bin/javac
 
