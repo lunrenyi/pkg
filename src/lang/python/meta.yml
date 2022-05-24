@@ -28,12 +28,12 @@ rule:
     _os: Linux
     _arch: x86_64
 
-
   py*/darwin/*:
     _os: MacOSX
   py*/win/*:
     _os: Windows
     file_suffix: exe
+      _arch: x86_64
 
 
 
