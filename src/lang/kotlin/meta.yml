@@ -4,9 +4,11 @@ rely: []
 const:
 github_source: https://github.com/JetBrains/kotlin/releases/download
 file_suffix: tar.gz
+_os: "%{os}"
+_arch: "%{arch}"
 url:
-  _: '%{github_source}/%{version}/kotlin-compiler-%{version}.%{file_suffix}'
-  cn: '%{github_source}/%{version}/kotlin-compiler-%{version}.%{file_suffix}'
+  _: '%{github_source}/%{version}/kotlin-%{_os}-%{_arch}-%{version}-349.%{file_suffix}'
+  cn: '%{github_source}/%{version}/kotlin-%{_os}-%{_arch}-%{version}-349.%{file_suffix}'
 xbin:
   kotlin: kotlin%{bin_suffix}
 
@@ -15,9 +17,18 @@ rule:
     version: stable
 
   stable/*:
-    version: v1.7.0-RC
+    version: v1.6.21
 
-  "*/win/*":
+  "*/linux/x64":
+    _os: native-linux
+    _arch: x86_64
+
+  "*/win/x64":
+    _os: native-windows
+    _arch: x86_64
     file_suffix: zip
 
+  "*/darwin/arch64":
+    _os: native-macos
+    _arch: aarch64
 
