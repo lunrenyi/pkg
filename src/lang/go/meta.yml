@@ -19,7 +19,7 @@ rule:
   latest/*:
     version: v18.2.0
 
-  "*/win/x86":
+  "*/win/x64":
     _os: windows
     _arch: 386
     file_suffix: zip
@@ -28,7 +28,7 @@ rule:
     _os: "%{os}"
     _arch: "%{arch}"
 
-  "*/linux/x86":
+  "*/linux/x64":
     _arch: 386
 
   "*/darwin/*":
