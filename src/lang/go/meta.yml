@@ -13,10 +13,16 @@ xbin:
   go: bin/gofmt
 
 rule:
+  /*:
+    version: latest
+
+  latest/*:
+    version: v18.2.0
+
   "*/win/x86":
-    _os: windows
-    _arch: 386
-    file_suffix: zip
+  _os: windows
+  _arch: 386
+  file_suffix: zip
 
   "*/linux/*":
     _os: "%{os}"
