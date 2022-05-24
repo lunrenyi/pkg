@@ -37,3 +37,4 @@ rule:
     zipname:    7za.win.x64.exe.7z
     bin_suffix: .exe
     file_suffix: zip
+

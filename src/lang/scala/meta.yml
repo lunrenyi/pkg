@@ -1,7 +1,7 @@
 homepage: https://www.scala-lang.org/download/all.html
 license: MIT
 rely: []
-file_suffix: tgz
+file_suffix: zip
 scala_source: "https://downloads.lightbend.com/scala/"
 cn_source: "https://downloads.lightbend.com/scala/"
 _os: "%{os}"
@@ -16,15 +16,42 @@ xbin:
 
 hook:
   pre-install: ""
-  install: install.sh
+  install: post-install.sh
 
 rule:
 
   /*:
-    version: 2.13.8
+    version: latest
 
+  latest:
+    version: 3.1.2
 
-  win/*:
-    file_suffix: zip
+  "2.10*/*":
+    url:
+      cn: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
+
+  "2.13*/*":
+    url:
+      cn: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
+
+  "2.12*/*":
+    url:
+      cn: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
+
+  "2.11.11/*":
+    url:
+      cn: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
+
+  "2.11*/*":
+    url:
+      cn: "http://downloads.typesafe.com/scala/%{version}/scala-%{version}.%{file_suffix}"
+
+  "2.11.12/*":
+    url:
+      cn: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
+
+  "3.*/*":
+    url:
+      cn: "https://github.com/lampepfl/dotty/releases/download/%{version}/scala3-%{version}.%{file_suffix}"
 
 

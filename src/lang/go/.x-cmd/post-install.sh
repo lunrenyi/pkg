@@ -1,5 +1,6 @@
-___x_cmd_pkg_scala_unpack(){
-    local bin_path
+___x_cmd_go_unpack(){
+    if [ "$(x os name)" = "win" ]; then
+		local bin_path
     	bin_path="$(___x_cmd_pkg_xbin_path "$pkg_name" "$version")"
     	if [ -x "$bin_path" ]; then
     	    return 0
@@ -20,6 +21,8 @@ ___x_cmd_pkg_scala_unpack(){
     	pkg:debug "Moving $unpack_dir to $tgt"
     	mv -f "$unpack_dir"/*/* "$tgt"
     	# x rmrf "$unpack_dir"
+	else
+        ___x_cmd_pkg_install___unzip "$pkg_name" "$version" "$osarch"
+    fi
 }
-
-___x_cmd_pkg_scala_unpack
+___x_cmd_go_unpack

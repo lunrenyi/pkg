@@ -30,12 +30,15 @@ rule:
   "*/linux/x64":
     _arch: x86_64
     _os: unknown-linux-gnu
-    file_suffix: tar.gz
 
-  win/x64:
-    file_suffix: zip
 
-  win-arm64:
-    file_suffix: aarch64-pc-windows-msvc.zip
+  "*/win/x64":
+    _os: pc-windows-msvc
+    _arch: x86_64
+
+  "*/darwin/x64":
+    _os: apple-darwin
+    _arch: x86_64
+
 
 

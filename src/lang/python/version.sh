@@ -1,7 +1,7 @@
 # shellcheck shell=sh #source
 
 get_py_version(){
-curl https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 2>/dev/null | awk 'match($0,"Miniconda" "-" "[0-9.]+" "-" "[A-Za-z]+" "-" "[A-Za-z0-9_]+") { a = substr($0,RSTART,RLENGTH)
+curl https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 2>/dev/null | awk 'match($0,"Miniconda3" "-" "[0-9.]+" "-" "[A-Za-z]+" "-" "[A-Za-z0-9_]+") { a = substr($0,RSTART,RLENGTH)
   split(a,b,"-")
   print b[2] "-" b[1] ":\n  " b[3] "-" b[4] ":\n    sha:"
 }'
@@ -13,4 +13,4 @@ curl -H "Accept-Encoding: gzip" https://downloads.python.org/pypy/ 2>/dev/null |
 } '
 }
 
-get_py_version | x yq -o json e -P
+get_py_version | x yq -o json e -P 

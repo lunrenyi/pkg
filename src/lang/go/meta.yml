@@ -12,17 +12,26 @@ url:
 xbin:
   go: bin/gofmt
 
+hook:
+  install: post-install.sh
+
+
 rule:
-  "*/win*":
+  /*:
+    version: latest
+
+  latest/*:
+    version: 1.18.2
+
+  "*/win/x64":
     _os: windows
+    _arch: 386
     file_suffix: zip
 
-  "*/linux/*":
-    _os: "%{os}"
-    _arch: "%{arch}"
 
   "*/linux/x64":
     _arch: 386
+
 
   "*/darwin/*":
     _os: "%{os}"
