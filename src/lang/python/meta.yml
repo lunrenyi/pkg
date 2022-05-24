@@ -9,10 +9,10 @@ file_suffix: sh
 minoconda_sh_file: Miniconda3-%{version}-%{_os}-%{_arch}.%{file_suffix}
 
 anaconda_source: https://repo.anaconda.com/miniconda/%{version}
-tuna_source: https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/%{version}-%{_os}-%{_arch}.%{file_suffix}
+tuna_source: https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda
 url:
   _: "%{anaconda_source}/%{minoconda_sh_file}"
-  cn: "%{tuna_source}"
+  cn: "%{tuna_source}/%{minoconda_sh_file}"
 xbin:
   python: bin/pip
 hook:
