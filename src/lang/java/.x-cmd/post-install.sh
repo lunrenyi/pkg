@@ -34,7 +34,7 @@ ___x_cmd_pkg_java_unpack(){
     	}
     	x rmrf "$tgt" && mkdir -p "$tgt"
     	pkg:debug "Moving $unpack_dir to $tgt"
-    	mv -f "$unpack_dir"/* "$tgt"
+    	mv -f "$unpack_dir"/*/* "$tgt"
     	# x rmrf "$unpack_dir"
 	fi
 }

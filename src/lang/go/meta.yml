@@ -13,15 +13,16 @@ xbin:
   go: bin/gofmt
 
 rule:
-  "*/win*":
+  "*/win/x86":
     _os: windows
+    _arch: 386
     file_suffix: zip
 
   "*/linux/*":
     _os: "%{os}"
     _arch: "%{arch}"
 
-  "*/linux/x64":
+  "*/linux/x86":
     _arch: 386
 
   "*/darwin/*":
