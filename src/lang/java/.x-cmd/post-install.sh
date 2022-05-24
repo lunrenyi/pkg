@@ -28,7 +28,7 @@ ___x_cmd_pkg_java_unpack(){
     	local unpack_dir="$___X_CMD_PKG_DOWNLOAD_PATH/$pkg_name/$version"
     	local tgt="$___X_CMD_PKG_INSTALL_PATH/$pkg_name/$version"
 
-    	pkg:info "Unpack222: $ball to $unpack_dir"
+    	pkg:info "Unpack: $ball to $unpack_dir"
     	unzip -d "$unpack_dir" "$ball" || {
     	    pkg:warn "Fail to unzip $ball"
     	}
