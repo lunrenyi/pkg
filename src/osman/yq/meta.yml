@@ -31,5 +31,5 @@ rule:
   "*/darwin/x64":
     zipname:    yq.darwin.x64.7z
   "*/win/x64":
-    zipname:    yq.x64.exe.7z
+    zipname:    yq.win.x64.exe.7z
     bin_suffix: .exe
