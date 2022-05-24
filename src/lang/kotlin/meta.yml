@@ -32,3 +32,6 @@ rule:
     _os: native-macos
     _arch: aarch64
 
+  "*/darwin/x64":
+    _os: native-macos
+    _arch: x86_64

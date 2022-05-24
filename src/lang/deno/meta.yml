@@ -24,11 +24,10 @@ rule:
     _arch: aarch64
     _os: apple-darwin
 
-  v*/darwin/x86:
+  v*/darwin/x64:
     _arch: x86_64
-    _os: unknown-linux-gnu
+    _os: apple-darwin
 
   v*/win/x64:
     _arch: x86_64
     _os: pc-windows-msvc
-

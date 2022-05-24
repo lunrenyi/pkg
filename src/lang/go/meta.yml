@@ -28,9 +28,6 @@ rule:
     _arch: 386
     file_suffix: zip
 
-  "*/linux/*":
-    _os: "%{os}"
-    _arch: "%{arch}"
 
   "*/linux/x64":
     _arch: 386

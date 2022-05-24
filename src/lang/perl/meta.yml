@@ -1,28 +1,36 @@
 homepage: https://strawberryperl.com/releases.html
 license: MIT
 rely: []
-
-os-arch:
-  linux-arrch:
-    url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{arch}-%{os}.tar.gz
-      cn: ""
-  darwin/arm64:
-    url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{arch}-%{os}.tar.gz
-      cn: "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{arch}-%{os}.tar.gz"
-  linux/x64:
-    url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{arch}-%{os}.tar.gz
-      cn: "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{arch}-%{os}.tar.gz"
-  darwin/x64:
-    url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{arch}-%{os}.tar.gz
-      cn: ""
-  win-64bit:
-    url:
-      _: https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{os}.zip
-      cn: "https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{os}.zip"
-
 xbin:
   perl: perl%{bin_suffix}
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: tar.gz
+url:
+      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
+      cn: "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz"
+
+
+rules:
+  "*/linux/arch64":
+
+
+  "*/darwin/*":
+    _os: darwin-2level
+    url:
+      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}.%{file_suffix}
+      cn: "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}.%{file_suffix}"
+
+
+  "*/linux/x64":
+    _os: x86_64
+    url:
+      _: "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.%{file_suffix}"
+      cn: "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.%{file_suffix}"
+
+  "*/win/x64":
+    _arch: 64bit
+    file_suffix: zip
+    url:
+      _: https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{_arch}.%{file_suffix}
+      cn: "https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{_arch}.%{file_suffix}"
