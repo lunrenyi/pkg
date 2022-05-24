@@ -24,16 +24,18 @@ rule:
 
   /*:
     version: py39_4.9.2
+
   py*/linux/x86:
     _os: Linux
     _arch: x86_64
 
   py*/darwin/*:
     _os: MacOSX
+
   py*/win/*:
     _os: Windows
+    _arch: x86_64
     file_suffix: exe
-      _arch: x86_64
 
 
 
