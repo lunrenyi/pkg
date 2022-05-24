@@ -10,7 +10,7 @@ url:
   cn: "%{sdkman_url}/%{version}/%{_os}%{_arch}"
 xbin:
   java: bin/javac
-
+hook:
   install: post-install.sh
 
 rule:
