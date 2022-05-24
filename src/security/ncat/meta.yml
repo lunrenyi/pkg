@@ -31,5 +31,5 @@ rule:
   "*/darwin/x64":
     zipname:    ncat.darwin.x64.7z
   "*/win/x64":
-    zipname:    ncat.x64.exe.7z
+    zipname:    ncat.win.x64.exe.7z
     bin_suffix: .exe

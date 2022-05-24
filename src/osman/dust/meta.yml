@@ -32,5 +32,5 @@ rule:
   "*/darwin/x64":
     zipname:    dust.darwin.x64.7z
   "*/win/x64":
-    zipname:    dust.x64.exe.7z
+    zipname:    dust.win.x64.exe.7z
     bin_suffix: .exe
