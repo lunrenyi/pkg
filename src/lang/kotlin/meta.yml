@@ -11,6 +11,9 @@ url:
   cn: '%{github_source}/v%{version}/kotlin-%{_os}-%{_arch}-%{version}-349.%{file_suffix}'
 xbin:
   kotlin: kotlin%{bin_suffix}
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 
 rule:
   /*:

@@ -15,8 +15,9 @@ xbin:
     rust: bin/scala
 
 hook:
-  pre-install: ""
-  install: ""
+  activate: activate.sh
+  deactivate: deactivate.sh
+  install: post-install.sh
 
 rule:
 

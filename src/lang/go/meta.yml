@@ -13,8 +13,9 @@ xbin:
   go: bin/gofmt
 
 hook:
-  install: ""
-
+  activate: activate.sh
+  deactivate: deactivate.sh
+  install: "install.sh"
 
 rule:
   /*:
