@@ -7,9 +7,12 @@ gc_url: https://gitcode.net/x-bash/ffmpeg/-/raw/main/ffmpeg/%{version}
 file_suffix: 7z
 url:
   _:
-    - "%{gh_url}/%{zipname}"
-    - "%{gc_url}/%{zipname}"
-  cn: "%{gc_url}/%{zipname}"
+    - "%{gh_url}/%{zipname}.%{file_suffix}"
+    - "%{gc_url}/%{zipname}.%{file_suffix}"
+  cn: "%{gc_url}/%{zipname}.%{file_suffix}"
+
+hook:
+  install: install.sh
 
 xbin: ffmpeg.%{os}.%{arch}%{bin_suffix}
 
@@ -24,15 +27,15 @@ rule:
     version: N-105323-gdd17c86aa1-tessus
 
   "*/linux/arm64":
-    zipname:    ffmpeg.linux.arm64.7z
+    zipname:    ffmpeg.linux.arm64
   "*/darwin/arm64":
-    zipname:    ffmpeg.darwin.arm64.7z
+    zipname:    ffmpeg.darwin.arm64
   "*/linux/x64":
-    zipname:    ffmpeg.linux.x64.7z
+    zipname:    ffmpeg.linux.x64
   "*/darwin/x64":
-    zipname:    ffmpeg.darwin.x64.7z
+    zipname:    ffmpeg.darwin.x64
   "*/win/x64":
-    zipname:    ffmpeg.win.x64.exe.7z
+    zipname:    ffmpeg.win.x64.exe
     bin:
       ffplay: ffmpeg/ffmpeg.%{osarch}.%{osname}.exe
 
