@@ -14,6 +14,7 @@ xbin:
   p7zip: 7za.%{os}.%{arch}%{bin_suffix}
   7za: 7za.%{os}.%{arch}%{bin_suffix}
   7z: 7za.%{os}.%{arch}%{bin_suffix}
+  
 
 rule:
   /*:
@@ -36,5 +37,4 @@ rule:
   "*/win/x64":
     zipname:    7za.win.x64.exe.7z
     bin_suffix: .exe
-    file_suffix: zip
 

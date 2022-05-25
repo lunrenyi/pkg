@@ -16,7 +16,7 @@ xbin:
 
 hook:
   pre-install: ""
-  install: post-install.sh
+  install: ""
 
 rule:
 
