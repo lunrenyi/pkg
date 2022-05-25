@@ -12,6 +12,9 @@ xbin:
   java: bin/javac
 hook:
   install: post-install.sh
+  activate: activate.sh
+  deactivate: deactivate.sh
+
 
 rule:
 
