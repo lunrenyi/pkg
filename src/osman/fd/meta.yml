@@ -9,8 +9,6 @@ url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
-xbin: fzf.%{os}.%{arch}%{bin_suffix}
-
 rule:
   /*:
     version: stable
@@ -23,13 +21,17 @@ rule:
 
   "*/linux/arm64":
     zipname:    fd-v8.3.2-arm-unknown-linux-musleabihf.tar.gz
+    xbin: fd-v8.3.2-arm-unknown-linux-musleabihf/fd
   "*/darwin/arm64":
     zipname:    fd-v8.3.2-x86_64-apple-darwin.tar.gz
+    xbin: fd-v8.3.2-x86_64-apple-darwin/fd
   "*/linux/x64":
     zipname:    fd-v8.3.2-aarch64-unknown-linux-gnu.tar.gz
+    xbin: fd-v8.3.2-aarch64-unknown-linux-gnu/fd
   "*/darwin/x64":
     zipname:    fd-v8.3.2-x86_64-apple-darwin.tar.gz
+    xbin: fd-v8.3.2-x86_64-apple-darwin/fd
   "*/win/x64":
     zipname:    fd-v8.3.2-x86_64-pc-windows-gnu.zip
+    xbin: fd-v8.3.2-x86_64-apple-darwin/fd.exe
     file_suffix: zip
-    bin_suffix: .exe
