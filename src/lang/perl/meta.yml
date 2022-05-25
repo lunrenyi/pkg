@@ -7,8 +7,12 @@ _os: "%{os}"
 _arch: "%{arch}"
 file_suffix: tar.gz
 url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
-      cn: "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz"
+  _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
+  cn: "https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz"
+hook:
+  activate: activate
+  deactivate: deactivate
+
 
 
 rules:

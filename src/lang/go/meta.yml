@@ -13,7 +13,7 @@ xbin:
   go: bin/gofmt
 
 hook:
-  install: post-install.sh
+  install: ""
 
 
 rule:

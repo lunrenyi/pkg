@@ -1,3 +1,4 @@
+# shellcheck shell=sh disable=SC2039,SC1090,SC3043,SC2263
 ___x_cmd_pkg_java_post_install(){
 
 	___x_cmd_pkg_install___unzip "$pkg_name" "$version" "$osarch"
