@@ -17,6 +17,7 @@ pkg_json2yml()(
     find . -name '*.json' | while read -r line; do
         p=${line%.json}.yml
         cat $line | x yq -o yaml e -P >$p
+        # x j2y "$line" "$p"
         rm "$line"
     done
 )
@@ -51,7 +52,7 @@ pkg_yml2json()(
 
                     mkdir -p "$tgtprefix/$dir/$pkg"
                     x yq -o json e -P <meta.yml | x ja t "\t" >"$tgtprefix/$dir/$pkg/meta.tt.json"
-
+                    # x y2j meta.yml | x ja t "\t" >"$tgtprefix/$dir/$pkg/meta.tt.json"
 
                     if [ -f version.sh ]; then
                         (
