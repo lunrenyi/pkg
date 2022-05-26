@@ -25,15 +25,20 @@ pkg_json2yml()(
 pkg_yml2tgz()(
     cd  $(x wsroot) && x rmrf .tmp
 
-    pkg_yml2json
+    pkg_yml2json "$@"
+    pkg_json2binmod
+    pkg_ins
     cd $(x wsroot)/.tmp
-    x z all.7z *
+    x 7za a all.7z *
+    # x 7 all.7z *
+    x rmrf ../dist/all.7z
     mkdir -p ../dist
     mv all.7z ../dist/all.7z
     cd  $(x wsroot) && x rmrf .tmp
 )
 
 pkg_yml2json()(
+    local state="$1" # whether force
     local tgtprefix="$(x wsroot)/.tmp"
     mkdir -p "$tgtprefix"
     cd $(x wsroot)/src
@@ -43,7 +48,7 @@ pkg_yml2json()(
             cd "$dir" || continue
             for pkg in *; do
                 (
-                    x:info "pkg: $pkg"
+                    x:info "pkg: $(pwd)/$pkg"
                     cd "$pkg" || exit
                     if [ ! -f meta.yml ]; then
                         x:warn  "Not Existed: $dir/$pkg/meta.yml"
@@ -55,9 +60,13 @@ pkg_yml2json()(
                     # x y2j meta.yml | x ja t "\t" >"$tgtprefix/$dir/$pkg/meta.tt.json"
 
                     if [ -f version.sh ]; then
-                        (
-                            . ./version.sh | x ja t "\t"
-                        ) >"$tgtprefix/$dir/$pkg/version.tt.json"
+                        if [ -z "$state" ]; then
+                            x rmrf tmp
+                            (
+                                . ./version.sh | x ja t "\t"
+                            ) > tmp
+                        fi
+                        cat tmp >"$tgtprefix/$dir/$pkg/version.tt.json"
                     elif [ -f version.yml ]; then
                         x:info "Generate: $tgtprefix/$dir/$pkg/version.tt.json" >&2
                         x yq -o json e -P <version.yml | x ja t "\t" >"$tgtprefix/$dir/$pkg/version.tt.json"
@@ -100,6 +109,7 @@ pkg_ins(){
 pkg_json2binmod()(
     # step 1: list all json
     # step 2: get xbin attribute
+    x:info "Generate binmod.txt file"
     cd "$(x wsroot)/.tmp" || return
     find . -name meta.tt.json | while read -r line; do
         # TODO: if it is a value.
@@ -108,15 +118,12 @@ pkg_json2binmod()(
 
         {
         x ja '
-_[1]~/xbin/{
-    if (v() != "}" && v() != "{"){
-        print ((k()=="xbin") ? "" : k()) SUBSEP v()
-    }
+    _[1]~/xbin/{
+        if(v() != "}"&& v() != "{"){print (k()=="xbin") ? "" : k()}
 }
 '
     } <"$line" | while read -r name; do
-            key="${name%%""*}"
-            printf ":%s:%s\n" "${key:-$pkg_name}" "${name#*}"
+            printf ":%s:%s\n" "${${name%%*}:-$pkg_name}" ${pkg_name}
         done
     done > binmod.txt
 )

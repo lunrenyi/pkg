@@ -4,12 +4,36 @@ rely: []
 
 google_site: https://golang.google.cn/dl
 file_suffix: tar.gz
+_os: "%{os}"
+_arch: "%{arch}"
 url:
-  _: "%{google_site}/go%{version}.%{os}-%{arch}.${file_suffix}"
-  cn: ""
+  _: "%{google_site}/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
+  cn: "%{google_site}/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
 xbin:
-  gobin: go%{bin_suffix}
+  go: bin/gofmt
+
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
+  install: "install.sh"
+
 rule:
-  v*/win*:
-    os: windows
+  /*:
+    version: latest
+
+  latest/*:
+    version: 1.18.2
+
+  "*/win/x64":
+    _os: windows
+    _arch: 386
     file_suffix: zip
+
+
+  "*/linux/x64":
+    _arch: 386
+
+
+  "*/darwin/*":
+    _os: "%{os}"
+    _arch: "%{arch}"

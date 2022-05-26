@@ -8,7 +8,7 @@ url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
-xbin: jq.%{osname}.%{osarch}%{bin_suffix}
+xbin: jq.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:
@@ -29,5 +29,5 @@ rule:
   "*/darwin/x64":
     zipname:    jq.darwin.x64.7z
   "*/win/x64":
-    zipname:    jq.x64.exe.7z
+    zipname:    jq.win.x64.exe.7z
     bin_suffix: .exe

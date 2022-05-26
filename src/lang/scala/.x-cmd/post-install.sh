@@ -1,5 +1,5 @@
-___x_cmd_env_scala_copy_to_unpackdir(){
-    chmod -R +x "$unpack_dir"/*/bin/*
+___x_cmd_scala_unpack(){
+    ___x_cmd_pkg_install___unzip "$pkg_name" "$version" "$osarch"
 }
 
-___x_cmd_env_scala_copy_to_unpackdir
+___x_cmd_scala_unpack

@@ -2,15 +2,16 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/dust/main/bin
-gc_url: https://gitee.com/static-build/dust/raw/main/bin
+gh_url: https://raw.githubusercontent.com/static-build/dust/main/dust/%{version}
+gc_url: https://gitee.com/static-build/dust/raw/main/dust/%{version}
+static-build: dust/dust
 file_suffix: 7z
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  du: dust.%{osname}.%{osarch}%{bin_suffix}
+  du: dust.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:
@@ -31,5 +32,5 @@ rule:
   "*/darwin/x64":
     zipname:    dust.darwin.x64.7z
   "*/win/x64":
-    zipname:    dust.x64.exe.7z
+    zipname:    dust.win.x64.exe.7z
     bin_suffix: .exe

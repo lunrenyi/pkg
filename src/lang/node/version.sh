@@ -1,16 +1,13 @@
 # shellcheck shell=sh  #source
-if ! [ -f tmp/a ] ; then
-    mkdir tmp
-    curl https://nodejs.org/dist/index.json 2>/dev/null > tmp/a
-fi
 
 get_node_version(){
-    cat tmp/a | x jo env .\* .version .files .security  -- 'echo "$version
+    curl https://nodejs.org/dist/index.json 2>/dev/null | x jo env .\* .version .files .security  -- 'echo "$version
 $security
 $files"'
 }
 
-get_node_version | awk '
+get_node_info_toyml(){
+   get_node_version | awk '
 BEGIN{
     DATA_VERSION = 0
     DATA_SECURITY = 1
@@ -55,4 +52,6 @@ function unique(line,       lastvalue, arr, l, _, i){
     return _
 }
 
-'| x yq -o json e -P
+'
+}
+get_node_info_toyml | x yq -o json e -P

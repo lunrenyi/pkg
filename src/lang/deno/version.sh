@@ -1,5 +1,4 @@
 # shellcheck shell=sh #source
-
 get_deno_version(){
   curl https://api.github.com/repos/denoland/deno/releases 2>/dev/null | awk ' {
     if(match($0, /"name": "[v0-9.]+"/)){
@@ -17,4 +16,5 @@ get_deno_version(){
   }
 '
 }
+
 get_deno_version | x yq -o json e -P

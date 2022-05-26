@@ -2,24 +2,25 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/yq/main/bin
-gc_url: https://gitee.com/static-build/yq/raw/main/bin
+gh_url: https://raw.githubusercontent.com/static-build/yq/main/yq/%{version}
+gc_url: https://gitee.com/static-build/yq/raw/main/yq/%{version}
+static-build: yq/yq
 file_suffix: 7z
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
-xbin: yq.%{osname}.%{osarch}%{bin_suffix}
+xbin: yq.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:
     version: stable
 
   stable/*:
-    version: 1.6-dirty
+    version: 4.15.1
 
   latest/*:
-    version: 1.6-dirty
+    version: 4.15.1
 
   "*/linux/arm64":
     zipname:    yq.linux.arm64.7z
@@ -30,5 +31,5 @@ rule:
   "*/darwin/x64":
     zipname:    yq.darwin.x64.7z
   "*/win/x64":
-    zipname:    yq.x64.exe.7z
+    zipname:    yq.win.x64.exe.7z
     bin_suffix: .exe

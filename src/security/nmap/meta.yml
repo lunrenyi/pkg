@@ -2,24 +2,25 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/nmap/main/bin
-gc_url: https://gitee.com/static-build/nmap/raw/main/bin
+gh_url: https://raw.githubusercontent.com/static-build/nmap/main/nmap/%{version}
+gc_url: https://gitee.com/static-build/nmap/raw/main/nmap/%{version}
 file_suffix: 7z
+static-build: nmap/nmap
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
-xbin: nmap.%{osname}.%{osarch}%{bin_suffix}
+xbin: nmap.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:
     version: stable
 
   stable/*:
-    version: v0.10.1
+    version: 7.92
 
   latest/*:
-    version: v0.10.1
+    version: 7.92
 
   "*/linux/arm64":
     zipname:    nmap.linux.arm64.7z
@@ -30,7 +31,6 @@ rule:
   "*/darwin/x64":
     zipname:    nmap.darwin.x64.7z
   "*/win/x64":
-    zipname:    nmap.x64.exe.7z
-    file_suffix: zip
-    bin:
-      ffplay: .exe
+    zipname:    nmap.win.x64.exe.7z
+    bin_suffix: .exe
+

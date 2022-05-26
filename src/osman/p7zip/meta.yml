@@ -2,26 +2,29 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/p7zip/main/bin
-gc_url: https://gitee.com/static-build/p7zip/raw/main/bin
+gh_url: https://raw.githubusercontent.com/static-build/p7zip/main/7za/%{version}
+gc_url: https://gitee.com/static-build/p7zip/raw/main/7za/%{version}
 file_suffix: 7z
+static-build: p7zip/7za
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  pzip: 7za.%{osname}.%{osarch}%{bin_suffix}
-  7z: 7za.%{osname}.%{osarch}%{bin_suffix}
+  p7zip: 7za.%{os}.%{arch}%{bin_suffix}
+  7za: 7za.%{os}.%{arch}%{bin_suffix}
+  7z: 7za.%{os}.%{arch}%{bin_suffix}
+
 
 rule:
   /*:
     version: stable
 
   stable/*:
-    version: 1.6-dirty
+    version: 16.02
 
   latest/*:
-    version: 1.6-dirty
+    version: 16.02
 
   "*/linux/arm64":
     zipname:    7za.linux.arm64.7z
@@ -32,6 +35,6 @@ rule:
   "*/darwin/x64":
     zipname:    7za.darwin.x64.7z
   "*/win/x64":
-    zipname:    7za.x64.exe.7z
+    zipname:    7za.win.x64.exe.7z
     bin_suffix: .exe
-    file_suffix: zip
+

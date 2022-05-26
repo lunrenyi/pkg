@@ -1,27 +1,23 @@
 homepage: https://strawberryperl.com/releases.html
 license: MIT
 rely: []
-
-os-arch:
-  linux-arrch:
-    url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{arch}-%{os}.tar.gz
-      cn: ""
-  darwin/arm64:
-    url:
-      _: https://golang.google.cn/dl/go%{version}.%{os}-%{arch}.tar.gz
-      cn: ""
-  linux/x64:
-    url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{arch}-%{os}.tar.gz
-      cn: ""
-  darwin/x64:
-    url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{arch}-%{os}.tar.gz
-      cn: ""
-  win-64bit:
-    url:
-      _: https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{os}.msi
-      cn: ""
 xbin:
   perl: perl%{bin_suffix}
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: tar.gz
+url:
+  _: https://www.cpan.org/src/5.0/perl-%{version}.tar.gz
+  cn: "https://www.cpan.org/src/5.0/perl-%{version}.tar.gz"
+
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
+  install: post_install.sh
+
+
+rule:
+
+  /*:
+    version: 5.36.0-RC3
+

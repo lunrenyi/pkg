@@ -17,4 +17,5 @@ get_rust_version(){
         else next
     }'
 }
+
 get_rust_version | x yq -o json e -P
