@@ -2,8 +2,8 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/nmap/main/bin
-gc_url: https://gitee.com/static-build/nmap/raw/main/bin
+gh_url: https://raw.githubusercontent.com/static-build/nmap/main/nping/%{version}
+gc_url: https://gitee.com/static-build/nmap/raw/main/nping/%{version}
 file_suffix: 7z
 static-build: nmap/nping
 url:
