@@ -1,6 +1,6 @@
 ___x_cmd_pkg_rust_unpack()(
-    local tgt="$___X_CMD_PKG_INSTALL_PATH/$pkg_name/rust-$version"
-    local unpack_dir="$___X_CMD_PKG_DOWNLOAD_PATH/$pkg_name/$version/tmp"
+    local tgt="$___X_CMD_PKG_INSTALL_PATH/$name/rust-$version"
+    local unpack_dir="$___X_CMD_PKG_DOWNLOAD_PATH/$name/$version/tmp"
 
     x uz "$ball" "$unpack_dir" 1>/dev/null || {
         pkg:warn "Fail to unzip $ball"
@@ -13,7 +13,7 @@ ___x_cmd_pkg_rust_unpack()(
     fi
     ./install.sh --destdir="../$version/" --prefix=/
     cd .. && x rmrf "$tgt"
-    x rmrf "$___X_CMD_PKG_DOWNLOAD_PATH/$pkg_name/$version"
+    x rmrf "$___X_CMD_PKG_DOWNLOAD_PATH/$name/$version"
 
 )
 
