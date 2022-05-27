@@ -11,6 +11,7 @@ url:
 
 xbin:
   exa: exa.%{os}.%{arch}%{bin_suffix}
+  ls: exa.%{os}.%{arch}%{bin_suffix}
   ll: exa.%{os}.%{arch}%{bin_suffix}
 
 rule:

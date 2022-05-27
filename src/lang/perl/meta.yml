@@ -13,7 +13,6 @@ url:
 hook:
   activate: activate.sh
   deactivate: deactivate.sh
-  install: post_install.sh
 
 
 rule:
