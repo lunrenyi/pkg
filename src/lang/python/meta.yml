@@ -37,6 +37,10 @@ rule:
     _arch: x86_64
     file_suffix: exe
 
+  py*/darwin/x64:
+    _os: MacOSX
+    _arch: x86_64
+
 
 
 

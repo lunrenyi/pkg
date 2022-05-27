@@ -20,6 +20,15 @@ rule:
   /*:
     version: 5.36.0-RC3
 
-  "*/darwin/*":
-    _os: aarch64
+  "*/win/*":
+    _arch: 32bit
+    url: https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-64bit.zip
 
+  "*/win/x86":
+    _arch: 64bit
+    url: https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-64bit.zip
+
+
+  "*/win/x64":
+    _os: 64bit
+    url: https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-64bit.zip

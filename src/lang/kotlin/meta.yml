@@ -14,6 +14,7 @@ xbin:
 hook:
   activate: activate.sh
   deactivate: deactivate.sh
+  install: post-install.sh
 
 rule:
   /*:
