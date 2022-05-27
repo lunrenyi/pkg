@@ -18,10 +18,10 @@ rule:
     version: stable
 
   stable/*:
-    version: 7.80.0-DEV
+    version: 7.83.1-DEV
 
   latest/*:
-    version: 7.80.0-DEV
+    version: 7.83.1-DEV
 
   "*/linux/arm64":
     zipname:    curl.linux.arm64.7z
