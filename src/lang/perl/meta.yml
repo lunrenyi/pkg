@@ -13,11 +13,13 @@ url:
 hook:
   activate: activate.sh
   deactivate: deactivate.sh
-  install: post_install.sh
 
 
 rule:
 
   /*:
     version: 5.36.0-RC3
+
+  "*/darwin/*":
+    _os: aarch64
 
