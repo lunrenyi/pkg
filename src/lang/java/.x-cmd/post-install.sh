@@ -1,9 +1,9 @@
 # shellcheck shell=sh disable=SC2039,SC1090,SC3043,SC2263
 ___x_cmd_pkg_java_post_install(){
 
-	___x_cmd_pkg_install___unzip "$pkg_name" "$version" "$osarch"
+	___x_cmd_pkg_install___unzip "$name" "$version" "$osarch"
 
-	local unpack_dir="${___X_CMD_PKG_INSTALL_PATH}/${pkg_name}/${version}"
+	local unpack_dir="${___X_CMD_PKG_INSTALL_PATH}/${name}/${version}"
 	case "$version" in
 		*-open|*-sapmchn|*-trava|*-oracle|*-grl|*-gln|*-amzn|*-nik|*-tem)
 			if [ "$(x os name)" = "darwin" ]; then
