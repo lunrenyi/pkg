@@ -38,7 +38,7 @@ DATA_STATUS==DATA_FILES{
     next
 }
 END{
-    data = gensub("-","/","g",data)
+    gsub("-","/",data)
     print data
 }
 
