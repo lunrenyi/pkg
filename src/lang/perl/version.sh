@@ -1,7 +1,7 @@
 # shellcheck shell=sh  #source
 
 get_perl_version(){
-  cat /home/linux/work/x-cmd/pkg/src/lang/perl/.x-cmd/test 2>/dev/null | awk '
+  curl https://api.github.com/repos/skaji/relocatable-perl/releases 2>/dev/null | awk '
 {
   if(match($0, /"name": "[0-9.]+"/)){
     lastosarch = ""
@@ -28,9 +28,4 @@ function print_osarch(osarch){
     }
 '
 }
-
-get_perl_info_to_yml(){
-  get_perl_version  | sort -V -u -r
-}
-
-get_perl_version | x yq -o json e -P > "/home/linux/work/x-cmd/pkg/src/lang/perl/tmp"
+get_perl_version | x yq -o json e -P
