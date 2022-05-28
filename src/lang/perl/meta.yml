@@ -17,12 +17,12 @@ hook:
 
 rule:
 
-  /*:
-    version: 5.36.0-RC3
+  /win/*:
+    version: 5.32.1.1
 
-  "*/win/*":
-    _arch: 32bit
-    url: https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-64bit.zip
+  "*/win/x86":
+    _arch: 64bite
+    url: https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{_arch}.zip
 
   "*/win/x86":
     _arch: 64bit
