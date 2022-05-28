@@ -1,7 +1,7 @@
 # shellcheck shell=sh #source
 
 get_py_version(){
-curl https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 2>/dev/null | awk 'match($0,"Miniconda3" "-" "[0-9.]+" "-" "[A-Za-z]+" "-" "[A-Za-z0-9_]+") { a = substr($0,RSTART,RLENGTH)
+curl https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 2>/dev/null | awk 'match($0,"Miniconda3" "-" "[py0-9.]*" "-" "[A-Za-z]+" "-" "[A-Za-z0-9_]+") { a = substr($0,RSTART,RLENGTH)
   split(a,b,"-")
   gsub("Linux", "linux", b[3])
   gsub("Windows", "win", b[3])
