@@ -20,7 +20,7 @@ rule:
     _arch: x86_64
     _os: unknown-linux-gnu
 
-  v*/darwin/arch64:
+  v*/darwin/arm64:
     _arch: aarch64
     _os: apple-darwin
 

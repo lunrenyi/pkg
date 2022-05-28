@@ -34,6 +34,5 @@ rule:
     _arch: 386
 
 
-  "*/darwin/*":
-    _os: "%{os}"
-    _arch: "%{arch}"
+  "*/darwin/x*":
+    _arch: "amd64"
