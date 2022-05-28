@@ -5,7 +5,12 @@ get_info_to_yml(){
         all = substr($0, RSTART+6, RLENGTH-6)
         match($0, "/dl/go[0-9.]+")
         version = substr($0, RSTART+6, RLENGTH-7)
-        print version " " substr(all, RLENGTH-5)
+        osarch = substr(all, RLENGTH-5)
+        split(osarch,newosarch,"-")
+        name = newosarch[1]"/"newosarch[2]
+        gsub("386","x64",name)
+        gsub("windows","win",name)
+        print version " " name
     }
     ' | sort -V -u -r | awk '{
         if(last != $1){
