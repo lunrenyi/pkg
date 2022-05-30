@@ -20,7 +20,7 @@ curl -H "Accept-Encoding: gzip" https://downloads.python.org/pypy/ 2>/dev/null |
   gsub("aarch64","darwin/amd64",b[3])
   gsub("osx64","darwin/x64",b[3])
 
-  if(b[3] != "src"){print b[2] "-" b[1] ":\n  " b[3] ":\n    sha:" }
+  if(b[3] != "src"){print b[1] "-" b[2] ":\n  " b[3] ":\n    sha:" }
 } '
 }
 

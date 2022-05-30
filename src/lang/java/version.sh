@@ -2,7 +2,7 @@
 get_java_version(){
 for platform in mingw64_nt_10 linuxarm64 linuxx64 darwinx64 darwinarm64 ; do
 
-    curl "https://api.sdkman.io/2/candidates/java/${platform}/versions/all" 2>/dev/null | awk -v $platform '
+    curl "https://api.sdkman.io/2/candidates/java/${platform}/versions/all" 2>/dev/null | awk -v platform=$platform '
           BEGIN{ RS=","} {
             gsub("mingw64_nt_10","win/x64",platform)
             gsub("linuxarm64","linux/arm64",platform)

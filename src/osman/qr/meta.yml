@@ -1,4 +1,4 @@
-homepage: https://golang.google.cn
+homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
@@ -20,10 +20,10 @@ rule:
     version: stable
 
   stable/*:
-    version: 16.02
+    version: 4.1.1
 
   latest/*:
-    version: 16.02
+    version: 4.1.1
 
   "*/linux/arm64":
     zipname:    qrencode.linux.arm64.7z

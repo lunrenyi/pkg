@@ -8,6 +8,7 @@ _arch: "%{arch}"
 url:
   _: "%{sdkman_url}/%{version}/%{_os}%{_arch}"
   cn: "%{sdkman_url}/%{version}/%{_os}%{_arch}"
+  
 xbin:
   java: bin/javac
 hook:
