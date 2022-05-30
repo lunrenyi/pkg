@@ -10,7 +10,9 @@ url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
-xbin: bat.%{os}.%{arch}%{bin_suffix}
+xbin:
+  bat: bat.%{os}.%{arch}%{bin_suffix}
+  cat: bat.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:
