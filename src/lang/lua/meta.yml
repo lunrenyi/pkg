@@ -1,0 +1,23 @@
+license: MIT
+rely: []
+file_suffix: tar.gz
+url:
+  _: "https://sourceforge.net/projects/luabinaries/files/%{version}/Tools%20Executables/lua-%{version}_%{_os}%{_arch}_bin.%{file_suffix}/download"
+  cn: "https://sourceforge.net/projects/luabinaries/files/%{version}/Tools%20Executables/lua-%{version}_%{_os}%{_arch}_bin.%{file_suffix}/download"
+
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
+  install: install.sh
+
+rule:
+  /*:
+    version: 5.4.2
+
+  v*/win:
+    file_suffix: zip
+    bin_suffix: exe
+
+  5.4.2/linux/*:
+    _os: Linux
+    _arch: "54_64"

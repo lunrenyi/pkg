@@ -12,6 +12,7 @@ url:
 
 xbin:
   du: dust.%{os}.%{arch}%{bin_suffix}
+  dust: dust.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:

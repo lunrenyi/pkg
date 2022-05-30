@@ -1,14 +1,12 @@
-homepage: https://gitee.com/organizations/static-build/projects/dl/
+homepage: https://golang.google.cn/dl/
 license: MIT
 rely: []
-
-google_site: https://gitee.com/organizations/static-build/projects/dl
 file_suffix: tar.gz
 _os: "%{os}"
 _arch: "%{arch}"
 url:
-  _: "%{google_site}/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
-  cn: "%{google_site}/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
+  _: "https://go.dev/dl/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
+  cn: "https://golang.google.cn/dl/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
 xbin:
   go: bin/gofmt
 
