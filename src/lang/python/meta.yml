@@ -25,6 +25,19 @@ rule:
   /*:
     version: py39_4.12.0
 
+  "v*-pypy*/darwin/*":
+    _os: osx64
+    url: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
+
+  "v*-pypy*/linux/x64":
+    _os: linux64
+    url: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
+
+  "v*-pypy*/linux/x32":
+    _os: linux32
+    url: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
+
+
   py*/linux/x*:
     _os: Linux
     _arch: x86_64

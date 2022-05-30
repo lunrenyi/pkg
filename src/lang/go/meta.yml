@@ -1,8 +1,8 @@
-homepage: https://golang.google.cn/dl/
+homepage: https://gitee.com/organizations/static-build/projects/dl/
 license: MIT
 rely: []
 
-google_site: https://golang.google.cn/dl
+google_site: https://gitee.com/organizations/static-build/projects/dl
 file_suffix: tar.gz
 _os: "%{os}"
 _arch: "%{arch}"

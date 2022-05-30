@@ -17,19 +17,15 @@ get_perl_version(){
 function print_osarch(osarch){
   if(lastosarch == osarch ) return
   lastosarch  = osarch
-  print version " " osarch
+  gsub("x86_64","x64",osarch)
+  print version":\n  " osarch":\n    sha:"
 }
 '
   curl https://strawberryperl.com/releases.html 2>/dev/null |awk '
     match($0, /<td><b>[0-9.]+<\/b><\/td>/) {
     version = substr($0,RSTART+7,RLENGTH-16)
-    print version":\n  x64:\n    sha:"
+    print version":\n  win/x64:\n    sha:"
     }
 '
 }
-
-get_perl_info_to_yml(){
-  get_perl_version  | sort -V -u -r
-}
-
-get_perl_version | x yq -o json e -P > "/home/linux/work/x-cmd/pkg/src/lang/perl/tmp"
+get_perl_version | x yq -o json e -P

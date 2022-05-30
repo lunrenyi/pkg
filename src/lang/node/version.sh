@@ -38,6 +38,7 @@ DATA_STATUS==DATA_FILES{
     next
 }
 END{
+    gsub("-","/",data)
     print data
 }
 
