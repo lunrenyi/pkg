@@ -1,0 +1,35 @@
+homepage: https://golang.google.cn
+license: MIT
+rely: []
+
+gh_url: https://raw.githubusercontent.com/static-build/sqlite3/main/sqlite3/%{version}
+gc_url: https://gitee.com/static-build/sqlite3/raw/main/sqlite3/%{version}
+file_suffix: 7z
+static-build: sqlite3/sqlite3
+url:
+  _: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin: sqlite3.%{os}.%{arch}%{bin_suffix}
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 3.36.0
+
+  latest/*:
+    version: 3.36.0
+
+  "*/linux/arm64":
+    zipname:    sqlite3.linux.arm64.7z
+  "*/darwin/arm64":
+    zipname:    sqlite3.darwin.arm64.7z
+  "*/linux/x64":
+    zipname:    sqlite3.linux.x64.7z
+  "*/darwin/x64":
+    zipname:    sqlite3.darwin.x64.7z
+  "*/win/x64":
+    zipname:    sqlite3.win.x64.exe.7z
+    bin_suffix: .exe
