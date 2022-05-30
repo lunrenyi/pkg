@@ -1,0 +1,35 @@
+homepage: https://golang.google.cn
+license: MIT
+rely: []
+
+gh_url: https://raw.githubusercontent.com/static-build/bat/main/bat/%{version}
+gc_url: https://gitee.com/static-build/bat/raw/main/bat/%{version}
+file_suffix: 7z
+static-build: bat/bat
+url:
+  _: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin: bat.%{os}.%{arch}%{bin_suffix}
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 0.18.2
+
+  latest/*:
+    version: 0.18.2
+
+  "*/linux/arm64":
+    zipname:    bat.linux.arm64.7z
+  "*/darwin/arm64":
+    zipname:    bat.darwin.arm64.7z
+  "*/linux/x64":
+    zipname:    bat.linux.x64.7z
+  "*/darwin/x64":
+    zipname:    bat.darwin.x64.7z
+  "*/win/x64":
+    zipname:    bat.win.x64.exe.7z
+    bin_suffix: .exe

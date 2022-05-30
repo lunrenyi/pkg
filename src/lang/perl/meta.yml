@@ -20,15 +20,38 @@ rule:
   /win/*:
     version: 5.32.1.1
 
+  /linux/*:
+    version: 5.34.1.1
+
+  /darwin/*:
+    version: 5.34.1.1
+
+
   "*/win/x86":
     _arch: 64bite
-    url: https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{_arch}.zip
+    url:
+      cn: https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{_arch}.zip
 
-  "*/win/x86":
-    _arch: 64bit
-    url: https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-64bit.zip
+  "*/win/x32":
+    _arch: 32bit
+    url:
+      cn: https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-%{_arch}.zip
 
+  "*/linux/x64":
+    _os: linux
+    _arch: x86_64
+    url:
+      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
 
-  "*/win/x64":
-    _os: 64bit
-    url: https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-64bit.zip
+  "*/darwin/x64":
+    _arch: 2level
+    _os: darwin
+    url:
+      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{arch}.tar.gz
+
+  "*/darwin/amd64":
+    _arch: 2level
+    _os: darwin
+    url:
+      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{arch}.tar.gz
+

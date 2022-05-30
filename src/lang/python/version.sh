@@ -1,7 +1,7 @@
 # shellcheck shell=sh #source
 
 get_py_version(){
-curl https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 2>/dev/null | awk 'match($0,"Miniconda3" "-" "[py0-9.]*" "-" "[A-Za-z]+" "-" "[A-Za-z0-9_]+") { a = substr($0,RSTART,RLENGTH)
+curl https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 2>/dev/null | awk 'match($0,"Miniconda3" "-" "[py0-9_.]*" "-" "[A-Za-z]+" "-" "[A-Za-z0-9_]+") { a = substr($0,RSTART,RLENGTH)
   split(a,b,"-")
   gsub("Linux", "linux", b[3])
   gsub("Windows", "win", b[3])
@@ -20,7 +20,7 @@ curl -H "Accept-Encoding: gzip" https://downloads.python.org/pypy/ 2>/dev/null |
   gsub("aarch64","darwin/amd64",b[3])
   gsub("osx64","darwin/x64",b[3])
 
-  if(b[3] != "src"){print b[2] "-" b[1] ":\n  " b[3] ":\n    sha:" }
+  if(b[3] != "src"){print b[1] "-" b[2] ":\n  " b[3] ":\n    sha:" }
 } '
 }
 

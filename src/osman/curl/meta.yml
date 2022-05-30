@@ -1,4 +1,4 @@
-homepage: https://golang.google.cn
+homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
@@ -11,7 +11,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  du: curl.%{os}.%{arch}%{bin_suffix}
+  curl: curl.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:
