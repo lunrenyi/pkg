@@ -3,7 +3,7 @@ ___x_cmd_pkg_lua_unpack(){
     local tgt="$___X_CMD_PKG_INSTALL_PATH/$name/$version"
     pkg:info "Unpack: $ball to $tgt"
     x rmrf "$tgt"; mkdir -p "$tgt"
-    x uz "$ball" "$tgt" >2/dev/null || {
+    x uz "$ball" "$tgt" || {
         pkg:warn "Fail to unzip $ball"
     }
 }
