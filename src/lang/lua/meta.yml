@@ -9,13 +9,13 @@ hook:
   activate: activate.sh
   deactivate: deactivate.sh
   install: install.sh
-  
+
 xbin:
   lua: lua54
 
 rule:
   /*:
-    version: 5.4.2
+    version: 5.2.4
 
   "*/win":
     file_suffix: zip
@@ -24,8 +24,6 @@ rule:
   "*/linux/*":
     _os: Linux
     _arch: "319_64"
-  5.4.2/linux/*:
-    _arch: "54_64"
 
   "*/win/x64":
     _os: Win
