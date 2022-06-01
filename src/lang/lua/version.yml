@@ -1,0 +1,28 @@
+5.4.2:
+    win/x32:
+        sha:
+    win/x64:
+        sha:
+    linux/x64:
+        sha:
+5.3.6:
+    win/x32:
+        sha:
+    win/x64:
+        sha:
+    linux/x64:
+        sha:
+5.2.4:
+    win/x32:
+        sha:
+    win/x64:
+        sha:
+    linux/x64:
+        sha:
+5.1.5:
+    win/x32:
+        sha:
+    win/x64:
+        sha:
+    linux/x64:
+        sha:
