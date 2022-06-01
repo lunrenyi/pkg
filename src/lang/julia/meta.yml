@@ -1,0 +1,27 @@
+license: MIT
+rely: []
+file_suffix: tar.gz
+url:
+  _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/%{version}/julia-%{version}-latest-%{_osarch}.%{file_suffix}"
+  cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/%{version}/julia-%{version}-latest-%{_osarch}.%{file_suffix}"
+
+xbin: bin/julia
+
+_os: "%{os}"
+_arch: "%{arch}"
+
+rule:
+  /*:
+    version: latest
+
+  latest/*:
+    version: 1.8
+
+
+  "*/linux/x64":
+    _osarch: linux-x86_64
+  "*/mac/*":
+    _osarch: "%{os}%{arch}"
+
+
+
