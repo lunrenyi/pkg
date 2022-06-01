@@ -1,0 +1,36 @@
+homepage: https://golang.google.cn
+license: MIT
+rely: []
+
+gh_url: https://raw.githubusercontent.com/static-build/ucloud/main/ucloud/%{version}
+gc_url: https://gitee.com/static-build/ucloud/raw/main/ucloud/%{version}
+file_suffix: 7z
+static-build: ucloud/ucloud
+url:
+  _: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  ucloud: ucloud.%{os}.%{arch}%{bin_suffix}
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 0.1.38
+
+  latest/*:
+    version: 0.1.38
+
+  "*/linux/arm64":
+    zipname:    ucloud.linux.arm64.7z
+  "*/darwin/arm64":
+    zipname:    ucloud.darwin.arm64.7z
+  "*/linux/x64":
+    zipname:    ucloud.linux.x64.7z
+  "*/darwin/x64":
+    zipname:    ucloud.darwin.x64.7z
+  "*/win/x64":
+    zipname:    ucloud.win.x64.exe.7z
+    bin_suffix: .exe

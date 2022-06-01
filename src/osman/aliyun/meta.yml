@@ -1,0 +1,36 @@
+homepage: https://golang.google.cn
+license: MIT
+rely: []
+
+gh_url: https://raw.githubusercontent.com/static-build/aliyun/main/aliyun/%{version}
+gc_url: https://gitee.com/static-build/aliyun/raw/main/aliyun/%{version}
+file_suffix: 7z
+static-build: aliyun/aliyun
+url:
+  _: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  aliyun: aliyun.%{os}.%{arch}%{bin_suffix}
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v3.0.121
+
+  latest/*:
+    version: v3.0.121
+
+  "*/linux/arm64":
+    zipname:    aliyun.linux.arm64.7z
+  "*/darwin/arm64":
+    zipname:    aliyun.darwin.arm64.7z
+  "*/linux/x64":
+    zipname:    aliyun.linux.x64.7z
+  "*/darwin/x64":
+    zipname:    aliyun.darwin.x64.7z
+  "*/win/x64":
+    zipname:    aliyun.win.x64.exe.7z
+    bin_suffix: .exe
