@@ -9,12 +9,12 @@ get_julia_version_cn(){
             gsub("winnt", "win", $2)
             gsub("x86_64", "x64", $2)
             gsub("i686", "x86", $2)
-            print $1 ":\n  " $2 ":\n    url: " $3 "\n    sha256: " $4
+            print $1 ":\n  " $2 ":\n    url:\n      cn: " $3 "\n    sha256: " $4
         } else {
             gsub("winnt", "win", $2)
             gsub("x86_64", "x64", $2)
             gsub("i686", "x86", $2)
-            print "  " $2 ":\n    url: " $3 "\n    sha256: " $4
+            print "  " $2 ":\n    url:\n      cn: " $3 "\n    sha256: " $4
         }
     }
     '
