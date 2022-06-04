@@ -20,8 +20,26 @@ rule:
 
   "*/linux/x64":
     _osarch: linux-x86_64
-  "*/mac/*":
-    _osarch: "%{os}%{arch}"
+  "*/linux/x86":
+    _osarch: linux-i686
+  "*/linux/arm64":
+    version: 0.6
+    _osarch: linux-arm
+    "*/linux/armv7l":
+    version: 1.7
+    _osarch: linux-armv7l
+
+  "*/mac/arm64":
+    _osarch: macaarch64
+  "*/mac/x64":
+    _osarch: mac64
+
+  "*/win/x64":
+    _osarch: win64
+    file_suffix: exe
+  "*/win/x32":
+    _osarch: win32
+    file_suffix: exe
 
 
 
