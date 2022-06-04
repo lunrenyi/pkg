@@ -7,8 +7,8 @@ file_suffix: tar.gz
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
-  
-xbin: fd
+
+xbin: fd%{bin_suffix}
 
 rule:
   /*:
