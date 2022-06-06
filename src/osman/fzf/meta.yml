@@ -10,9 +10,6 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin: fzf%{bin_suffix}
-hook:
-  install: install.sh
-
 
 rule:
   /*:
