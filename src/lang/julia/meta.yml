@@ -2,9 +2,10 @@ license: MIT
 rely: []
 file_suffix: tar.gz
 url:
-  _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/%{version}/julia-%{version}-latest-%{_osarch}.%{file_suffix}"
-  cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/%{version}/julia-%{version}-latest-%{_osarch}.%{file_suffix}"
-
+  _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
+  cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
+hook:
+  install: install.sh
 xbin: bin/julia
 
 _os: "%{os}"
@@ -16,6 +17,8 @@ rule:
 
   latest/*:
     version: 1.8
+  1.8/*:
+    version: 1.8.0-rc1
 
 
   "*/linux/x64":
@@ -23,10 +26,10 @@ rule:
   "*/linux/x86":
     _osarch: linux-i686
   "*/linux/arm64":
-    version: 0.6
+    version: 0.6.0-rc1
     _osarch: linux-arm
     "*/linux/armv7l":
-    version: 1.7
+    version: 1.7.0-rc1
     _osarch: linux-armv7l
 
   "*/mac/arm64":
@@ -37,9 +40,13 @@ rule:
   "*/win/x64":
     _osarch: win64
     file_suffix: exe
+    xbin: bin/julia.exe
+
   "*/win/x32":
     _osarch: win32
     file_suffix: exe
+    xbin: bin/julia.exe
+
 
 
 
