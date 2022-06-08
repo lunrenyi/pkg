@@ -10,7 +10,9 @@ url:
   _: '%{scala_source}/%{version}/scala-%{version}.%{file_suffix}'
   cn: '%{cn_source}/%{version}/scala-%{version}.%{file_suffix}'
 
-xbin: bin/scala
+xbin:
+  scala: bin/scala
+  scaladoc: bin/scaladoc
 
 hook:
   activate: activate.sh
