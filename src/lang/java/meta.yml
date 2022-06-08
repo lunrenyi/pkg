@@ -2,7 +2,7 @@ homepage: https://sdkman.io/
 license: MIT
 rely: []
 sdkman_url: https://api.sdkman.io/2/broker/download/java
-tsinghua_url: https://mirrors.tuna.tsinghua.edu.cn/AdoptOpenJDK
+tsinghua_url: https://mirrors.tuna.tsinghua.edu.cn/Adoptium
 
 file_suffix: tar.gz
 _os: "%{os}"
