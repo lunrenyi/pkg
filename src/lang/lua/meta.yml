@@ -8,7 +8,6 @@ url:
 hook:
   activate: activate.sh
   deactivate: deactivate.sh
-  install: install.sh
 
 xbin:
   lua: lua54

@@ -3,8 +3,6 @@ license: MIT
 rely: []
 _os: "%{os}"
 _arch: "%{arch}"
-hook:
-  install: install.sh
 url:
     _: https://github.com/denoland/deno/releases/download/%{version}/deno-%{_arch}-%{_os}.%{file_suffix}
     cn: https://github.com/denoland/deno/releases/download/%{version}/deno-%{_arch}-%{_os}.%{file_suffix}

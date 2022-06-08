@@ -14,7 +14,8 @@ xbin:
 hook:
   activate: activate.sh
   deactivate: deactivate.sh
-  install: post-install.sh
+
+unpack_way: unpack_copy_to_target_dir
 
 rule:
   /*:
