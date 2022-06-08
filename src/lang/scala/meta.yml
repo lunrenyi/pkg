@@ -10,14 +10,12 @@ url:
   _: '%{scala_source}/%{version}/scala-%{version}.%{file_suffix}'
   cn: '%{cn_source}/%{version}/scala-%{version}.%{file_suffix}'
 
-xbin:
-    rustc: bin/scala
-    rust: bin/scala
+xbin: bin/scala
 
 hook:
   activate: activate.sh
   deactivate: deactivate.sh
-  install: post-install.sh
+unpack_way: unpack_copy_to_target_dir
 
 rule:
 

@@ -115,7 +115,7 @@ pkg_json2binmod()(
         # TODO: if it is a value.
         pkg_name="${line%/meta.tt.json}"
         pkg_name="${pkg_name##*/}"
-        < "$line" x ja -v NAME="$pkg_name" '{
+        cat "$line" | x ja -v NAME="$pkg_name" '{
             if (k()=="static-build") {
                 _idx = index(v(), "/")
                 NAME=substr(v(), _idx+1)

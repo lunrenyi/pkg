@@ -4,12 +4,12 @@ file_suffix: tar.gz
 url:
   _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
   cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
-hook:
-  install: install.sh
+  
 xbin: bin/julia
 
 _os: "%{os}"
 _arch: "%{arch}"
+unpack_way: unpack_copy_to_target_dir
 
 rule:
   /*:
