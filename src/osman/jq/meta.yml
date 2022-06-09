@@ -5,12 +5,15 @@ rely: []
 gh_url: https://raw.githubusercontent.com/static-build/jq/main/jq/%{version}
 gc_url: https://gitee.com/static-build/jq/raw/main/jq/%{version}
 file_suffix: 7z
-static-build: jq/jq
+static-build: jq
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
-xbin: jq.%{os}.%{arch}%{bin_suffix}
+xbin: jq/jq.%{os}.%{arch}%{bin_suffix}
+
+
+jq/1.6-dirty/jq/jq.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:
