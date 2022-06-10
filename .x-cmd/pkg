@@ -112,7 +112,7 @@ pkg_json2binmod()(
     x:info "Generate binmod.txt file"
     cd "$(x wsroot)/.tmp" || return
     find . -name meta.tt.json | while read -r line; do
-        
+        # TODO: if it is a value.
         pkg_name="${line%/meta.tt.json}"
         pkg_name="${pkg_name##*/}"
         cat "$line" | x ja -v NAME="$pkg_name" '{

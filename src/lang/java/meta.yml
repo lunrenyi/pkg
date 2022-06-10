@@ -76,12 +76,16 @@ rule:
 
 
   8*/darwin/amd64:
-    _os: macosx
+    _os: macos
     _arch: aarch64
     file_suffix: dmg
 
   18*/darwin/amd64:
     _os: macosx
+    _arch: aarch64
+
+  18*/darwin/arm64:
+    _os: macos
     _arch: aarch64
 
   18*/darwin/x64:
