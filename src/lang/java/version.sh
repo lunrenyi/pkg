@@ -19,7 +19,7 @@ done  | sort -V -u -r | awk '{
         last = $1
     }'
 
-    curl "https://www.injdk.cn/" 2/>dev>null | awk '
+    curl "https://www.injdk.cn/" 2>/dev/null | awk '
         match($0,"oraclejdk" "/" "[0-9]*" "/" "jdk-[0-9._a-z]+" "[-]?" "[0-9a-zA-Z_]+" "." "[0-9a-z.]+"){a = substr($0,RSTART,RLENGTH)
         split(a,b,"/")
         c = substr(b[3],5)
@@ -30,7 +30,7 @@ done  | sort -V -u -r | awk '{
         os = d[2]
         arch = d[3]
 
-        print d[1]"(oraclejdk):\n  " d[3]"/"d[2] ":\n    sha:"
+        print "(oraclejdk)"d[1]":\n  " d[3]"/"d[2] ":\n    sha:"
         }
     '
 

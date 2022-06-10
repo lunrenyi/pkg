@@ -2,14 +2,14 @@ homepage: https://sdkman.io/
 license: MIT
 rely: []
 sdkman_url: https://api.sdkman.io/2/broker/download/java
-tsinghua_url: https://d6.injdk.cn/oraclejdk/%{version}/jdk-%{version}_windows-x64_bin.zip
+injdk_url: https://d6.injdk.cn/oraclejdk/%{version}/jdk-%{version}_%{_os}-%{_arch}_bin.%{file_suffix}
 
 file_suffix: tar.gz
 _os: "%{os}"
 _arch: "%{arch}"
 url:
   _: "%{sdkman_url}/%{version}/%{_os}%{_arch}"
-  cn: "%{sdkman_url}/%{version}/%{_os}%{_arch}"
+  cn: "%{injdk_url}/oraclejdk/%{version}/jdk-%{version}_%{_os}-%{_arch}_bin.%{file_suffix}"
 
 xbin:
   java: bin/javac
@@ -19,16 +19,71 @@ hook:
   deactivate: deactivate.sh
 
 unpack_way: unpack_copy_to_target_dir
-
+file_suffix: tar.gz
+_os: "%{os}"
+_arch: "%{arch}"
 rule:
 
   /*:
     version: stable
 
   stable/*:
-    version: 18-open
+    cn: https://d6.injdk.cn/oraclejdk/%{version}/jdk-%{version}_%{_os}-%{_arch}_bin.%{file_suffix}
+      version: 18
+    _: https://api.sdkman.io/2/broker/download/java%{sdkman_url}/%{version}/%{_os}%{_arch}
+      version: 18-open
 
   latest/*:
     version: openjdk-v8.3.2
 
-  18/
+  "*/darwin/x64":
+    _os: macos
+
+  "*/darwin/amd64":
+    _os: macos
+    _arch: aarch64
+
+  "*/windows/*":
+    _os: windows
+    file_suffix: zip
+
+  "16/*/*":
+    url:
+     cn: https://d6.injdk.cn/oraclejdk/16/jdk-16.0.2_%{_os}-%{_arch}.%{file_suffix}
+
+
+  "11/*/*":
+    url:
+      cn: https://d6.injdk.cn/oraclejdk/11/jdk-11.0.12_%{_os}-%{_arch}.%{file_suffix}
+
+
+  "8/*/*":
+    url:
+      cn: https://d6.injdk.cn/oraclejdk/8/jdk-8u301-%{_os}-%{_arch}.%{file_suffix}
+
+  16/darwin/amd64:
+    _os: osx
+    _arch: aarch64
+
+  16/darwin/x64:
+    _os: osx
+
+  11/darwin/amd64:
+    _os: osx
+    _arch: aarch64
+
+  11/darwin/x64:
+    _os: osx
+
+  "*/linux/amd64":
+    _arch: aarch64
+
+
+  8/darwin/amd64:
+    _os: macosx
+    _arch: aarch64
+
+  8/darwin/amd64:
+    _os: macosx
+    file_suffix: dmg
+
