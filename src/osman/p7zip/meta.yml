@@ -12,17 +12,8 @@ url:
 
 xbin:
   p7zip: 7za.%{os}.%{arch}%{bin_suffix}
-  7zb: 7zb/7za.%{os}.%{arch}%{bin_suffix}
-  7z: 7za/7za.%{os}.%{arch}%{bin_suffix}
-
-x 7z
-
-binmod.txt
-:7z:p7zip/7za
-
-p7zip main version/7za/7za.osarch.7z
-
-xbin: p7zip/version/7za/7za.%{os}.%{arch}%{bin_suffix}
+  7za: 7za.%{os}.%{arch}%{bin_suffix}
+  7z: 7za.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:

@@ -10,10 +10,8 @@ url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
-xbin: jq/jq.%{os}.%{arch}%{bin_suffix}
+xbin: jq.%{os}.%{arch}%{bin_suffix}
 
-
-jq/1.6-dirty/jq/jq.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:
