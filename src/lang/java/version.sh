@@ -38,6 +38,4 @@ done  | sort -V -u -r | awk '{
         }
     '
 }
-
-
 get_java_version | x yq -o json e -P
