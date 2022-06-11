@@ -16,10 +16,10 @@ rule:
     version: stable
 
   stable/*:
-    version: 1.0.0
+    version: v1.0.0
 
   latest/*:
-    version: 1.0.0
+    version: v1.0.0
 
   "*/linux/arm64":
     zipname:    zsh-plugin.tar.gz
