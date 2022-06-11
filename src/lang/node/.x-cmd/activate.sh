@@ -3,7 +3,7 @@ ___x_cmd_node_activate(){
 
     if [ "${NPM_CONFIG_PREFIX-}" = "" ] && [ -n "$___X_CMD_PKG_INSTALL_PATH" ]; then
         export NPM_CONFIG_PREFIX="$___X_CMD_PKG_INSTALL_PATH/$version/.npm"
-        x path add "$___X_CMD_PKG_INSTALL_PATH/$version/.npm"
+        x path add "$___X_CMD_PKG_INSTALL_PATH/$version/.npm/bin"
     fi
 }
 
