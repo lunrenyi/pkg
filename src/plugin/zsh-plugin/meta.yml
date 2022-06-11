@@ -1,0 +1,38 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+
+
+gh_url: https://raw.githubusercontent.com/static-build/zsh-plugin/main/zsh-plugin/%{version}
+gc_url: https://gitee.com/static-build/zsh-plugin/raw/main/zsh-plugin/%{version}
+file_suffix: tar.gz
+url:
+  _: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin: zsh-plugin%{bin_suffix}
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 1.0.0
+
+  latest/*:
+    version: 1.0.0
+
+  "*/linux/arm64":
+    zipname:    zsh-plugin.tar.gz
+    file_suffix: tar.gz
+  "*/darwin/arm64":
+    zipname:    zsh-plugin.tar.gz
+    file_suffix: tar.gz
+  "*/linux/x64":
+    zipname:    zsh-plugin.tar.gz
+    file_suffix: tar.gz
+  "*/darwin/x64":
+    zipname:    zsh-plugin.tar.gz
+    file_suffix: tar.gz
+  "*/win/x64":
+    zipname:    zsh-plugin.tar.gz
+    file_suffix: tar.gz
