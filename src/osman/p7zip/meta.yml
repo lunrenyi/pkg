@@ -5,7 +5,7 @@ rely: []
 gh_url: https://raw.githubusercontent.com/static-build/p7zip/main/7za/%{version}
 gc_url: https://gitee.com/static-build/p7zip/raw/main/7za/%{version}
 file_suffix: 7z
-static-build: p7zip
+static-build: 7za/p7zip
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"

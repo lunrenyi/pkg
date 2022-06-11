@@ -34,3 +34,6 @@ rule:
   "*/win/x64":
     zipname:    tig.win.x64.exe.7z
     bin_suffix: .exe
+
+
+  https://gitee.com/static-build/p7zip/blob/main/7za/16.02/7za.linux.x64.7z
