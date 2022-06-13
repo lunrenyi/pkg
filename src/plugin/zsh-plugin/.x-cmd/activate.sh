@@ -5,6 +5,12 @@ ___x_cmd_zsh_plugin_activate(){
     local zsh_plugins
     local plugin
     zsh_plugins=("${(@s/,/)ZSH_PLUGIN:?Provide ZSH plugin name}")
+
+    # TODO: wait x pkg ls output empty
+    if [ -z "$(x pkg ls zsh-plugin 2>/dev/null)" ]; then
+        x pkg install zsh-plugin
+    fi
+
     for plugin in "${zsh_plugins[@]}"; do
         if . "$___X_CMD_PKG_INSTALL_PATH/$name/$version/$plugin/$plugin.plugin.zsh"; then
             x boot rc add "x-plugin-$plugin" \
