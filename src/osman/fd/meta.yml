@@ -9,8 +9,8 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-fd%{bin_suffix}
-ff%{bin_suffix}
+  fd%{bin_suffix}
+  ff%{bin_suffix}
 
 rule:
   /*:
