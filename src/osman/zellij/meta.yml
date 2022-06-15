@@ -1,0 +1,30 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+
+gh_url: https://github.com/zellij-org/zellij/releases/download/%{version}
+gc_url: https://download.fastgit.org/zellij-org/zellij/releases/download/%{version}
+file_suffix: tar.gz
+url:
+  _: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin: fzf%{bin_suffix}
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.30.0
+
+  latest/*:
+    version: v0.30.0
+
+  "*/linux/arm64":
+    zipname:    zellij-aarch64-unknown-linux-musl.tar.gz
+  "*/darwin/arm64":
+    zipname:    zellij-aarch64-apple-darwin.tar.gz
+  "*/linux/x64":
+    zipname:    zellij-x86_64-unknown-linux-musl.tar.gz
+  "*/darwin/x64":
+    zipname:    zellij-x86_64-apple-darwin.tar.gz
