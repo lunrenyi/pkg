@@ -5,14 +5,10 @@ rely: []
 gh_url: https://raw.githubusercontent.com/static-build/ffmpeg/main/ffmpeg/%{version}
 gc_url: https://gitcode.net/x-bash/ffmpeg/-/raw/main/ffmpeg/%{version}
 file_suffix: 7z
+static-build: ffmpeg/ffmpeg
 url:
-  _:
-    - "%{gh_url}/%{zipname}.%{file_suffix}"
-    - "%{gc_url}/%{zipname}.%{file_suffix}"
+  _: "%{gc_url}/%{zipname}.%{file_suffix}"
   cn: "%{gc_url}/%{zipname}.%{file_suffix}"
-
-hook:
-  install: install.sh
 
 xbin: ffmpeg.%{os}.%{arch}%{bin_suffix}
 
