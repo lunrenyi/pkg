@@ -11,7 +11,6 @@ url:
 
 hook:
   activate: activate.sh
-  deactivate: deactivate.sh
 
 rule:
   /*:
