@@ -24,7 +24,7 @@ rule:
     zipname:    helm-v3.9.0-linux-arm64.tar.gz
     _preffix: linux-arm64
   "*/darwin/arm64":
-    zipname:    helm-v3.9.0-darwin-arm64.tar.gz
+    zipname:    helm-v3.9.0-darwin-amd64.tar.gz
     _preffix: darwin-arm64
   "*/linux/x64":
     zipname:    helm-v3.9.0-linux-amd64.tar.gz
