@@ -15,7 +15,8 @@ xbin:
     rust: bin/rustc
 
 hook:
-  pre-install: ""
+  activate: activate.sh
+  deactivate: deactivate.sh
   install: install.sh
 
 rule:

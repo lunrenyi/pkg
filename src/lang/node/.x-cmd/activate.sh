@@ -5,9 +5,5 @@ ___x_cmd_node_activate(){
         export NPM_CONFIG_PREFIX="$___X_CMD_PKG_INSTALL_PATH/$name/$version/.npm"
         x path unshift "$___X_CMD_PKG_INSTALL_PATH/$name/$version/.npm/bin"
     fi
-
-
-
 }
-
 ___x_cmd_node_activate
