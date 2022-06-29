@@ -7,12 +7,10 @@ file_suffix: tar.gz
 url:
   _: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
-_os: "%{os}"
-_arch: "%{arch}"
 
 xbin:
-  fd: fd-%{version}-%{_arch}-%{_os}/fd
-  ff: fd-%{version}-%{_arch}-%{_os}/fd
+  fd: fd
+  ff: fd
 
 rule:
   /*:
@@ -24,31 +22,23 @@ rule:
   latest/*:
     version: v8.3.2
 
-  "$app/$version/linux/arm64":
-    zipname:    $app-v8.3.2-arm-unknown-linux-musleabihf.tar.gz
-    _os: linux-musleabihf
-    _arch: arm-unknown
+  "*/linux/arm64":
+    zipname:    fd-v8.3.2-arm-unknown-linux-musleabihf.tar.gz
+    xbin:       fd-v8.3.2-arm-unknown-linux-musleabihf/fd
 
   "*/darwin/arm64":
     zipname:    fd-v8.3.2-x86_64-apple-darwin.tar.gz
-    xbin: xsssss
+    xbin:       fd-v8.3.2-x86_64-apple-darwin/fd
 
   "*/linux/x64":
     zipname:    fd-v8.3.2-x86_64-unknown-linux-musl.tar.gz
-    _os: unknown-linux-musl
-    _arch: x86_64
+    xbin:       fd-v8.3.2-x86_64-unknown-linux-musl/fd
 
   "*/darwin/x64":
     zipname:    fd-v8.3.2-x86_64-apple-darwin.tar.gz
-    _arch: x86_64
-    _os: apple-darwin
+    xbin:       fd-v8.3.2-x86_64-apple-darwin/fd
 
   "*/win/x64":
     zipname:    fd-v8.3.2-x86_64-pc-windows-gnu.zip
-    xbin: fd.exe
+    xbin:       fd-v8.3.2-x86_64-pc-windows-gnu/fd.exe
     file_suffix: zip
-    _arch: x86_64
-    _os: pc-windows-gnu
-    xbin:
-    fd: fd-%{version}-%{_arch}-%{_os}/fd
-    ff: fd-%{version}-%{_arch}-%{_os}/fd
