@@ -49,4 +49,6 @@ rule:
     file_suffix: zip
     _arch: x86_64
     _os: pc-windows-gnu
-
+    xbin:
+    fd: fd-%{version}-%{_arch}-%{_os}/fd
+    ff: fd-%{version}-%{_arch}-%{_os}/fd

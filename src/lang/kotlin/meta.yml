@@ -7,8 +7,8 @@ file_suffix: tar.gz
 _os: "%{os}"
 _arch: "%{arch}"
 url:
-  _: '%{github_source}/v%{version}/kotlin-%{_os}-%{_arch}-%{version}-349.%{file_suffix}'
-  cn: '%{github_source}/v%{version}/kotlin-%{_os}-%{_arch}-%{version}-349.%{file_suffix}'
+  _: '%{github_source}/v%{version}/kotlin-%{_os}-%{_arch}-%{version}.%{file_suffix}'
+  cn: '%{github_source}/v%{version}/kotlin-%{_os}-%{_arch}-%{version}.%{file_suffix}'
 xbin:
   kotlin: kotlin%{bin_suffix}
 hook:
@@ -40,3 +40,5 @@ rule:
   "*/darwin/x64":
     _os: native-macos
     _arch: x86_64
+
+

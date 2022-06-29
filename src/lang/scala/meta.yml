@@ -29,30 +29,37 @@ rule:
 
   "2.10*/*":
     url:
+      _: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
       cn: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
 
   "2.13*/*":
     url:
+      _: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
       cn: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
 
   "2.12*/*":
     url:
+      _: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
       cn: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
 
   "2.11.11/*":
     url:
+      _: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
       cn: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
 
   "2.11*/*":
     url:
+      _: "http://downloads.typesafe.com/scala/%{version}/scala-%{version}.%{file_suffix}"
       cn: "http://downloads.typesafe.com/scala/%{version}/scala-%{version}.%{file_suffix}"
 
   "2.11.12/*":
     url:
+      _: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
       cn: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"
 
   "3.*/*":
     url:
+      _: "https://github.com/lampepfl/dotty/releases/download/%{version}/scala3-%{version}.%{file_suffix}"
       cn: "https://github.com/lampepfl/dotty/releases/download/%{version}/scala3-%{version}.%{file_suffix}"
 
 

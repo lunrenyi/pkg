@@ -8,7 +8,7 @@ _arch: "%{arch}"
 file_suffix: sh
 minoconda_sh_file: Miniconda3-%{version}-%{_os}-%{_arch}.%{file_suffix}
 
-anaconda_source: https://repo.anaconda.com/miniconda/%{version}
+anaconda_source: https://repo.anaconda.com/miniconda
 tuna_source: https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda
 url:
   _: "%{anaconda_source}/%{minoconda_sh_file}"

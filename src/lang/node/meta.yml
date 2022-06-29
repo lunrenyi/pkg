@@ -24,7 +24,7 @@ rule:
     version: latest
 
   latest/*:
-    version: v18.2.0
+    version: v18.4.0
 
   v*/win:
     file_suffix: zip
