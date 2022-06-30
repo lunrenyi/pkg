@@ -51,13 +51,13 @@ rule:
     _arch: 2level
     _os: darwin
     url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{arch}.tar.gz
-      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{arch}.tar.gz
+      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
+      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
 
   "*/darwin/amd64":
     _arch: 2level
     _os: darwin
     url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{arch}.tar.gz
-      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{arch}.tar.gz
+      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
+      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
 
