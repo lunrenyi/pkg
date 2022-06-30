@@ -28,7 +28,7 @@ rule:
     version: 5.34.1.1
 
 
-  "*/win/x86":
+  "*/win/x64":
     _arch: 64bite
     url:
       _: https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{_arch}.zip
