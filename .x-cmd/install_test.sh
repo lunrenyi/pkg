@@ -14,7 +14,6 @@ ___x_cmd_test_install(){
     x pkg activate scala
     x pkg install kotlin
     x pkg install perl
-
 }
 
 ___x_cmd_test_install
