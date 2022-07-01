@@ -4,7 +4,7 @@ file_suffix: tar.gz
 url:
   _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
   cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
-  
+
 xbin: bin/julia
 
 _os: "%{os}"
@@ -23,29 +23,61 @@ rule:
 
   "*/linux/x64":
     _osarch: linux-x86_64
+    url:
+      _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
+      cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
+
   "*/linux/x86":
     _osarch: linux-i686
+    url:
+      _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
+      cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
+
   "*/linux/arm64":
     version: 0.6.0-rc1
     _osarch: linux-arm
+    url:
+      _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/0.6/julia-%{version}-%{_osarch}.%{file_suffix}"
+      cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/0.6/julia-%{version}-%{_osarch}.%{file_suffix}"
+
     "*/linux/armv7l":
     version: 1.7.0-rc1
     _osarch: linux-armv7l
+    url:
+      _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.7/julia-%{version}-%{_osarch}.%{file_suffix}"
+      cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.7/julia-%{version}-%{_osarch}.%{file_suffix}"
+
 
   "*/mac/arm64":
     _osarch: macaarch64
+    url:
+      _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
+      cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
+
   "*/mac/x64":
     _osarch: mac64
+    url:
+      _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
+      cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
+
 
   "*/win/x64":
     _osarch: win64
     file_suffix: exe
     xbin: bin/julia.exe
+    url:
+      _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
+      cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
+
 
   "*/win/x32":
     _osarch: win32
     file_suffix: exe
     xbin: bin/julia.exe
+    url:
+      _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
+      cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
+
 
 
 
