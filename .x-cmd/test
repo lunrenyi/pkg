@@ -1,0 +1,98 @@
+# shellcheck shell=sh disable=SC2039,SC2142,SC3043 #source
+
+x log init pkg_test
+
+test_download_url(){
+    local candidate="${1}"
+    local osarch="${2}"
+    local net="${3}"
+    if ! version_list="$(___x_cmd_pkg_ls_all "$candidate")" || [ -z "$version_list" ] ; then
+        ___x_cmd_ldict put "$candidate_key" error_url_count   -
+        ___x_cmd_ldict put "$candidate_key" success_url_count -
+        pkg_test:error "$candidate ls_all error, $osarch, $net, version_list: $version_list"
+        return 1
+    fi
+
+    local url
+    while read -r version; do
+        url="$(___x_cmd_pkg___list "$candidate" "$version" "$osarch" "$net")"
+
+        if ! return_code="$(curl --silent --max-time 5.5 -I "$url" | grep -E "^HTTP" | awk -F " " '{print $2}')" \
+            || { ! [ "$return_code" = 200 ] && ! [ "$return_code" = 302 ] ; } ; then
+            pkg_test:error "return code: $return_code, $osarch, $net,  $version, $url"
+            ___x_cmd_ldict put "$candidate_key" error_url_count "$(($(___x_cmd_ldict get "$candidate_key" error_url_count)+1))"
+            return 1
+        fi
+        ___x_cmd_ldict put "$candidate_key" success_url_count "$(($(___x_cmd_ldict get "$candidate_key" success_url_count)+1))"
+    done <<A
+$version_list
+A
+}
+
+main(){
+    local candidate_list="${1:-"$(___x_cmd_pkg_ls___all_candidate)"}"
+    local candidate_key
+    while read -r candidate; do
+        pkg_test:info "== $candidate =="
+
+        # TODO: To add more osarch and net
+        for osarch in "darwin/arm64" "darwin/x64" ; do
+            for net in "cn"; do
+                candidate_key="$(printf "%s" "___X_CMD_TEST_${candidate}_${osarch}" | tr - _ | tr / _)"
+                ___x_cmd_ldict put "$candidate_key" error_url_count   0
+                ___x_cmd_ldict put "$candidate_key" success_url_count 0
+                # Check if the version list is empty, and if the resource of the spliced url exists
+                ___X_CMD_PKG_OSARCH="$osarch" test_download_url "$candidate" "$osarch" "url.$net"
+            done
+        done
+    done <<A
+$candidate_list
+A
+
+    local error_url_count
+    local success_url_count
+    local total_error_url_count=0
+    local total_success_url_count=0
+    local candidate_success_count=0
+    local candidate_error_count=0
+    ___x_cmd_ui_table -
+    ___x_cmd_ui_table h CANDIDATE  OS_ARCH  SUCCESS ERROE TOTAL   PERCENT
+
+    while read -r candidate; do
+        # TODO: To add more osarch and net
+        for osarch in "darwin/arm64" "darwin/x64" ; do
+            for net in "cn"; do
+                candidate_key="$(printf "%s" "___X_CMD_TEST_${candidate}_${osarch}" | tr - _ | tr / _)"
+                error_url_count="$(___x_cmd_ldict get "$candidate_key" error_url_count)"
+                success_url_count="$(___x_cmd_ldict get "$candidate_key" success_url_count)"
+                # pkg_test:warn "$error_url_count $success_url_count"
+
+                if [ "$error_url_count" = "-" ]; then
+                    percent="-"
+                    total="-"
+                    candidate_error_count="$((candidate_error_count+1))"
+                else
+                    total="$((success_url_count+error_url_count))"
+                    candidate_success_count="$((candidate_success_count+1))"
+                    total_error_url_count=$((total_error_url_count+error_url_count))
+                    total_success_url_count=$((total_success_url_count+success_url_count))
+                    percent=$(awk "BEGIN { pc=100*${success_url_count}/$((error_url_count+success_url_count)); i=int(pc); print (pc-i<0.5)?i:i+1 }")
+                fi
+                ___x_cmd_ui_table + "${candidate}" "${osarch}" "$success_url_count" "$error_url_count" "$total" "$percent%"
+            done
+        done
+    done <<A
+$candidate_list
+A
+
+    percent="$(awk "BEGIN { pc=100*${total_success_url_count}/$((total_error_url_count+total_success_url_count)); i=int(pc); print (pc-i<0.5)?i:i+1 }")"
+    ___x_cmd_ui_table + "total" - "$total_success_url_count" "$total_error_url_count" "$((total_success_url_count+total_error_url_count))" "$percent%"
+    percent="$(awk "BEGIN { pc=100*${candidate_success_count}/$((candidate_error_count+candidate_success_count)); i=int(pc); print (pc-i<0.5)?i:i+1 }")"
+    ___x_cmd_ui_table + "candidate" - "$candidate_success_count" "$candidate_error_count" "$((candidate_success_count+candidate_error_count))" "$percent%"
+    ___x_cmd_ui_table
+}
+
+case "$1" in
+    url) main "$2" ;;
+    *)   pkg_test:warn "Use: 'xws test url [<candidate>]'" ;;
+esac
