@@ -1,0 +1,42 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+rely: []
+
+gh_url: https://raw.githubusercontent.com/static-build/mosquitto/main/mosquitto/%{version}
+gc_url: https://gitee.com/static-build/mosquitto/raw/main/mosquitto/%{version}
+file_suffix: 7z
+static-build: mosquitto/mosquitto
+url:
+  _: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  mosquitto: mosquitto
+  mqtt: mosquitto
+  mosquitto_passwd: mosquitto_passwd
+  mosquitto_pub: mosquitto_pub
+  mosquitto_rr: mosquitto_rr
+  mosquitto_sub: mosquitto_sub
+  mosquitto_ctrl: mosquitto_ctrl
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 2.0.1
+
+  latest/*:
+    version: 2.0.1
+
+  "*/linux/arm64":
+    zipname:    mosquitto.linux.arm64.7z
+  "*/darwin/arm64":
+    zipname:    mosquitto.darwin.arm64.7z
+  "*/linux/x64":
+    zipname:    mosquitto.linux.x64.7z
+  "*/darwin/x64":
+    zipname:    mosquitto.darwin.x64.7z
+  "*/win/x64":
+    zipname:    mosquitto.win.x64.exe.7z
+    bin_suffix: .exe
