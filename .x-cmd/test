@@ -36,7 +36,7 @@ main(){
         pkg_test:info "== $candidate =="
 
         # TODO: To add more osarch and net
-        for osarch in "darwin/arm64" "darwin/x64" ; do
+        for osarch in "darwin/arm64"; do
             for net in "cn"; do
                 candidate_key="$(printf "%s" "___X_CMD_TEST_${candidate}_${osarch}" | tr - _ | tr / _)"
                 ___x_cmd_ldict put "$candidate_key" error_url_count   0
@@ -55,12 +55,12 @@ A
     local total_success_url_count=0
     local candidate_success_count=0
     local candidate_error_count=0
-    ___x_cmd_ui_table -
-    ___x_cmd_ui_table h CANDIDATE  OS_ARCH  SUCCESS ERROE TOTAL   PERCENT
+    x ui table -
+    x ui table h CANDIDATE  OS_ARCH  SUCCESS ERROE TOTAL   PERCENT
 
     while read -r candidate; do
         # TODO: To add more osarch and net
-        for osarch in "darwin/arm64" "darwin/x64" ; do
+        for osarch in "darwin/arm64" ; do
             for net in "cn"; do
                 candidate_key="$(printf "%s" "___X_CMD_TEST_${candidate}_${osarch}" | tr - _ | tr / _)"
                 error_url_count="$(___x_cmd_ldict get "$candidate_key" error_url_count)"
@@ -78,7 +78,7 @@ A
                     total_success_url_count=$((total_success_url_count+success_url_count))
                     percent=$(awk "BEGIN { pc=100*${success_url_count}/$((error_url_count+success_url_count)); i=int(pc); print (pc-i<0.5)?i:i+1 }")
                 fi
-                ___x_cmd_ui_table + "${candidate}" "${osarch}" "$success_url_count" "$error_url_count" "$total" "$percent%"
+                x ui table + "${candidate}" "${osarch}" "$success_url_count" "$error_url_count" "$total" "$percent%"
             done
         done
     done <<A
@@ -86,10 +86,10 @@ $candidate_list
 A
 
     percent="$(awk "BEGIN { pc=100*${total_success_url_count}/$((total_error_url_count+total_success_url_count)); i=int(pc); print (pc-i<0.5)?i:i+1 }")"
-    ___x_cmd_ui_table + "total" - "$total_success_url_count" "$total_error_url_count" "$((total_success_url_count+total_error_url_count))" "$percent%"
+    x ui table + "total" - "$total_success_url_count" "$total_error_url_count" "$((total_success_url_count+total_error_url_count))" "$percent%"
     percent="$(awk "BEGIN { pc=100*${candidate_success_count}/$((candidate_error_count+candidate_success_count)); i=int(pc); print (pc-i<0.5)?i:i+1 }")"
-    ___x_cmd_ui_table + "candidate" - "$candidate_success_count" "$candidate_error_count" "$((candidate_success_count+candidate_error_count))" "$percent%"
-    ___x_cmd_ui_table
+    x ui table + "candidate" - "$candidate_success_count" "$candidate_error_count" "$((candidate_success_count+candidate_error_count))" "$percent%"
+    x ui table
 }
 
 case "$1" in
