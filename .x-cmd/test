@@ -2,6 +2,38 @@
 
 x log init pkg_test
 
+# Section(util):  count_percent table_add
+
+count_percent(){
+    awk "BEGIN {
+        sum=$(($1+$2))
+        if(sum==0){
+            printf(\"-\")
+            exit
+        }
+        pc=100*$1/sum;
+        i=int(pc);
+        print (pc-i<0.5)?i:i+1
+    }"
+}
+
+table_add(){
+    local candidate="$1"
+    local osarch="$2"
+    local success="$3"
+    local error="$4"
+    local sum="-"
+    local percent="-"
+    if ! [ "$success" = "-" ] ;then
+        percent="$(count_percent "$success" "$error")"
+        sum="$((success+error))"
+    fi
+
+    x ui table + "$candidate" "$osarch" "$success" "$error" "$sum" "$percent%"
+}
+
+# EndSection
+
 test_download_url(){
     local candidate="${1}"
     local osarch="${2}"
@@ -17,11 +49,11 @@ test_download_url(){
     while read -r version; do
         url="$(___x_cmd_pkg___list "$candidate" "$version" "$osarch" "$net")"
 
-        if ! return_code="$(curl --silent --max-time 5.5 -I "$url" | grep -E "^HTTP" | awk -F " " '{print $2}')" \
+        if ! return_code="$(curl --silent --max-time 5.5 -I "$url" | grep -E "^HTTP" | awk -F " " '{print $2}' | tail -n 1)"  \
             || { ! [ "$return_code" = 200 ] && ! [ "$return_code" = 302 ] ; } ; then
             pkg_test:error "return code: $return_code, $osarch, $net,  $version, $url"
             ___x_cmd_ldict put "$candidate_key" error_url_count "$(($(___x_cmd_ldict get "$candidate_key" error_url_count)+1))"
-            return 1
+            continue
         fi
         ___x_cmd_ldict put "$candidate_key" success_url_count "$(($(___x_cmd_ldict get "$candidate_key" success_url_count)+1))"
     done <<A
@@ -29,26 +61,7 @@ $version_list
 A
 }
 
-main(){
-    local candidate_list="${1:-"$(___x_cmd_pkg_ls___all_candidate)"}"
-    local candidate_key
-    while read -r candidate; do
-        pkg_test:info "== $candidate =="
-
-        # TODO: To add more osarch and net
-        for osarch in "darwin/arm64"; do
-            for net in "cn"; do
-                candidate_key="$(printf "%s" "___X_CMD_TEST_${candidate}_${osarch}" | tr - _ | tr / _)"
-                ___x_cmd_ldict put "$candidate_key" error_url_count   0
-                ___x_cmd_ldict put "$candidate_key" success_url_count 0
-                # Check if the version list is empty, and if the resource of the spliced url exists
-                ___X_CMD_PKG_OSARCH="$osarch" test_download_url "$candidate" "$osarch" "url.$net"
-            done
-        done
-    done <<A
-$candidate_list
-A
-
+get_report_table() {
     local error_url_count
     local success_url_count
     local total_error_url_count=0
@@ -60,39 +73,57 @@ A
 
     while read -r candidate; do
         # TODO: To add more osarch and net
-        for osarch in "darwin/arm64" ; do
-            for net in "cn"; do
-                candidate_key="$(printf "%s" "___X_CMD_TEST_${candidate}_${osarch}" | tr - _ | tr / _)"
-                error_url_count="$(___x_cmd_ldict get "$candidate_key" error_url_count)"
-                success_url_count="$(___x_cmd_ldict get "$candidate_key" success_url_count)"
-                # pkg_test:warn "$error_url_count $success_url_count"
+        candidate_key="$(printf "%s" "___X_CMD_TEST_${candidate}_${osarch}" | tr - _ | tr / _)"
+        error_url_count="$(___x_cmd_ldict get "$candidate_key" error_url_count)"
+        success_url_count="$(___x_cmd_ldict get "$candidate_key" success_url_count)"
 
-                if [ "$error_url_count" = "-" ]; then
-                    percent="-"
-                    total="-"
-                    candidate_error_count="$((candidate_error_count+1))"
-                else
-                    total="$((success_url_count+error_url_count))"
-                    candidate_success_count="$((candidate_success_count+1))"
-                    total_error_url_count=$((total_error_url_count+error_url_count))
-                    total_success_url_count=$((total_success_url_count+success_url_count))
-                    percent=$(awk "BEGIN { pc=100*${success_url_count}/$((error_url_count+success_url_count)); i=int(pc); print (pc-i<0.5)?i:i+1 }")
-                fi
-                x ui table + "${candidate}" "${osarch}" "$success_url_count" "$error_url_count" "$total" "$percent%"
-            done
-        done
+        if [ "$error_url_count" = "-" ]; then
+            candidate_error_count="$((candidate_error_count+1))"
+            table_add "${candidate}" "${osarch}" "-" "-"
+        else
+            candidate_success_count="$((candidate_success_count+1))"
+            total_error_url_count=$((total_error_url_count+error_url_count))
+            total_success_url_count=$((total_success_url_count+success_url_count))
+            table_add "${candidate}" "${osarch}" "$success_url_count" "$error_url_count"
+        fi
     done <<A
 $candidate_list
 A
 
-    percent="$(awk "BEGIN { pc=100*${total_success_url_count}/$((total_error_url_count+total_success_url_count)); i=int(pc); print (pc-i<0.5)?i:i+1 }")"
-    x ui table + "total" - "$total_success_url_count" "$total_error_url_count" "$((total_success_url_count+total_error_url_count))" "$percent%"
-    percent="$(awk "BEGIN { pc=100*${candidate_success_count}/$((candidate_error_count+candidate_success_count)); i=int(pc); print (pc-i<0.5)?i:i+1 }")"
-    x ui table + "candidate" - "$candidate_success_count" "$candidate_error_count" "$((candidate_success_count+candidate_error_count))" "$percent%"
+    table_add  "total" - "$total_success_url_count" "$total_error_url_count"
+    table_add  "candidate" - "$candidate_success_count" "$candidate_error_count"
     x ui table
 }
 
-case "$1" in
-    url) main "$2" ;;
-    *)   pkg_test:warn "Use: 'xws test url [<candidate>]'" ;;
-esac
+test_pkg(){
+    local candidate_key
+    while read -r candidate; do
+        pkg_test:info "== $candidate $osarch $net =="
+        candidate_key="$(printf "%s" "___X_CMD_TEST_${candidate}_${osarch}" | tr - _ | tr / _)"
+        ___x_cmd_ldict put "$candidate_key" error_url_count   0
+        ___x_cmd_ldict put "$candidate_key" success_url_count 0
+
+        # TODO: To add more osarch and net
+        # Check if the version list is empty, and if the resource of the spliced url exists
+        ___X_CMD_PKG_OSARCH="$osarch" test_download_url "$candidate" "$osarch" "url.$net"
+    done <<A
+$candidate_list
+A
+}
+
+(
+    local candidate_list="${2:-"$(___x_cmd_pkg_ls___all_candidate)"}"
+    local osarch="${___X_CMD_PKG_OSARCH:-$(___x_cmd_pkg_osarch)}"
+    case "$1" in
+        local)  net="cn" test_pkg ;;
+        cross)
+            for osarch in "darwin/x64" "darwin/arm64"; do
+                for net in "cn" "_"; do
+                    test_pkg "$2"
+                done
+            done
+            ;;
+        *)   pkg_test:warn "Use: 'xws test <local|cross> [<candidate>]'" ;;
+    esac
+    get_report_table
+)
