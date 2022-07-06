@@ -39,6 +39,7 @@ DATA_STATUS==DATA_FILES{
 }
 END{
     gsub("-","/",data)
+    gsub("osx","darwin",data)
     print data
 }
 
