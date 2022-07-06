@@ -5,17 +5,20 @@
 # v1.60.0: {}
 
 get_rust_version(){
-    curl https://forge.rust-lang.org/infra/other-installation-methods.html 2>/dev/null | awk 'BEGIN{
-        print "rust-1.60.0:"
-    }
-    {
-        if ($0 ~ "---------|--------|------|--------") INFO_STATUS = 1
-        else if ($0 ~ "`, and") exit(0)
-        else if (INFO_STATUS == 1) {
-            if (match($0, "` | ")) print "  " substr($0, 2, RSTART-2) ":\n    sha:"
-        }
-        else next
-    }'
+    curl https://api.github.com/repos/rust-lang/rust/releases 2>/dev/null | x jo env .\* .name -- 'printf "%s\n" "
+${name#*Rust}:
+  linux/x64:
+    sha:
+  darwin/amd64:
+    sha:
+  darwin/x86:
+    sha:
+  win/x64:
+    sha:
+  darwin/arm64:
+    sha:
+    "'
 }
 
 get_rust_version | x yq -o json e -P
+
