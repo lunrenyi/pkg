@@ -9,7 +9,7 @@ _os: "%{os}"
 _arch: "%{arch}"
 url:
   _: "%{sdkman_url}/%{version}/%{_os}%{_arch}"
-  cn: "%{injdk_url}/oraclejdk/%{version}/jdk-%{version}_%{_os}-%{_arch}_bin.%{file_suffix}"
+  cn: "%{sdkman_url}/%{version}/%{_os}%{_arch}"
 
 xbin:
   java: bin/javac
@@ -43,21 +43,29 @@ rule:
     _os: windows
     file_suffix: zip
 
-  16*/*/*:
+  16/*/*:
     url:
-      cn: https://d6.injdk.cn/oraclejdk/16/jdk-16.0.2_%{_os}-%{_arch}.%{file_suffix}
+      cn: https://d6.injdk.cn/oraclejdk/16/jdk-16.0.2_%{_os}-%{_arch}_bin.%{file_suffix}
 
 
-  11*/*/*:
+  11.0.12/*/*:
     url:
-      cn: https://d6.injdk.cn/oraclejdk/11/jdk-11.0.12_%{_os}-%{_arch}.%{file_suffix}
+      cn: https://d6.injdk.cn/oraclejdk/11/jdk-11.0.12_%{_os}-%{_arch}_bin.%{file_suffix}
 
 
-  "8*/*/*":
+  8/*/*:
     url:
-      cn: https://d6.injdk.cn/oraclejdk/8/jdk-8u301-%{_os}-%{_arch}.%{file_suffix}
+      cn: https://d6.injdk.cn/oraclejdk/8/jdk-8u301-%{_os}-%{_arch}_bin.%{file_suffix}
 
-  16*/darwin/amd64:
+  17/*/*:
+    url:
+      cn: https://d6.injdk.cn/oraclejdk/16/jdk-16.0.2_%{_os}-%{_arch}_bin.%{file_suffix}
+
+  18/*/*:
+    url:
+      cn: https://d6.injdk.cn/oraclejdk/18/jdk-18_%{_os}-%{_arch}_bin.%{file_suffix}
+
+  16.0.2/darwin/amd64:
     _os: osx
     _arch: aarch64
 

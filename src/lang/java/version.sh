@@ -18,24 +18,25 @@ done  | sort -V -u -r | awk '{
         print "  " $2 ":\n    sha:"
         last = $1
     }'
-
-    curl "https://www.injdk.cn/" 2>/dev/null | awk '
-        match($0,"oraclejdk" "/" "[0-9]*" "/" "jdk-[0-9._a-z]+" "[-]?" "[0-9a-zA-Z_]+" "." "[0-9a-z.]+"){a = substr($0,RSTART,RLENGTH)
-        gsub("aarch64","arm64",a)
-        gsub("osx","darwin",a)
-        gsub("macos","darwin",a)
-        gsub("windows","win",a)
-        split(a,b,"/")
-        c = substr(b[3],5)
-        gsub("_","-",c)
-        gsub("8u301","8",c)
-        split(c,d,"-")
-        version = d[1]
-        os = d[2]
-        arch = d[3]
-        split(d[3],f,".")
-        print "(oraclejdk-cn)"d[1]":\n  " d[2]"/"f[1] ":\n    sha:"
-        }
-    '
+wget --no-check-certificate  "https://www.injdk.cn/"
+cat "/home/mnnna/work/x-cmd/pkg/index.html" 2>/dev/null | awk '
+    match($0,"oraclejdk" "/" "[0-9]*" "/" "jdk-[0-9._a-z]+" "[-]?" "[0-9a-zA-Z_]+" "." "[0-9a-z.]+"){a = substr($0,RSTART,RLENGTH)
+    gsub("aarch64","arm64",a)
+    gsub("osx","darwin",a)
+    gsub("macos","darwin",a)
+    gsub("windows","win",a)
+    split(a,b,"/")
+    c = substr(b[3],5)
+    gsub("_","-",c)
+    gsub("8u301","8",c)
+    split(c,d,"-")
+    version = d[1]
+    os = d[2]
+    arch = d[3]
+    split(d[3],f,".")
+    print "(oraclejdk-cn)"d[1]":\n  " d[2]"/"f[1] ":\n    sha:"
+    }
+'
+    x rmrf index.html
 }
 get_java_version | x yq -o json e -P

@@ -27,27 +27,14 @@ rule:
   latest/*:
     version: py39_4.12.0
 
-  "v*-pypy*/darwin/*":
-    _os: osx64
-    url: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
-
-  "v*-pypy*/linux/x64":
-    _os: linux64
-    url: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
-
-  "v*-pypy*/linux/x32":
-    _os: linux32
-    url: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
-
-
-  py*/linux/x*:
+  py*/linux/x64:
     _os: Linux
     _arch: x86_64
 
   py*/darwin/*:
     _os: MacOSX
 
-  py*/win/*:
+  py*/win/x64:
     _os: Windows
     _arch: x86_64
     file_suffix: exe
@@ -55,4 +42,21 @@ rule:
   py*/darwin/x64:
     _os: MacOSX
     _arch: x86_64
+
+
+  "pypy*/darwin/*":
+    _os: osx64
+    url: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
+
+  "pypy*/linux/x64":
+    _os: linux64
+    url:
+      cn: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
+
+  "pypy*/linux/x32":
+    _os: linux32
+    url:
+      cn: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
+
+
 
