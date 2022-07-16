@@ -18,7 +18,7 @@ done  | sort -V -u -r | awk '{
         print "  " $2 ":\n    sha:"
         last = $1
     }'
-wget --no-check-certificate  "https://www.injdk.cn/"
+wget --no-check-certificate  "https://www.injdk.cn/" 1>/dev/null
 cat "/home/mnnna/work/x-cmd/pkg/index.html" 2>/dev/null | awk '
     match($0,"oraclejdk" "/" "[0-9]*" "/" "jdk-[0-9._a-z]+" "[-]?" "[0-9a-zA-Z_]+" "." "[0-9a-z.]+"){a = substr($0,RSTART,RLENGTH)
     gsub("aarch64","arm64",a)
