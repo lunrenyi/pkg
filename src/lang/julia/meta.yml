@@ -63,8 +63,8 @@ rule:
 
   "*/win/x64":
     _osarch: win64
-    file_suffix: exe
-    xbin: bin/julia.exe
+    file_suffix: tar.gz
+    xbin: bin/julia.tar.gz
     url:
       _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
       cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
@@ -72,8 +72,8 @@ rule:
 
   "*/win/x32":
     _osarch: win32
-    file_suffix: exe
-    xbin: bin/julia.exe
+    file_suffix: tar.gz
+    xbin: bin/julia.tar.gz
     url:
       _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
       cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/1.8/julia-%{version}-%{_osarch}.%{file_suffix}"
