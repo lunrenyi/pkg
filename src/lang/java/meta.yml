@@ -64,6 +64,28 @@ rule:
   18/*/*:
     url:
       cn: https://d6.injdk.cn/oraclejdk/18/jdk-18_%{_os}-%{_arch}_bin.%{file_suffix}
+    ---
+  16/*/win:
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/16/openjdk-16.0.1_windows-x64_bin.zip
+
+
+  11.0.12/*/win:
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/11/openjdk-11+28_windows-x64_bin.zip
+
+
+  8/*/win:
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/8/openjdk-8u41-b04-windows-i586-14_jan_2020.zip
+
+  17/*/*:
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/17/openjdk-17.0.1_windows-x64_bin.zip
+
+  18/*/*:
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/18/openjdk-18_windows-x64_bin.zip
 
   16.0.2/darwin/amd64:
     _os: osx
