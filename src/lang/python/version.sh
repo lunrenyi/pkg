@@ -11,7 +11,7 @@ curl https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 2>/dev/null | awk 
   gsub("-Minicoda3","",b[2])
   gsub(/^3.[0-9]*.[0-9]*/,"",b[2])
   gsub(/^2.[0-9]*.[0-9]*/,"",b[2])
-  if(b[2] != ""){print b[2] ":\n  " b[3] "/" b[4] ":\n    sha:"}
+  if((b[2] != "")&&(b[2] ~ /^py.*/)){print b[2] ":\n  " b[3] "/" b[4] ":\n    sha:"}
 }'
 
 curl -H "Accept-Encoding: gzip" https://downloads.python.org/pypy/ 2>/dev/null | gunzip | more | awk ' match($0, "pypy[0-9.]+" "-" "v[0-9.]+" "-" "[a-z0-9]+" ){
