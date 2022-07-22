@@ -22,7 +22,7 @@ rule:
     version: latest
 
   latest/*:
-    version: 1.18.2
+    version: 1.18.4
 
   "*/win/x64":
     _os: windows
