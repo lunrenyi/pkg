@@ -1,1 +1,2 @@
-x jq 
+pkg:info "jq"
+x jq

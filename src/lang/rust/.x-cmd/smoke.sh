@@ -1,1 +1,2 @@
-rustc -V 
+pkg:info "rust"
+rustc -V

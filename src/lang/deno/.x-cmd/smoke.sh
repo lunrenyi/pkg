@@ -1,1 +1,2 @@
-deno -V 
+pkg:info "deno"
+deno -V
