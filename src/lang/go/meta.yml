@@ -26,12 +26,12 @@ rule:
 
   "*/win/x64":
     _os: windows
-    _arch: "386"
+    _arch: 386
     file_suffix: zip
 
 
   "*/linux/x64":
-    _arch: "386"
+    _arch: 386
 
 
   "*/darwin/x*":
