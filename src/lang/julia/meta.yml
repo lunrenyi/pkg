@@ -2,8 +2,8 @@ license: MIT
 rely: []
 file_suffix: tar.gz
 url:
-  _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
-  cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{os}/%{arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
+  _: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{_os}/%{_arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
+  cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{_os}/%{_arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
 
 xbin: bin/julia
 
@@ -38,10 +38,12 @@ rule:
     _osarch: linux-armv7l
 
 
-  "*/mac/arm64":
+  "*/darwin/arm64":
+    _os: mac
     _osarch: macaarch64
 
-  "*/mac/x64":
+  "*/darwin/x64":
+    _os: mac
     _osarch: mac64
 
 
@@ -55,8 +57,4 @@ rule:
     _osarch: win32
     file_suffix: tar.gz
     xbin: bin/julia.tar.gz
-
-
-
-
 
