@@ -10,6 +10,7 @@ get_julia_version_cn(){
         version = substr( $1, 1, 3)
         osarch = $2 "/" $3
         gsub("winnt", "win", osarch)
+        gsub("mac", "darwin", osarch)
         gsub("x86_64", "x64", osarch)
         gsub("i686", "x86", osarch)
         gsub("x86_64", "x64", $3)
