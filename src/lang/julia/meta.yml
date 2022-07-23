@@ -50,11 +50,11 @@ rule:
   "*/win/x64":
     _osarch: win64
     file_suffix: tar.gz
-    xbin: bin/julia.tar.gz
+    xbin: bin/julia.exe
 
 
   "*/win/x32":
     _osarch: win32
     file_suffix: tar.gz
-    xbin: bin/julia.tar.gz
+    xbin: bin/julia.exe
 
