@@ -4,6 +4,7 @@ ___x_cmd_java_activate(){
 
     if [ -n "$___X_CMD_PKG_INSTALL_PATH" ]; then
         export JAVA_HOME="$___X_CMD_PKG_INSTALL_PATH/$name/$version/bin"
+        export PATH=$JAVA_HOME/bin:$PATH
     fi
 }
 
