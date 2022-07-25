@@ -1,2 +1,2 @@
 pkg:info "dust"
-x dust
+x dust -v

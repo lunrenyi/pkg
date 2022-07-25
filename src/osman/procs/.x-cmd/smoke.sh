@@ -1,2 +1,2 @@
 pkg:info "procs"
-x procs
+x procs -v

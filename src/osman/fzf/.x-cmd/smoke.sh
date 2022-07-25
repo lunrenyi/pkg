@@ -1,2 +1,2 @@
 pkg:info "fzf"
-x fzf
+x fzf -v

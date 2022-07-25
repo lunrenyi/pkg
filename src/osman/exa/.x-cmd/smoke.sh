@@ -1,2 +1,2 @@
 pkg:info "exa"
-x exa
+x exa -v

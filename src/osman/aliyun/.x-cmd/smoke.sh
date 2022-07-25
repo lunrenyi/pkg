@@ -1,2 +1,2 @@
 pkg:info "aliyun"
-x aliyun
+x aliyun -v

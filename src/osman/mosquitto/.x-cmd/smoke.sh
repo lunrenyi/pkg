@@ -1,2 +1,2 @@
 pkg:info "mosquitto"
-x mosquitto
+x mosquitto -v

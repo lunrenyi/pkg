@@ -1,2 +1,2 @@
 pkg:info "curl"
-x curl
+x curl -v

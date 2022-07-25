@@ -1,2 +1,2 @@
 pkg:info "jq"
-x jq
+x jq -v

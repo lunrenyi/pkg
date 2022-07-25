@@ -1,2 +1,2 @@
 pkg:info "helm"
-x helm
+x helm -v

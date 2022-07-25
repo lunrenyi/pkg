@@ -1,2 +1,2 @@
 pkg:info "bat"
-x bat ./lib/latest
+x bat -v

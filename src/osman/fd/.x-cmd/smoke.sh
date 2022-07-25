@@ -1,2 +1,2 @@
 pkg:info "fd"
-x fd
+x fd -v

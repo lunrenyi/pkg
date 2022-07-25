@@ -1,2 +1,2 @@
 pkg:info "gh"
-x gh
+x gh -v
