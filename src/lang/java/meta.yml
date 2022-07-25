@@ -66,26 +66,31 @@ rule:
       cn: https://d6.injdk.cn/oraclejdk/18/jdk-18_%{_os}-%{_arch}_bin.%{file_suffix}
 
   16/win/*:
+    file_suffix: zip
     url:
-      cn: https://d6.injdk.cn/openjdk/openjdk/16/openjdk-16.0.1_windows-x64_bin.zip
+      cn: https://d6.injdk.cn/openjdk/openjdk/16/openjdk-16.0.1_windows-x64_bin.%{file_suffix}
 
 
   11.0.12/win/*:
+    file_suffix: zip
     url:
-      cn: https://d6.injdk.cn/openjdk/openjdk/11/openjdk-11+28_windows-x64_bin.zip
+      cn: https://d6.injdk.cn/openjdk/openjdk/11/openjdk-11+28_windows-x64_bin.%{file_suffix}
 
 
   8/win/*:
+    file_suffix: zip
     url:
-      cn: https://d6.injdk.cn/openjdk/openjdk/8/openjdk-8u41-b04-windows-i586-14_jan_2020.zip
+      cn: https://d6.injdk.cn/openjdk/openjdk/8/openjdk-8u41-b04-windows-i586-14_jan_2020.%{file_suffix}
 
   17/win/*:
+    file_suffix: zip
     url:
-      cn: https://d6.injdk.cn/openjdk/openjdk/17/openjdk-17.0.1_windows-x64_bin.zip
+      cn: https://d6.injdk.cn/openjdk/openjdk/17/openjdk-17.0.1_windows-x64_bin.%{file_suffix}
 
   18/win/*:
+    file_suffix: zip
     url:
-      cn: https://d6.injdk.cn/openjdk/openjdk/18/openjdk-18_windows-x64_bin.zip
+      cn: https://d6.injdk.cn/openjdk/openjdk/18/openjdk-18_windows-x64_bin.%{file_suffix}
 
   16.0.2/darwin/amd64:
     _os: osx
