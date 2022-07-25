@@ -5,9 +5,6 @@ url:
   _: "https://sourceforge.net/projects/luabinaries/files/%{version}/Tools%20Executables/lua-%{version}_%{_os}%{_arch}_bin.%{file_suffix}/download"
   cn: "https://sourceforge.net/projects/luabinaries/files/%{version}/Tools%20Executables/lua-%{version}_%{_os}%{_arch}_bin.%{file_suffix}/download"
 
-hook:
-  activate: activate.sh
-  deactivate: deactivate.sh
 
 xbin:
   lua: lua54

@@ -1,2 +1,7 @@
 pkg:info "mosquitto"
-x mosquitto -v
+mosquitto_test(){
+
+    x assert 'eval '
+}
+
+mosquitto_test
