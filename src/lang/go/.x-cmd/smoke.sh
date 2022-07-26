@@ -1,5 +1,7 @@
 pkg:info "go"
-x assert stdout 'eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/bin/fmt -V' <<A
+
+go_test(){
+x assert stdout 'eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/bin/gofmt -h' <<A
 flag provided but not defined: -V
 usage: gofmt [flags] [path ...]
   -cpuprofile string
@@ -12,3 +14,6 @@ usage: gofmt [flags] [path ...]
   -s    simplify code
   -w    write result to (source) file instead of stdout
 A
+}
+
+go_test

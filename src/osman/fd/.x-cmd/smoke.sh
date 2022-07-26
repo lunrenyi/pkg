@@ -8,8 +8,8 @@ fd_test(){
     arch="$(___x_cmd_os arch)"
     osname="$(___x_cmd_os name)"
 
-    x assert stdout 'eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/fd.${osname}.${arch} -V' <<A
-0.30.0 (2093667)
+    x assert stdout 'eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/*/fd -V' <<A
+fd 8.3.2
 A
 }
 fd_test

@@ -1,9 +1,12 @@
 pkg:info "tmux"
 
 tmux_test(){
-    x assert stdout 'eval eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/tmux.${osname}.${arch} --h' <<A
-usage: tmux [-2CluvV] [-c shell-command] [-f file] [-L socket-name]
-            [-S socket-path] [command [flags]]
+    local arch
+    arch="$(___x_cmd_os arch)"
+    local osname
+    osname="$(___x_cmd_os name)"
+    x assert stdout 'eval eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/tmux.${osname}.${arch} -V' <<A
+tmux.linux.x64 3.2a
 A
 }
 tmux_test
