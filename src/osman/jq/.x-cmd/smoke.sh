@@ -6,7 +6,7 @@ jq_test(){
     local osname
     osname="$(___x_cmd_os name)"
 
-    x assert stdout 'eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/jq.${osname}.{arch} -h' <<A
+    x assert stdout 'eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/jq.${osname}.${arch} -h' <<A
 jq - commandline JSON processor [version 1.6]
 
 Usage:  /home/mnnna/.x-cmd/.tmp/pkg/installed/jq/1.6-dirty/jq.linux.x64 [options] <jq filter> [file...]

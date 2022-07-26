@@ -1,4 +1,5 @@
 pkg:info "ffmpeg"
+
 x assert stdout 'eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/* -version' <<A
 ffmpeg version N-60236-gffb000fff8-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2022 the FFmpeg developers
 built with gcc 8 (Debian 8.3.0-6)
@@ -12,4 +13,5 @@ libswscale      6.  5.100 /  6.  5.100
 libswresample   4.  4.100 /  4.  4.100
 libpostproc    56.  4.100 / 56.  4.100
 A
+
 x pkg uninstall ffmpeg

@@ -1,9 +1,11 @@
 pkg:info "aliyun"
+aliyun(){
+    local arch
+    local osname
+    arch="$(___x_cmd_os arch)"
+    osname="$(___x_cmd_os name)"
 
-arch="$(___x_cmd_os arch)"
-osname="$(___x_cmd_os name)"
-
-x assert stdout ' eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/aliyun.${osname}.${arch} --help' <<A
+    x assert stdout ' eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/aliyun.${osname}.${arch} --help' <<A
 Alibaba Cloud Command Line Interface Version 3.0.121
 
 Usage:
@@ -149,5 +151,6 @@ Products:
 
 Use `aliyun --help` for more information.
 A
-
+}
+aliyun
 x pkg uninstall aliyun
