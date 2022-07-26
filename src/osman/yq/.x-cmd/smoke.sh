@@ -11,4 +11,3 @@ A
 }
 
 yq_test
-x  pkg uninstall yq

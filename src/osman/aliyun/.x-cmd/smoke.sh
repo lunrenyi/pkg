@@ -153,4 +153,3 @@ Use `aliyun --help` for more information.
 A
 }
 aliyun
-x pkg uninstall aliyun

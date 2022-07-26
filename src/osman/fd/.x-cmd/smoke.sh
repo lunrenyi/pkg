@@ -14,4 +14,3 @@ A
 }
 fd_test
 
-x pkg uninstall fd

@@ -7,4 +7,4 @@ usage: tmux [-2CluvV] [-c shell-command] [-f file] [-L socket-name]
 A
 }
 tmux_test
-x pkg uninstall tmux
+

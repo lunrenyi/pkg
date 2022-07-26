@@ -14,4 +14,3 @@ A
 fi
 }
 java_test
-x pkg uninstall java

@@ -11,4 +11,3 @@ A
 }
 
 bandwhich_test
-x pkg uninstall bandwhich

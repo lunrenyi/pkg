@@ -9,3 +9,5 @@ rg_test(){
 ripgrep 13.0.0
 A
 }
+
+rg_test

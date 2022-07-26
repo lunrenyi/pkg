@@ -17,4 +17,3 @@ A
 
 nmap_test
 
-x pkg uninstall nmap

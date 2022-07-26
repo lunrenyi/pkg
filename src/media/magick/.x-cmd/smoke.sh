@@ -15,4 +15,4 @@ magick_test(){
 A
 }
 magick_test
-x pkg uninstall magick
+

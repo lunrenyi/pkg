@@ -73,4 +73,3 @@ Usage: 7za <command> [<switches>...] <archive_name> [<file_names>...]
 A
 }
 7za_test
-x pkg uninstall 7za

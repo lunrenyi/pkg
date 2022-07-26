@@ -13,4 +13,3 @@ A
 
 traceroute_test
 
-x pkg uninstall traceroute

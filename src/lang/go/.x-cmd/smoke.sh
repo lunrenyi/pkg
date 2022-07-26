@@ -12,4 +12,3 @@ usage: gofmt [flags] [path ...]
   -s    simplify code
   -w    write result to (source) file instead of stdout
 A
-x pkg uninstall go

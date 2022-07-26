@@ -13,4 +13,3 @@ A
 
 procs_test
 
-x pkg uninstall procs

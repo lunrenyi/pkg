@@ -17,4 +17,3 @@ info: kotlinc-native 1.6.21 (JRE 18+36-2087)
 Kotlin/Native: 1.6.21
 A
 
-kotlinc -version

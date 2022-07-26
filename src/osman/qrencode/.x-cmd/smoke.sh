@@ -10,5 +10,5 @@ qrencode_test(){
 qrencode version 4.1.1
 Copyright (C) 2006-2017 Kentaro Fukuchi
 A
-
 }
+qrencode_test

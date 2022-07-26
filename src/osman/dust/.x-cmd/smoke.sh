@@ -11,4 +11,3 @@ Dust 0.6.0
 A
 }
 dust_test
-x pkg uninstall dust

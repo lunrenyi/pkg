@@ -17,4 +17,3 @@ A
 
 nping_test
 
-x pkg uninstall nping

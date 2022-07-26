@@ -10,4 +10,3 @@ sqlite3_test(){
 A
 }
 sqlite3_test
-x pkg uninstall sqlite3

@@ -58,4 +58,3 @@ A
 }
 jq_test
 
-x pkg uninstall jq

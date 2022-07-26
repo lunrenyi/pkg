@@ -11,4 +11,3 @@ OpenSSL 3.0.0 7 sep 2021 (Library: OpenSSL 3.0.0 7 sep 2021)
 A
 }
 openssl_test
-x pkg uninstall openssl

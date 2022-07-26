@@ -14,4 +14,3 @@ libswresample   4.  4.100 /  4.  4.100
 libpostproc    56.  4.100 / 56.  4.100
 A
 
-x pkg uninstall ffmpeg

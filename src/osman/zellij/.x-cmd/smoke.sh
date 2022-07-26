@@ -6,4 +6,4 @@ A
 }
 zellij_test
 
-x pkg uninstall zellij
+

@@ -12,4 +12,3 @@ this system using "man perl" or "perldoc perl".  If you have access to the
 Internet, point your browser at http://www.perl.org/, the Perl Home Page.
 A
 
-x pkg uninstall perl

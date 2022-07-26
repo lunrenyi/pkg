@@ -14,4 +14,3 @@ A
 }
 exa_test
 
-x pkg uninstall exa

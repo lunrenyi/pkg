@@ -13,4 +13,3 @@ A
 }
 
 terraform_test
-x pkg uninstall terraform_test

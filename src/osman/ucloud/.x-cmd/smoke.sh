@@ -9,4 +9,3 @@ ulcoud_test(){
 
 ulcoud_test
 
-x pkg uninstall ulcoud

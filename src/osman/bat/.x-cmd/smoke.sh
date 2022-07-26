@@ -12,4 +12,3 @@ A
 
 bat_test
 
-x pkg uninstall bat

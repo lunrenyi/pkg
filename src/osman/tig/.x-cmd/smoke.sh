@@ -14,4 +14,3 @@ A
 
 tig_test
 
-x pkg uninstall tig

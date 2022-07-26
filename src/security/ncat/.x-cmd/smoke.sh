@@ -13,4 +13,3 @@ A
 
 ncat_test
 
-x pkg uninstall nact

@@ -13,4 +13,3 @@ SUBCOMMANDS:
     member    Authorize gh
 A
 
-x pkg uninstall gh

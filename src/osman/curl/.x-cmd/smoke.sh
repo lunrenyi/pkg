@@ -13,4 +13,3 @@ Features: alt-svc AsynchDNS HSTS HTTP2 HTTPS-proxy IPv6 Largefile libz NTLM NTLM
 A
 }
 curl_test
-x pkg uninstall curl
