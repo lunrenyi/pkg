@@ -55,6 +55,13 @@ rule:
     _os: MacOSX
     _arch: x86_64
 
+  py*/darwin/amd64:
+    _os: MacOSX
+    _arch: aarch64
+
+  py*/linux/amd64:
+    _os: Linux
+    _arch: aarch64
 
   "pypy*/darwin/*":
     _os: osx64
