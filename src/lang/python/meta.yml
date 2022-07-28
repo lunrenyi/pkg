@@ -55,11 +55,11 @@ rule:
     _os: MacOSX
     _arch: x86_64
 
-  py*/darwin/amd64:
+  py*/darwin/arm64:
     _os: MacOSX
     _arch: aarch64
 
-  py*/linux/amd64:
+  py*/linux/arm64:
     _os: Linux
     _arch: aarch64
 
