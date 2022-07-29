@@ -1,17 +1,7 @@
 pkg:info "perl"
 perl_test(){
-x assert stdout 'eval /home/mnnna/.x-cmd/.tmp/pkg/installed/$name/$version/bin/perl -v' <<A
-
-This is perl 5, version 34, subversion 1 (v5.34.1) built for x86_64-linux
-
-Copyright 1987-2022, Larry Wall
-
-Perl may be copied only under the terms of either the Artistic License or the
-GNU General Public License, which may be found in the Perl 5 source kit.
-
-Complete documentation for Perl, including FAQ lists, should be found on
-this system using "man perl" or "perldoc perl".  If you have access to the
-Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+x assert stdout '/home/mnnna/.x-cmd/.tmp/pkg/installed/$name/$version/bin/perl -v 2>&1 | awk '\''NR==2{print $3 $4} '\''' <<A
+perl5,
 A
 }
 perl_test

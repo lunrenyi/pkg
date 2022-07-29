@@ -1,15 +1,8 @@
 pkg:info "gh"
-x assert stdout  'x gh -h' <<A
-
+gh_test(){
+x assert stdout  'x gh -h  | awk '\''NR==2{print $1} '\''' <<A
 SUBCOMMANDS:
-    repo      repo command
-    current   set current owner, repo
-    org       manage org
-    user      user
-    config    save, load, which
-    token     set token
-    auth      Authorize gh
-    release   manage release
-    member    Authorize gh
 A
+}
 
+gh_test

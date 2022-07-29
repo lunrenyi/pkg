@@ -5,9 +5,8 @@ traceroute_test(){
     local osname
     osname="$(___x_cmd_os name)"
 
-    x assert stdout 'eval /home/mnnna/.x-cmd/.tmp/pkg/installed/$name/$version/traceroute.${osname}.${arch} -V' <<A
-Modern traceroute for Linux, version 2.1.0
-Copyright (c) 2016  Dmitry Butskoy,   License: GPL v2 or any later
+    x assert stdout '$___X_CMD_PKG_INSTALL_PATH/$name/$version/traceroute.${osname}.${arch} -V 2>&1 | awk '\''NR==1{print $2} '\''' <<A
+traceroute
 A
 }
 

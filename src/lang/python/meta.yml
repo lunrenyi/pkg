@@ -63,6 +63,9 @@ rule:
     _os: Linux
     _arch: aarch64
 
+  "pypy*/*/*":
+    file_suffix: tar.bz2
+
   "pypy*/darwin/*":
     _os: osx64
     url: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2

@@ -6,10 +6,8 @@ local osname
 arch="$(___x_cmd_os arch)"
 osname="$(___x_cmd_os name)"
 
-x assert stdout 'eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/exa.${osname}.${arch} -v' <<A
-exa - list files on the command-line
-v0.10.1 [+git]
-https://the.exa.website/
+x assert stdout '$___X_CMD_PKG_INSTALL_PATH/$name/$version/exa.${osname}.${arch} -V 2>&1 | awk '\''NR==1{print $1}  '\''' <<A
+exa:
 A
 }
 exa_test

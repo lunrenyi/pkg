@@ -1,8 +1,8 @@
 pkg:info "lua"
 
 lua_test(){
-x assert stdout 'eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/lua54 -v' <<A
-Lua 5.4.2  Copyright (C) 1994-2020 Lua.org, PUC-Rio
+x assert stdout '$___X_CMD_PKG_INSTALL_PATH/$name/$version/lua54 -v 2>&1 | awk '\'' {print $1 $2}'\''' <<A
+Lua5.4.2
 A
 }
 lua_test

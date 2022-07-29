@@ -5,8 +5,8 @@ ncat_test(){
     local osname
     osname="$(___x_cmd_os name)"
 
-    x assert stdout 'eval /home/mnnna/.x-cmd/.tmp/pkg/installed/$name/$version/ncat.${osname}.${arch} --version' <<A
-Ncat: Version 7.92 ( https://nmap.org/ncat )
+    x assert stdout '$___X_CMD_PKG_INSTALL_PATH/$name/$version/ncat.${osname}.${arch} --version 2>&1 | awk '\''NR==1{print $1} '\''' <<A
+Ncat:
 A
 }
 

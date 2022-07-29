@@ -5,7 +5,7 @@ bandwhich_test(){
     local osname
     osname="$(___x_cmd_os name)"
 
-    x assert stdout 'eval $___X_CMD_PKG_INSTALL_PATH/$name/$version/bandwhich.${osname}.${arch} -V' <<A
+    x assert stdout '$___X_CMD_PKG_INSTALL_PATH/$name/$version/bandwhich.${osname}.${arch} -V' <<A
 bandwhich 0.20.0
 A
 }
