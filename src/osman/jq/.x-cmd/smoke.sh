@@ -7,10 +7,12 @@ jq_test(){
     osname="$(___x_cmd_os name)"
 
 if [ $osname = "darwin" ]; then
+echo $osname
     x assert stdout '$___X_CMD_PKG_INSTALL_PATH/$name/$version/jq.${osname}.${arch} -V 2>&1 | awk '\''{print $0} '\''' <<A
 jq-1.6-dirty
 A
 else
+echo $osname
     x assert stdout '$___X_CMD_PKG_INSTALL_PATH/$name/$version/jq.${osname}.${arch} -V 2>&1 | awk '\''{print $0} '\''' <<A
 jq-1.6
 A
