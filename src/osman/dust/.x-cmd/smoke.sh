@@ -6,7 +6,7 @@ dust_test(){
     arch="$(___x_cmd_os arch)"
     osname="$(___x_cmd_os name)"
 
-    x assert stdout 'eval /home/mnnna/.x-cmd/.tmp/pkg/installed/$name/$version/dust.${osname}.${arch} -V' <<A
+    x assert stdout '/home/mnnna/.x-cmd/.tmp/pkg/installed/$name/$version/dust.${osname}.${arch} -V' <<A
 Dust 0.6.0
 A
 }

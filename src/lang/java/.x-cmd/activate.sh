@@ -5,7 +5,7 @@ ___x_cmd_java_activate(){
     local osname
     osname="$(___x_cmd_os name)"
 
-    if [ $arch = "x64" ] && [ $osname = "darwin" ];then
+    if [ $osname = "darwin" ];then
         ___x_cmd_path_unshift "$___X_CMD_PKG_INSTALL_PATH/$name/$version/Contents/Home/bin"
         export JAVA_HOME="$___X_CMD_PKG_INSTALL_PATH/$name/$version/Contents/Home"
     elif [ -n "$___X_CMD_PKG_INSTALL_PATH" ]; then
