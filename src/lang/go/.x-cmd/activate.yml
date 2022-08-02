@@ -1,0 +1,7 @@
+mkdirp:
+  - "%{___X_CMD_PKG_INSTALL_PATH}/%{name}/%{version}/Go_package"
+env:
+  PATH:
+    unshift: "%{___X_CMD_PKG_INSTALL_PATH}/%{name}/%{version}/bin"
+  GOPATH:
+    set: "%{___X_CMD_PKG_INSTALL_PATH}/%{name}/%{version}/Go_package"
