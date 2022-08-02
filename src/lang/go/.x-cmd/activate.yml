@@ -3,6 +3,7 @@ var:
 
 mkdirp:
   - "%{prefix}/Go_package"
+
 env:
   PATH:
     unshift: "%{prefix}/bin"
