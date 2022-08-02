@@ -5,3 +5,4 @@ x assert stdout '$___X_CMD_PKG_INSTALL_PATH/$name/$version/bin/scalac -version 2
 Scala3.1.2
 A
 }
+scala_test
