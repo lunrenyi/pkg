@@ -61,22 +61,37 @@ rule:
 
   py*/linux/arm64:
     _os: Linux
-  
+
 
   "pypy*/*/*":
     file_suffix: tar.bz2
 
   "pypy*/darwin/*":
     _os: osx64
-    url: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
+    url:
+      _: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
+      cn: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
 
   "pypy*/linux/x64":
     _os: linux64
     url:
+      _ : https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
       cn: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
 
   "pypy*/linux/x32":
     _os: linux32
     url:
+      _: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
       cn: https://downloads.python.org/pypy/%{version}-%{_os}.tar.bz2
 
+  "pypy*/win/x64":
+    _arch: 64
+    url:
+      _: https://downloads.python.org/pypy/%{version}-%{_os}.zip
+      cn: https://downloads.python.org/pypy/%{version}-%{_os}.zip
+
+  "pypy*/win/x32":
+    _arch: 32
+    url:
+      _: https://downloads.python.org/pypy/%{version}-%{_os}.zip
+      cn: https://downloads.python.org/pypy/%{version}-%{_os}.zip
