@@ -21,7 +21,9 @@ ___x_cmd_pkg_python_unpack(){
         local archive_path="$___X_CMD_PKG_INSTALL_PATH/$name/$version/$version.$file_suffix"
         chmod +x "${archive_path}" && \
         "${archive_path}" -b -u -p "${archive_path%/*}" 1>/dev/null
-        [ $? = 0 ] || pkg:error "Fail to unpack python $version."
+        [ $? = 0 ] || {
+            pkg:error "Fail to unpack python $version."; return 1
+            }
         pkg:info "Finish python $version unpack."
         ;;
 

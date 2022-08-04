@@ -57,11 +57,11 @@ rule:
 
   py*/darwin/arm64:
     _os: MacOSX
-    _arch: aarch64
+
 
   py*/linux/arm64:
     _os: Linux
-    _arch: aarch64
+  
 
   "pypy*/*/*":
     file_suffix: tar.bz2
