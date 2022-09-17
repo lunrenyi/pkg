@@ -1,22 +1,18 @@
 pkg:info "jq"
 
 jq_test(){
+    local aaa
     local arch
     arch="$(___x_cmd_os arch)"
     local osname
     osname="$(___x_cmd_os name)"
 
 if [ $osname = "darwin" ]; then
-echo $osname
-    x assert stdout $___X_CMD_PKG_INSTALL_PATH/$name/$version/jq.${osname}.${arch} -V 2>&1 | awk '{print $0} ' <<A
-jq-1.6-dirty
-A
+    aaa=$($___X_CMD_PKG_INSTALL_PATH/$name/$version/jq.${osname}.${arch} -V 2>&1 | awk '{print $0} ')
+    x assert is-eq $aaa jq-1.6-dirty
 else
-echo $osname
-    x assert stdout $___X_CMD_PKG_INSTALL_PATH/$name/$version/jq.${osname}.${arch} -V 2>&1 | awk '{print $0} ' <<A
-jq-1.6
-A
-echo $osname
+    aaa=$($___X_CMD_PKG_INSTALL_PATH/$name/$version/jq.${osname}.${arch} -V 2>&1 | awk '{print $0} ')
+    x assert is-eq $aaa jq-1.6
 fi
 }
 jq_test

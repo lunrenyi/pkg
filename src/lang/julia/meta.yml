@@ -16,9 +16,9 @@ rule:
     version: latest
 
   latest/*:
-    version: 1.8
-  1.8/*:
-    version: 1.8.0-rc1
+    version: 1.8.0-rc2
+  1.8*/*:
+    version: 1.8.0-rc2
 
 
   "*/linux/x64":
