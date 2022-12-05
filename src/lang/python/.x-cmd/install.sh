@@ -19,7 +19,36 @@ ___x_cmd_pkg_python_unpack(){
         mkdir -p "$tgt"
         cp -r $ball $tgt
         local archive_path="$___X_CMD_PKG_INSTALL_PATH/$name/$version/$version.$file_suffix"
-        if chmod +x "${archive_path}" && "${archive_path}" -b -u -p "${archive_path%/*}" 1>/dev/null ; then
+        if chmod +x "${archive_path}" && "${archive_path}" -b -u -p "${archive_path%/*}" | awk -v col="$COLUMNS" '
+        BEGIN{
+            max_len = 10
+            i = 0;
+            for (k = 0; k < col; k++) {
+                blank = blank " "
+            }
+        }
+
+        function refresh(){
+            for (i = 0; i < max_len && i < NR; i++) {
+                printf("\r" blank "\r\033[A")
+            }
+        }
+
+        {
+            if (NR <= max_len) {
+                print "==> " $0
+                arr[i] = $0
+            } else {
+                refresh()
+                for (j = i-max_len+1; j <= i; j++) {
+                    arr[i] = $0
+                    print "==> " arr[j]
+                }
+            }
+            i++
+        }
+
+        END{ refresh() }'; then
             pkg:info "Finish python $version unpack."
         else
             pkg:error "Fail to unpack python $version."; return 1
@@ -31,5 +60,3 @@ ___x_cmd_pkg_python_unpack(){
 }
 
 ___x_cmd_pkg_python_unpack
-
-
