@@ -16,12 +16,12 @@ pkg_index(){
             printf "%s" "$version_list" | awk -F'[-.]' '{print $1}' | sort | uniq | while read -r prefix; do
                 printf "  %s:\n" "$prefix"
                 ___x_cmd_pkg_ls_all "$pkg" | grep "$prefix" | while read -r candidate; do
-                    printf "    %s:\n" "$candidate"
+                    printf "    %s:\n      <info>: null\n" "$candidate"
                 done
             done
         elif [ -n "$version_list" ] ; then
             printf "%s" "$version_list" | sort | while read -r version; do
-                printf "  %s:\n" "$version"
+                printf "  %s:\n    <info>: null\n" "$version"
             done
         fi
     done | x y2j
