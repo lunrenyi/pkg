@@ -8,24 +8,41 @@ pkg(){
 }
 
 pkg_index(){
-    local version
-    ls "$___X_CMD_PKG_RAWPATH"/*/ | awk '{if(($0 != "") && (! match($0, /^\/[..]*/))){print $0}}' | while read -r pkg; do
-        printf "%s:\n" "$pkg"
-        version_list="$(___x_cmd_pkg_ls_all "$pkg" 2>/dev/null)"
-        [ -n "$version_list" ] || continue
-        if [ "$(printf "%s" "$version_list" | wc -l)" -gt 10 ] ; then
-            printf "%s" "$version_list" | awk -F'[-.]' '{print $1}' | sort | uniq | while read -r prefix; do
-                printf "  %s:\n" "$prefix"
-                ___x_cmd_pkg_ls_all "$pkg" | grep "$prefix" | while read -r candidate; do
-                    printf "    %s:\n      <info>: null\n" "$candidate"
-                done
-            done
-        elif [ -n "$version_list" ] ; then
-            printf "%s" "$version_list" | sort | while read -r version; do
-                printf "  %s:\n    <info>: null\n" "$version"
-            done
-        fi
-    done | x y2j
+    local tgtprefix="$(x wsroot)/.tmp"
+    mkdir -p "$tgtprefix"
+    cd $(x wsroot)/src
+    for dir in *; do
+    (
+        cd "$dir" || continue
+        for pkg in *; do
+            (
+                cd "$pkg" || exit
+                if [ ! -f meta.yml ]; then
+                    x:warn  "Not Existed: $dir/$pkg/meta.yml"
+                    exit
+                fi
+
+                version_list="$(___x_cmd_pkg_ls_all "$pkg" 2>/dev/null)"
+                [ -n "$version_list" ] || continue
+                {
+                    if [ "$(printf "%s" "$version_list" | wc -l)" -gt 10 ] ; then
+                        printf "%s" "$version_list" | awk -F'[-.]' '{print $1}' | sort | uniq | while read -r prefix; do
+                            printf "  %s:\n" "$prefix"
+                            ___x_cmd_pkg_ls_all "$pkg" | grep "$prefix" | while read -r candidate; do
+                                printf "    %s:\n      <info>: null\n" "$candidate"
+                            done
+                        done
+                    elif [ -n "$version_list" ] ; then
+                        printf "%s" "$version_list" | sort | while read -r version; do
+                            printf "  %s:\n    <info>: null\n" "$version"
+                        done
+                    fi
+                } | x y2j >"$tgtprefix/$dir/$pkg/index.json"
+                x:info "Generate: $tgtprefix/$dir/$pkg/index.json"
+            )
+        done
+    )
+    done
 }
 
 pkg_ls()(
@@ -49,8 +66,8 @@ pkg_yml2tgz()(
     pkg_yml2json "$@"
     pkg_json2binmod
     pkg_ins
+    pkg_index
     cd $(x wsroot)/.tmp
-    pkg_index >index.json
     x 7za a all.7z *
     # x 7 all.7z *
     x rmrf ../dist/all.7z
