@@ -6,7 +6,7 @@ gh_url: https://raw.githubusercontent.com/static-build/zsh-plugin/main/zsh-plugi
 gc_url: https://gitee.com/static-build/zsh-plugin/raw/main/zsh-plugin/%{version}
 file_suffix: tar.gz
 url:
-  _: "%{gh_url}/%{zipname}"
+  en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 hook:

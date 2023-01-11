@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/dust/raw/main/dust/%{version}
 static-build: dust/dust
 file_suffix: 7z
 url:
-  _: "%{gh_url}/%{zipname}"
+  en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:

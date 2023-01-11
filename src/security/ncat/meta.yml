@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/nmap/raw/main/ncat/%{version}
 file_suffix: 7z
 static-build: nmap/ncat
 url:
-  _: "%{gh_url}/%{zipname}"
+  en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin: ncat.%{os}.%{arch}%{bin_suffix}

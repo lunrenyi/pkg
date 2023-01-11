@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/mosquitto/raw/main/mosquitto/%{version}
 file_suffix: 7z
 static-build: mosquitto/mosquitto
 url:
-  _: "%{gh_url}/%{zipname}"
+  en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:

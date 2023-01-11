@@ -4,7 +4,7 @@ rely: []
 _os: "%{os}"
 _arch: "%{arch}"
 url:
-    _: https://github.com/denoland/deno/releases/download/%{version}/deno-%{_arch}-%{_os}.%{file_suffix}
+    en: https://github.com/denoland/deno/releases/download/%{version}/deno-%{_arch}-%{_os}.%{file_suffix}
     cn: https://github.com/denoland/deno/releases/download/%{version}/deno-%{_arch}-%{_os}.%{file_suffix}
 xbin:
   deno: deno

@@ -8,7 +8,7 @@ file_suffix: tar.gz
 _os: "%{os}"
 _arch: "%{arch}"
 url:
-  _: "%{sdkman_url}/%{version}/%{_os}%{_arch}"
+  en: "%{sdkman_url}/%{version}/%{_os}%{_arch}"
   cn: "%{sdkman_url}/%{version}/%{_os}%{_arch}"
 
 xbin:

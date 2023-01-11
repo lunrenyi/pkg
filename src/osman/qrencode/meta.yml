@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/qrencode/raw/main/qrencode/%{version}
 file_suffix: 7z
 static-build: qrencode/qrencode
 url:
-  _: "%{gh_url}/%{zipname}"
+  en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:

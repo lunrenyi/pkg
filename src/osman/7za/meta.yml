@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/p7zip/raw/main/7za/%{version}
 file_suffix: 7z
 static-build: p7zip/7za
 url:
-  _: "%{gh_url}/%{zipname}"
+  en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:

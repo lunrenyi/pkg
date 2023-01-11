@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/bandwhich/raw/main/bandwhich/%{version}
 file_suffix: 7z
 static-build: bandwhich/bandwhich
 url:
-  _: "%{gh_url}/%{zipname}"
+  en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin: bandwhich.%{os}.%{arch}%{bin_suffix}

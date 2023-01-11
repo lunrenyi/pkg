@@ -7,7 +7,7 @@ cn_source: "https://downloads.lightbend.com/scala/"
 _os: "%{os}"
 _arch: "%{arch}"
 url:
-  _: '%{scala_source}/%{version}/scala-%{version}.%{file_suffix}'
+  en: '%{scala_source}/%{version}/scala-%{version}.%{file_suffix}'
   cn: '%{cn_source}/%{version}/scala-%{version}.%{file_suffix}'
 
 xbin:

@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/bat/raw/main/bat/%{version}
 file_suffix: 7z
 static-build: bat/bat
 url:
-  _: "%{gh_url}/%{zipname}"
+  en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:

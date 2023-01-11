@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/ucloud/raw/main/ucloud/%{version}
 file_suffix: 7z
 static-build: ucloud/ucloud
 url:
-  _: "%{gh_url}/%{zipname}"
+  en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:

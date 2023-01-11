@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/tig/raw/main/tig/%{version}
 file_suffix: 7z
 static-build: tig/tig
 url:
-  _: "%{gh_url}/%{zipname}"
+  en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:

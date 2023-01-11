@@ -2,7 +2,7 @@ license: MIT
 rely: []
 file_suffix: tar.gz
 url:
-  _: "https://sourceforge.net/projects/luabinaries/files/%{version}/Tools%20Executables/lua-%{version}_%{_os}%{_arch}_bin.%{file_suffix}/download"
+  en: "https://sourceforge.net/projects/luabinaries/files/%{version}/Tools%20Executables/lua-%{version}_%{_os}%{_arch}_bin.%{file_suffix}/download"
   cn: "https://sourceforge.net/projects/luabinaries/files/%{version}/Tools%20Executables/lua-%{version}_%{_os}%{_arch}_bin.%{file_suffix}/download"
 
 

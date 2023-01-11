@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/magick/raw/main/magick/%{version}
 static-build: magick/magick
 file_suffix: 7z
 url:
-  _: "%{gh_url}/%{zipname}"
+  en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin: magick.%{os}.%{arch}%{bin_suffix}

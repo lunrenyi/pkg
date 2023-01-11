@@ -5,7 +5,7 @@ gh_url: https://releases.hashicorp.com/terraform/%{version}
 gc_url: https://gitcode.net/x-bash/terraform/-/raw/main/%{version}
 file_suffix: zip
 url:
-  _: "%{gh_url}/%{zipname}"
+  en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 xbin: terraform%{bin_suffix}
 
