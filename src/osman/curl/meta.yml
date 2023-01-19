@@ -1,36 +1,38 @@
-homepage: https://gitee.com/organizations/static-build/projects
+homepage: https://golang.google.cn
 license: MIT
 rely: []
+gh_url: https://github.com/tzw-my/static_qr/releases/download/%{version}
+docker_hub: staticbin/curl
+docker_github: tzw-my/static_qr
 
-gh_url: https://raw.githubusercontent.com/static-build/curl/main/curl/%{version}
-gc_url: https://gitee.com/static-build/curl/raw/main/curl/%{version}
+file_suffix: gzip
 static-build: curl/curl
-file_suffix: 7z
 url:
   en: "%{gh_url}/%{zipname}"
-  cn: "%{gc_url}/%{zipname}"
+  cn: "x dregistry download %{docker_hub} %{digest}"
+  en_spare: "target=github  x dregistry download %{docker_github} %{digest}"
 
-xbin:
-  curl: curl.%{os}.%{arch}%{bin_suffix}
-
+xbin: curl.%{os}.%{arch}%{bin_suffix}
 rule:
   /*:
     version: stable
-
   stable/*:
-    version: 7.83.1-DEV
-
+    version: v7.8
   latest/*:
-    version: 7.83.1-DEV
-
+    version: v7.8
   "*/linux/arm64":
-    zipname:    curl.linux.arm64.7z
+    zipname: curl.linux.arm64.7z
+    digest: sha256:b43b6684c997e1e48ecaa6412c1ed7027cab086f27b2b5d00140ad46df4d7651
   "*/darwin/arm64":
-    zipname:    curl.darwin.arm64.7z
+    zipname: curl.darwin.arm64.7z
+    digest: sha256:093fb4c2ea6fafbeaaa6eec58dae626cf1e4d1a84d1775d54aad2256ce33061f
   "*/linux/x64":
-    zipname:    curl.linux.x64.7z
+    zipname: curl.linux.x64.7z
+    digest: sha256:04448ac6c9c4f18a80880c779438710f210b0a2535ad72ea9bf63e08a9b48725
   "*/darwin/x64":
-    zipname:    curl.darwin.x64.7z
+    zipname: curl.darwin.x64.7z
+    digest: sha256:007ee2c1dfcd53972d58bee3ee4671f9e6a92b910076a85c67660f71c3ebff2f
   "*/win/x64":
-    zipname:    curl.win.x64.exe.7z
+    zipname: curl.win.x64.exe.7z
+    digest: sha256:be5276a6fe6ae6bc636eeb4ed986fc1bd3be5bc00703d68cf59d62daec02ac8e
     bin_suffix: .exe

@@ -1,0 +1,5 @@
+v0.1.0:
+  linux/arm64:
+    sha256: dc9054afaf92a941bb37b032c6dbba1b6c914dc8e6bf83e0e49363803d5ca788
+  linux/x64:
+    sha256: 739a396ec5d42b814f9eee7a575e43e2c27339347959e9e81dbb721484ad7fba
