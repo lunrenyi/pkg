@@ -24,9 +24,13 @@ rule:
     version: v0.1.0
 
   "*/linux/amd64":
-    _os: unknown-linux
+    _os: unknown-linux-gnu
     _arch: aarch64
     zipname:    proot-rs.linux.amd64.tar.gz
+  "*/linux/arm64":
+    _os: linux-androideabi
+    _arch: arm
+    zipname:    proot-rs.linux.arm.tar.gz
   "*/linux/x64":
     _os: unknown-linux-gnu
     _arch: x86_64
