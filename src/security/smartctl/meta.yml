@@ -4,7 +4,7 @@ rely: []
 gh_url: https://raw.githubusercontent.com/static-build/smartmontools/main/smartmontools/%{version}
 gc_url: https://gitee.com/static-build/smartmontools/raw/main/smartmontools/%{version}
 file_suffix: 7z
-static-build: smartmontools/smartmontools
+static-build: smartmontools/smartctl
 url:
   en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
