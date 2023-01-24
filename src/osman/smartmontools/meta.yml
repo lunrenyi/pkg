@@ -26,17 +26,17 @@ rule:
   "*/darwin/arm64":
     _os: darwin
     _arch: arm64
-    zipname:    smart.darwin.arm64.7z
+    zipname:    smartctl.darwin.arm64.7z
   "*/linux/arm64":
     _os: linux
     _arch: arm64
-    zipname: smart.linux.arm64.7z
+    zipname: smartctl.linux.arm64.7z
     "*/linux/x64":
     _os: linux
     _arch: x64
-    zipname:    smart.linux.x64.7z
+    zipname:  smartctl.linux.x64.7z
   "*/win/x64":
     _os: win
     _arch: x64
-    zipname:    win.x64.7z
+    zipname:  win.x64.7z
 
