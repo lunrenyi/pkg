@@ -1,11 +1,10 @@
 homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
-
-gh_url: https://raw.githubusercontent.com/static-build/smartctl/main/smartctl/%{version}
-gc_url: https://gitee.com/static-build/smartctl/raw/main/smartctl/%{version}
+gh_url: https://raw.githubusercontent.com/static-build/smartmontools/main/smartmontools/%{version}
+gc_url: https://gitee.com/static-build/smartmontools/raw/main/smartmontools/%{version}
 file_suffix: 7z
-static-build: smartctl/smartctl
+static-build: smartmontools/smartmontools
 url:
   en: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
