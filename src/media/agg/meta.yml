@@ -1,0 +1,39 @@
+homepage: https://github.com/asciinema/agg/releases/tag/v1.3.0
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+url:
+    en: https://github.com/asciinema/agg/releases/download/%{version}/agg-%{_arch}-%{_os}
+    cn: https://github.com/asciinema/agg/releases/download/%{version}/agg-%{_arch}-%{_os}
+xbin:
+  agg: agg-{_arch}-{_os}
+
+unpack_way: non_unpack
+
+rule:
+  /*:
+    version: v1.3.0
+  v*/linux/x64:
+    _arch: x86_64
+    _os: unknown-linux-gnu
+
+  v*/linux/arm64:
+    _arch: arm
+    _os: unknown-linux-gnu
+
+  v*/linux/amd64:
+    _arch: aarch64
+    _os: apple-darwin
+
+  v*/darwin/arm64:
+    _arch: aarch64
+    _os: apple-darwin
+
+  v*/darwin/x64:
+    _arch: x86_64
+    _os: apple-darwin
+
+  v*/win/x64:
+    _arch: x86_64
+    _os: pc-windows-msvc.exe
