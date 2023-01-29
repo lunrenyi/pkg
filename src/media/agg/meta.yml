@@ -6,8 +6,8 @@ _arch: "%{arch}"
 url:
     en: https://github.com/asciinema/agg/releases/download/%{version}/agg-%{_arch}-%{_os}
     cn: https://github.com/asciinema/agg/releases/download/%{version}/agg-%{_arch}-%{_os}
-xbin:
-  agg: agg-{_arch}-{_os}
+    
+xbin: agg-{_arch}-{_os}
 
 unpack_way: non_unpack
 
