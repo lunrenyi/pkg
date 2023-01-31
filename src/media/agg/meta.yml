@@ -7,7 +7,7 @@ url:
     en: https://github.com/asciinema/agg/releases/download/%{version}/agg-%{_arch}-%{_os}
     cn: https://github.com/asciinema/agg/releases/download/%{version}/agg-%{_arch}-%{_os}
 
-xbin: "%{version}""
+xbin: "agg.%{_os}.%{_arch}"
 
 unpack_way: non_unpack
 
@@ -37,3 +37,4 @@ rule:
   v*/win/x64:
     _arch: x86_64
     _os: pc-windows-msvc.exe
+
