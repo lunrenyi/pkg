@@ -1,0 +1,37 @@
+homepage: https://www.php.net/
+license: MIT
+rely: []
+file_suffix: tar.gz
+en_source: "https://www.php.net/distributions/"
+cn_source: "https://www.php.net/distributions/"
+
+url:
+  en: 'php-%{version}.%{file_suffix}'
+  cn: 'php-%{version}.%{file_suffix}'
+
+xbin:
+    php: bin/rustc
+
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
+  install: install.sh
+
+rule:
+
+  /*:
+    version: 8.2.1
+
+  "*/darwin/arm64":
+
+
+  "*/linux/x64":
+
+
+
+  "*/win/x64":
+    _os: pc-windows-msvc
+    _arch: x86_64
+
+  "*/darwin/x64":
+
