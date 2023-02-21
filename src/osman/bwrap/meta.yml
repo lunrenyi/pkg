@@ -27,12 +27,3 @@ rule:
     zipname:    bwrap.linux.arm64.7z
   "*/linux/x64":
     zipname:    bwrap.linux.x64.7z
-
-
-    bwrap:
-      - gitee: 403
-    gost:
-      - gitee: 404
-      - url: https://gitee.com/static-build/gost/raw/main/gost/v3.0.0-rc6/gost.linux.x64.7z
-      - github: 404
-      - url: https://raw.githubusercontent.com/static-build/gost/main/gost/v3.0.0-rc6/gost.linux.x64.7z
