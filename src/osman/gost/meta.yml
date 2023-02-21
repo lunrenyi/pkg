@@ -1,8 +1,7 @@
 homepage: https://golang.google.cn
 license: MIT
 rely: []
-
-gh_url: https://raw.githubusercontent.com/static-build/gost/main/gost/%{version}
+gh_url: https://github.com/go-gost/gost/releases/download/%{version}
 gc_url: https://gitee.com/static-build/gost/raw/main/gost/%{version}
 file_suffix: tar.gz
 static-build: gost/gost
