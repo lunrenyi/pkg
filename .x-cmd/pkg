@@ -139,10 +139,10 @@ pkg_install(){
 }
 
 pkg_ins(){
-    x rmrf "$___X_CMD_ROOT_TMP/pkg/raw"
+    x rmrf "$___X_CMD_PKG_BASE_PATH/raw"
     mkdir -p "$___X_CMD_ROOT_TMP/pkg"
-    x:info "Copy .x-cmd to $___X_CMD_ROOT_TMP/pkg/raw"
-    cp -rf "$(x wsroot)/.tmp" "$___X_CMD_ROOT_TMP/pkg/raw"
+    x:info "Copy .x-cmd to $___X_CMD_PKG_BASE_PATH/raw"
+    cp -rf "$(x wsroot)/.tmp" "$___X_CMD_PKG_BASE_PATH/raw"
 }
 
 pkg_json2binmod()(

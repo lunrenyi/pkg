@@ -3,19 +3,22 @@ license: MIT
 rely: []
 file_suffix: tar.gz
 en_source: "https://www.php.net/distributions/"
-cn_source: "https://www.php.net/distributions/"
+cn_source: "https://mirrors.sohu.com/php/"
 
 url:
-  en: 'php-%{version}.%{file_suffix}'
-  cn: 'php-%{version}.%{file_suffix}'
-
-xbin:
-    php: bin/rustc
+  en: '%{en_source}php-%{version}.%{file_suffix}'
+  cn: '%{cn_source}php-%{version}.%{file_suffix}'
 
 hook:
   activate: activate.sh
   deactivate: deactivate.sh
-  install: install.sh
+unpack_way: unpack_copy_to_target_dir
+xbin:
+    php: main/php.h
+
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 
 rule:
 
