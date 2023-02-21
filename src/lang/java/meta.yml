@@ -19,7 +19,6 @@ hook:
   deactivate: deactivate.sh
 
 unpack_way: unpack_copy_to_target_dir
-file_suffix: tar.gz
 
 rule:
 

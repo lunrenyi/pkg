@@ -3,11 +3,12 @@ license: Apache License
 rely: []
 _os: "%{os}"
 _arch: "%{arch}"
+
 url:
     en: https://github.com/asciinema/agg/releases/download/%{version}/agg-%{_arch}-%{_os}
     cn: https://github.com/asciinema/agg/releases/download/%{version}/agg-%{_arch}-%{_os}
-    
-xbin: agg-{_arch}-{_os}
+
+xbin: "agg.%{xbin_suffix}"
 
 unpack_way: non_unpack
 
@@ -17,23 +18,28 @@ rule:
   v*/linux/x64:
     _arch: x86_64
     _os: unknown-linux-gnu
+    xbin_suffix: linux.x64
 
   v*/linux/arm64:
     _arch: arm
     _os: unknown-linux-gnu
+    xbin_suffix: linux.arm64
 
   v*/linux/amd64:
     _arch: aarch64
     _os: apple-darwin
-
+    xbin_suffix: linux.amd64
   v*/darwin/arm64:
     _arch: aarch64
     _os: apple-darwin
+    xbin_suffix: darwin.arm64
 
   v*/darwin/x64:
     _arch: x86_64
     _os: apple-darwin
+    xbin_suffix: darwin.x64
 
   v*/win/x64:
     _arch: x86_64
     _os: pc-windows-msvc.exe
+    xbin_suffix: win.x64
