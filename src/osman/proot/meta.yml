@@ -5,7 +5,6 @@ rely: []
 gh_url: https://github.com/proot-me/proot-rs/releases/download/%{version}/proot-rs-%{version}-%{_arch}-%{_os}.%{file_suffix}
 gt_url: https://gitee.com/static-build/proot/raw/main/v%2F0.1.0%2Fproot-rs-%{version}-%{_arch}-%{_os}.%{file_suffix}
 file_suffix: tar.gz
-static-build: bat/bat
 url:
   en: "%{gh_url}"
   cn: "%{gt_url}"
