@@ -2,7 +2,7 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 gh_url: https://github.com/go-gost/gost/releases/download/%{version}
-gc_url: https://github.com/go-gost/gost/releases/download/%{version}
+gc_url: https://gitcode.net/static-build/gost/-/releases/3.0.0/downloads/%{version}
 file_suffix: tar.gz
 url:
   en: "%{gh_url}/%{zipname}"
