@@ -1,0 +1,29 @@
+homepage: https://golang.google.cn
+license: MIT
+rely: []
+
+gh_url: https://raw.githubusercontent.com/static-build/bwrap/main/bwrap/%{version}
+gc_url: https://gitee.com/static-build/bwrap/raw/main/bwrap/%{version}
+file_suffix: 7z
+static-build: bwrap/bwrap
+url:
+  en: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  bwrap: bwrap.%{os}.%{arch}%{bin_suffix}
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.7.0
+
+  latest/*:
+    version: v0.7.0
+
+  "*/linux/arm64":
+    zipname:    bwrap.linux.arm64.7z
+  "*/linux/x64":
+    zipname:    bwrap.linux.x64.7z
