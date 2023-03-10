@@ -1,8 +1,8 @@
 homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 
-gh_url: https://github.com/cli/cli/releases/download/%{version}
-gc_url: https://gitcode.net/x-cmd-builder/sodium/-/releases/v0.0.1/downloads
+gh_url: https://github.com/x-cmd-builder/sodium/releases/download/%{version}/
+gc_url: https://gitcode.net/x-cmd-builder/sodium/-/releases/%{version}/downloads
 file_suffix: 7z
 url:
   en: "%{gh_url}/%{zipname}"
