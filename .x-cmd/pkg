@@ -84,9 +84,7 @@ pkg_yml2json()(
 
     for dir in *; do
         (
-            case "$dir" in
-                _unstable)   continue ;;
-            esac
+
             cd "$dir" || continue
             for pkg in *; do
                 (
