@@ -159,10 +159,14 @@ pkg_json2binmod()(
                 _idx = index(v(), "/")
                 NAME=substr(v(), _idx+1)
             }
-            if ((O[1]=="\"xbin\"") && (v() !~ /^[\{}]$/)) alias_name[ ++ alias_namel ] = ( D == 1 ) ? NAME : k()
-        }
-        END{
-            for (i=1; i<=alias_namel; i++) print ":" alias_name[i] ":" NAME
+            if ((O[1]=="\"xbin\"") && (v() !~ /^[\{}]$/)) {
+                _name = ( D == 1 ) ? NAME : k()
+                if(uq[ _name ] == "") {
+                    print ":" _name ":" NAME
+                    uq[ _name ] = _name
+                }
+
+            }
         }
         '
     done > binmod.txt
