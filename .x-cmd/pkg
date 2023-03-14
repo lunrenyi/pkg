@@ -84,9 +84,15 @@ pkg_yml2json()(
 
     for dir in *; do
         (
+            case "$dir" in
+                *-todo)   continue ;;
+            esac
             cd "$dir" || continue
             for pkg in *; do
                 (
+                    case "$pkg" in
+                        *-todo)   continue ;;
+                    esac
                     x:info "pkg: $(pwd)/$pkg"
                     cd "$pkg" || exit
                     if [ ! -f meta.yml ]; then
