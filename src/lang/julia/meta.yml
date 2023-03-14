@@ -33,7 +33,7 @@ rule:
     _osarch: linux-arm
 
 
-    "*/linux/armv7l":
+  "*/linux/armv7l":
     version: 1.7.0-rc1
     _osarch: linux-armv7l
 
