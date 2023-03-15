@@ -56,11 +56,11 @@ generate_mdtable_local()(
         }
         {
             if ((O[1]=="\"rule\"") && (v() !~ /^[\{}]$/) && aa(NAME)) {
-                if(juq(K) ~ "*/linux/x64") linux_x64 = "ok"
-                if(juq(K) ~ "*/linux/arm64")  linux_arm64 = "ok"
-                if(juq(K) ~ "*/darwin/arm64")  darwin_arm64 = "ok"
-                if(juq(K) ~ "*/darwin/x64")  darwin_x64 = "ok"
-                if(juq(K) ~ "*/win/x64")  win_x64 = "ok"
+                if(juq(K) == "*/linux/x64") linux_x64 = "ok"
+                if(juq(K) == "*/linux/arm64")  linux_arm64 = "ok"
+                if(juq(K) == "*/darwin/arm64")  darwin_arm64 = "ok"
+                if(juq(K) == "*/darwin/x64")  darwin_x64 = "ok"
+                if(juq(K) == "*/win/x64")  win_x64 = "ok"
             }
         }
         END{
