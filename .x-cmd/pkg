@@ -1,5 +1,5 @@
 # shellcheck shell=sh disable=SC3043 #source
-
+. "$(x wsroot)/.x-cmd/generate_table"
 pkg(){
     local op="$1";  shift
     case "$op" in
@@ -65,6 +65,7 @@ pkg_yml2tgz()(
 
     pkg_yml2json "$@"
     pkg_json2binmod
+    generate_mdtable_local
     pkg_ins
     pkg_index
     cd $(x wsroot)/.tmp
