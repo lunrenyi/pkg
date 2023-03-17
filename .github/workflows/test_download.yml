@@ -10,7 +10,6 @@ jobs:
       matrix:
         os: [ubuntu-latest]
     env:
-      ___X_CMD_GHACTION_X: x1
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       git_user: mnnna
       git_email: 850400628@qq.com
@@ -18,4 +17,4 @@ jobs:
       CONCURRENCY: 10
     steps:
     - uses: actions/checkout@v3
-    - run:  eval "$(curl https://get.x-cmd.com/x1)"
+    - run:  eval "$(curl https://get.x-cmd.com)"
