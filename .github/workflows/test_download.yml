@@ -1,24 +1,22 @@
-name:  pkg
+name: Use upload artifact
 on:
   push:
   workflow_dispatch:
 
 jobs:
-  pkg:
-    runs-on: ubuntu-latest
+  publisher:
+    runs-on: ${{ matrix.os }}
     strategy:
-    matrix:
-      os: ubuntu-latest
-    timeout-minutes: 5
+      matrix:
+        os: [windows-latest, ubuntu-latest,macos-latest]
     env:
-      ___X_CMD_GHACTION_X: x1
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
       git_user: mnnna
-      git_email: zhengyuhang@x-cmd.com
+      git_email: 850400628@qq.com
+      ___X_CMD_CODESORUCE_REPO: dev
       CONCURRENCY: 10
-     steps:
-      - uses: x-cmd/action@main
-      - run: xws generate_table net
+    steps:
+    - uses: actions/checkout@v3
 
+    - run: echo "hi"
 
