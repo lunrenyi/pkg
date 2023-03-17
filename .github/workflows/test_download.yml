@@ -1,13 +1,14 @@
-name: Bundle pkg
+name:  pkg
 on:
   push:
   workflow_dispatch:
 
-
 jobs:
-  pkg_test:
-    name: pkg_test
+  publisher:
     runs-on: ubuntu-latest
+    strategy:
+    matrix:
+      os: ubuntu-latest
     timeout-minutes: 5
     env:
       ___X_CMD_GHACTION_X: x1
@@ -17,9 +18,7 @@ jobs:
       git_email: zhengyuhang@x-cmd.com
       CONCURRENCY: 10
      steps:
-      - name: main
       - uses: x-cmd/action@main
-        with:
-          run: xws generate_table net
+      - run: xws generate_table net
 
 
