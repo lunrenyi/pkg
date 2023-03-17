@@ -2,7 +2,7 @@
 | ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |
 |deno | ok | x| ok | ok | ok |
 |go | ok | ok | ok | ok | ok |
-|java | ok | ok | x| x| x|
+|java | ok | ok | ok | ok | x|
 |julia | ok | x| x| x| ok |
 |kotlin | ok | x| ok | x| ok |
 |lua | ok | ok | x| x| ok |
