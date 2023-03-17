@@ -9,7 +9,6 @@ jobs:
     strategy:
        matrix:
         os: ubuntu-latest
-    timeout-minutes: 5
     env:
       ___X_CMD_GHACTION_X: x1
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -19,7 +18,7 @@ jobs:
       CONCURRENCY: 10
      steps:
       - name: main
-        uses: actions/upload-artifact@v3
+        uses: x-cmd/action@main
         with:
          code: |
           xws generate_table net
