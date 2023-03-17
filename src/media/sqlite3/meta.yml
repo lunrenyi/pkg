@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/sqlite3/raw/main/sqlite3/%{version}
 file_suffix: 7z
 static-build: sqlite3/sqlite3
 url:
-  en: "%{gh_url}/%{zipname}"
+  internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin: sqlite3.%{os}.%{arch}%{bin_suffix}

@@ -6,7 +6,7 @@ gc_url: https://download.fastgit.org/BurntSushi/ripgrep/releases/download/%{vers
 file_suffix: tar.gz
 unpack_way: unpack_copy_to_target_dir
 url:
-  en: "%{gh_url}/%{zipname}"
+  internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin: rg%{bin_suffix}

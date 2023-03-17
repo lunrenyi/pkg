@@ -7,7 +7,7 @@ _os: "%{os}"
 _arch: "%{arch}"
 file_suffix: tar.gz
 url:
-  en: https://www.cpan.org/src/5.0/perl-%{version}.tar.gz
+  internet: https://www.cpan.org/src/5.0/perl-%{version}.tar.gz
   cn: "https://www.cpan.org/src/5.0/perl-%{version}.tar.gz"
 file_suffix: tar.gz
 hook:

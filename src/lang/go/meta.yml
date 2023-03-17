@@ -5,7 +5,7 @@ file_suffix: tar.gz
 _os: "%{os}"
 _arch: "%{arch}"
 url:
-  en: "https://go.dev/dl/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
+  internet: "https://go.dev/dl/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
   cn: "https://golang.google.cn/dl/go%{version}.%{_os}-%{_arch}.%{file_suffix}"
 xbin:
   go: bin/go

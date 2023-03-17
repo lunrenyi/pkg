@@ -6,7 +6,7 @@ en_source: "https://www.php.net/distributions/"
 cn_source: "https://mirrors.sohu.com/php/"
 
 url:
-  en: '%{en_source}php-%{version}.%{file_suffix}'
+  internet: '%{en_source}php-%{version}.%{file_suffix}'
   cn: '%{cn_source}php-%{version}.%{file_suffix}'
 
 hook:

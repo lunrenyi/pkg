@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/nmap/raw/main/traceroute/%{version}
 file_suffix: 7z
 static-build: nmap/traceroute
 url:
-  en: "%{gh_url}/%{zipname}"
+  internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin: traceroute.%{os}.%{arch}%{bin_suffix}

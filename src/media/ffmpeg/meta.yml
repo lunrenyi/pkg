@@ -7,7 +7,7 @@ gc_url: https://gitcode.net/x-bash/ffmpeg/-/raw/main/ffmpeg/%{version}
 file_suffix: 7z
 
 url:
-  en: "%{gc_url}/%{zipname}.%{file_suffix}"
+  internet: "%{gc_url}/%{zipname}.%{file_suffix}"
   cn: "%{gc_url}/%{zipname}.%{file_suffix}"
 
 xbin: ffmpeg.%{os}.%{arch}%{bin_suffix}

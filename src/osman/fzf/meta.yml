@@ -6,7 +6,7 @@ gh_url: https://github.com/junegunn/fzf/releases/download/%{version}
 gc_url: https://download.fastgit.org/junegunn/fzf/releases/download/%{version}
 file_suffix: zip
 url:
-  en: "%{gh_url}/%{zipname}"
+  internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin: fzf%{bin_suffix}

@@ -6,7 +6,7 @@ gc_url: https://gitee.com/static-build/smartmontools/raw/main/smartmontools/%{ve
 file_suffix: 7z
 static-build: smartmontools/smartctl
 url:
-  en: "%{gh_url}/%{zipname}"
+  internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin: smartctl.%{os}.%{arch}%{bin_suffix}

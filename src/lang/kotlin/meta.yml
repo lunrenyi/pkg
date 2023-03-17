@@ -7,7 +7,7 @@ file_suffix: tar.gz
 _os: "%{os}"
 _arch: "%{arch}"
 url:
-  en: '%{github_source}/v%{version}/kotlin-%{_os}-%{_arch}-%{version}.%{file_suffix}'
+  internet: '%{github_source}/v%{version}/kotlin-%{_os}-%{_arch}-%{version}.%{file_suffix}'
   cn: '%{github_source}/v%{version}/kotlin-%{_os}-%{_arch}-%{version}.%{file_suffix}'
 xbin:
   kotlin: kotlin%{bin_suffix}

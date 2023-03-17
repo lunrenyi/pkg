@@ -7,7 +7,7 @@ cn_source: "https://static.rust-lang.org/dist"
 _os: "%{os}"
 _arch: "%{arch}"
 url:
-  en: '%{cn_source}/rust-%{version}-%{_arch}-%{_os}.%{file_suffix}'
+  internet: '%{cn_source}/rust-%{version}-%{_arch}-%{_os}.%{file_suffix}'
   cn: '%{cn_source}/rust-%{version}-%{_arch}-%{_os}.%{file_suffix}'
 
 xbin:

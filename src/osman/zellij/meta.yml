@@ -5,7 +5,7 @@ gh_url: https://github.com/zellij-org/zellij/releases/download/%{version}
 gc_url: https://download.fastgit.org/zellij-org/zellij/releases/download/%{version}
 file_suffix: tar.gz
 url:
-  en: "%{gh_url}/%{zipname}"
+  internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin: zellij%{bin_suffix}

@@ -65,7 +65,7 @@ pkg_yml2tgz()(
 
     pkg_yml2json "$@"
     pkg_json2binmod
-    generate_mdtable_local
+    # xws table local
     pkg_ins
     pkg_index
     cd $(x wsroot)/.tmp

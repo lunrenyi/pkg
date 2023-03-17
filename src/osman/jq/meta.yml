@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/jq/raw/main/jq/%{version}
 file_suffix: 7z
 static-build: jq/jq
 url:
-  en: "%{gh_url}/%{zipname}"
+  internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin: jq.%{os}.%{arch}%{bin_suffix}

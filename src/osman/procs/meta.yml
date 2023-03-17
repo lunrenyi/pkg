@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/procs/raw/main/procs/%{version}
 file_suffix: 7z
 static-build: procs/procs
 url:
-  en: "%{gh_url}/%{zipname}"
+  internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin: procs.%{os}.%{arch}%{bin_suffix}

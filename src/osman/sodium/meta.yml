@@ -5,7 +5,7 @@ gh_url: https://github.com/x-cmd-builder/sodium/releases/download/%{version}/
 gc_url: https://gitcode.net/x-cmd-builder/sodium/-/releases/%{version}/downloads
 file_suffix: 7z
 url:
-  en: "%{gh_url}/%{zipname}"
+  internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:

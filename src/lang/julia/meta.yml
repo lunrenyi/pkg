@@ -2,7 +2,7 @@ license: MIT
 rely: []
 file_suffix: tar.gz
 url:
-  en: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{_os}/%{_arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
+  internet: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{_os}/%{_arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
   cn: "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/%{_os}/%{_arch}/%{version}/julia-%{version}-%{_osarch}.%{file_suffix}"
 
 xbin: bin/julia

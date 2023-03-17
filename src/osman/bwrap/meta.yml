@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/bwrap/raw/main/bwrap/%{version}
 file_suffix: 7z
 static-build: bwrap/bwrap
 url:
-  en: "%{gh_url}/%{zipname}"
+  internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:

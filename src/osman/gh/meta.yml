@@ -5,7 +5,7 @@ gh_url: https://github.com/cli/cli/releases/download/%{version}
 gc_url: https://download.fastgit.org/cli/cli/releases/download/%{version}
 file_suffix: tar.gz
 url:
-  en: "%{gh_url}/%{zipname}"
+  internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:

@@ -7,7 +7,7 @@ gc_url: https://gitee.com/static-build/nmap/raw/main/nping/%{version}
 file_suffix: 7z
 static-build: nmap/nping
 url:
-  en: "%{gh_url}/%{zipname}"
+  internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin: nping.%{os}.%{arch}%{bin_suffix}
