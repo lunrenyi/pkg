@@ -17,5 +17,5 @@ jobs:
       ___X_CMD_CODESORUCE_REPO: dev
       CONCURRENCY: 10
     steps:
-    - uses: x-cmd/action@main
+    - uses: actions/checkout@v3
     - run:  eval "$(curl https://get.x-cmd.com/x1)"
