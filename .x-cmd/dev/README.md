@@ -3,15 +3,15 @@
 |deno | ok | x| ok | ok | ok |
 |go | ok | ok | ok | ok | ok |
 |java | ok | ok | x| x| x|
-|julia | x| x| x| x| x|
+|julia | ok | x| x| x| ok |
 |kotlin | ok | x| ok | x| ok |
 |lua | ok | ok | x| x| ok |
 |node | ok | ok | ok | ok | ok |
-|perl | x| x| x| x| x|
+|perl | ok | x| ok | x| x|
 |python | ok | x| ok | ok | ok |
 |ruby-todo | x| x| x| x| x|
 |rust | ok | x| ok | ok | ok |
-|scala | x| x| x| x| x|
+|scala | ok | ok | ok | ok | ok |
 |agg | ok | x| ok | ok | ok |
 |ffmpeg | ok | ok | x| ok | ok |
 |magick | ok | ok | ok | ok | x|
