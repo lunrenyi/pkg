@@ -2,43 +2,72 @@ generate_mdtable_net()(
     x:info "Generate: maerkdown table"
     printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 | 备注 |"
     printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |"
-    cd "$(x wsroot)/.tmp" || return
-    find . -name meta.tt.json | while read -r line; do
 
-        pkg_name="${line%/meta.tt.json}"
-        pkg_name="${pkg_name##*/}"
+    cd $(x wsroot)/src
 
-        version="${2:-$(___x_cmd_pkg_default_version "$pkg_name")}"
+    for dir in *; do
+    (
+        cd "$dir" || continue
 
-        printf "|%s " "$pkg_name"
-        while read -r osarch; do
-            url="$(___x_cmd_pkg___list "$pkg_name" "$version" "$osarch" "url.cn")"
-            return_code="$(curl --silent --max-time 5.5 -I "$url" | grep -E "^HTTP" | awk -F " " '{print $2}' | tail -n 1)"
-
-            if [ "$return_code" = "200" ] || [ "$return_code" = "302" ];then
+        for pkg in *; do
+            (
+                version="$(___x_cmd_pkg_default_version $pkg)"
+                printf "|%s " "$pkg"
+                while read -r osarch; do
+                     url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.cn")"
+                     return_code="$(curl --silent --max-time 5.5 -I "$url" | grep -E "^HTTP" | awk -F " " '{print $2}' | tail -n 1)"
+                      if [ "$return_code" = "200" ] || [ "$return_code" = "302" ];then
 
                 if [ "$osarch" = "linux/x64" ]; then
-                    printf "| %s " "ok"
-                elif [ "$osarch" = "linux/arm64" ]; then
-                    printf "| %s " "ok"
-                elif [ "$osarch" = "darwin/x64" ]; then
-                    printf "| %s " "ok"
-                elif [ "$osarch" = "darwin/arm64" ]; then
-                    printf "| %s " "ok"
-                else [ "$osarch" = "win/x64" ]
-                    printf "| %s " "ok"
+                    if [ "$return_code" = "200" ] || [ "$return_code" = "302" ];then
+                        printf "| %s " "ok"
+                    else
+                        printf "%s " "  |"
+                    fi
+                fi
+                if [ "$osarch" = "linux/arm64" ]; then
+                    if [ "$return_code" = "200" ] || [ "$return_code" = "302" ];then
+                        printf "| %s " "ok"
+                    else
+                        printf "%s " "  |"
+                    fi
+                fi
+                if [ "$osarch" = "darwin/x64" ]; then
+                    if [ "$return_code" = "200" ] || [ "$return_code" = "302" ];then
+                        printf "| %s " "ok"
+                    else
+                        printf "%s " "  |"
+                    fi
+                fi
+                if [ "$osarch" = "darwin/arm64" ]; then
+                    if [ "$return_code" = "200" ] || [ "$return_code" = "302" ];then
+                        printf "| %s " "ok"
+                    else
+                        printf "%s " "  |"
+                    fi
+                fi
+                if [ "$osarch" = "win/x64" ]; then
+                    if [ "$return_code" = "200" ] || [ "$return_code" = "302" ];then
+                        printf "| %s " "ok"
+                    else
+                        printf "%s " "  |"
+                    fi
                 fi
             fi
 
-        done <<A
+                done <<A
 linux/x64
 linux/arm64
 darwin/x64
 darwin/arm64
 win/x64
 A
-    echo "|"
-    done
+     echo "|"
+            )
+        done
+
+    )
+done
 ) > $(x wsroot)/.x-cmd/dev/README.md
 
 generate_mdtable_local()(
