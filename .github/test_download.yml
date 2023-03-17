@@ -1,0 +1,23 @@
+name: test_download
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  publisher:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      git_user: mnnna
+      git_email: 850400628@qq.com
+      ___X_CMD_CODESORUCE_REPO: dev
+      CONCURRENCY: 10
+    steps:
+    - uses: actions/checkout@v3
+
+
+    - run: xws generate_table net
+
