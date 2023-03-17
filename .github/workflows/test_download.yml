@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  pkg:
+  pkg_test:
     runs-on: ${{ matrix.os }}
     strategy:
        matrix:
@@ -17,9 +17,7 @@ jobs:
       git_email: zhengyuhang@x-cmd.com
       CONCURRENCY: 10
      steps:
-      - name: main
-        uses: x-cmd/action@main
-        with:
-         code: |
-          xws generate_table net
+    - uses: actions/checkout@v3
+    - run: echo hello > path/to/artifact/world.txt
+      
 
