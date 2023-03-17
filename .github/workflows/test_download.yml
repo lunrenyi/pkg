@@ -16,5 +16,5 @@ jobs:
       ___X_CMD_CODESORUCE_REPO: dev
       CONCURRENCY: 10
     steps:
-    - uses: actions/checkout@v3
-    - run: echo hello 
+    - uses: x-cmd/action@main
+    - run: echo hello
