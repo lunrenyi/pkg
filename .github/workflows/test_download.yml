@@ -9,16 +9,17 @@ jobs:
     name: pkg_test
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    env:
+      ___X_CMD_GHACTION_X: x1
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
+      git_user: mnnna
+      git_email: zhengyuhang@x-cmd.com
+      CONCURRENCY: 10
      steps:
       - name: main
-      env:
-        ___X_CMD_GHACTION_X: x1
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        git_user: mnnna
-        git_email: zhengyuhang@x-cmd.com
-        CONCURRENCY: 10
-      uses: x-cmd/action@main
-      run: xws generate_table net
+      - uses: x-cmd/action@main
+        with:
+          run: xws generate_table net
 
 
