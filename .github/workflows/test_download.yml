@@ -17,6 +17,6 @@ jobs:
       CONCURRENCY: 10
     steps:
       - name: main
-        uses: x-cmd/action@main
+        uses: x-cmd/action@main 
         run: xws generate_table net
 
