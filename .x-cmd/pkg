@@ -1,5 +1,5 @@
 # shellcheck shell=sh disable=SC3043 #source
-. "$(x wsroot)/.x-cmd/generate_table"
+. "$(x wsroot)/.x-cmd/table"
 pkg(){
     local op="$1";  shift
     case "$op" in
@@ -70,7 +70,7 @@ pkg_yml2tgz()(
     pkg_index
     cd $(x wsroot)/.tmp
     x 7za a all.7z *
-    # x 7 all.7z *
+    # x 7za all.7z *
     x rmrf ../dist/all.7z
     mkdir -p ../dist
     mv all.7z ../dist/all.7z

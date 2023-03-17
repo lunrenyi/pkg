@@ -29,113 +29,96 @@ rule:
     version: 18.0.2-sem
 
   latest/*:
-    version: openjdk-v8.3.2
+    version: 18.0.2-sem
 
-  "*/darwin/x64":
-    internet:
-      _os: darwin
-      _arch: x64
-    cn:
-      _os: macos
+  "*/win/*":
+    _os: mingw64_nt_10
 
-  "*/darwin/amd64":
-  cn:
-    _os: macos
-    _arch: aarch64
-
-  "*/windows/*":
-    cn:
-      _os: windows
-      file_suffix: zip
-    internet:
-      _os: mingw64_nt_10
-
-  16/*/*:
+  "18*?/linux/x64":
     url:
-      cn: https://d6.injdk.cn/oraclejdk/16/jdk-16.0.2_%{_os}-%{_arch}_bin.%{file_suffix}
+      cn: https://d6.injdk.cn/openjdk/openjdk/18/openjdk-18_linux-x64_bin.tar.gz
 
-
-  11.0.12/*/*:
+  "18*?/linux/arm64":
     url:
-      cn: https://d6.injdk.cn/oraclejdk/11/jdk-11.0.12_%{_os}-%{_arch}_bin.%{file_suffix}
+      cn: https://d6.injdk.cn/openjdk/openjdk/18/openjdk-18_linux-aarch64_bin.tar.gz
 
-
-  8/*/*:
+  "18*?/darwin/arm64":
     url:
-      cn: https://d6.injdk.cn/oraclejdk/8/jdk-8u301-%{_os}-%{_arch}_bin.%{file_suffix}
+      cn: https://d6.injdk.cn/openjdk/openjdk/18/openjdk-18_macos-aarch64_bin.tar.gz
 
-  17/*/*:
+  "18*?/darwin/x64":
     url:
-      cn: https://d6.injdk.cn/oraclejdk/16/jdk-16.0.2_%{_os}-%{_arch}_bin.%{file_suffix}
+      cn: https://d6.injdk.cn/openjdk/openjdk/18/openjdk-18_macos-x64_bin.tar.gz
 
-  18*/*/*:
-    url:
-      cn: https://d6.injdk.cn/oraclejdk/18/jdk-18_%{_os}-%{_arch}_bin.%{file_suffix}
-
-  16/win/*:
-    url:
-      cn: https://d6.injdk.cn/openjdk/openjdk/16/openjdk-16.0.1_windows-x64_bin.zip
-
-
-  11.0.12/win/*:
-    url:
-      cn: https://d6.injdk.cn/openjdk/openjdk/11/openjdk-11+28_windows-x64_bin.zip
-
-
-
-  8/win/*:
-    url:
-      cn: https://d6.injdk.cn/openjdk/openjdk/8/openjdk-8u41-b04-windows-i586-14_jan_2020.zip
-
-  17/win/*:
-
-    url:
-      cn: https://d6.injdk.cn/openjdk/openjdk/17/openjdk-17.0.1_windows-x64_bin.zip
-
-  18/win/*:
+  "18*?/win/x64":
     url:
       cn: https://d6.injdk.cn/openjdk/openjdk/18/openjdk-18_windows-x64_bin.zip
 
+  "17*?/linux/x64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/17/openjdk-17.0.1_linux-x64_bin.tar.gz
 
-  16.0.2/darwin/amd64:
-    cn:
-      _os: osx
-      _arch: aarch64
+  "17*?/linux/arm64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/17/openjdk-17.0.1_linux-aarch64_bin.tar.gz
 
-  16*/darwin/x64:
-    cn:
-      _os: osx
+  "17*?/darwin/arm64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/17/openjdk-17.0.1_macos-aarch64_bin.tar.gz
 
-  11*/darwin/amd64:
-    cn:
-      _os: osx
-      _arch: aarch64
+  "17*?/darwin/x64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/17/openjdk-17.0.1_macos-x64_bin.tar.gz
 
-  11*/darwin/x64:
-    cn:
-      _os: osx
+  "17*?/win/x64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/17/openjdk-17.0.1_windows-x64_bin.zip
 
-  "*/linux/amd64":
-    cn:
-      _arch: aarch64
+  "16*?/linux/x64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/16/openjdk-16.0.1_linux-x64_bin.tar.gz
+
+  "16*?/darwin/x64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/16/openjdk-16.0.1_osx-x64_bin.tar.gz
+
+  "16*?/win/x64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/16/openjdk-16.0.1_windows-x64_bin.zip
+
+  "16*?/linux/arm64":
+    cn: https://d6.injdk.cn/openjdk/openjdk/16/openjdk-16.0.1_linux-aarch64_bin.tar.gz
+
+  "15*?/linux/x64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/15/openjdk-15.0.2_linux-x64_bin.tar.gz
+
+  "15*?/darwin/x64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/15/openjdk-15.0.2_osx-x64_bin.tar.gz
+
+  "15*?/win/x64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/15/openjdk-15.0.2_windows-x64_bin.zip
+
+  "15*?/linux/arm64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/15/openjdk-15.0.2_linux-aarch64_bin.tar.gz
+
+  "14*?/linux/x64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/14/openjdk-14.0.2_linux-x64_bin.tar.gz
+
+  "14*?/win/x64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/14/openjdk-14.0.2_windows-x64_bin.zip
+
+  "14*?/darwin/x64":
+    url:
+      cn: https://d6.injdk.cn/openjdk/openjdk/14/openjdk-14.0.2_osx-x64_bin.tar.gz
 
 
-  8*/darwin/amd64:
-    cn:
-      _os: macos
-      _arch: aarch64
-      file_suffix: dmg
 
-  18*/darwin/amd64:
-    _os: macosx
-    _arch: aarch64
 
-  18*/darwin/arm64:
-    cn:
-      _os: macos
-      _arch: aarch64
 
-  18*/darwin/x64:
-    cn:
-      _os: macosx
 
