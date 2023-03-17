@@ -107,3 +107,12 @@ generate_mdtable_local()(
 
 done
 ) >  $(x wsroot)/.x-cmd/dev/README.md
+
+[ "$#" -gt 0 ] && generate_mdtable "$@"
+
+generate_mdtable(){
+    local op="$1";  shift
+    case "$op" in
+        *)             "generate_mdtable_$op" ;;
+    esac
+}
