@@ -32,33 +32,33 @@ rule:
     _arch: 64bit
     file_suffix: zip
     url:
-      _: https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{_arch}.%{file_suffix}
+      internet: https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{_arch}.%{file_suffix}
       cn: https://strawberryperl.com/download/%{version}/strawberry-perl-%{version}-%{_arch}.%{file_suffix}
 
   "*/win/x32":
     _arch: 32bit
     file_suffix: zip
     url:
-      _: https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-%{_arch}.%{file_suffix}
+      internet: https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-%{_arch}.%{file_suffix}
       cn: https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-%{_arch}.%{file_suffix}
 
   "*/linux/x64":
     _os: linux
     _arch: x86_64
     url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
+      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
       cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
 
   "*/darwin/x64":
     _arch: 2level
     _os: darwin
     url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
+      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
       cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
 
   "*/darwin/amd64":
     _arch: 2level
     _os: darwin
     url:
-      _: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
+      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
       cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
