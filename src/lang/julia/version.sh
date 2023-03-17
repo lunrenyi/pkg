@@ -29,9 +29,9 @@ get_julia_version_cn(){
 
         if ($1 != last_version) {
             last_version = $1
-            print $1 ":\n  " osarch ":\n    url:\n      _: " $4 "\n      cn: " "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/" $2 "/" $3  "/" version "/julia-" $1 "-" _osarch "." file_suffix
+            print $1 ":\n  " osarch ":\n    url:\n      internet: " $4 "\n      cn: " "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/" $2 "/" $3  "/" version "/julia-" $1 "-" _osarch "." file_suffix
         } else {
-            print "  " osarch ":\n    url:\n      _: " $4 "\n      cn: " "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/" $2 "/" $3 "/" version "/julia-" $1 "-" _osarch "." file_suffix
+            print "  " osarch ":\n    url:\n      internet: " $4 "\n      cn: " "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/" $2 "/" $3 "/" version "/julia-" $1 "-" _osarch "." file_suffix
         }
     }
     '
