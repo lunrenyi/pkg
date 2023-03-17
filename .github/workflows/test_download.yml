@@ -10,6 +10,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
     env:
+      ___X_CMD_GHACTION_X: x1
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       git_user: mnnna
       git_email: 850400628@qq.com
