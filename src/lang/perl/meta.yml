@@ -49,15 +49,19 @@ rule:
       internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
       cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
 
-  "*/darwin/x64":
-    _arch: 2level
+    "*/linux/x64":
+    _os: linux
+    url:
+      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
+      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
+
+  "*/darwin/arm64":
     _os: darwin
     url:
       internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
       cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
 
   "*/darwin/amd64":
-    _arch: 2level
     _os: darwin
     url:
       internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
