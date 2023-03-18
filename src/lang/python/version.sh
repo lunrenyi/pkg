@@ -8,6 +8,7 @@ curl -L https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 2>/dev/null | a
   gsub("Windows", "win", b[3])
   gsub("MacOSX", "darwin", b[3])
   gsub("x86_64", "x64", b[4])
+  gsub("aarch64", "arm64", b[4])
   gsub("-Minicoda3","",b[2])
   gsub(/^3.[0-9]*.[0-9]*/,"",b[2])
   gsub(/^2.[0-9]*.[0-9]*/,"",b[2])

@@ -1,5 +1,5 @@
 # shellcheck shell=sh disable=SC3043 #source
-. "$(x wsroot)/.x-cmd/table"
+# . "$(x wsroot)/.x-cmd/table"
 pkg(){
     local op="$1";  shift
     case "$op" in
