@@ -9,7 +9,7 @@
 |node | ok | ok | ok | ok | ok |
 |perl | ok | x| ok | x| x|
 |python | ok | ok | ok | ok | ok |
-|rust | ok | x| ok | ok | ok |
+|rust | ok | ok | ok | ok | ok |
 |scala | ok | ok | ok | ok | ok |
 |agg | ok | x| ok | ok | ok |
 |ffmpeg | ok | ok | x| ok | ok |
