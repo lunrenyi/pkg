@@ -3,10 +3,10 @@
 |deno | ok | x| ok | ok | ok |
 |go | ok | ok | ok | ok | ok |
 |java | ok | ok | ok | ok | ok |
-|julia | ok | x| x| x| ok |
+|julia | ok | x| ok | ok | ok |
 |kotlin | ok | x| ok | x| ok |
 |lua | ok | ok | x| x| ok |
-|node | x| ok | ok | ok | ok |
+|node | ok | ok | ok | ok | ok |
 |perl | ok | x| ok | x| x|
 |python | ok | x| ok | ok | ok |
 |ruby-todo | x| x| x| x| x|
