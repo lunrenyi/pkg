@@ -14,9 +14,9 @@ generate_mdtable_net()(
                 version="$(___x_cmd_pkg_default_version $pkg)"
                 printf "|%s " "$pkg"
                 while read -r osarch; do
-                    echo "$pkg"
+                    echo "$pkg" >&2
                      url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.internet")"
-                    echo "$pkg"
+                    echo "$pkg" >&2
                      return_code="$(curl --silent --max-time 10 -I "$url" | grep -E "^HTTP" | awk -F " " '{print $2}' | tail -n 1)"
 
 
