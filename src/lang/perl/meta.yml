@@ -6,9 +6,10 @@ xbin:
 _os: "%{os}"
 _arch: "%{arch}"
 file_suffix: tar.gz
+perl_url: https://github.com/skaji/relocatable-perl/releases/download/
 url:
-  internet: "https://www.cpan.org/src/5.0/perl-%{version}.tar.gz"
-  cn: "https://www.cpan.org/src/5.0/perl-%{version}.tar.gz"
+  internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
+  cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
 file_suffix: tar.gz
 hook:
   activate: activate.sh
@@ -46,51 +47,32 @@ rule:
     _os: linux
     _arch: aarch64
     url:
-      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
-      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
+      internet: "%{perl_url}%{version}/perl-%{_arch}-%{_os}.tar.gz"
+      cn: "%{perl_url}%{version}/perl-%{_arch}-%{_os}.tar.gz"
 
   "*/linux/x64":
     _os: linux
     _arch: x86_64
     url:
-      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
-      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_arch}-%{_os}.tar.gz
+      internet: "%{perl_url}%{version}/perl-%{_arch}-%{_os}.tar.gz"
+      cn: "%{perl_url}%{version}/perl-%{_arch}-%{_os}.tar.gz"
 
   "*/darwin/x64":
     _arch: 2level
-    _os: darwin
     url:
-      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
-      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
+      internet: "%{perl_url}%{version}/perl-%{_os}-%{_arch}.tar.gz"
+      cn: "%{perl_url}%{version}/perl-%{_os}-%{_arch}.tar.gz"
+
+  "*/darwin/arm64":
+    _arch: 2level
+    url:
+      internet: "%{perl_url}%{version}/perl-%{_os}-%{_arch}.tar.gz"
+      cn: "%{perl_url}%{version}/perl-%{_os}-%{_arch}.tar.gz"
 
   "*/darwin/amd64":
     _arch: 2level
-    _os: darwin
     url:
-      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
-      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
+      internet: "%{perl_url}%{version}/perl-%{_os}-%{_arch}.tar.gz"
+      cn: "%{perl_url}%{version}/perl-%{_os}-%{_arch}.tar.gz"
 
-  "5.36.0.1/linux/x64":
-    url:
-      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
-      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
-
-  "5.36.0.1/linux/arm64":
-    url:
-      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
-      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
-
-  "5.36.0.1/linux/amd64":
-    url:
-      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
-      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
-
-  "5.36.0.1/darwin/amd64":
-    url:
-      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
-      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
-
-  "5.36.0.1/linux/arm64":
-    url:
-      internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
-      cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
+  
