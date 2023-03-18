@@ -33,7 +33,7 @@ rule:
     _arch: x86_64
     file_suffix: zip
 
-  "*/darwin/arch64":
+  "*/darwin/arm64":
     _os: native-macos
     _arch: aarch64
 
