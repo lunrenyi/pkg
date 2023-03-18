@@ -8,7 +8,7 @@
 |lua | ok | ok | x| x| ok |
 |node | ok | ok | ok | ok | ok |
 |perl | ok | x| ok | x| x|
-|python | ok | x| ok | ok | ok |
+|python | ok | ok | ok | ok | ok |
 |rust | ok | x| ok | ok | ok |
 |scala | ok | ok | ok | ok | ok |
 |agg | ok | x| ok | ok | ok |
