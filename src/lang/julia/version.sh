@@ -14,26 +14,31 @@ get_julia_version_cn(){
         gsub("mac", "darwin", osarch)
         gsub("x86_64", "x64", osarch)
         gsub("i686", "x86", osarch)
+        gsub("aarch64", "arm64", osarch)
         gsub("x86_64", "x64", $3)
         gsub("i686", "x86", $3)
 
 
-        _osarch = $2 "-" $3
+
+
+        _osarch = $2  $3
         if ( _osarch == "winnt-x64" ) _osarch = "win64"
-        else if ( _osarch == "winnt-x86"  ) _osarch = "win32"
-        else if ( _osarch == "linux-x64"  ) _osarch = "linux-x86_64"
-        else if ( _osarch == "linux-x86"  ) _osarch = "linux-i686"
-        else if ( _osarch == "linux-arm64"  ) _osarch = "linux-arm"
-        else if ( _osarch == "mac-x64"  )   _osarch = "mac64"
-        else if ( _osarch == "arm-x64"  )   _osarch = "aarch64"
+        else if ( _osarch == "winntx86"  ) _osarch = "win32"
+        else if ( _osarch == "linuxx64"  ) _osarch = "linux-x86_64"
+        else if ( _osarch == "linuxx86"  ) _osarch = "linux-i686"
+        else if ( _osarch == "linuxarm64"  ) _osarch = "linux-arm"
+        else if ( _osarch == "macx64"  )   _osarch = "mac64"
+        else if ( _osarch == "armx64"  )   _osarch = "macaarch64"
+
 
         if ($1 != last_version) {
             last_version = $1
-            print $1 ":\n  " osarch ":\n    url:\n      internet: " $4 "\n      cn: " "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/" $2 "/" $3  "/" version "/julia-" $1 "-" _osarch "." file_suffix
+            print $1 ":\n  " osarch ":\n    url:\n      internet: " $4 "\n      cn: " "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/" $2 "/" $3  "/" version "/julia-" $1 "-" _osarch "." "tar.gz"
         } else {
-            print "  " osarch ":\n    url:\n      internet: " $4 "\n      cn: " "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/" $2 "/" $3 "/" version "/julia-" $1 "-" _osarch "." file_suffix
+            print "  " osarch ":\n    url:\n      internet: " $4 "\n      cn: " "https://mirrors.tuna.tsinghua.edu.cn/julia-releases/bin/" $2 "/" $3 "/" version "/julia-" $1 "-" _osarch "." "tar.gz"
         }
     }
     '
 }
-get_julia_version_cn | x yq -o json e -P
+get_julia_version_cn  | x yq -o json e -P
+
