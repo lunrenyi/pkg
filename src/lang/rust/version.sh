@@ -9,6 +9,8 @@ get_rust_version(){
 ${name#*Rust}:
   linux/x64:
     sha:
+  linux/arm64:
+    sha:
   darwin/amd64:
     sha:
   darwin/x86:
