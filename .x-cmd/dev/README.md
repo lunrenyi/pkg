@@ -4,7 +4,7 @@
 |go | ok | ok | ok | ok | ok |
 |java | ok | ok | ok | ok | ok |
 |julia | ok | x| ok | ok | ok |
-|kotlin | ok | x| ok | x| ok |
+|kotlin | ok | x| ok | ok | ok |
 |lua | ok | ok | x| x| ok |
 |node | ok | ok | ok | ok | ok |
 |perl | ok | x| ok | x| x|
@@ -15,7 +15,7 @@
 |agg | ok | x| ok | ok | ok |
 |ffmpeg | ok | ok | x| ok | ok |
 |magick | ok | ok | ok | ok | x|
-|sqlite3 | x| x| x| x| x|
+|sqlite3 | ok | ok | ok | ok | ok |
 |7za | ok | ok | ok | ok | ok |
 |aliyun | ok | ok | ok | ok | ok |
 |bat | ok | ok | ok | ok | ok |
@@ -36,7 +36,7 @@
 |rg | ok | ok | ok | ok | ok |
 |sodium | ok | ok | ok | ok | ok |
 |terraform | ok | ok | ok | ok | ok |
-|tig | x| x| x| x| x|
+|tig | ok | ok | ok | ok | x|
 |tmux | ok | ok | ok | ok | ok |
 |ucloud | ok | x| ok | ok | ok |
 |yq | ok | ok | ok | ok | ok |
