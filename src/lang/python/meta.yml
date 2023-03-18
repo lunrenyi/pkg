@@ -60,6 +60,8 @@ rule:
 
 
   py*/linux/arm64:
+    url:
+      internet: "%{anaconda_source}/Miniconda3-%{version}-%{_os}-aarch64.%{file_suffix}"
     _os: Linux
 
 
@@ -95,3 +97,4 @@ rule:
     url:
       _: https://downloads.python.org/pypy/%{version}-%{_os}.zip
       cn: https://downloads.python.org/pypy/%{version}-%{_os}.zip
+
