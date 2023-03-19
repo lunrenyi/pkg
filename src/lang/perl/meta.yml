@@ -19,13 +19,13 @@ unpack_way: unpack_copy_to_target_dir
 
 rule:
 
-  /win/*:
+  "*/win/*":
     version: 5.32.1.1
 
-  /linux/*:
+  "*/linux/*":
     version: 5.36.0.1
 
-  /darwin/*:
+  "*/darwin/*":
     version: 5.36.0.1
 
 
