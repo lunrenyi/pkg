@@ -7,7 +7,7 @@
 |kotlin | ok | x| ok | ok | ok |
 |lua | ok | ok | x| x| ok |
 |node | ok | ok | ok | ok | ok |
-|perl | x| x| x| x| x|
+|perl | ok | ok | x| ok | ok |
 |python | ok | ok | ok | ok | ok |
 |rust | ok | ok | ok | ok | ok |
 |scala | ok | ok | ok | ok | ok |
