@@ -29,7 +29,6 @@ rule:
 
 
   "*/linux/arm64":
-    version: 0.6.0-rc1
     _osarch: linux-arm
 
 

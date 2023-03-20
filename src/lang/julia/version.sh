@@ -29,6 +29,7 @@ get_julia_version_cn(){
         else if ( _osarch == "linuxarm64"  ) _osarch = "linux-arm"
         else if ( _osarch == "macx64"  )   _osarch = "mac64"
         else if ( _osarch == "armx64"  )   _osarch = "macaarch64"
+        else if ( _osarch == "linuxaarch64"  )   _osarch = "linux-aarch64"
 
 
         if ($1 != last_version) {
