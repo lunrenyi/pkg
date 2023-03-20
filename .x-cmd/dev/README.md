@@ -1,24 +1,24 @@
 | candidate \ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 | 备注 |
 | ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |
-|deno | ok | x| ok | ok | ok |
+|deno | ok | ok | ok | ok | ok |
 |go | ok | ok | ok | ok | ok |
 |java | ok | ok | ok | ok | ok |
-|julia | ok | ok| ok | ok | ok |
-|kotlin | ok | ok| ok | ok | ok |
+|julia | ok | ok | ok | ok | ok |
+|kotlin | ok | ok | ok | ok | ok |
 |lua | ok | ok | x| x| ok |
 |node | ok | ok | ok | ok | ok |
-|perl | ok | ok | x| ok | ok |
-|python | ok | ok | ok | ok | ok |
+|perl | ok | ok | ok | ok | ok |
+|python |  ok | ok | ok | ok | ok |
 |rust | ok | ok | ok | ok | ok |
 |scala | ok | ok | ok | ok | ok |
-|agg | ok | x| ok | ok | ok |
+|agg | ok | ok | ok | ok | ok |
 |ffmpeg | ok | ok | x| ok | ok |
 |magick | ok | ok | ok | ok | x|
 |sqlite3 | ok | ok | ok | ok | ok |
 |7za | ok | ok | ok | ok | ok |
 |aliyun | ok | ok | ok | ok | ok |
 |bat | ok | ok | ok | ok | ok |
-|bwrap | ok | ok | x| x| x|
+|bwrap | ok | ok | ok | ok | ok |
 |curl | ok | ok | ok | ok | ok |
 |dust | ok | ok | ok | ok | ok |
 |exa | ok | ok | ok | ok | ok |
@@ -42,9 +42,9 @@
 |zellij | ok | ok | ok | ok | x|
 |zsh-plugin | ok | ok | ok | ok | ok |
 |bandwhich | ok | ok | ok | ok | x|
-|ncat | ok | ok | ok | x| x|
+|ncat | ok | ok | ok | ok | x|
 |nmap | ok | ok | ok | ok | x|
 |nping | ok | ok | ok | ok | x|
 |openssl | ok | ok | ok | ok | ok |
-|smartctl | x| x| x| x| x|
+|smartctl | ok | ok | ok | ok | ok |
 |traceroute | ok | ok | x| x| x|
