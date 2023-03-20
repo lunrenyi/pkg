@@ -21,7 +21,7 @@ rule:
     xbin_suffix: linux.x64
 
   v*/linux/arm64:
-    _arch: arm
+    _arch: x86_64
     _os: unknown-linux-gnu
     xbin_suffix: linux.x64
 

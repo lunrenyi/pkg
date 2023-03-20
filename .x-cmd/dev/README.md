@@ -3,8 +3,8 @@
 |deno | ok | x| ok | ok | ok |
 |go | ok | ok | ok | ok | ok |
 |java | ok | ok | ok | ok | ok |
-|julia | ok | x| ok | ok | ok |
-|kotlin | ok | x| ok | ok | ok |
+|julia | ok | ok| ok | ok | ok |
+|kotlin | ok | ok| ok | ok | ok |
 |lua | ok | ok | x| x| ok |
 |node | ok | ok | ok | ok | ok |
 |perl | ok | ok | x| ok | ok |
