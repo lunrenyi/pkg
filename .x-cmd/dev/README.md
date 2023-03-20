@@ -19,7 +19,7 @@
 |aliyun | ok | ok | ok | ok | ok |
 |bat | ok | ok | ok | ok | ok |
 |bwrap | ok | ok | x| x| x|
-|curl | x| x| x| x| x|
+|curl | ok | ok | ok | ok | ok |
 |dust | ok | ok | ok | ok | ok |
 |exa | ok | ok | ok | ok | ok |
 |fd | ok | ok | ok | ok | ok |
