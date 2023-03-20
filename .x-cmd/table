@@ -1,5 +1,5 @@
 generate_mdtable_net()(
-    x:info "Generate: maerkdown table"
+    x:info "Generate: markdown table"
     printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 | 备注 |"
     printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |"
 
@@ -14,7 +14,7 @@ generate_mdtable_net()(
                 version="$(___x_cmd_pkg_default_version $pkg)"
                 printf "|%s " "$pkg"
                 while read -r osarch; do
-                     url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$1")"
+                     url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.internet")"
                      return_code="$(curl --silent --max-time 10 -I "$url" | grep -E "^HTTP" | awk -F " " '{print $2}' | tail -n 1)"
 
 
@@ -71,7 +71,7 @@ done
 ) > $(x wsroot)/.x-cmd/dev/README.md
 
 generate_mdtable_local()(
-    x:info "Generate: maerkdown table"
+    x:info "Generate: markdown table"
     printf "%s\n" "| candidate \\ osarch | linux/arm64 | darwin/arm64 | darwin/x64 | linux/x64 | win/x64 | 备注 |"
     printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |"
     cd "$(x wsroot)/.tmp" || return
