@@ -28,6 +28,10 @@ rule:
     _os: native-linux
     _arch: x86_64
 
+  "*/linux/arm64":
+    _os: native-linux
+    _arch: x86_64
+
   "*/win/x64":
     _os: native-windows
     _arch: x86_64
