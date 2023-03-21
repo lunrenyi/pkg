@@ -16,10 +16,10 @@ rule:
     version: stable
 
   stable/*:
-    version: 2.13.0
+    version: v2.13.0
 
   latest/*:
-    version: 2.13.0
+    version: v2.13.0
 
   "*/linux/arm64":
     zipname:    gh_2.13.0_linux_arm64.tar.gz
@@ -30,7 +30,7 @@ rule:
     xbin:       gh_2.13.0_macOS_amd64/bin/gh
 
   "*/linux/x64":
-    zipname:    gh_2.13.0_linux_amd64.tar.gz.tar.gz
+    zipname:    gh_2.13.0_linux_amd64.tar.gz
     xbin:       gh_2.13.0_linux_amd64/bin/gh
 
   "*/darwin/x64":
