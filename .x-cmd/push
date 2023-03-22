@@ -10,7 +10,7 @@ f()(
 
     clone_xcmd_pkg || return
     x:info "Copy $WSROOT/dist to $WSROOT/tmp/pkg"
-    rm "$WSROOT/tmp/pkg/dist/all.7z"
+
     cp -r "$WSROOT/dist" "$WSROOT/tmp/pkg/dist"
 
     cd "$WSROOT/tmp/pkg" || return
