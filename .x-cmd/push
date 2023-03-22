@@ -1,0 +1,28 @@
+WSROOT="$(x wsroot)"
+clone_xcmd_pkg()(
+    x rmrf "$WSROOT/tmp"
+    x mkdirp "$WSROOT/tmp"
+    cd "$WSROOT/tmp" || return
+    git clone git@gitee.com:x-cmd/pkg
+)
+
+f()(
+
+    clone_xcmd_pkg || return
+    x:info "Copy $WSROOT/dist to $WSROOT/tmp/pkg"
+    rm "$WSROOT/tmp/pkg/dist/all.7z"
+    cp -r "$WSROOT/dist" "$WSROOT/tmp/pkg/dist"
+
+    cd "$WSROOT/tmp/pkg" || return
+    git add "$WSROOT/tmp/pkg/dist/all.7z"
+
+    if [ "$git_user" = "agent-zero" ]; then
+        git commit -m "build: release x-cmd pkg bundle"
+    else
+        git commit -m "update: dist/all.tgz"
+    fi
+    git push origin main
+    x rmrf "$WSROOT/tmp"
+)
+
+f
