@@ -15,12 +15,8 @@ f()(
 
     cd "$WSROOT/tmp/pkg" || return
     git add "$WSROOT/tmp/pkg/dist/all.7z"
+    git commit -m "update: dist/all.tgz"
 
-    if [ "$git_user" = "agent-zero" ]; then
-        git commit -m "build: release x-cmd pkg bundle"
-    else
-        git commit -m "update: dist/all.tgz"
-    fi
     git push origin main
     x rmrf "$WSROOT/tmp"
 )
