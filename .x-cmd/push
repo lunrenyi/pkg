@@ -12,7 +12,8 @@ f()(
     x:info "Copy $WSROOT/dist to $WSROOT/tmp/pkg"
 
     rm -rf "$WSROOT/tmp/pkg/dist"
-    cp -r "$WSROOT/dist/all.7z" "$WSROOT/tmp/pkg"
+    mkdir "$WSROOT/tmp/pkg/dist"
+    cp -r "$WSROOT/dist/all.7z" "$WSROOT/tmp/pkg/dist"
 
     if cd "$WSROOT/tmp/pkg" ; then
         git add "dist/all.7z"
