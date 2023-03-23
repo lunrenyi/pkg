@@ -11,7 +11,8 @@ f()(
     clone_xcmd_pkg || return
     x:info "Copy $WSROOT/dist to $WSROOT/tmp/pkg"
 
-    cp -r "$WSROOT/dist" "$WSROOT/tmp/pkg/dist"
+    rm -rf "$WSROOT/tmp/pkg/dist"
+    cp -r "$WSROOT/dist/all.7z" "$WSROOT/tmp/pkg"
 
     if cd "$WSROOT/tmp/pkg" ; then
         git add "dist/all.7z"
