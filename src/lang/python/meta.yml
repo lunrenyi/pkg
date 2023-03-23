@@ -14,7 +14,7 @@ url:
   internet: "%{anaconda_source}/%{minoconda_sh_file}"
   cn: "%{tuna_source}/%{minoconda_sh_file}"
 xbin:
-  python: bin/pip
+  python: bin/python
 hook:
   install: install.sh
   activate: activate.sh
