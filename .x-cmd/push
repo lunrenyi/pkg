@@ -13,15 +13,17 @@ f()(
 
     cp -r "$WSROOT/dist" "$WSROOT/tmp/pkg/dist"
 
-    cd "$WSROOT/tmp/pkg" || return
-    git add "$WSROOT/tmp/pkg/dist/all.7z"
+    if cd "$WSROOT/tmp/pkg" ; then
+        git add "dist/all.7z"
 
-    if [ "$git_user" = "agent-zero" ]; then
-        git commit -m "build: release x-cmd pkg bundle"
-    else
-        git commit -m "update: dist/all.tgz"
+        if [ "$git_user" = "agent-zero" ]; then
+            git commit -m "build: release x-cmd pkg bundle"
+        else
+            git commit -m "update: dist/all.tgz"
+        fi
+        git push origin main
+
     fi
-    git push origin main
     x rmrf "$WSROOT/tmp"
 )
 
