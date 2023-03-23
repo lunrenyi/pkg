@@ -2,12 +2,11 @@ homepage: https://nodejs.org
 license: MIT
 rely: []
 node_source: https://nodejs.org/dist/%{version}
-tuna_source: https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/%{version}
 file_suffix: tar.gz
 url:
   internet: "%{node_source}/node-%{version}-%{os}-%{arch}.%{file_suffix}"
-  cn: "%{tuna_source}/node-%{version}-%{os}-%{arch}.%{file_suffix}"
-xbin:
+  cn: "https://registry.npmmirror.com/-/binary/node/latest-%{version_pre}/node-%{version}-%{os}-%{arch}.%{file_suffix}"
+
   node: bin/node
   npm: bin/npm
 
@@ -24,10 +23,56 @@ rule:
     version: latest
 
   latest/*:
+    version_pre: v18.x
     version: v18.4.0
 
+  v19*/*/*:
+    version_pre: v19.x
+
+
+  v18*/*/*:
+    version_pre: v18.x
+
+
+  v17*/*/*:
+    version_pre: v17.x
+
+
+  v16*/*/*:
+    version_pre: v16.x
+
+  v15*/*/*:
+    version_pre: v15.x
+
+
+  v14*/*/*:
+    version_pre: v14.x
+
+  v13*/*/*:
+    version_pre: v13.x
+
+  v12*/*/*:
+    version_pre: v12.x
+
+  v11*/*/*:
+    version_pre: v11.x
+
+  v10*/*/*:
+    version_pre: v10.x
+
+  v0.12*/*/*:
+    version_pre: v0.12.x
+
+  v0.10*/*/*:
+    version_pre: v0.10.x
+
+
+
+
+
+
   v19/*/*:
-    version: vv19.5.0
+    version: v19.5.0
 
   v18/*/*:
     version: v18.4.0
