@@ -1,0 +1,27 @@
+homepage: https://github.com/oven-sh/bun/releases
+license: MIT
+rely: []
+
+file_suffix: 7z
+url:
+  internet: "https://github.com/oven-sh/bun/releases/download/bun-%{version}/bun-%{_os}-%{_arch}-profile.zip"
+  cn: "https://github.com/oven-sh/bun/releases/download/bun-%{version}/bun-%{_os}-%{_arch}-profile.zip"
+
+_os: "%{os}"
+_arch: "%{arch}"
+xbin: bun
+rule:
+  /*:
+    version: latest
+
+  stable/*:
+    version: v0.5.8
+
+  latest/*:
+    version: v0.5.8
+
+  "*/linux/arm64":
+    _arch: aarch64
+  "*/darwin/arm64":
+    _arch: aarch64
+
