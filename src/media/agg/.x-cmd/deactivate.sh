@@ -1,4 +1,4 @@
 ___x_cmd_agg_deactivate(){
-    x path rm "$___X_CMD_PKG_INSTALL_PATH/$name/$version"
+    rm -rf "$___X_CMD_PKG_BIN_PATH/$name"
 }
 ___x_cmd_agg_deactivate
