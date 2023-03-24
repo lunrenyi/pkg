@@ -1,8 +1,8 @@
 homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 
-gh_url: https://github.com/cli/cli/releases/download/%{version}
-gc_url: https://download.fastgit.org/cli/cli/releases/download/%{version}
+gh_url: https://github.com/x-cmd-build/gh/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/gh/-/releases/%{version}/downloads
 file_suffix: tar.gz
 url:
   internet: "%{gh_url}/%{zipname}"

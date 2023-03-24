@@ -2,10 +2,10 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/sqlite3/main/sqlite3/%{version}
-gc_url: https://gitee.com/static-build/sqlite3/raw/main/sqlite3/%{version}
+gh_url: https://github.com/x-cmd-build/sqlite3/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/sqlite3/-/releases/%{version}/downloads
 file_suffix: 7z
-static-build: sqlite3/sqlite3
+
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"

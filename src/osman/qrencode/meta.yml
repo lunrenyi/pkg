@@ -2,10 +2,9 @@ homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/qrencode/main/qrencode/%{version}
-gc_url: https://gitee.com/static-build/qrencode/raw/main/qrencode/%{version}
+gh_url: https://github.com/x-cmd-build/qrencode/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/qrencode/-/releases/%{version}/downloads
 file_suffix: 7z
-static-build: qrencode/qrencode
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"

@@ -2,10 +2,9 @@ homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/bandwhich/main/bandwhich/%{version}
-gc_url: https://gitee.com/static-build/bandwhich/raw/main/bandwhich/%{version}
+gh_url: https://github.com/x-cmd-build/bandwhich/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/bandwhich/-/releases/%{version}/downloads
 file_suffix: 7z
-static-build: bandwhich/bandwhich
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"

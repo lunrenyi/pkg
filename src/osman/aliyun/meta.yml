@@ -2,10 +2,9 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/aliyun/main/aliyun/%{version}
-gc_url: https://gitee.com/static-build/aliyun/raw/main/aliyun/%{version}
+gh_url: https://github.com/x-cmd-build/aliyun/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/aliyun/-/releases/%{version}/downloads
 file_suffix: 7z
-static-build: aliyun/aliyun
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"

@@ -1,8 +1,8 @@
 homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 
-gh_url: https://github.com/sharkdp/fd/releases/download/%{version}
-gc_url: https://download.fastgit.org/sharkdp/fd/releases/download/%{version}
+gh_url: https://github.com/x-cmd-build/fd/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/fd/-/releases/%{version}/downloads
 file_suffix: tar.gz
 url:
   internet: "%{gh_url}/%{zipname}"

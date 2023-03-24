@@ -2,10 +2,9 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/bat/main/bat/%{version}
-gc_url: https://gitee.com/static-build/bat/raw/main/bat/%{version}
+gh_url: https://github.com/x-cmd-build/bat/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/bat/-/releases/%{version}/downloads
 file_suffix: 7z
-static-build: bat/bat
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"

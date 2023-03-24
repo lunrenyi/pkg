@@ -2,9 +2,8 @@ homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/magick/main/magick/%{version}
-gc_url: https://gitee.com/static-build/magick/raw/main/magick/%{version}
-static-build: magick/magick
+gh_url: https://github.com/x-cmd-build/magick/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/magick/-/releases/%{version}/downloads
 file_suffix: 7z
 url:
   internet: "%{gh_url}/%{zipname}"

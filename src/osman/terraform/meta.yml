@@ -1,8 +1,8 @@
 homepage: https://www.terraform.io/downloads
 license: MIT
 
-gh_url: https://releases.hashicorp.com/terraform/%{version}
-gc_url: https://gitcode.net/x-bash/terraform/-/raw/main/%{version}
+gh_url: https://github.com/x-cmd-build/terraform/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/terraform/-/releases/%{version}/downloads
 file_suffix: zip
 url:
   internet: "%{gh_url}/%{zipname}"

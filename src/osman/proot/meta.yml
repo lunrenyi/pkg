@@ -2,8 +2,8 @@ homepage: https://e.gitee.com/lteam18/repos/static-build/proot/tree/main/v/0.1.0
 license: MIT
 rely: []
 
-gh_url: https://github.com/proot-me/proot-rs/releases/download/%{version}/proot-rs-%{version}-%{_arch}-%{_os}.%{file_suffix}
-gt_url: https://gitee.com/static-build/proot/raw/main/v%2F0.1.0%2Fproot-rs-%{version}-%{_arch}-%{_os}.%{file_suffix}
+gh_url: https://github.com/x-cmd-build/procs/releases/download/%{version}/proot-rs-%{version}-%{_arch}-%{_os}.%{file_suffix}
+gt_url: https://gitcode.net/x-cmd-build/procs/-/releases/%{version}/downloads/proot-rs-%{version}-%{_arch}-%{_os}.%{file_suffix}
 file_suffix: tar.gz
 url:
   internet: "%{gh_url}"

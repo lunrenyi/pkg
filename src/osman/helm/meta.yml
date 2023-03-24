@@ -1,8 +1,8 @@
 homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 
-gh_url: https://get.helm.sh
-gc_url: https://repo.huaweicloud.com/helm/%{version}
+gh_url: https://github.com/x-cmd-build/helm/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/helm/-/releases/%{version}/downloads
 file_suffix: tar.gz
 url:
   internet: "%{gh_url}/%{zipname}"

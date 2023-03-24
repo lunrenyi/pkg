@@ -2,10 +2,9 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/ucloud/main/ucloud/%{version}
-gc_url: https://gitee.com/static-build/ucloud/raw/main/ucloud/%{version}
+gh_url: https://github.com/x-cmd-build/ucloud/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/ucloud/-/releases/%{version}/downloads
 file_suffix: 7z
-static-build: ucloud/ucloud
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"

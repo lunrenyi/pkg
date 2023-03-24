@@ -2,10 +2,9 @@ homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/mosquitto/main/mosquitto/%{version}
-gc_url: https://gitee.com/static-build/mosquitto/raw/main/mosquitto/%{version}
+gh_url: https://github.com/x-cmd-build/mosquitto/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/mosquitto/-/releases/%{version}/downloads
 file_suffix: 7z
-static-build: mosquitto/mosquitto
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"

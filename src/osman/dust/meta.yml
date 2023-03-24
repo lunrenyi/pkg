@@ -2,9 +2,8 @@ homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/dust/main/dust/%{version}
-gc_url: https://gitee.com/static-build/dust/raw/main/dust/%{version}
-static-build: dust/dust
+gh_url: https://github.com/x-cmd-build/dust/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/dust/-/releases/%{version}/downloads
 file_suffix: 7z
 url:
   internet: "%{gh_url}/%{zipname}"

@@ -2,8 +2,8 @@ homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/yq/main/yq/%{version}
-gc_url: https://gitee.com/static-build/yq/raw/main/yq/%{version}
+gh_url: https://github.com/x-cmd-build/yq/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/yq/-/releases/%{version}/downloads
 static-build: yq/yq
 file_suffix: 7z
 url:

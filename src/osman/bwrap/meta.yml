@@ -2,10 +2,9 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/bwrap/main/bwrap/%{version}
-gc_url: https://gitee.com/static-build/bwrap/raw/main/bwrap/%{version}
+gh_url: https://github.com/x-cmd-build/bwrap/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/bwrap/-/releases/%{version}/downloads
 file_suffix: 7z
-static-build: bwrap/bwrap
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"

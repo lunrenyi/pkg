@@ -1,8 +1,8 @@
 homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 
-gh_url: https://github.com/BurntSushi/ripgrep/releases/download/%{version}
-gc_url: https://download.fastgit.org/BurntSushi/ripgrep/releases/download/%{version}
+gh_url: https://github.com/x-cmd-build/rg/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/rg/-/releases/%{version}/downloads
 file_suffix: tar.gz
 unpack_way: unpack_copy_to_target_dir
 url:

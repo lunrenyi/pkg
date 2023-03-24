@@ -2,8 +2,8 @@ homepage: https://golang.google.cn
 license: MIT
 rely: []
 
-gh_url: https://raw.githubusercontent.com/static-build/tig/main/tig/%{version}
-gc_url: https://gitee.com/static-build/tig/raw/main/tig/%{version}
+gh_url: https://github.com/x-cmd-build/tig/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/tig/-/releases/%{version}/downloads
 file_suffix: 7z
 static-build: tig/tig
 url:
