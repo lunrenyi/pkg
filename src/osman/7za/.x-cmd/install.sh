@@ -1,5 +1,5 @@
 if ! [ -d "$___X_CMD_PKG_INSTALL_PATH/${name}/${version}" ]; then
-   x mkdir "$___X_CMD_PKG_INSTALL_PATH/$name/$version"
+    x mkdirp "$___X_CMD_PKG_INSTALL_PATH/$name/$version"
 fi
 cp -r $ball "$___X_CMD_PKG_INSTALL_PATH/$name/$version/7za.7z"
 
