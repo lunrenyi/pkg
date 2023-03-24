@@ -26,6 +26,6 @@ rule:
   "*/*/arm64":
     _arch: aarch64
     url:
-      cn: https://github.com/oven-sh/bun/releases/download/bun-%{version}/bun-%{_os}-%{_arch}-.zip
-      internet: https://github.com/oven-sh/bun/releases/download/bun-%{version}/bun-%{_os}-%{_arch}-.zip
+      cn: https://github.com/oven-sh/bun/releases/download/bun-%{version}/bun-%{_os}-%{_arch}.zip
+      internet: https://github.com/oven-sh/bun/releases/download/bun-%{version}/bun-%{_os}-%{_arch}.zip
 
