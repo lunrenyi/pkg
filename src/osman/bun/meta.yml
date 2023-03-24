@@ -10,7 +10,7 @@ url:
 _os: "%{os}"
 _arch: "%{arch}"
 unpack_way: unpack_copy_to_target_dir
-xbin: bun-profile
+xbin: bun
 hook:
   activate: activate.sh
 rule:
