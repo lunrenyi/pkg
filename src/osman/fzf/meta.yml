@@ -22,15 +22,15 @@ rule:
     version: v0.0.0
 
   "*/linux/arm64":
-    zipname:    fzf-%{version}-linux_arm64.tar.gz
+    zipname:    fzf-0.30.0-linux_arm64.tar.gz
     file_suffix: tar.gz
   "*/darwin/arm64":
-    zipname:    fzf-%{version}-darwin_arm64.zip
+    zipname:    fzf-0.30.0-darwin_arm64.zip
   "*/linux/x64":
-    zipname:    fzf-%{version}-linux_amd64.tar.gz
+    zipname:    fzf-0.30.0-linux_amd64.tar.gz
     file_suffix: tar.gz
   "*/darwin/x64":
-    zipname:    fzf-%{version}-darwin_amd64.zip
+    zipname:    fzf-0.30.0-darwin_amd64.zip
   "*/win/x64":
-    zipname:    fzf-%{version}-windows_amd64.zip
+    zipname:    fzf-0.30.0-windows_amd64.zip
     bin_suffix: .exe

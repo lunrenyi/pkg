@@ -19,13 +19,13 @@ rule:
   latest/*:
     version: v0.0.0
   "*/linux/arm64":
-    zipname:    terraform_%{version}_linux_arm64.zip
+    zipname:    terraform_1.2.2_linux_arm64.zip
   "*/darwin/arm64":
-    zipname:    terraform_%{version}_darwin_arm64.zip
+    zipname:    terraform_1.2.2_darwin_arm64.zip
   "*/linux/x64":
-    zipname:    terraform_%{version}_linux_amd64.zip
+    zipname:    terraform_1.2.2_linux_amd64.zip
   "*/darwin/x64":
-    zipname:    terraform_%{version}_darwin_amd64.zip
+    zipname:    terraform_1.2.2_darwin_amd64.zip
   "*/win/x64":
-    zipname:    terraform_%{version}_windows_amd64.zip
+    zipname:    terraform_1.2.2_windows_amd64.zip
     bin_suffix: .exe
