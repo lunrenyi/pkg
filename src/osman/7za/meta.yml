@@ -8,6 +8,8 @@ file_suffix: 7z
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
+hook:
+  install: install.sh
 
 xbin:
   p7zip: 7za.%{os}.%{arch}%{bin_suffix}
