@@ -9,7 +9,8 @@ url:
 
 _os: "%{os}"
 _arch: "%{arch}"
-xbin: bun
+unpack_way: unpack_copy_to_target_dir
+xbin: bun-profile
 rule:
   /*:
     version: latest
