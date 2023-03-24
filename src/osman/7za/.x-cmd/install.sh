@@ -1,0 +1,1 @@
+p7zd x $ball "$___X_CMD_PKG_INSTALL_PATH/$name/$version"
