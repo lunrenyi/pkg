@@ -5,7 +5,6 @@ rely: []
 gh_url: https://github.com/x-cmd-build/tig/releases/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/tig/-/releases/%{version}/downloads
 file_suffix: 7z
-static-build: tig/tig
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
