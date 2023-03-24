@@ -8,5 +8,5 @@ cp -r $ball "$___X_CMD_PKG_INSTALL_PATH/$name/$version/7za.7z"
         return 1
     }
     p7zd x "$___X_CMD_PKG_INSTALL_PATH/$name/$version/7za.7z"
-    chmod +X "$___X_CMD_PKG_INSTALL_PATH/$name/$version/7za.$os.$arch"
+    chmod +x "$___X_CMD_PKG_INSTALL_PATH/$name/$version/7za.$os.$arch"
 )
