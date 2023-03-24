@@ -19,10 +19,10 @@ rule:
     version: stable
 
   stable/*:
-    version: 16.02
+    version: v0.0.0
 
   latest/*:
-    version: 16.02
+    version: v0.0.0
 
   "*/linux/arm64":
     zipname:    7za.linux.arm64.7z

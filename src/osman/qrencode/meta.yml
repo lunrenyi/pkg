@@ -19,10 +19,10 @@ rule:
     version: stable
 
   stable/*:
-    version: 4.1.1
+    version: v0.0.0
 
   latest/*:
-    version: 4.1.1
+    version: v0.0.0
 
   "*/linux/arm64":
     zipname:    qrencode.linux.arm64.7z

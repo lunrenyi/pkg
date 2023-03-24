@@ -17,10 +17,10 @@ rule:
     version: stable
 
   stable/*:
-    version: v0.1.0
+    version: v0.0.0
 
   latest/*:
-    version: v0.1.0
+    version: v0.0.0
 
   "*/linux/amd64":
     _os: unknown-linux-gnu

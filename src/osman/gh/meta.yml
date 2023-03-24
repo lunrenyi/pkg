@@ -16,10 +16,10 @@ rule:
     version: stable
 
   stable/*:
-    version: v2.25.1
+    version: v0.0.0
 
   latest/*:
-    version: v2.25.1
+    version: v0.0.0
 
   "*/linux/arm64":
     zipname:    gh_2.25.1_linux_arm64.tar.gz

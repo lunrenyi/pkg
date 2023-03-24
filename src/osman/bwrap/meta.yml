@@ -17,10 +17,10 @@ rule:
     version: stable
 
   stable/*:
-    version: v0.7.0
+    version: v0.0.0
 
   latest/*:
-    version: v0.7.0
+    version: v0.0.0
 
   "*/linux/arm64":
     zipname:    bwrap.linux.arm64.7z

@@ -14,10 +14,10 @@ rule:
     version: stable
 
   stable/*:
-    version: 1.2.2
+    version: v0.0.0
 
   latest/*:
-    version: 1.2.2
+    version: v0.0.0
   "*/linux/arm64":
     zipname:    terraform_%{version}_linux_arm64.zip
   "*/darwin/arm64":

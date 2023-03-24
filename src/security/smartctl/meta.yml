@@ -15,10 +15,10 @@ rule:
     version: stable
 
   stable/*:
-    version: 7.2
+    version: v0.0.0
 
   latest/*:
-    version: 7.2
+    version: v0.0.0
 
   "*/linux/arm64":
     zipname:    smartctl.linux.arm64.7z

@@ -17,10 +17,10 @@ rule:
     version: stable
 
   stable/*:
-    version: 3.2a
+    version: v0.0.0
 
   latest/*:
-    version: 3.2a
+    version: v0.0.0
 
   "*/linux/arm64":
     zipname:    tmux.linux.arm64.7z
