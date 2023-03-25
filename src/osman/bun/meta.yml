@@ -18,10 +18,10 @@ rule:
     version: latest
 
   stable/*:
-    version: v0.0.0
+    version: v0.5.8
 
   latest/*:
-    version: v0.0.0
+    version: v0.5.8
 
   "*/*/arm64":
     _arch: aarch64

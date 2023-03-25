@@ -1,4 +1,4 @@
-v0.0.0:
+v0.5.8:
   darwin/arm64:
     sha256: a614c1574bd04fb4207f5c18f50a9cef15ebb370a6b3d8caa63a752b19536f3f
   darwin/x64:
