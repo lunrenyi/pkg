@@ -23,9 +23,21 @@ rule:
   latest/*:
     version: v0.5.8
 
+  "*/linux/x64":
+
+  "*/linux/arm64":
+
+  "*/darwin/x64":
+
+  "*/darwin/arm64":
+
+  "*/win/x64":
+
   "*/*/arm64":
     _arch: aarch64
     url:
       cn: https://github.com/oven-sh/bun/releases/download/bun-%{version}/bun-%{_os}-%{_arch}.zip
       internet: https://github.com/oven-sh/bun/releases/download/bun-%{version}/bun-%{_os}-%{_arch}.zip
+
+
 

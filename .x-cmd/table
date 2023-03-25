@@ -11,6 +11,7 @@ generate_mdtable_net()(
 
         for pkg in *; do
             (
+                echo $pkg >&2
                 version="$(___x_cmd_pkg_default_version $pkg)"
                 printf "|%s " "$pkg"
                 while read -r osarch; do

@@ -27,6 +27,16 @@ rule:
   latest:
     version: 3.1.2
 
+  "*/linux/x64":
+
+  "*/linux/arm64":
+
+  "*/darwin/x64":
+
+  "*/darwin/arm64":
+
+  "*/win/x64":
+
   "2.10*/*":
     url:
       internet: "https://downloads.lightbend.com/scala/%{version}/scala-%{version}.%{file_suffix}"

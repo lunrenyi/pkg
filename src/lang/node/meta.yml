@@ -26,6 +26,16 @@ rule:
     version_pre: v18.x
     version: v18.4.0
 
+  "*/linux/x64":
+
+  "*/linux/arm64":
+
+  "*/darwin/x64":
+
+  "*/darwin/arm64":
+
+  "*/win/x64":
+
   v19*/*/*:
     version_pre: v19.x
 
