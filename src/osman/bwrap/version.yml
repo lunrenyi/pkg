@@ -1,4 +1,4 @@
-v0.7.0:
+v0.0.0:
   linux/arm64:
     sha256: a47653615a00c0c7e29f2b18eefcfe4bf06440efa5df62615471fd581b5e4212
   linux/x64:

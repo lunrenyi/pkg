@@ -1,4 +1,4 @@
-1.6-dirty:
+v0.0.0:
   darwin/arm64:
     sha256: fe4bb2570cd6a0c1d94d1fa721c6f268fb0a98e8ce201ad1682fd5aaf9197d2b
   linux/arm64:
