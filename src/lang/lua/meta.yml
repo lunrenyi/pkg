@@ -84,9 +84,9 @@ rule:
   5.4*/win/*:
     xbin: lua54
   5.3*/*/*:
-    xbin: luac53
+    xbin: lua53
   5.3*/win/*:
-    xbin: luac53
+    xbin: lua53
 
   5.34/darwin/*:
   xbin: liblua53.a
