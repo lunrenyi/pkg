@@ -1,3 +1,4 @@
+# shellcheck shell=sh disable=SC3043,2034
 pkg:info "qrencode"
 
 qrencode_test(){

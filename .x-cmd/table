@@ -1,3 +1,4 @@
+# shellcheck shell=sh disable=SC2154,SC2164,2046,2106,3043
 generate_mdtable_net()(
     x:info "Generate: markdown table"
     printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 | 备注 |"
