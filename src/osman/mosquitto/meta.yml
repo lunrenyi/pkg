@@ -17,7 +17,9 @@ xbin:
   mosquitto_rr: mosquitto_rr
   mosquitto_sub: mosquitto_sub
   mosquitto_ctrl: mosquitto_ctrl
-
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 rule:
   /*:
     version: stable

@@ -9,7 +9,9 @@ file_suffix: 7z
 url:
   internet: "%{gc_url}/%{zipname}.%{file_suffix}"
   cn: "%{gc_url}/%{zipname}.%{file_suffix}"
-
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 xbin: ffmpeg.%{os}.%{arch}%{bin_suffix}
 
 rule:

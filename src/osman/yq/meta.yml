@@ -8,7 +8,9 @@ file_suffix: 7z
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
-
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 xbin: yq.%{os}.%{arch}%{bin_suffix}
 
 rule:

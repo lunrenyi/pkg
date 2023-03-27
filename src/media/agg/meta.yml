@@ -9,7 +9,9 @@ url:
     cn: https://github.com/asciinema/agg/releases/download/%{version}/agg-%{_arch}-%{_os}
 
 xbin: "agg.%{xbin_suffix}"
-
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 unpack_way: non_unpack
 
 rule:

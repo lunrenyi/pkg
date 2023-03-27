@@ -11,7 +11,9 @@ url:
 
 xbin:
   ucloud: ucloud.%{os}.%{arch}%{bin_suffix}
-
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 rule:
   /*:
     version: stable

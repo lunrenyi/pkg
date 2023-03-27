@@ -11,8 +11,10 @@ url:
 
 xbin:
   bat: bat.%{os}.%{arch}%{bin_suffix}
-  cat: bat.%{os}.%{arch}%{bin_suffix}
 
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 rule:
   /*:
     version: stable

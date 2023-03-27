@@ -11,7 +11,9 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin: ncat.%{os}.%{arch}%{bin_suffix}
-
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 rule:
   /*:
     version: stable

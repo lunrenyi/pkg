@@ -11,7 +11,9 @@ url:
 
 xbin:
   proot: proot-rs
-
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 rule:
   /*:
     version: stable

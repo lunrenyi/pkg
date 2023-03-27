@@ -10,7 +10,9 @@ url:
 
 xbin:
   ghcli: gh
-
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 rule:
   /*:
     version: stable

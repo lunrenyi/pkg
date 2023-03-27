@@ -11,7 +11,9 @@ url:
 xbin:
   fd: fd
   ff: fd
-
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 rule:
   /*:
     version: stable
