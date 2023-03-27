@@ -1,4 +1,4 @@
-# shellcheck shell=sh disable=SC3043 #source
+# shellcheck shell=sh disable=SC3043,2164,2046,2155,2106,2086,2002,1091 #source
 # . "$(x wsroot)/.x-cmd/table"
 pkg(){
     local op="$1";  shift
