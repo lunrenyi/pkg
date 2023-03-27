@@ -27,5 +27,5 @@ rule:
   "*/linux/arm64":
     zipname:    proot-rs-v0.1.0-aarch64-unknown-linux-gnu.tar.gz
   "*/linux/x64":
-    zipname:    pproot-rs-v0.1.0-x86_64-linux-android.tar.gz
+    zipname:    proot-rs-v0.1.0-x86_64-linux-android.tar.gz
 
