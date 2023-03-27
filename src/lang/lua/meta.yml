@@ -8,12 +8,20 @@ url:
 
 xbin:
   lua: lua54
-
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
 rule:
   /*:
     version: latest
-  latest/*:
+  latest/linux/*:
     version: 5.4.2
+
+  latest/win/*:
+    version: 5.4.2
+
+  latest/darwin/*:
+    version: 5.3.5
 
   "*/win":
     file_suffix: zip
@@ -37,21 +45,51 @@ rule:
     _os: Win
     _arch: 32
 
-  "*/darwin/arm64":
-    version: 5.2.4
+
+  "5.3*/darwin/arm64":
     _os: MacOS
     _arch: 1011
+    url:
+      internet: "https://sourceforge.net/projects/luabinaries/files/%{version}/Other%20Libraries/lua-%{version}_MacOS_arch_lib.tar.gz/download"
+      cn: "https://sourceforge.net/projects/luabinaries/files/%{version}/Other%20Libraries/lua-%{version}_MacOS%{_arch}_lib.tar.gz/download"
 
-    "*/darwin/x64":
-    version: 5.2.4
+  "5.3*/darwin/x64":
     _os: MacOS
     _arch: 1011
+    url:
+      internet: "https://sourceforge.net/projects/luabinaries/files/%{version}/Other%20Libraries/lua-%{version}_MacOS_arch_lib.tar.gz/download"
+      cn: "https://sourceforge.net/projects/luabinaries/files/%{version}/Other%20Libraries/lua-%{version}_MacOS%{_arch}_lib.tar.gz/download"
 
-  5.4.2/*:
+
+
+
+  "5.3.5/darwin/x64":
+    _os: MacOS
+    _arch: 1013
+    url:
+      internet: "https://sourceforge.net/projects/luabinaries/files/%{version}/Other%20Libraries/lua-%{version}_MacOS_arch_lib.tar.gz/download"
+      cn: "https://sourceforge.net/projects/luabinaries/files/%{version}/Other%20Libraries/lua-%{version}_MacOS%{_arch}_lib.tar.gz/download"
+
+    "5.3.5/darwin/arm64":
+      _os: MacOS
+      _arch: 1013
+      url:
+        internet: "https://sourceforge.net/projects/luabinaries/files/%{version}/Other%20Libraries/lua-%{version}_MacOS_arch_lib.tar.gz/download"
+        cn: "https://sourceforge.net/projects/luabinaries/files/%{version}/Other%20Libraries/lua-%{version}_MacOS%{_arch}_lib.tar.gz/download"
+
+
+
+  5.4*/linux/*:
     xbin: lua54
-  5.3.6/*:
+  5.4*/win/*:
+    xbin: lua54
+  5.3*/*/*:
     xbin: luac53
-  5.2.4/*:
-    xbin: luac52
-  5.1.5/*:
-    xbin: luac5.1
+  5.3*/win/*:
+    xbin: luac53
+
+  5.34/darwin/*:
+  xbin: liblua53.a
+
+  5.32/darwin/*:
+  xbin: liblua53.a

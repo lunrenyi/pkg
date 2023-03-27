@@ -5,6 +5,13 @@
         sha:
     linux/x64:
         sha:
+5.4.0:
+    win/x32:
+        sha:
+    win/x64:
+        sha:
+    linux/x64:
+        sha:
 5.3.6:
     win/x32:
         sha:
@@ -12,17 +19,56 @@
         sha:
     linux/x64:
         sha:
-5.2.4:
+5.3.5:
     win/x32:
         sha:
     win/x64:
+        sha:
+    darwin/x64:
+        sha:
+    darwin/arm64:
         sha:
     linux/x64:
         sha:
-5.1.5:
+5.3.4:
     win/x32:
         sha:
     win/x64:
+        sha:
+    darwin/x64:
+        sha:
+    darwin/arm64:
+        sha:
+    linux/x64:
+        sha:
+5.3.3:
+    win/x32:
+        sha:
+    win/x64:
+        sha:
+        sha:
+    linux/x64:
+        sha:
+5.3:
+    win/x32:
+        sha:
+    win/x64:
+        sha:
+    darwin/x64:
+        sha:
+    darwin/arm64:
+        sha:
+    linux/x64:
+        sha:
+
+5.3.2:
+    win/x32:
+        sha:
+    win/x64:
+        sha:
+    darwin/x64:
+        sha:
+    darwin/arm64:
         sha:
     linux/x64:
         sha:
