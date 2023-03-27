@@ -67,15 +67,15 @@ rule:
     _os: MacOS
     _arch: 1013
     url:
-      internet: "https://sourceforge.net/projects/luabinaries/files/%{version}/Other%20Libraries/lua-%{version}_MacOS_arch_lib.tar.gz/download"
-      cn: "https://sourceforge.net/projects/luabinaries/files/%{version}/Other%20Libraries/lua-%{version}_MacOS%{_arch}_lib.tar.gz/download"
+      internet: "https://sourceforge.net/projects/luabinaries/files/5.3.5/Other%20Libraries/lua-5.3.5_MacOS1013_lib.tar.gz/download"
+      cn: "https://sourceforge.net/projects/luabinaries/files/5.3.5/Other%20Libraries/lua-5.3.5_MacOS1013_lib.tar.gz/download"
 
-    "5.3.5/darwin/arm64":
-      _os: MacOS
-      _arch: 1013
-      url:
-        internet: "https://sourceforge.net/projects/luabinaries/files/%{version}/Other%20Libraries/lua-%{version}_MacOS_arch_lib.tar.gz/download"
-        cn: "https://sourceforge.net/projects/luabinaries/files/%{version}/Other%20Libraries/lua-%{version}_MacOS%{_arch}_lib.tar.gz/download"
+  "5.3.5/darwin/arm64":
+    _os: MacOS
+    _arch: 1013
+    url:
+      internet: "https://sourceforge.net/projects/luabinaries/files/5.3.5/Other%20Libraries/lua-5.3.5_MacOS1013_lib.tar.gz/download"
+      cn: "https://sourceforge.net/projects/luabinaries/files/5.3.5/Other%20Libraries/lua-5.3.5_MacOS1013_lib.tar.gz/download"
 
 
 
