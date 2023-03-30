@@ -9,9 +9,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin: "%{_preffix}/helm%{bin_suffix}"
-hook:
-  activate: activate.sh
-  deactivate: deactivate.sh
+
 rule:
   /*:
     version: stable

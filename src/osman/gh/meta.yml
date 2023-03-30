@@ -10,9 +10,7 @@ url:
 unpack_way: unpack_copy_to_target_dir
 xbin:
   ghcli: gh
-hook:
-  activate: activate.sh
-  deactivate: deactivate.sh
+
 rule:
   /*:
     version: stable

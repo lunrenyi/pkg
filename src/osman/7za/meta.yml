@@ -10,10 +10,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 hook:
   install: install.sh
-hook:
-  activate: activate.sh
-  deactivate: deactivate
-  install: install.sh
+
 xbin:
   p7zip: 7za.%{os}.%{arch}%{bin_suffix}
   7za: 7za.%{os}.%{arch}%{bin_suffix}

@@ -11,9 +11,6 @@ url:
 xbin:
   exa: exa.%{os}.%{arch}%{bin_suffix}
 
-hook:
-  activate: activate.sh
-  deactivate: deactivate.sh
 rule:
   /*:
     version: stable

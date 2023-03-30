@@ -12,9 +12,7 @@ url:
 xbin:
   qrencode: qrencode.%{os}.%{arch}%{bin_suffix}
   qr: qrencode.%{os}.%{arch}%{bin_suffix}
-hook:
-  activate: activate.sh
-  deactivate: deactivate.sh
+
 
 rule:
   /*:

@@ -11,9 +11,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin: traceroute.%{os}.%{arch}%{bin_suffix}
-hook:
-  activate: activate.sh
-  deactivate: deactivate.sh
+
 rule:
   /*:
     version: stable

@@ -12,9 +12,7 @@ url:
 xbin:
   du: dust.%{os}.%{arch}%{bin_suffix}
   dust: dust.%{os}.%{arch}%{bin_suffix}
-hook:
-  activate: activate.sh
-  deactivate: deactivate.sh
+
 rule:
   /*:
     version: stable
