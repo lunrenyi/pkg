@@ -29,4 +29,20 @@ f()(
     x rmrf "$WSROOT/tmp"
 )
 
+
+ff()(
+
+        git add "dist/all.7z"
+
+        if [ "$git_user" = "agent-zero" ]; then
+            git commit -m "build: release x-cmd pkg bundle"
+        else
+            git commit -m "update: dist/all.tgz"
+        fi
+        git push origin main
+
+)
+
+
 f
+ff

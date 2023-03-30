@@ -23,4 +23,5 @@ jobs:
       - name: main
         uses: x-cmd/action@main
         with:
+          code: xws pkg yml2tgz
           code: xws push || true
