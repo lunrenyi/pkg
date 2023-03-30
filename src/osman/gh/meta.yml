@@ -23,19 +23,19 @@ rule:
 
   "*/linux/arm64":
     zipname:    gh_2.25.1_linux_arm64.tar.gz
-    xbin:       gh_2.25.1_linux_arm64/bin/gh
+    xbin:       bin/gh
 
   "*/darwin/arm64":
     zipname:    gh_2.25.1_macOS_arm64.tar.gz
-    xbin:       gh_2.25.1_macOS_arm64/bin/gh
+    xbin:       bin/gh
 
   "*/linux/x64":
     zipname:    gh_2.25.1_linux_amd64.tar.gz
-    xbin:       gh_2.25.1_linux_amd64/bin/gh
+    xbin:       bin/gh
 
   "*/darwin/x64":
     zipname:    gh_2.25.1_macOS_amd64.tar.gz
-    xbin:       gh_2.25.1_macOS_amd64/bin/gh
+    xbin:       bin/gh
 
   "*/win/x64":
     zipname:    gh_2.25.1_windows_amd64.zip

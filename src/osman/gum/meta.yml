@@ -10,7 +10,8 @@ url:
 unpack_way: unpack_copy_to_target_dir
 xbin:
   gumcli: gum
-
+hook:
+  activate: activate.sh
 rule:
   /*:
     version: stable
@@ -23,21 +24,21 @@ rule:
 
   "*/linux/arm64":
     zipname:    gum_0.10.0_Linux_arm64.tar.gz
-    xbin:       gum_0.10.0_Linux_arm64/gum
+    xbin:       gum
 
   "*/darwin/arm64":
     zipname:    gum_0.10.0_Darwin_arm64.tar.gz
-    xbin:       gum_0.10.0_Darwin_arm64/gum
+    xbin:       gum
 
   "*/linux/x64":
     zipname:    gum_0.10.0_Linux_x86_64.tar.gz
-    xbin:       gum_0.10.0_Linux_x86_64/gum
+    xbin:       gum
 
   "*/darwin/x64":
     zipname:    gum_0.10.0_Darwin_x86_64.tar.gz
-    xbin:       gum_0.10.0_Darwin_x86_64/gum
+    xbin:       gum
 
   "*/win/x64":
     zipname:    gum_0.10.0_Windows_x86_64.zip
-    xbin:       gum_0.10.0_Windows_x86_64/gum.exe
+    xbin:       gum.exe
     file_suffix: zip
