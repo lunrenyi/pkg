@@ -1,0 +1,32 @@
+homepage: https://github.com/btraceio/btrace/releases/tag/v2.2.3
+license: Apache License
+rely: []
+
+file_suffix: tar.gz
+url:
+  internet: "https://github.com/btraceio/btrace/releases/download/%{version}/btrace-%{version}-bin.tar.gz"
+  cn: "https://github.com/btraceio/btrace/releases/download/%{version}/btrace-%{version}-bin.tar.gz"
+
+xbin:
+  btrace: bin/btrace
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v2.2.3
+
+  latest/*:
+    version: v2.2.3
+
+  "*/linux/arm64":
+
+  "*/darwin/arm64":
+
+  "*/linux/x64":
+
+  "*/darwin/x64":
+
+  "*/win/x64":
+
+

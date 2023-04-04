@@ -1,0 +1,36 @@
+homepage: https://activemq.apache.org/components/classic/download/
+license: Apache License
+rely: []
+
+file_suffix: tar.gz
+url:
+  internet: "https://www.apache.org/dyn/closer.cgi?filename=/activemq/%{version}/apache-activemq-%{version}-bin.%{file_suffix}&action=download"
+  cn: "https://www.apache.org/dyn/closer.cgi?filename=/activemq/%{version}/apache-activemq-%{version}-bin.%{file_suffix}&action=download"
+
+xbin:
+  activemq: bin/activemq
+unpack_way: unpack_copy_to_target_dir
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 5.18.0
+
+  latest/*:
+    version: 5.18.0
+
+  "*/linux/arm64":
+
+  "*/darwin/arm64":
+
+  "*/linux/x64":
+
+  "*/darwin/x64":
+
+  "*/win/x64":
+    file_suffix: zip
+    url:
+      internet: "https://www.apache.org/dyn/closer.cgi?filename=/activemq/5.18.0/apache-activemq-5.18.0-bin.zip&action=download"
+      cn: "https://www.apache.org/dyn/closer.cgi?filename=/activemq/5.18.0/apache-activemq-5.18.0-bin.zip&action=download"
+

@@ -1,0 +1,33 @@
+homepage: https://github.com/ssadedin/bpipe/releases/tag/0.9.11
+license: Apache License
+rely: []
+
+file_suffix: tar.gz
+url:
+  internet: "https://github.com/ssadedin/bpipe/releases/download/%{version}bpipe-%{version}.tar.gz"
+  cn: "https://github.com/ssadedin/bpipe/releases/download/%{version}bpipe-%{version}.tar.gz"
+
+xbin:
+  bpipe: bin/bpipe
+unpack_way: unpack_copy_to_target_dir
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 0.9.11
+
+  latest/*:
+    version: 0.9.11
+
+  "*/linux/arm64":
+
+  "*/darwin/arm64":
+
+  "*/linux/x64":
+
+  "*/darwin/x64":
+
+  "*/win/x64":
+
+
