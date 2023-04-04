@@ -4,6 +4,8 @@ clone_xcmd_pkg()(
     x mkdirp "$WSROOT/tmp"
     cd "$WSROOT/tmp" || return
     git clone git@gitee.com:x-cmd/pkg.git
+    x:info "clone git@gitee.com:x-cmd/pkg.git"
+
 )
 
 f()(
@@ -16,7 +18,7 @@ f()(
     cp -r "$WSROOT/dist/all.7z" "$WSROOT/tmp/pkg/dist"
 
     if cd "$WSROOT/tmp/pkg" ; then
-        git add "./dist/all.7z"
+        git add "$WSROOT/tmp/pkg/dist"
 
         if [ "$git_user" = "agent-zero" ]; then
             git commit -m "build: release x-cmd pkg bundle"
