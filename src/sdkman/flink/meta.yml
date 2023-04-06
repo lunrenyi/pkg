@@ -1,0 +1,35 @@
+homepage: https://github.com/coursier/coursier/releases
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: tar.gz
+url:
+  internet: "https://dlcdn.apache.org/flink/flink-%{version}/flink-%{version}-bin-scala_2.12.tgz"
+  cn: "https://dlcdn.apache.org/flink/flink-%{version}/flink-%{version}-bin-scala_2.12.tgz"
+unpack_way: unpack_copy_to_target_dir
+xbin:
+  flink: bin/flink
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 1.17.0
+
+  latest/*:
+    version: 1.17.0
+
+  "*/linux/arm64":
+
+  "*/darwin/arm64":
+
+  "*/linux/x64":
+
+  "*/darwin/x64":
+
+  "*/win/x64":
+
+
+
+

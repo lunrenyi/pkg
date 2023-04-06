@@ -1,0 +1,40 @@
+homepage: https://github.com/coursier/coursier/releases
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: gz
+url:
+  internet: "https://github.com/coursier/coursier/releases/download/%{version}/cs-%{_arch}-%{_os}.%{file_suffix}"
+  cn: "https://github.com/coursier/coursier/releases/download/%{version}/cs-%{_arch}-%{_os}.%{file_suffix}"
+
+xbin:
+  cs: cs-%{_arch}-%{_os}
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v2.1.0
+
+  latest/*:
+    version: v2.1.0
+
+  "*/linux/arm64":
+    _os:  pc-linux
+    _arch: x86_64
+  "*/darwin/arm64":
+    _os:  apple-darwin
+    _arch: x86_64
+  "*/linux/x64":
+    _os:  pc-linux
+    _arch: x86_64
+  "*/darwin/x64":
+    _os:  apple-darwin
+    _arch: x86_64
+  "*/win/x64":
+    file_suffix: zip
+    _os:  pc-win
+    arch: x86_64
+
+

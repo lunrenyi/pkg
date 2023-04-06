@@ -1,0 +1,35 @@
+homepage: https://github.com/kobo/gaiden/releases
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://github.com/kobo/gaiden/releases/download/v1.3/gaiden-1.3.zip"
+  cn: "https://github.com/kobo/gaiden/releases/download/v1.3/gaiden-1.3.zip"
+unpack_way: unpack_copy_to_target_dir
+xbin:
+  gaiden: bin/gaiden
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v1.3
+
+  latest/*:
+    version: v1.3
+
+  "*/linux/arm64":
+
+  "*/darwin/arm64":
+
+  "*/linux/x64":
+
+  "*/darwin/x64":
+
+  "*/win/x64":
+
+
+
+

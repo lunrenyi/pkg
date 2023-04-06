@@ -1,0 +1,34 @@
+homepage: https://github.com/coursier/coursier/releases
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: tar.gz
+url:
+  internet: "https://dlcdn.apache.org/cxf/%{version}/apache-cxf-%{version}.%{file_suffix}"
+  cn: "https://dlcdn.apache.org/cxf/%{version}/apache-cxf-%{version}.%{file_suffix}"
+unpack_way: unpack_copy_to_target_dir
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 4.0.0
+
+  latest/*:
+    version: 4.0.0
+
+  "*/linux/arm64":
+
+  "*/darwin/arm64":
+
+  "*/linux/x64":
+
+  "*/darwin/x64":
+
+  "*/win/x64":
+    file_suffix: zip
+
+
+

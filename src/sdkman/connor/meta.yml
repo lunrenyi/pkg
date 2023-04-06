@@ -1,0 +1,37 @@
+homepage: https://github.com/helpermethod/connor/releases
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://github.com/helpermethod/connor/releases/download/v%{version}/connor-%{version}-%{_os}-%{_arch}.zip"
+  cn: "https://github.com/helpermethod/connor/releases/download/v%{version}/connor-%{version}-%{_os}-%{_arch}.zip"
+unpack_way: unpack_copy_to_target_dir
+xbin:
+  connor: bin/connor
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v1.4.1
+
+  latest/*:
+    version: v1.4.1
+
+  "*/linux/arm64":
+    _os:  osx
+    _arch: x86_64
+  "*/darwin/arm64":
+    _os:  osx
+    _arch: x86_64
+  "*/linux/x64":
+    _arch: x86_64
+  "*/darwin/x64":
+    _os:  osx
+    _arch: x86_64
+  "*/win/x64":
+    arch: x86_64
+
+

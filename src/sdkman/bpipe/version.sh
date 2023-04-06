@@ -5,7 +5,7 @@ $tag_name:
     sha:
   darwin/amd64:
     sha:
-  darwin/x86:
+  darwin/arm64:
     sha:
   win/x64:
     sha:

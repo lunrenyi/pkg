@@ -1,0 +1,35 @@
+homepage: https://github.com/docToolchain/docToolchain/releases
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://github.com/docToolchain/docToolchain/releases/download/v2.2.1/docToolchain-2.2.1.zip"
+  cn: "https://github.com/docToolchain/docToolchain/releases/download/v2.2.1/docToolchain-2.2.1.zip"
+unpack_way: unpack_copy_to_target_dir
+xbin:
+  doctoolchain: bin/doctoolchain
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v2.2.1
+
+  latest/*:
+    version: v2.2.1
+
+  "*/linux/arm64":
+
+  "*/darwin/arm64":
+
+  "*/linux/x64":
+
+  "*/darwin/x64":
+
+  "*/win/x64":
+    file_suffix: zip
+
+
+
