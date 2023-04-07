@@ -5,11 +5,11 @@ _os: "%{os}"
 _arch: "%{arch}"
 file_suffix: zip
 url:
-  internet: "https://gradle.org/next-steps/?version=%{version}&format=bin"
-  cn: "https://gradle.org/next-steps/?version=%{version}&format=bin"
+  internet: "https://services.gradle.org/distributions/gradle-%{version}-bin.zip"
+  cn: "https://services.gradle.org/distributions/gradle-%{version}-bin.zip"
 unpack_way: unpack_copy_to_target_dir
 xbin:
-  gaiden: bin/gaiden
+  gradle: bin/gradle
 rule:
   /*:
     version: stable

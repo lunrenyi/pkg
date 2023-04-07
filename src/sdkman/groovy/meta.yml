@@ -1,0 +1,35 @@
+homepage: https://groovy.jfrog.io/ui/native/dist-release-local/groovy-zips/
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-%{version}.zip"
+  cn: "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-%{version}.zip"
+unpack_way: unpack_copy_to_target_dir
+xbin:
+  grails: bin/grails
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 2.4.10
+
+  latest/*:
+    version: 2.4.10
+
+  "*/linux/arm64":
+
+  "*/darwin/arm64":
+
+  "*/linux/x64":
+
+  "*/darwin/x64":
+
+  "*/win/x64":
+
+
+
+

@@ -14,7 +14,7 @@ unpack_way: non_unpack
 
 rule:
   /*:
-    version: v1.3.0
+    version: v1.4.0
   v*/linux/x64:
     _arch: x86_64
     _os: unknown-linux-gnu
