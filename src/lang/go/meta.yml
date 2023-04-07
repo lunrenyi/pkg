@@ -39,5 +39,8 @@ rule:
   "*/darwin/x64":
     _arch: "amd64"
 
+  "*/darwin/arm64":
+    _arch: "amd64"
+
   "*/darwin/x64":
 
