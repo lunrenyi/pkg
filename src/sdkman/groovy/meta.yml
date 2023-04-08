@@ -9,16 +9,16 @@ url:
   cn: "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-binary-%{version}.zip"
 unpack_way: unpack_copy_to_target_dir
 xbin:
-  grails: bin/grails
+  groovy: bin/groovy
 rule:
   /*:
     version: stable
 
   stable/*:
-    version: 2.4.10
+    version: 4.0.9
 
   latest/*:
-    version: 2.4.10
+    version: 4.0.9
 
   "*/linux/arm64":
 

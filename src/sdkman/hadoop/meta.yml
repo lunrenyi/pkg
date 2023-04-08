@@ -1,0 +1,43 @@
+homepage: https://groovy.jfrog.io/ui/native/dist-release-local/groovy-zips/
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: tar.gz
+url:
+  internet: "https://dlcdn.apache.org/hadoop/common/hadoop-%{version}/hadoop-%{version}.tar.gz"
+  cn: "https://dlcdn.apache.org/hadoop/common/hadoop-%{version}/hadoop-%{version}.tar.gz"
+unpack_way: unpack_copy_to_target_dir
+xbin:
+  hadoop: bin/hadoop
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 3.3.5
+
+  latest/*:
+    version: 3.3.5
+
+  "*/linux/x64":
+
+  "*/darwin/x64":
+
+  "*/win/x64":
+
+  "*/linux/arm64":
+
+  "*/darwin/arm64":
+
+  "3.3.5/linux/arm64":
+    url:
+      internet: "https://dlcdn.apache.org/hadoop/common/hadoop-%{version}/hadoop-%{version}-aarch64.tar.gz"
+      cn: "https://dlcdn.apache.org/hadoop/common/hadoop-%{version}/hadoop-%{version}-aarch64.tar.gz"
+
+  "3.3.5/darwin/arm64":
+    url:
+      internet: "https://dlcdn.apache.org/hadoop/common/hadoop-%{version}/hadoop-%{version}-aarch64.tar.gz"
+      cn: "https://dlcdn.apache.org/hadoop/common/hadoop-%{version}/hadoop-%{version}-aarch64.tar.gz"
+
+
