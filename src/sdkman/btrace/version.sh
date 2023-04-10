@@ -4,6 +4,8 @@ $tag_name:
   linux/x64:
     sha:
   darwin/amd64:
+  linux/arm64:
+    sha:
     sha:
   darwin/arm64:
     sha:

@@ -7,6 +7,11 @@ $tag_name:
       internet: https://github.com/docToolchain/docToolchain/releases/download/$tag_name/docToolchain-${tag_name#v*}.zip
       cn: https://github.com/docToolchain/docToolchain/releases/download/$tag_name/docToolchain-${tag_name#v*}.zip
     sha:
+  linux/arm64:
+    url:
+      internet: https://github.com/docToolchain/docToolchain/releases/download/$tag_name/docToolchain-${tag_name#v*}.zip
+      cn: https://github.com/docToolchain/docToolchain/releases/download/$tag_name/docToolchain-${tag_name#v*}.zip
+    sha:
   darwin/amd64:
     url:
       internet: https://github.com/docToolchain/docToolchain/releases/download/$tag_name/docToolchain-${tag_name#v*}.zip

@@ -28,7 +28,7 @@ rule:
 
   "*/linux/arm64":
 
-  "*/darwin/arm64":
+
 
   "3.3.5/linux/arm64":
     url:

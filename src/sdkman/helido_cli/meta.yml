@@ -1,0 +1,43 @@
+homepage: https://helidon.io/docs/v3/#/about/cli
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+
+url:
+  internet: "https://helidon.io/cli/latest/linux/helidon"
+  cn: "https://helidon.io/cli/latest/linux/helidon"
+unpack_way: non_unpack
+xbin:
+  helidon: helidon
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 3.2.0
+
+  latest/*:
+    version: 3.2.0
+
+  "*/linux/x64":
+
+  "*/darwin/x64":
+    url:
+      internet: "https://helidon.io/cli/latest/darwin/helidon"
+      cn: "https://helidon.io/cli/latest/darwin/helidon"
+
+  "*/linux/arm64":
+
+  "*/darwin/arm64":
+    url:
+      internet: "https://helidon.io/cli/latest/darwin/helidon"
+      cn: "https://helidon.io/cli/latest/darwin/helidon"
+
+  "*/win/x64":
+    url:
+      internet: "https://helidon.io/cli/latest/windows/helidon.exe" 
+      cn: "https://helidon.io/cli/latest/windows/helidon.exe"
+
+
+

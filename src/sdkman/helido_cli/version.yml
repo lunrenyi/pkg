@@ -1,0 +1,13 @@
+"3.2.0":
+  darwin/arm64:
+    sha256:
+  darwin/x64:
+    sha256:
+  darwin/amd64:
+    sha256:
+  linux/arm64:
+    sha256:
+  linux/x64:
+    sha256:
+  win/x64:
+    sha256:

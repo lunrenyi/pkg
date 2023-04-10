@@ -1,0 +1,40 @@
+homepage: https://www.apache.org/dyn/closer.lua/karaf/4.4.3/apache-karaf-4.4.3.tar.gz
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: tar.gz
+url:
+  internet: "https://dlcdn.apache.org/karaf/%{version}/apache-karaf-%{version}.tar.gz"
+  cn: "https://dlcdn.apache.org/karaf/%{version}/apache-karaf-%{version}.tar.gz"
+unpack_way: unpack_copy_to_target_dir
+xbin:
+  karaf: bin/karaf
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 4.4.3
+
+  latest/*:
+    version: 4.4.3
+
+  "*/linux/arm64":
+
+
+  "*/darwin/arm64":
+
+
+  "*/linux/x64":
+
+
+  "*/darwin/x64":
+
+
+  "*/win/x64":
+
+
+
+
+

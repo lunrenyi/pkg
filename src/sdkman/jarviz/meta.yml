@@ -1,0 +1,50 @@
+homepage: https://github.com/infrastructor/infrastructor
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://github.com/infrastructor/infrastructor/releases/download/%{version}/infrastructor-%{version}.zip"
+  cn: "https://github.com/infrastructor/infrastructor/releases/download/%{version}/infrastructor-%{version}.zip"
+unpack_way: unpack_copy_to_target_dir
+xbin:
+  jarviz: bin/jarviz
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 0.3.0
+
+  latest/*:
+    version: 0.3.0
+
+  "*/linux/arm64":
+    url:
+      internet: "https://github.com/kordamp/jarviz/releases/download/v%{version}/jarviz-standalone-%{version}-linux_musl-aarch64.zip"
+      cn: "https://github.com/kordamp/jarviz/releases/download/v%{version}/jarviz-standalone-%{version}-linux_musl-aarch64.zip"
+
+  "*/darwin/arm64":
+    url:
+      internet: "https://github.com/kordamp/jarviz/releases/download/v%{version}/jarviz-standalone-%{version}-osx-aarch64.zip"
+      cn: "https://github.com/kordamp/jarviz/releases/download/v%{version}/jarviz-standalone-%{version}-osx-aarch64.zip"
+
+  "*/linux/x64":
+    url:
+      internet: "https://github.com/kordamp/jarviz/releases/download/v%{version}/jarviz-standalone-%{version}-linux-x86_64.zip"
+      cn: "https://github.com/kordamp/jarviz/releases/download/v%{version}/jarviz-standalone-%{version}-linux-x86_64.zip"
+
+  "*/darwin/x64":
+    url:
+      internet: "https://github.com/kordamp/jarviz/releases/download/v%{version}/jarviz-standalone-%{version}-osx-x86_64.zip"
+      cn: "https://github.com/kordamp/jarviz/releases/download/v%{version}/jarviz-standalone-%{version}-osx-x86_64.zip"
+
+  "*/win/x64":
+    url:
+      internet: "https://github.com/kordamp/jarviz/releases/download/v%{version}/jarviz-standalone-%{version}-windows-x86_64.zip"
+      cn: "https://github.com/kordamp/jarviz/releases/download/v%{version}/jarviz-standalone-%{version}-windows-x86_64.zip"
+
+
+
+
