@@ -11,18 +11,24 @@ rm -rf "$(x wsroot)/.x-cmd/url_check/$dir"
             case $pkg in
                 *-todo) continue ;;
             esac
-            
-            touch "$(x wsroot)/.x-cmd/url_check/$dir/$pkg.yml"
+
+            touch "$(x wsroot)/.x-cmd/url_check/$dir/$pkg.md"
             (
                 printf "%s\n " "$pkg" >&2
-
+                printf "%s\n" "| version |  osarch | status |"
+                printf "%s\n" "| ------------------ | ----------- | ------------ | "
                 while read -r osarch; do
                     x pkg ls all "$pkg" |  while read -r version; do
-                        url=$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.cn")
-                        echo "$url"
+                    url=$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.cn" 2>/dev/null )
+                    return_code="$(curl --silent --max-time 10 -I "$url" | grep -E "^HTTP" | awk -F " " '{print $2}' | tail -n 1)"
+                    printf "|%s|%s " "$version" "$osarch"
+                    if [ "$return_code" = "200" ] || [ "$return_code" = "302" ];then
+                        printf "| %s " "ok"
+                    else
+                        printf "| %s" "x"
+                    fi
+                    echo "|"
                     done
-
-
                 done <<A
 linux/x64
 linux/arm64
@@ -30,8 +36,7 @@ darwin/x64
 darwin/arm64
 win/x64
 A
-
-            )  >> "$(x wsroot)/.x-cmd/url_check/$dir/$pkg.yml" &
+            )  >> "$(x wsroot)/.x-cmd/url_check/$dir/$pkg.md" &
         done
 
     )
