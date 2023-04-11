@@ -7,7 +7,6 @@ file_suffix: tar.gz
 url:
   internet: "%{gum_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
-unpack_way: unpack_copy_to_target_dir
 xbin:
   gumcli: gum
 hook:
