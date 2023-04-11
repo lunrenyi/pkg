@@ -1,0 +1,1 @@
+. "$___X_CMD_PKG_INSTALL_PATH/$name/$version/bin/ki.sh"

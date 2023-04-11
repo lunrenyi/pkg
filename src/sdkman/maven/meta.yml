@@ -1,0 +1,44 @@
+homepage: https://maven.apache.org/download.cgi
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://dlcdn.apache.org/maven/maven-3/%{version}/binaries/apache-maven-%{version}-bin.zip"
+  cn: "https://dlcdn.apache.org/maven/maven-3/%{version}/binaries/apache-maven-%{version}-bin.zip"
+unpack_way: unpack_copy_to_target_dir
+
+xbin:
+  maven: bin/mvn
+  mvn: bin/mvn
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 3.9.1
+
+  latest/*:
+    version: 3.9.1
+
+  "4.*/*/*":
+    url:
+      internet: "https://dlcdn.apache.org/maven/maven-4/%{version}/binaries/apache-maven-%{version}-bin.zip"
+      cn: "https://dlcdn.apache.org/maven/maven-4/%{version}/binaries/apache-maven-%{version}-bin.zip"
+
+  "*/linux/arm64":
+
+
+  "*/darwin/arm64":
+
+
+  "*/linux/x64":
+
+
+  "*/darwin/x64":
+
+
+  "*/win/x64":
+
+

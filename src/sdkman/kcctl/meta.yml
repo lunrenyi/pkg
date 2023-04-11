@@ -1,15 +1,15 @@
-homepage: https://www.apache.org/dyn/closer.lua/karaf/4.4.3/apache-karaf-4.4.3.tar.gz
+homepage: https://github.com/kcctl/kcctl/releases/tag/v1.0.0.Beta3
 license: Apache License
 rely: []
 _os: "%{os}"
 _arch: "%{arch}"
-file_suffix: tar.gz
+file_suffix: zip
 url:
-  internet: "https://dlcdn.apache.org/karaf/%{version}/apache-karaf-%{version}.tar.gz"
+  internet: "https://github.com/kcctl/kcctl/releases/download/v1.0.0.Beta3/kcctl-1.0.0.Beta3-linux-x86_64.zip"
   cn: "https://dlcdn.apache.org/karaf/%{version}/apache-karaf-%{version}.tar.gz"
 unpack_way: unpack_copy_to_target_dir
 xbin:
-  karaf: bin/karaf
+  kcctl: bin/kcctl
 rule:
   /*:
     version: stable
@@ -34,8 +34,7 @@ rule:
 
   "*/win/x64":
     xbin:
-      karaf: bin/karaf.exe
-
+      kcctl: bin/kcctl.exe
 
 
 

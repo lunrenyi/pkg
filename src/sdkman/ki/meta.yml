@@ -1,0 +1,44 @@
+homepage: https://github.com/Kotlin/kotlin-interactive-shell/releases/tag/v0.5.2
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://github.com/Kotlin/kotlin-interactive-shell/releases/download/%{version}/ki-archive.zip"
+  cn: "https://github.com/Kotlin/kotlin-interactive-shell/releases/download/%{version}/ki-archive.zip"
+unpack_way: unpack_copy_to_target_dir
+hook:
+  activate: install.sh
+xbin:
+  ki: bin/ki
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.5.2
+
+  latest/*:
+    version: v0.5.2
+
+  "*/linux/arm64":
+
+
+  "*/darwin/arm64":
+
+
+  "*/linux/x64":
+
+
+  "*/darwin/x64":
+
+
+  "*/win/x64":
+    xbin:
+      karaf: bin/karaf.exe
+
+
+
+
+

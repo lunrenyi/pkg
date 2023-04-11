@@ -1,0 +1,42 @@
+homepage: https://github.com/varabyte/kobweb/
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://github.com/varabyte/kobweb/releases/download/cli-v%{version}/kobweb-0.9.11.zip"
+  cn: "https://github.com/varabyte/kobweb/releases/download/cli-v%{version}/kobweb-0.9.11.zip"
+unpack_way: unpack_copy_to_target_dir
+
+xbin:
+  kobweb: bin/kobweb
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 0.9.11
+
+  latest/*:
+    version: 0.9.11
+
+  "*/linux/arm64":
+
+
+  "*/darwin/arm64":
+
+
+  "*/linux/x64":
+
+
+  "*/darwin/x64":
+
+
+  "*/win/x64":
+
+
+
+
+
+

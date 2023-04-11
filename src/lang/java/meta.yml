@@ -34,6 +34,10 @@ rule:
   "*/win/*":
     _os: mingw64_nt_10
 
+  "*/darwin/*":
+    xbin:
+      java: Contents/Home/bin/javac
+
   "18*?/linux/x64":
     url:
       cn: https://d6.injdk.cn/openjdk/openjdk/18/openjdk-18_linux-x64_bin.tar.gz

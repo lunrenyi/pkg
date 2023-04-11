@@ -1,0 +1,41 @@
+homepage: https://github.com/mthmulders/mcs
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://github.com/mthmulders/mcs/releases/download/v%{version}/mcs-%{version}-%{_os}-%{_arch}.zip"
+  cn: "https://github.com/mthmulders/mcs/releases/download/v%{version}/mcs-%{version}-%{_os}-%{_arch}.zip"
+unpack_way: unpack_copy_to_target_dir
+
+xbin:
+  mcs: bin/mcs
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 0.3.1
+
+  latest/*:
+    version: 0.3.1
+
+  "*/linux/arm64":
+    _arch: x86_64
+
+  "*/darwin/arm64":
+    _os: osx
+    _arch: aarch_64
+
+  "*/linux/x64":
+    _arch: x86_64
+
+  "*/darwin/x64":
+    _os: osx
+
+  "*/win/x64":
+    _arch: x86_64
+    _os: windows
+
