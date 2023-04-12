@@ -24,6 +24,7 @@ jobs:
         uses: x-cmd/action@main
         with:
           code: |
+            xrc pkg
             xws table net
             xws push
 
