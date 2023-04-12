@@ -30,4 +30,6 @@ rule:
     zipname:    nping.linux.x64.7z
   "*/darwin/x64":
     zipname:    nping.darwin.x64.7z
-
+  "*/win/x64":
+    zipname:    nping.win.x64.exe.7z
+    bin_suffix: .exe
