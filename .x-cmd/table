@@ -21,7 +21,7 @@ generate_mdtable_net()(
                         printf "| %s " "-"
                         continue
                     fi
-                     return_code="$(curl -sSI -o /dev/null -w "%{http_code}" "$url")"
+                     return_code="$(curl -sSI -o /dev/null -w "%{http_code}" "$url" 2>/dev/null)"
 
                     if [ "$return_code" = "200" ] || [ "$return_code" = "302" ];then
                         printf "| %s " "✅"

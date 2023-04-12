@@ -4,17 +4,14 @@ WSROOT="$(x wsroot)"
 f()(
     x:info "update candidate dev list"
 
-    if xws table net; then
+
         git add "./.x-cmd/dev"
 
-        if [ "$git_user" = "agent-zero" ]; then
-            git commit -m "update candidate dev list"
-        else
-            git commit -m "update candidate dev list"
-        fi
-        git push origin push
+        git commit -m "update candidate dev list"
 
-    fi
+        git push origin main
+
+
 )
 
 f
