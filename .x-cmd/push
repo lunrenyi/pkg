@@ -1,4 +1,4 @@
-
+#source
 WSROOT="$(x wsroot)"
 
 f()(
@@ -6,7 +6,7 @@ f()(
 
     if xws table net; then
         git add "./.x-cmd/dev"
-        
+
         if [ "$git_user" = "agent-zero" ]; then
             git commit -m "update candidate dev list"
         else
@@ -15,7 +15,6 @@ f()(
         git push origin push
 
     fi
-    x rmrf "$WSROOT/tmp"
 )
 
 f
