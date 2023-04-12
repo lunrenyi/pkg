@@ -7,6 +7,9 @@ generate_mdtable_net()(
     cd $(x wsroot)/src
 
     for dir in *; do
+        case $dir in
+            sdkman) continue;;
+        esac
     (
         cd "$dir" || continue
 
@@ -16,12 +19,12 @@ generate_mdtable_net()(
                 version="$(___x_cmd_pkg_default_version $pkg)"
                 printf "|%s " "$pkg"
                 while read -r osarch; do
-                    url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.internet")"
+                    url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.internet" 2>/dev/null)"
                     if [ -z $url ]; then
                         printf "| %s " "-"
                         continue
                     fi
-                     return_code="$(curl -sSI -o /dev/null -w "%{http_code}" "$url" 2>/dev/null)"
+                     return_code="$(curl -sSI -o /dev/null -w "%{http_code}" "$url" )"
 
                     if [ "$return_code" = "200" ] || [ "$return_code" = "302" ];then
                         printf "| %s " "✅"
