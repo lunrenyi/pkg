@@ -26,6 +26,6 @@ jobs:
           code: |
            xrc pkg
            xws table net
-           xws instah push 
+           xws install push
 
 

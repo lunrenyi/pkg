@@ -16,7 +16,7 @@ generate_mdtable_net()(
                 version="$(___x_cmd_pkg_default_version $pkg)"
                 printf "|%s " "$pkg"
                 while read -r osarch; do
-                    url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.cn")"
+                    url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.internet")"
                     if [ -z $url ]; then
                         printf "| %s " "-"
                         continue
