@@ -1,0 +1,41 @@
+homepage: https://github.com/apache/maven-mvnd/releases/
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://github.com/apache/maven-mvnd/releases/download/%{version}/maven-mvnd-%{version}-m39-%{_os}-%{_arch}.%{file_suffix}"
+  cn:  "https://github.com/apache/maven-mvnd/releases/download/%{version}/maven-mvnd-%{version}-m39-%{_os}-%{_arch}.%{file_suffix}"
+unpack_way: unpack_copy_to_target_dir
+
+xbin:
+  mulefd: bin/mulefd
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 1.0-m6
+  latest/*:
+    version: 1.0-m6
+
+  "*/linux/arm64":
+    _arch: amd64
+
+
+  "*/darwin/arm64":
+    _arch: aarch64
+
+
+  "*/linux/x64":
+    _arch: amd64
+
+  "*/darwin/x64":
+    _arch: amd64
+
+  "*/win/x64":
+    _os: windows
+    _arch: amd64
+

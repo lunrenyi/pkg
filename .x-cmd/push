@@ -1,31 +1,18 @@
-WSROOT="$(x wsroot)"
-clone_xcmd_pkg()(
-    x rmrf "$WSROOT/tmp"
-    x mkdirp "$WSROOT/tmp"
-    cd "$WSROOT/tmp" || return
-    git clone git@gitee.com:x-cmd/pkg.git
-    x:info "clone git@gitee.com:x-cmd/pkg.git"
 
-)
+WSROOT="$(x wsroot)"
 
 f()(
+    x:info "update candidate dev list"
 
-    clone_xcmd_pkg || return
-    x:info "Copy $WSROOT/dist to $WSROOT/tmp/pkg"
-
-    rm -rf "$WSROOT/tmp/pkg/dist"
-    mkdir "$WSROOT/tmp/pkg/dist"
-    cp -r "$WSROOT/dist/all.7z" "$WSROOT/tmp/pkg/dist"
-
-    if cd "$WSROOT/tmp/pkg" ; then
-        git add "dist"
-
+    if xws table net; then
+        git add "./.x-cmd/dev"
+        
         if [ "$git_user" = "agent-zero" ]; then
-            git commit -m "build: release x-cmd pkg bundle"
+            git commit -m "update candidate dev list"
         else
-            git commit -m "update: dist/all.tgz"
+            git commit -m "update candidate dev list"
         fi
-        git push origin main
+        git push origin push
 
     fi
     x rmrf "$WSROOT/tmp"

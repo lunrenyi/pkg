@@ -3,8 +3,6 @@
     sha256:
   linux/arm64:
     sh256:
-  linux/arm64:
-    sha256:
   darwin/x64:
     sha:
   darwin/arm64:

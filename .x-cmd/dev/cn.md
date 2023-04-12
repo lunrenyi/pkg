@@ -4,7 +4,7 @@
 |bwrap |
 |zellij | ok | ok | ok | ok |
 |jq | ok | ok | ok | ok | ok |
-|helm | ok | ok | ok | ok | ok |
+|helm | ok |  | ok | ok | ok |
 |sodium | ok | ok | ok | ok | ok |
 |procs | ok | ok | ok | ok | ok |
 |fd | ok | ok | ok | ok | ok |
