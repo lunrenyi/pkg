@@ -19,7 +19,6 @@ generate_mdtable_net()(
                 version="$(___x_cmd_pkg_default_version $pkg)"
                 printf "|%s " "$pkg"
                 while read -r osarch; do
-                    total=$(($total+1))
                     url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.cn"  2>/dev/null)"
                     if [ -z $url ]; then
                         printf "| %s " "-"
@@ -31,7 +30,7 @@ generate_mdtable_net()(
                         printf "| %s " "✅"
                     else
                         printf "| %s(%s)" "❌" "${return_code:-"overtime"}"
-                        failed=$(($failed+1))
+
                     fi
 
                 done <<A
