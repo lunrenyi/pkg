@@ -1,24 +1,24 @@
 | candidate \ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 | 备注 |
 | ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |
-|deno | ❌(overtime)| ❌(overtime)| ❌(overtime)| ❌(overtime)| ❌(overtime)|
+|deno | ✅ | ✅ | ✅ | ✅ | ✅ |
 |go | ✅ | ✅ | ✅ | ✅ | ✅ |
-|java | ✅ | ✅ | ✅ | ✅ | ✅ |
+|java | ❌(overtime)| ❌(overtime)| ❌(overtime)| ❌(overtime)| ❌(overtime)|
 |julia | ✅ | ✅ | ✅ | ✅ | ❌(404)|
-|kotlin | ❌(overtime)| ❌(overtime)| ❌(overtime)| ❌(overtime)| ❌(overtime)|
-|lua | ❌(overtime)| - | ❌(overtime)| ❌(404)| ❌(overtime)|
+|kotlin | ✅ | ✅ | ✅ | ✅ | ✅ |
+|lua | ✅ | - | ❌(404)| ❌(404)| ✅ |
 |node | ✅ | ✅ | ✅ | ✅ | ✅ |
-|perl | ❌(overtime)| ❌(overtime)| ❌(overtime)| ❌(overtime)| ❌(overtime)|
-|python | ❌(overtime)| ❌(404)| ✅ | ✅ | ✅ |
-|rust | ❌(overtime)| ✅ | ❌(overtime)| ❌(overtime)| ❌(overtime)|
-|scala | ❌(overtime)| ✅ | ❌(overtime)| ❌(overtime)| ✅ |
-|agg | ❌(overtime)| ❌(overtime)| ❌(overtime)| ❌(overtime)| ❌(overtime)|
+|perl | ✅ | ✅ | ❌(404)| ✅ | ✅ |
+|python | ✅ | ❌(404)| ✅ | ✅ | ✅ |
+|rust | ✅ | ✅ | ✅ | ✅ | ✅ |
+|scala | ✅ | ✅ | ✅ | ✅ | ✅ |
+|agg | ✅ | ✅ | ✅ | ✅ | ✅ |
 |ffmpeg | ✅ | ✅ | ❌(404)| ✅ | ✅ |
 |magick | ✅ | ✅ | ✅ | ✅ | ❌(404)|
 |sqlite3 | ✅ | ✅ | ✅ | ✅ | ✅ |
 |7za | ✅ | ✅ | ✅ | ✅ | ✅ |
 |aliyun | ✅ | ✅ | ✅ | ✅ | ✅ |
 |bat | ✅ | ✅ | ✅ | ✅ | ✅ |
-|bun | ✅ | ❌(overtime)| ❌(overtime)| ❌(overtime)| ❌(overtime)|
+|bun | ✅ | ✅ | ✅ | ✅ | ❌(404)|
 |bwrap | ✅ | ✅ | - | - | - |
 |curl | ✅ | ✅ | ✅ | ✅ | ✅ |
 |dust | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -31,7 +31,7 @@
 |helm | ✅ | ✅ | ✅ | ✅ | ✅ |
 |jq | ✅ | ✅ | ✅ | ✅ | ✅ |
 |mosquitto | ✅ | ✅ | ✅ | ✅ | ✅ |
-|procs | ✅ | ❌(overtime)| ✅ | ✅ | ✅ |
+|procs | ✅ | ✅ | ✅ | ✅ | ✅ |
 |proot | ✅ | ✅ | - | - | - |
 |qrencode | ✅ | ✅ | ✅ | ✅ | ✅ |
 |rg | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -43,13 +43,10 @@
 |yq | ✅ | ✅ | ✅ | ✅ | ✅ |
 |zellij | ✅ | ✅ | ✅ | ✅ | ✅ |
 |zsh-plugin | ✅ | ✅ | ✅ | ✅ | ✅ |
-|bandwhich | ❌(404)| ❌(overtime)| ❌(404)| ❌(404)| ❌(404)|
-|ncat | ✅ | ✅ | ✅ | ✅ | ❌(404)|
-|nmap | ✅ | ✅ | ✅ | ✅ | ❌(404)|
-|nping | ✅ | ✅ | ✅ | ✅ | ❌(404)|
+|bandwhich | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|ncat | ✅ | ✅ | ✅ | ✅ | ✅ |
+|nmap | ✅ | ✅ | ✅ | ✅ | ✅ |
+|nping | ✅ | ✅ | ✅ | ✅ | ✅ |
 |openssl | ✅ | ✅ | ✅ | ✅ | ✅ |
-|smartctl | ✅ | ✅ | ✅ | ✅ | ❌(overtime)|
-|traceroute | ✅ | ✅ | ❌(404)| ❌(404)| ❌(404)|
-
-
- ** Success:0-0   Failed:0    Success Rate:0-0\0 **
+|smartctl | ✅ | ✅ | ✅ | ✅ | ✅ |
+|traceroute | ✅ | ✅ | - | - | - |
