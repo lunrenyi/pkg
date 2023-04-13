@@ -33,7 +33,7 @@ generate_mdtable(){
 
             printf "|\n"
         done
-        generate_result_one "$category"
+        x:info "$(generate_result_one "$category")"
     done
 }
 
