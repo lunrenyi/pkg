@@ -60,7 +60,8 @@ generate_result_one(){
     pass="$(x sdict get pkg_url_test "$category/pass")"
     unsuport="$(x sdict get pkg_url_test "$category/unsuport")"
     error="$(x sdict get pkg_url_test "$category/error")"
-    printf "%s  \n" "$category: total=$((${pass:-0}+${unsuport:-0}+${error:-0})) pass=${pass:-0} unsuport=${unsuport:-0} error=${error:-0}"
+    printf "%s: total=%s pass=%s unsuport=%s error=%s  \n" \
+        "$category" "$((${pass:-0}+${unsuport:-0}+${error:-0}))" "${pass:-0}" "${unsuport:-0}" "${error:-0}"
 }
 
 if [ "$#" -eq 0 ] ; then
