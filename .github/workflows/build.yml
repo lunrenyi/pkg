@@ -1,7 +1,7 @@
 
 name: Bundle x-cmd pkg
 on:
-  # push:
+  push:
   #   branches:
   #     - main
   schedule:

@@ -3,7 +3,7 @@ generate_mdtable(){
     printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 |"
     printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- |"
 
-    local dir ; local pkg ; local version ; local osarch ; local url ; local http_code ; local time_total ; local category
+    local dir ; local pkg ; local version ; local osarch ; local url ; local http_code ; local time_total ; local category;
     for dir in "$(x wsroot)"/src/*; do
         category="${dir##*/}"
 
