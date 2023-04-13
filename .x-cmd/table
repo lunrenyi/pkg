@@ -33,6 +33,7 @@ generate_mdtable(){
 
             printf "|\n"
         done
+        generate_result
     done
 }
 
@@ -41,7 +42,7 @@ count_num(){
     local stat="$2"
     local num=""; num="$(x sdict get pkg_url_test "$category/$stat")"
     [ -n "$num" ] || num=0
-    x sdict put pkg_url_test "$category:$stat" "$((num+1))"
+    x sdict put pkg_url_test "$category/$stat" "$((num+1))"
 }
 
 generate_result(){
@@ -52,7 +53,7 @@ generate_result(){
         pass="$(x sdict get pkg_url_test "$category/pass")"
         unsuport="$(x sdict get pkg_url_test "$category/unsuport")"
         error="$(x sdict get pkg_url_test "$category/error")"
-        printf "%s\n" "$category: total=$((${pass:-0}+${unsuport:-0}+${error:-0})) pass=${pass:-0} unsuport=${unsuport:-0} error=${error:-0} "
+        printf "%s  \n" "$category: total=$((${pass:-0}+${unsuport:-0}+${error:-0})) pass=${pass:-0} unsuport=${unsuport:-0} error=${error:-0} "
     done
 }
 
