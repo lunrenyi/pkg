@@ -1,110 +1,50 @@
 # shellcheck shell=sh disable=SC2154,SC2164,2046,2106,3043 #source
-generate_mdtable_net()(
-    local code
-    local time
-    success=0
-    error=0
-    total=0
-    x:info "Generate: markdown table"
-    printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 | 备注 |"
-    printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |"
+generate_mdtable(){
+    printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 |"
+    printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- |"
 
-    cd $(x wsroot)/src
+    local dir ; local pkg ; local version ; local osarch ; local url ; local http_code ; local time_total ; local category;
+    for dir in "$(x wsroot)"/src/*; do
+        category="${dir##*/}"
 
-    for dir in *; do
-        case $dir in
-            sdkman) continue;;
-        esac
-    {
-        cd "$(x wsroot)/src/$dir" || continue
+        [ -d "$dir" ] || continue
+        for pkg in "$dir"/*; do
+            pkg="${pkg##*/}"
+            x:info "$pkg" >&2
+            version="$(___x_cmd_pkg_default_version "$pkg")"
+            printf "|%s/%s " "$category" "$pkg"
 
-        for pkg in *; do
-            {
-                echo $pkg >&2
-                version="$(___x_cmd_pkg_default_version $pkg)"
-                printf "|%s " "$pkg"
-                while read -r osarch; do
-                total=$(($total+1))
-                    url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.internet"  2>/dev/null)"
-                    if [ -z $url ]; then
-                        printf "| %s " "-"
-                        success=$(($success+1))
-                        continue
-                    fi
-                    time_code="$(curl -sSI -o /dev/null --max-time 1 --silent -w "%{time_connect}+%{http_code}"  "$url" 2>/dev/null)"
-                    code="${time_code#*+}"
-                    time="${time_code%+*}"
-                    if [ "$code" = "200" ] || [ "$code" = "302" ];then
-                        time="${time#*.}"
-                        time="${time%?}"
-                        time="${time#?}"
-                        time="${time#?}"
-                        printf "| %s(%sms)" "✅" "$time"
-                        success=$(($success+1))
-                    else
-                        printf "| %s(%s)" "❌" "${code:-"overtime"}"
-                        error=$(($error+1))
-                    fi
-                done <<A
-linux/x64
-linux/arm64
-darwin/x64
-darwin/arm64
-win/x64
-A
-     echo "|"
-            }
+            for osarch in linux/x64 linux/arm64 darwin/x64 darwin/arm64 win/x64; do
+                url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
+                [ -n "$url" ] || { printf "| %s " "-" ; continue ; }
+                eval "$(curl -sSI --max-time 10 -o /dev/null -w "http_code=%{http_code} ; time_total=%{time_total}" "$url")"
+                time_total=$(awk 'BEGIN{printf("%d\n",'"$time_total"'*1000)}')
+
+                case $http_code in
+                    200|302)    printf "| %s(%sms) " "✅" "$time_total";;
+                    000)        printf "| ❌(overtime)"
+                                x:error "url: $url, http_code: overtime";;
+                    *)          printf "| %s(%s)" "❌" "${http_code:-"overtime"}"
+                                x:error "url: $url, http_code: $http_code";;
+                esac
+            done
+
+            printf "|"
         done
-
-    }
-done
-success_rate=$(command awk -v success=$success -v total=$total ' BEGIN {rate = success/total*100; print rate}'  )
-printf "\ntotal:%s  success:%s  error:%s  success_rate:%s%" "$total" "$success" "$error" "$success_rate"
-) > $(x wsroot)/.x-cmd/dev/README.md
-
-generate_mdtable_local()(
-    x:info "Generate: markdown table"
-    printf "%s\n" "| candidate \\ osarch | linux/arm64 | darwin/arm64 | darwin/x64 | linux/x64 | win/x64 | 备注 |"
-    printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |"
-    cd "$(x wsroot)/.tmp" || return
-    find . -name meta.tt.json | while read -r line; do
-
-    pkg_name="${line%/meta.tt.json}"
-    pkg_name="${pkg_name##*/}"
-        cat "$line" | x ja -v NAME="$pkg_name"  '
-        BEGIN{
-            linux_x64 = "x"; linux_arm64 = "x";  darwin_arm64 = "x"; darwin_x64 = "x"; win_x64 = "x"
-        }
-        {
-            if ((O[1]=="\"rule\"") && (v() !~ /^[\{}]$/) && aa(NAME)) {
-                if(juq(K) ~ "*/linux/x64") linux_x64 = "ok"
-                if(juq(K) ~ "*/linux/arm64")  linux_arm64 = "ok"
-                if(juq(K) ~ "*/darwin/arm64")  darwin_arm64 = "ok"
-                if(juq(K) ~ "*/darwin/x64")  darwin_x64 = "ok"
-                if(juq(K) ~ "*/win/x64")  win_x64 = "ok"
-            }
-        }
-        END{
-
-            print "| " NAME  " | " linux_x64 " | "  linux_arm64 " | "  darwin_arm64 " | "  darwin_x64  " |  " win_x64 " |  "  "  |"
-        }
-        function aa(name){
-            if(name ~ "^node$|^scala$|^go$|^lua$|^java$"){
-                linux_x64 = "ok"; linux_arm64 = "ok";  darwin_arm64 = "ok"; darwin_x64 = "ok"; win_x64 = "ok"
-                return false
-            }else return true
-        }
-
-        '
-
-done
-) >  $(x wsroot)/.x-cmd/dev/README.md
-
-
-table(){
-    local op="$1";  shift
-    case "$op" in
-        *)             "generate_mdtable_$op" ;;
-    esac
+    done
 }
-[ "$#" -gt 0 ] && table "$@"
+
+if [ "$#" -eq 0 ] ; then
+    set -- "cn"
+fi
+
+local network="$1"
+local result_path; result_path="$(x wsroot)/doc/default_url/$network.md"
+x touch "$result_path"
+
+x:info "Generate: markdown table for $network network"
+generate_mdtable "$network" >"$result_path"
+
+
+
+

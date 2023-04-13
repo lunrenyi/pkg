@@ -1,0 +1,25 @@
+name: x pkg build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      github_token: ${{ secrets.MINIMUM_PRIVILEGE_TOKEN }}
+      ssh_key: ${{ secrets.REPO_SSH_KEY }}
+      git_user: tzw-my
+      git_email: tzw@x-cmd.com
+      repo_name: bit
+    steps:
+        - name: main
+          uses: x-cmd/action@main
+          with:
+            code: |
+              x exa ..
