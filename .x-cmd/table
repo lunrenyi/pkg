@@ -2,6 +2,7 @@
 generate_mdtable()(
     local network="$1"
 
+    x touch "$(x wsroot)/doc/README.$network.md"
     x:info "Generate: markdown table"
     printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 | 备注 |"
     printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |"
@@ -15,7 +16,7 @@ generate_mdtable()(
         for pkg in *; do
             (
                 x:info "$pkg" >&2
-                version="$(___x_cmd_pkg_default_version $pkg)"
+                version="$(___x_cmd_pkg_default_version "$pkg")"
                 printf "|%s " "$pkg"
                 while read -r osarch; do
                     url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
@@ -44,14 +45,13 @@ A
         done
 
     )
-done > $(x wsroot)/doc/README.md
+done > "$(x wsroot)/doc/README.$network.md"
 
 )
 
-x touch $(x wsroot)/doc/README.md
 if [ "$#" -gt 0 ] ; then
     generate_mdtable "$@"
 else
-    generate_mdtable "internet"
+    generate_mdtable "cn"
 fi
 
