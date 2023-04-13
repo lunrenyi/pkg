@@ -16,21 +16,43 @@ generate_mdtable(){
 
             for osarch in linux/x64 linux/arm64 darwin/x64 darwin/arm64 win/x64; do
                 url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
-                [ -n "$url" ] || { printf "| %s " "-" ; continue ; }
+                [ -n "$url" ] || { printf "| %s " "-"; count_num "$category" unsuport; continue;}
                 eval "$(curl -sSI --max-time 10 -o /dev/null -w "http_code=%{http_code} ; time_total=%{time_total}" "$url")"
                 time_total=$(awk 'BEGIN{printf("%d\n",'"$time_total"'*1000)}')
 
                 case $http_code in
-                    200|302)    printf "| %s(%sms) " "✅" "$time_total";;
-                    000)        printf "| ❌(overtime)"
-                                x:error "url: $url, http_code: overtime";;
-                    *)          printf "| %s(%s)" "❌" "${http_code:-"overtime"}"
+                    200|302)    printf "| %s(%sms) " "✅" "$time_total"; count_num "$category" pass ;;
+                    000)        printf "| ❌(timeout)"
+                                count_num "$category" error
+                                x:error "url: $url, http_code: timeout";;
+                    *)          printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
+                                count_num "$category" error
                                 x:error "url: $url, http_code: $http_code";;
                 esac
             done
 
-            printf "|"
+            printf "|\n"
         done
+    done
+}
+
+count_num(){
+    local category="$1"
+    local stat="$2"
+    local num=""; num="$(x sdict get pkg_url_test "$category/$stat")"
+    [ -n "$num" ] || num=0
+    x sdict put pkg_url_test "$category:$stat" "$((num+1))"
+}
+
+generate_result(){
+    printf "\n\n"
+    local dir ; local category; local pass ; local unsuport ; local error
+    for dir in "$(x wsroot)"/src/*; do
+        category="${dir##*/}"
+        pass="$(x sdict get pkg_url_test "$category/pass")"
+        unsuport="$(x sdict get pkg_url_test "$category/unsuport")"
+        error="$(x sdict get pkg_url_test "$category/error")"
+        printf "%s\n" "$category: total=$((${pass:-0}+${unsuport:-0}+${error:-0})) pass=${pass:-0} unsuport=${unsuport:-0} error=${error:-0} "
     done
 }
 
@@ -43,4 +65,7 @@ local result_path; result_path="$(x wsroot)/doc/default_url/$network.md"
 x touch "$result_path"
 
 x:info "Generate: markdown table for $network network"
-generate_mdtable "$network" >"$result_path"
+(
+    generate_mdtable "$network" >"$result_path"
+    generate_result  >>"$result_path"
+)
