@@ -1,15 +1,11 @@
-# shellcheck  #source
+# shellcheck shell=dash #source
 WSROOT="$(x wsroot)"
 
-
-f()(
-    cd "$(x wsroot)" || return 1
-    if [ -n "$CI" ]; then
-        git add "$(x wsroot)/.x-cmd/dev"
-        git commit -m "update pkg available url markdown. by $GITHUB_RUN_NUMBER"
-        git push git@github.com:x-cmd/pkg main
-    fi
-
+(
+cd "$(x wsroot)" || return 1
+if [ -n "$CI" ]; then
+    git add "$(x wsroot)/doc"
+    git commit -m "update pkg available url markdown. by $GITHUB_RUN_NUMBER"
+    git push git@github.com:x-cmd/pkg main
+fi
 )
-
-f
