@@ -1,5 +1,10 @@
 # shellcheck shell=sh disable=SC2154,SC2164,2046,2106,3043 #source
 generate_mdtable_net()(
+    local code
+    local time
+    success=0
+    error=0
+    total=0
     x:info "Generate: markdown table"
     printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 | 备注 |"
     printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |"
@@ -10,29 +15,36 @@ generate_mdtable_net()(
         case $dir in
             sdkman) continue;;
         esac
-    (
-        cd "$dir" || continue
+    {
+        cd "$(x wsroot)/src/$dir" || continue
 
         for pkg in *; do
-            (
+            {
                 echo $pkg >&2
                 version="$(___x_cmd_pkg_default_version $pkg)"
                 printf "|%s " "$pkg"
                 while read -r osarch; do
-                    url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.cn"  2>/dev/null)"
+                total=$(($total+1))
+                    url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.internet"  2>/dev/null)"
                     if [ -z $url ]; then
                         printf "| %s " "-"
+                        success=$(($success+1))
                         continue
                     fi
-                    return_code="$(curl --silent --max-time 5 -I "$url" | grep -E "^HTTP" | awk -F " " '{print $2}' | tail -n 1)"
-
-                    if [ "$return_code" = "200" ] || [ "$return_code" = "302" ];then
-                        printf "| %s " "✅"
+                    time_code="$(curl -sSI -o /dev/null --max-time 1 --silent -w "%{time_connect}+%{http_code}"  "$url" 2>/dev/null)"
+                    code="${time_code#*+}"
+                    time="${time_code%+*}"
+                    if [ "$code" = "200" ] || [ "$code" = "302" ];then
+                        time="${time#*.}"
+                        time="${time%?}"
+                        time="${time#?}"
+                        time="${time#?}"
+                        printf "| %s(%sms)" "✅" "$time"
+                        success=$(($success+1))
                     else
-                        printf "| %s(%s)" "❌" "${return_code:-"overtime"}"
-
+                        printf "| %s(%s)" "❌" "${code:-"overtime"}"
+                        error=$(($error+1))
                     fi
-
                 done <<A
 linux/x64
 linux/arm64
@@ -41,12 +53,13 @@ darwin/arm64
 win/x64
 A
      echo "|"
-            )
+            }
         done
 
-    )
+    }
 done
-
+success_rate=$(command awk -v success=$success -v total=$total ' BEGIN {rate = success/total*100; print rate}'  )
+printf "\ntotal:%s  success:%s  error:%s  success_rate:%s%" "$total" "$success" "$error" "$success_rate"
 ) > $(x wsroot)/.x-cmd/dev/README.md
 
 generate_mdtable_local()(
