@@ -85,10 +85,11 @@ generate_mdtable_local()(
         '
 
 done
-) >  $(x wsroot)/.x-cmd/dev/README.md
+) >  $(x wsroot)/doc/README.md
 
 
 table(){
+    x touch $(x wsroot)/doc/README.md
     local op="$1";  shift
     case "$op" in
         *)             "generate_mdtable_$op" ;;
