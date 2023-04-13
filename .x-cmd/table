@@ -21,13 +21,13 @@ generate_mdtable(){
                 time_total=$(awk 'BEGIN{printf("%d\n",'"$time_total"'*1000)}')
 
                 case $http_code in
-                    200|302)    printf "| %s(%sms) " "✅" "$time_total"; count_num "$category" pass ;;
-                    000)        printf "| ❌(timeout)"
-                                count_num "$category" error
-                                x:error "url: $url, http_code: timeout";;
-                    *)          printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
-                                count_num "$category" error
-                                x:error "url: $url, http_code: $http_code";;
+                    200|302|304)    printf "| %s(%sms) " "✅" "$time_total"; count_num "$category" pass ;;
+                    000)            printf "| ❌(timeout)"
+                                    count_num "$category" error
+                                    x:error "url: $url, http_code: timeout";;
+                    *)               printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
+                                    count_num "$category" error
+                                    x:error "url: $url, http_code: $http_code";;
                 esac
             done
 
