@@ -6,7 +6,7 @@ generate_mdtable(){
     local dir ; local pkg ; local version ; local osarch ; local url ; local http_code ; local time_total ; local category;
     for dir in "$(x wsroot)"/src/*; do
         category="${dir##*/}"
-
+        
         [ -d "$dir" ] || continue
         for pkg in "$dir"/*; do
             pkg="${pkg##*/}"
@@ -64,6 +64,20 @@ generate_result_one(){
         "$category" "$((${pass:-0}+${unsuport:-0}+${error:-0}))" "${pass:-0}" "${unsuport:-0}" "${error:-0}"
 }
 
+generate_sammury(){
+    local total ; local total_pass; local total_error; local total_unsuport; local _total=0 local _stat
+    for dir in "$(x wsroot)"/src/*; do
+        category="${dir##*/}"
+        for _stat in pass unsuport error;do
+            if [ "$_stat" = "pass" ]; then
+                _pass_total=$(x sdict get pkg_url_test "$category/pass")
+                total_pass="$(awk -v total_pass=$total_pass -v _pass_total=$_pass_total 'BEGIN{total_amount=0; total_amount = total_pass + _pass_total; printf("%s", total_amount)}')"
+            fi
+        done
+    done
+    printf "pass total:%s"   "$total_pass"
+}
+
 if [ "$#" -eq 0 ] ; then
     set -- "cn"
 fi
@@ -76,4 +90,5 @@ x:info "Generate: markdown table for $network network"
 (
     generate_mdtable "$network" >"$result_path"
     generate_result  >>"$result_path"
+    generate_sammury >>"$result_path"
 )
