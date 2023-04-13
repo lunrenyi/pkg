@@ -1,18 +1,19 @@
 # shellcheck shell=sh disable=SC2154,SC2164,2046,2106,3043 #source
-generate_mdtable()(
+generate_mdtable(){
     printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 |"
     printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- |"
-    cd $(x wsroot)/src
 
-    local dir ; local pkg ; local version ; local osarch ; local url ; local http_code ; local time_total
-    for dir in *; do
-    (
-        cd "$dir" || continue
-        for pkg in *; do
-        (
+    local dir ; local pkg ; local version ; local osarch ; local url ; local http_code ; local time_total ; local category
+    for dir in "$(x wsroot)"/src/*; do
+        category="${dir##*/}"
+
+        [ -d "$dir" ] || continue
+        for pkg in "$dir"/*; do
+            pkg="${pkg##*/}"
             x:info "$pkg" >&2
             version="$(___x_cmd_pkg_default_version "$pkg")"
-            printf "|%s " "$pkg"
+            printf "|%s/%s " "$category" "$pkg"
+
             for osarch in linux/x64 linux/arm64 darwin/x64 darwin/arm64 win/x64; do
                 url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
                 [ -n "$url" ] || { printf "| %s " "-" ; continue ; }
@@ -27,12 +28,11 @@ generate_mdtable()(
                                 x:error "url: $url, http_code: $http_code";;
                 esac
             done
-            echo "|"
-        )
+
+            printf "|"
         done
-    )
     done
-)
+}
 
 if [ "$#" -eq 0 ] ; then
     set -- "cn"
@@ -43,4 +43,4 @@ local result_path; result_path="$(x wsroot)/doc/default_url/$network.md"
 x touch "$result_path"
 
 x:info "Generate: markdown table for $network network"
-generate_mdtable "$network" > "$result_path"
+generate_mdtable "$network" >"$result_path"
