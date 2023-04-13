@@ -3,7 +3,7 @@ generate_mdtable()(
     local network="$1"
 
     x touch "$(x wsroot)/doc/README.$network.md"
-    x:info "Generate: markdown table"
+    x:info "Generate: markdown table for $network network"
     {
         printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 | 备注 |"
         printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |"
@@ -47,7 +47,7 @@ A
         done
 
     )
-done > "$(x wsroot)/doc/README.$network.md"
+done >> "$(x wsroot)/doc/README.$network.md"
 
 )
 
