@@ -4,8 +4,10 @@ generate_mdtable()(
 
     x touch "$(x wsroot)/doc/README.$network.md"
     x:info "Generate: markdown table"
-    printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 | 备注 |"
-    printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |"
+    {
+        printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 | 备注 |"
+        printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |"
+    } > "$(x wsroot)/doc/README.$network.md"
 
     cd $(x wsroot)/src
 
