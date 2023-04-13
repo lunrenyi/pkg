@@ -10,7 +10,7 @@ generate_mdtable(){
         [ -d "$dir" ] || continue
         for pkg in "$dir"/*; do
             pkg="${pkg##*/}"
-            x:info "$pkg" >&2
+            x:info "$category/$pkg" >&2
             version="$(___x_cmd_pkg_default_version "$pkg")"
             printf "|%s/%s " "$category" "$pkg"
 
@@ -33,7 +33,7 @@ generate_mdtable(){
 
             printf "|\n"
         done
-        generate_result
+        generate_result_one "$category"
     done
 }
 
@@ -47,14 +47,20 @@ count_num(){
 
 generate_result(){
     printf "\n\n"
-    local dir ; local category; local pass ; local unsuport ; local error
+    local dir ; local category;
     for dir in "$(x wsroot)"/src/*; do
         category="${dir##*/}"
-        pass="$(x sdict get pkg_url_test "$category/pass")"
-        unsuport="$(x sdict get pkg_url_test "$category/unsuport")"
-        error="$(x sdict get pkg_url_test "$category/error")"
-        printf "%s  \n" "$category: total=$((${pass:-0}+${unsuport:-0}+${error:-0})) pass=${pass:-0} unsuport=${unsuport:-0} error=${error:-0} "
+        generate_result_one "$category"
     done
+}
+
+generate_result_one(){
+    local pass ; local unsuport ; local error
+    local category="$1"
+    pass="$(x sdict get pkg_url_test "$category/pass")"
+    unsuport="$(x sdict get pkg_url_test "$category/unsuport")"
+    error="$(x sdict get pkg_url_test "$category/error")"
+    printf "%s  \n" "$category: total=$((${pass:-0}+${unsuport:-0}+${error:-0})) pass=${pass:-0} unsuport=${unsuport:-0} error=${error:-0}"
 }
 
 if [ "$#" -eq 0 ] ; then
