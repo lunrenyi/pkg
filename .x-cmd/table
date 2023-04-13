@@ -17,7 +17,7 @@ generate_mdtable()(
                 url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
                 [ -n "$url" ] || { printf "| %s " "-" ; continue ; }
                 eval "$(curl -sSI --max-time 10 -o /dev/null -w "http_code=%{http_code} ; time_total=%{time_total}" "$url")"
-                time_total=$(echo $((time_total * 1000)) | awk '{printf("%d\n",$1)}')
+                time_total=$(awk 'BEGIN{printf("%d\n",'"$time_total"'*1000)}')
 
                 case $http_code in
                     200|302)    printf "| %s(%sms) " "✅" "$time_total";;
@@ -39,6 +39,8 @@ if [ "$#" -eq 0 ] ; then
 fi
 
 local network="$1"
-x touch "$(x wsroot)/doc/README.$network.md"
+local result_path; result_path="$(x wsroot)/doc/default_url/$network.md"
+x touch "$result_path"
+
 x:info "Generate: markdown table for $network network"
-generate_mdtable "$network" > "$(x wsroot)/doc/README.$network.md"
+generate_mdtable "$network" > "$result_path"
