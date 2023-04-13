@@ -1,59 +1,44 @@
 # shellcheck shell=sh disable=SC2154,SC2164,2046,2106,3043 #source
 generate_mdtable()(
-    local network="$1"
-
-    x touch "$(x wsroot)/doc/README.$network.md"
-    x:info "Generate: markdown table for $network network"
-    {
-        printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 | 备注 |"
-        printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- | ---- |"
-    } > "$(x wsroot)/doc/README.$network.md"
-
+    printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 |"
+    printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- |"
     cd $(x wsroot)/src
 
+    local dir ; local pkg ; local version ; local osarch ; local url ; local http_code ; local time_total
     for dir in *; do
     (
         cd "$dir" || continue
-
         for pkg in *; do
-            (
-                x:info "$pkg" >&2
-                version="$(___x_cmd_pkg_default_version "$pkg")"
-                printf "|%s " "$pkg"
-                while read -r osarch; do
-                    url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
-                    if [ -z "$url" ]; then
-                        printf "| %s " "-"
-                        continue
-                    fi
-                    return_code="$(curl -sSI --max-time 10 -o /dev/null -w "%{http_code}" "$url")"
+        (
+            x:info "$pkg" >&2
+            version="$(___x_cmd_pkg_default_version "$pkg")"
+            printf "|%s " "$pkg"
+            for osarch in linux/x64 linux/arm64 darwin/x64 darwin/arm64 win/x64; do
+                url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
+                [ -n "$url" ] || { printf "| %s " "-" ; continue ; }
+                eval "$(curl -sSI --max-time 10 -o /dev/null -w "http_code=%{http_code} ; time_total=%{time_total}" "$url")"
+                time_total=$(echo $((time_total * 1000)) | awk '{printf("%d\n",$1)}')
 
-                    case $return_code in
-                        200|302) printf "| %s " "✅";;
-                        *)
-                            printf "| %s(%s)" "❌" "${return_code:-"overtime"}"
-                            x:error "url: $url, return_code: $return_code"
-                            ;;
-                    esac
-                done <<A
-linux/x64
-linux/arm64
-darwin/x64
-darwin/arm64
-win/x64
-A
-     echo "|"
-            )
+                case $http_code in
+                    200|302)    printf "| %s(%sms) " "✅" "$time_total";;
+                    000)        printf "| ❌(overtime)"
+                                x:error "url: $url, http_code: overtime";;
+                    *)          printf "| %s(%s)" "❌" "${http_code:-"overtime"}"
+                                x:error "url: $url, http_code: $http_code";;
+                esac
+            done
+            echo "|"
+        )
         done
-
     )
-done >> "$(x wsroot)/doc/README.$network.md"
-
+    done
 )
 
-if [ "$#" -gt 0 ] ; then
-    generate_mdtable "$@"
-else
-    generate_mdtable "cn"
+if [ "$#" -eq 0 ] ; then
+    set -- "cn"
 fi
 
+local network="$1"
+x touch "$(x wsroot)/doc/README.$network.md"
+x:info "Generate: markdown table for $network network"
+generate_mdtable "$network" > "$(x wsroot)/doc/README.$network.md"
