@@ -15,24 +15,24 @@ generate_mdtable_net()(
 
         for pkg in *; do
             (
-                echo $pkg >&2
+                x:info "$pkg" >&2
                 version="$(___x_cmd_pkg_default_version $pkg)"
                 printf "|%s " "$pkg"
                 while read -r osarch; do
                     url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.cn"  2>/dev/null)"
-                    if [ -z $url ]; then
+                    if [ -z "$url" ]; then
                         printf "| %s " "-"
                         continue
                     fi
-                    return_code="$(curl --silent --max-time 5 -I "$url" | grep -E "^HTTP" | awk -F " " '{print $2}' | tail -n 1)"
+                    return_code="$(curl -sSI --max-time 10 -o /dev/null -w "%{http_code}" "$url")"
 
-                    if [ "$return_code" = "200" ] || [ "$return_code" = "302" ];then
-                        printf "| %s " "✅"
-                    else
-                        printf "| %s(%s)" "❌" "${return_code:-"overtime"}"
-
-                    fi
-
+                    case $return_code in
+                        200|302) printf "| %s " "✅";;
+                        *)
+                            printf "| %s(%s)" "❌" "${return_code:-"overtime"}"
+                            x:error "url: $url, return_code: $return_code"
+                            ;;
+                    esac
                 done <<A
 linux/x64
 linux/arm64
@@ -47,7 +47,7 @@ A
     )
 done
 
-) > $(x wsroot)/.x-cmd/dev/README.md
+) > $(x wsroot)/doc/README.md
 
 generate_mdtable_local()(
     x:info "Generate: markdown table"
