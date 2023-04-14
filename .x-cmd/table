@@ -25,7 +25,7 @@ generate_mdtable(){
                     000)            printf "| ❌(timeout)"
                                     count_num "$category" error
                                     x:error "url: $url, http_code: timeout";;
-                    *)               printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
+                    *)              printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
                                     count_num "$category" error
                                     x:error "url: $url, http_code: $http_code";;
                 esac

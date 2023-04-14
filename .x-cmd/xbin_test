@@ -1,0 +1,163 @@
+# shellcheck shell=sh disable=SC2154,SC2164,2046,2106,3043 #source
+generate_xbin_test_mdtable(){
+    printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 |"
+    printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- |"
+
+    local dir ; local pkg ; local version ; local osarch ; local url ; local http_code ; local time_total ; local category;
+    for dir in "$(x wsroot)"/src/*; do
+        category="${dir##*/}"
+        case $category in
+            lang|sdkman|osman|media|plugin) continue;;
+        esac
+        [ -d "$dir" ] || continue
+        for pkg in "$dir"/*; do
+            pkg="${pkg##*/}"
+            x:info "$category/$pkg" >&2
+            version="$(___x_cmd_pkg_default_version "$pkg")"
+            printf "|%s/%s " "$category" "$pkg"
+
+            for osarch in linux/x64 linux/arm64 darwin/x64 darwin/arm64 win/x64; do
+                url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
+                [ -n "$url" ] || { printf "| %s " "-"; count_num "$category" unsupport; continue;}
+                eval "$(curl -sSI --max-time 10 -o /dev/null -w "http_code=%{http_code} ; time_total=%{time_total}" "$url")"
+                case $http_code in
+                    200|302|304)    test_xbin "$pkg" "$version" "$osarch" "$url";;
+                    000)            printf "| ❌(timeout)"
+                                    count_num "$category" error
+                                    x:error "url: $url, http_code: timeout";;
+                    *)              printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
+                                    count_num "$category" error
+                                    x:error "url: $url, http_code: $http_code";;
+                esac
+            done
+            printf "|\n"
+        done
+        x:info "$(generate_result_one "$category")"
+    done
+}
+
+test_xbin(){
+    local name="$1" ; local version="$2" ; local osarch="$3" ; local url="$4" ; local os; local arch ; local bin_path; local size
+    arch=${osarch#*/} ; os=${osarch%/*}
+    ___X_CMD_OS_NAME_=$os; ___X_CMD_OS_ARCH_=$arch;
+
+    (
+        if x pkg download "$name"; then
+            local file_suffix unpack_way
+            ___x_cmd_pkg___attr "$name" "$version" "$osarch" "file_suffix,unpack_way"
+            local unpack_dir="$___X_CMD_PKG_DOWNLOAD_PATH/$name/$version"
+            local tgt="$___X_CMD_PKG_INSTALL_PATH/$name/$version"
+
+            if [ "$unpack_way" = "non_unpack" ]; then
+                local ball="$___X_CMD_PKG_DOWNLOAD_PATH/$name/$name.$os.$arch"
+            else
+                local ball="$___X_CMD_PKG_DOWNLOAD_PATH/$name/$version.$file_suffix"
+            fi
+
+            ___x_cmd_pkg___attr "$name" "$version" "$osarch" "static-build"
+
+
+            if [  -n "${static-build}" ]; then
+
+                bin_path=$(x pkg xbin path "$name" "$version")
+                if [ -f "$bin_path" ]; then
+                    size=$(ls -lh $bin_path | awk '{printf("%s", $5)}')
+                    printf "| %s(%s) " "✅" "$size"; count_num "$category" pass
+                else
+                    printf "| %s(%s)" "❌" "Not found path"
+                    x:error "pkg: $name, os/arch: $osarch  Not found path"
+                    count_num "$category" error
+                    return
+
+                fi
+            fi
+
+            size=$(ls -lh $ball | awk '{printf("%s", $5)}')
+
+            if [ "$unpack_way" = "unpack_copy_to_target_dir" ]; then
+                local unpack_dir="$___X_CMD_PKG_DOWNLOAD_PATH/$name/$version"
+                $(time x uz "$ball" "$unpack_dir" 1>/dev/null) || {
+                printf "| %s(%s)" "❌" "Fail to unzip"
+                x:error "pkg: $name, os/arch: $osarch   Fail to unzip1"
+                count_num "$category" error
+                return
+                }
+                x rmrf "$tgt"
+                mkdir -p "$tgt"
+                mv -f "$unpack_dir"/*/* "$tgt"
+                x rmrf "$unpack_dir"
+            elif [ "$unpack_way" = "non_unpack" ]; then
+                local ball="$___X_CMD_PKG_DOWNLOAD_PATH/$name"
+                mkdir -p "$tgt"
+                pkg:debug "Moving $ball to $tgt"
+                mv -f "$ball"/* "$tgt"
+            else
+                pkg:info "Unpack - '$ball to $tgt'"
+                x uz "$ball" "$tgt"  ||  {
+                printf "| %s(%s)" "❌" "Fail to unzip"
+                x:error "pkg: $name, os/arch: $osarch   Fail to unzip2"
+                count_num "$category" error
+                return
+                }
+            fi
+
+            bin_path=$(x pkg xbin path "$name" "$version")
+            if [ -f "$bin_path" ]; then
+                printf "| %s(%s) " "✅" "$size"; count_num "$category" pass
+            else
+                printf "| %s(%s)" "❌" "Not found path"
+                x:error "pkg: $name, os/arch: $osarch  Not found path"
+                count_num "$category" error
+                return
+
+            fi
+
+        else
+            printf "| %s(%s)" "❌" "File corrupted."
+            count_num "$category" error
+            return
+        fi
+    )
+}
+
+generate_result(){
+    printf "\n\n"
+    local dir ; local category;
+    for dir in "$(x wsroot)"/src/*; do
+        category="${dir##*/}"
+        generate_result_one "$category"
+    done
+}
+
+generate_result_one(){
+    local pass ; local unsupport ; local error
+    local category="$1"
+    pass="$(x sdict get pkg_xbin_test "$category/pass")"
+    unsupport="$(x sdict get pkg_xbin_test "$category/unsupport")"
+    error="$(x sdict get pkg_xbin_test "$category/error")"
+    printf "%s: total=%s pass=%s unsupport=%s error=%s  \n" \
+        "$category" "$((${pass:-0}+${unsupport:-0}+${error:-0}))" "${pass:-0}" "${unsupport:-0}" "${error:-0}"
+}
+
+
+count_num(){
+    local category="$1"
+    local stat="$2"
+    local num=""; num="$(x sdict get pkg_xbin_test "$category/$stat")"
+    [ -n "$num" ] || num=0
+    x sdict put pkg_xbin_test "$category/$stat" "$((num+1))"
+}
+
+if [ "$#" -eq 0 ] ; then
+    set -- "cn"
+fi
+
+local network="$1"
+local result_path; result_path="$(x wsroot)/doc/xbin_test/$network.md"
+x touch "$result_path"
+
+x:info "Generate: markdown table for $network network"
+(
+    generate_xbin_test_mdtable "$network" >"$result_path"
+    generate_result  >>"$result_path"
+)

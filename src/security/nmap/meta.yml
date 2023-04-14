@@ -31,6 +31,7 @@ rule:
   "*/darwin/x64":
     zipname:    nmap.darwin.x64.7z
   "*/win/x64":
-    zipname:    nmap.win.x64.exe.7z
-    bin_suffix: .exe
+    url:
+      internet: "%{gh_url}/%{zipname}"
+      cn: ""
 
