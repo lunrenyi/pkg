@@ -6,7 +6,7 @@ generate_mdtable(){
     local dir ; local pkg ; local version ; local osarch ; local url ; local http_code ; local time_total ; local category;
     for dir in "$(x wsroot)"/src/*; do
         category="${dir##*/}"
-        
+
         [ -d "$dir" ] || continue
         for pkg in "$dir"/*; do
             pkg="${pkg##*/}"
@@ -85,7 +85,7 @@ generate_sammury(){
     done
     total="$(awk  'BEGIN{printf("%d\n",'"$total_unsuport"'+ '"$total_error"'+ '"$total_pass"' )}')"
     success_rate="$( total=$total  unsupport="$total_unsuport" pass="$total_pass" command awk 'BEGIN{ success= ENVIRON[ "unsupport" ] + ENVIRON[ "pass" ]; rate = success / ENVIRON["total"]; printf("%d", rate*100) }')"
-    printf "total:%s  total pass :%s  total error:%s  total unsupport:%s  success rate:%s%% "  "$total" "$total_pass" "$total_error" "$total_unsuport" "$success_rate"
+    printf "total:%s  total pass :%s  total unsupport:%s  total error:%s  success rate:%s%% "  "$total" "$total_pass" "$total_unsuport" "$total_error" "$success_rate"
 }
 
 if [ "$#" -eq 0 ] ; then
