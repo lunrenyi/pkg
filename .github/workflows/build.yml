@@ -1,7 +1,7 @@
 
 name: Bundle x-cmd pkg
 on:
-  # push:
+  push:
   #   branches:
   #     - main
   schedule:
@@ -24,10 +24,8 @@ jobs:
         uses: x-cmd/action@main
         with:
           code: |
-            xrc pkg && xws table internet && \
-            git add "$(x wsroot)"     && \
-            git commit -m "update pkg available url markdown. by $GITHUB_RUN_NUMBER" && \
-            git push git@github.com:x-cmd/pkg main && git push git@gitee.com:x-cmd/pkg main
+            xws push
+
 
 
 
