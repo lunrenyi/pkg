@@ -16,7 +16,7 @@ generate_mdtable(){
 
             for osarch in linux/x64 linux/arm64 darwin/x64 darwin/arm64 win/x64; do
                 url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
-                [ -n "$url" ] || { printf "| %s " "-"; count_num "$category" unsuport; continue;}
+                [ -n "$url" ] || { printf "| %s " "-"; count_num "$category" unsupport; continue;}
                 eval "$(curl -sSI --max-time 10 -o /dev/null -w "http_code=%{http_code} ; time_total=%{time_total}" "$url")"
                 time_total=$(awk 'BEGIN{printf("%d\n",'"$time_total"'*1000)}')
 
@@ -55,27 +55,37 @@ generate_result(){
 }
 
 generate_result_one(){
-    local pass ; local unsuport ; local error
+    local pass ; local unsupport ; local error
     local category="$1"
     pass="$(x sdict get pkg_url_test "$category/pass")"
-    unsuport="$(x sdict get pkg_url_test "$category/unsuport")"
+    unsupport="$(x sdict get pkg_url_test "$category/unsupport")"
     error="$(x sdict get pkg_url_test "$category/error")"
-    printf "%s: total=%s pass=%s unsuport=%s error=%s  \n" \
-        "$category" "$((${pass:-0}+${unsuport:-0}+${error:-0}))" "${pass:-0}" "${unsuport:-0}" "${error:-0}"
+    printf "%s: total=%s pass=%s unsupport=%s error=%s  \n" \
+        "$category" "$((${pass:-0}+${unsupport:-0}+${error:-0}))" "${pass:-0}" "${unsupport:-0}" "${error:-0}"
 }
 
 generate_sammury(){
-    local total ; local total_pass; local total_error; local total_unsuport; local _total=0 local _stat
+    local total ; local total_pass; local _total_pass; local total_error; local _total_error; local _total_unsuport; local success_rate
     for dir in "$(x wsroot)"/src/*; do
         category="${dir##*/}"
-        for _stat in pass unsuport error;do
+        for _stat in pass unsupport error;do
             if [ "$_stat" = "pass" ]; then
                 _pass_total=$(x sdict get pkg_url_test "$category/pass")
-                total_pass="$(awk -v total_pass=$total_pass -v _pass_total=$_pass_total 'BEGIN{total_amount=0; total_amount = total_pass + _pass_total; printf("%s", total_amount)}')"
+                total_pass="$(awk -v total_pass=$total_pass -v _pass_total=$_pass_total 'BEGIN{ total_amount = total_pass + _pass_total; printf("%s", total_amount)}')"
+            fi
+            if [ "$_stat" = "error" ]; then
+                _tota_error=$(x sdict get pkg_url_test "$category/error")
+                total_error="$(awk -v total_error=$total_error -v _tota_error=$_tota_error 'BEGIN{ total_amount = total_error + _tota_error; printf("%s", total_amount)}')"
+            fi
+            if [ "$_stat" = "unsupport" ]; then
+                _total_unsupport=$(x sdict get pkg_url_test "$category/unsupport")
+                total_unsuport="$(awk -v total_unsuport=$total_unsuport -v _total_unsupport=$_total_unsupport 'BEGIN{ total_amount = total_unsuport + _total_unsupport; printf("%s", total_amount)}')"
             fi
         done
     done
-    printf "pass total:%s"   "$total_pass"
+    total="$(awk  'BEGIN{printf("%d\n",'"$total_unsuport"'+ '"$total_error"'+ '"$total_pass"' )}')"
+    success_rate="$( total=$total  unsupport="$total_unsuport" pass="$total_pass" command awk 'BEGIN{ success= ENVIRON[ "unsupport" ] + ENVIRON[ "pass" ]; rate = success / ENVIRON["total"]; printf("%d", rate*100) }')"
+    printf "total:%s  total pass :%s  total error:%s  total unsupport:%s  success rate:%s%% "  "$total" "$total_pass" "$total_error" "$total_unsuport" "$success_rate"
 }
 
 if [ "$#" -eq 0 ] ; then
