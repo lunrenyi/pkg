@@ -41,7 +41,7 @@ test_xbin(){
     arch=${osarch#*/} ; os=${osarch%/*}
     ___X_CMD_OS_NAME_=$os; ___X_CMD_OS_ARCH_=$arch;
 
-    (
+    {
         if x pkg download "$name"; then
             local file_suffix unpack_way
             ___x_cmd_pkg___attr "$name" "$version" "$osarch" "file_suffix,unpack_way"
@@ -54,15 +54,13 @@ test_xbin(){
                 local ball="$___X_CMD_PKG_DOWNLOAD_PATH/$name/$version.$file_suffix"
             fi
 
-            ___x_cmd_pkg___attr "$name" "$version" "$osarch" "static-build"
 
-
-            if [  -n "${static-build}" ]; then
-
+            if [  "$name" = "nmap" ] || [  "$name" = "nping" ] || [  "$name" = "ncat" ] || [  "$name" = "traceroute" ]; then
                 bin_path=$(x pkg xbin path "$name" "$version")
                 if [ -f "$bin_path" ]; then
                     size=$(ls -lh $bin_path | awk '{printf("%s", $5)}')
                     printf "| %s(%s) " "✅" "$size"; count_num "$category" pass
+                    return
                 else
                     printf "| %s(%s)" "❌" "Not found path"
                     x:error "pkg: $name, os/arch: $osarch  Not found path"
@@ -76,7 +74,7 @@ test_xbin(){
 
             if [ "$unpack_way" = "unpack_copy_to_target_dir" ]; then
                 local unpack_dir="$___X_CMD_PKG_DOWNLOAD_PATH/$name/$version"
-                $(time x uz "$ball" "$unpack_dir" 1>/dev/null) || {
+                x uz "$ball" "$unpack_dir" 1>/dev/null || {
                 printf "| %s(%s)" "❌" "Fail to unzip"
                 x:error "pkg: $name, os/arch: $osarch   Fail to unzip1"
                 count_num "$category" error
@@ -104,9 +102,10 @@ test_xbin(){
             bin_path=$(x pkg xbin path "$name" "$version")
             if [ -f "$bin_path" ]; then
                 printf "| %s(%s) " "✅" "$size"; count_num "$category" pass
+                return
             else
                 printf "| %s(%s)" "❌" "Not found path"
-                x:error "pkg: $name, os/arch: $osarch  Not found path"
+                x:error "pkg: $name, os/arch: $osarch  Not found path:$bin_path"
                 count_num "$category" error
                 return
 
@@ -117,7 +116,7 @@ test_xbin(){
             count_num "$category" error
             return
         fi
-    )
+    }
 }
 
 generate_result(){
