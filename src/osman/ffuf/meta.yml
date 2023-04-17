@@ -33,5 +33,4 @@ rule:
     zipname:    ffuf_2.0.0_linux_arm64.tar.xz
   "*/win/x64":
     zipname:    ffuf_2.0.0_windows_amd64.tar.xz
-
     bin_suffix: .exe
