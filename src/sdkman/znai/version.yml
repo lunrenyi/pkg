@@ -1,0 +1,11 @@
+"1.63":
+  linux/x64:
+    sha256: 4d9c1d0a2897f2639b4ad3c36cb53d0078eb0ca6e4be8266e7af822ce6a89f6e
+  linux/arm64:
+    sha256: 4d9c1d0a2897f2639b4ad3c36cb53d0078eb0ca6e4be8266e7af822ce6a89f6e
+  dawin/arm64:
+    sha256: 4d9c1d0a2897f2639b4ad3c36cb53d0078eb0ca6e4be8266e7af822ce6a89f6e
+  darwin/x64:
+    sha256: 4d9c1d0a2897f2639b4ad3c36cb53d0078eb0ca6e4be8266e7af822ce6a89f6e
+  win/x64:
+    sha256: 4d9c1d0a2897f2639b4ad3c36cb53d0078eb0ca6e4be8266e7af822ce6a89f6e
