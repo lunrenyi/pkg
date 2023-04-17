@@ -29,6 +29,8 @@ rule:
     zipname:    grex-v1.4.1-x86_64-apple-darwin.tar.xz
   "*/linux/x64":
     zipname:    grex-v1.4.1-x86_64-unknown-linux-musl.tar.xz
+  "*/linux/arm64":
+    zipname:    grex-v1.4.1-x86_64-unknown-linux-musl.tar.xz
   "*/win/x64":
     zipname:    grex-v1.4.1-x86_64-pc-windows-msvc.tar.xz
 

@@ -33,5 +33,4 @@ rule:
     zipname:    goreleaser_Linux_x86_64.tar.xz
   "*/win/x64":
     zipname:    goreleaser_Windows_x86_64.tar.xz
-
     bin_suffix: .exe
