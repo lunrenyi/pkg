@@ -1,5 +1,6 @@
 
 case "$1" in
     pkg)        shift; . "$(x wsroot)/.x-cmd/pkg" "$@" ;;
+    install)    shift; xws pkg install ;;
     *)          x yanfa mod "$@" ;;
 esac
