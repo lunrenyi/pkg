@@ -35,5 +35,4 @@ rule:
     zipname:    gitleaks_8.16.2_linux_arm64.tar.xz
   "*/win/x64":
     zipname:    gitleaks_8.16.2_windows_x64.tar.xz
-
     bin_suffix: .exe
