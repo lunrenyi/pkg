@@ -1,7 +1,7 @@
 
 name: Bundle x-cmd pkg
 on:
-  # push:
+  push:
   #   branches:
   #     - main
   schedule:
@@ -24,8 +24,7 @@ jobs:
         uses: x-cmd/action@main
         with:
           code: |
-            xws pkg yml2tgz && xws push all
-
+            xrc pkg &&  xws table internet && xws xbin_test internet && xws push test
 
 
 

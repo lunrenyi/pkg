@@ -1,12 +1,35 @@
 # shellcheck shell=dash #source
 WSROOT="$(x wsroot)"
 
-(
-cd "$(x wsroot)" || return 1
-if [ -n "$CI" ]; then
-    git add "$(x wsroot)/doc"
-    git commit -m "update pkg available url markdown. by $GITHUB_RUN_NUMBER"
-    git push git@github.com:x-cmd/pkg main
-    # git push git@gitee.com:x-cmd/pkg main
-fi
-)
+___x_test(){
+    (
+    cd "$(x wsroot)" || return 1
+    if [ -n "$CI" ]; then
+        git add "$(x wsroot)/doc"
+        git commit -m "update pkg available url markdown. by $GITHUB_RUN_NUMBER"
+        git push git@github.com:x-cmd/pkg main
+        # git push git@gitee.com:x-cmd/pkg main
+    fi
+    )
+}
+
+___x_all(){
+    (
+    cd "$(x wsroot)" || return 1
+    if [ -n "$CI" ]; then
+        git add "$(x wsroot)"
+        git commit -m "update pkg all.7z. by $GITHUB_RUN_NUMBER"
+        git push git@github.com:x-cmd/pkg main
+        git push git@gitee.com:x-cmd/pkg main
+    fi
+    )
+}
+
+push(){
+    local op="$1";  shift
+    case "$op" in
+        *)             "___x_$op" "$@" ;;
+    esac
+}
+
+push "$@"
