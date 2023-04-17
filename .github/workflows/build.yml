@@ -24,7 +24,7 @@ jobs:
         uses: x-cmd/action@main
         with:
           code: |
-            xrc pkg && xws xbin_test internet && \
+            xrc pkg &&  xws table internet && xws xbin_test internet && \
             git add "$(x wsroot)/doc"     && \
             git commit -m "update pkg available url markdown. by $GITHUB_RUN_NUMBER" &&
             xws push
