@@ -28,6 +28,6 @@ rule:
   "*/linux/arm64":
     zipname:    upx-4.0.2-arm64_linux.tar.xz
   "*/win/x64":
-    zipname:    upx-4.0.2-win64.zip
-    file_suffix: zip
+    zipname:    upx-4.0.2-win64.tar.xz
+
     bin_suffix: .exe

@@ -4,7 +4,7 @@ rely: []
 
 gh_url: https://github.com/x-cmd-build/tokei/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/tokei/-/releases/%{version}/downloads
-file_suffix: 7z
+file_suffix: tar.xz
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
@@ -24,11 +24,11 @@ rule:
     version: v0.0.0
 
   "*/darwin/x64":
-    zipname:    tokei-x86_64-apple-darwin.tar.gz
+    zipname:    tokei-x86_64-apple-darwin.tar.xz
   "*/linux/x64":
-    zipname:    tokei-x86_64-unknown-linux-gnu.tar.gz
+    zipname:    tokei-x86_64-unknown-linux-gnu.tar.xz
   "*/linux/arm64":
-    zipname:    tokei-aarch64-unknown-linux-gnu.tar.gz
+    zipname:    tokei-aarch64-unknown-linux-gnu.tar.xz
   "*/win/x64":
     zipname:    tokei-x86_64-pc-windows-msvc.exe
     bin_suffix: .exe

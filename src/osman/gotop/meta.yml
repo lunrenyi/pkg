@@ -32,6 +32,6 @@ rule:
   "*/linux/arm64":
     zipname:    gotop_v4.2.0_linux_arm64.tgz
   "*/win/x64":
-    zipname:    gotop_v4.2.0_windows_amd64.zip
-    file_suffix: zip
+    zipname:    gotop_v4.2.0_windows_amd64.tar.xz
+
     bin_suffix: .exe

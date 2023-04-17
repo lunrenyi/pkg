@@ -4,7 +4,7 @@ rely: []
 
 gh_url: https://github.com/x-cmd-build/kind/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/kind/-/releases/%{version}/downloads
-file_suffix: 7z
+file_suffix: tar.xz
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"

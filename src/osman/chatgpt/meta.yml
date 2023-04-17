@@ -4,7 +4,7 @@ rely: []
 
 gh_url: https://github.com/x-cmd-build/chatgpt/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/chatgpt/-/releases/%{version}/downloads
-file_suffix: tar.gz
+file_suffix: tar.xz
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
@@ -25,14 +25,14 @@ rule:
 
 
   "*/darwin/arm64":
-    zipname:    chatgpt_Darwin_arm64.tar.gz
+    zipname:    chatgpt_Darwin_arm64.tar.xz
   "*/darwin/x64":
-    zipname:    chatgpt_Darwin_x86_64.tar.gz
+    zipname:    chatgpt_Darwin_x86_64.tar.xz
   "*/linux/x64":
-    zipname:    chatgpt_Linux_x86_64.tar.gz
+    zipname:    chatgpt_Linux_x86_64.tar.xz
   "*/linux/arm64":
-    zipname:    chatgpt_Linux_arm64.tar.gz
+    zipname:    chatgpt_Linux_arm64.tar.xz
   "*/win/x64":
-    zipname:    chatgpt_Windows_x86_64.zip
-    file_suffix: zip
+    zipname:    chatgpt_Windows_x86_64.tar.xz
+
     bin_suffix: .exe
