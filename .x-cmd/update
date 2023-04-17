@@ -1,0 +1,10 @@
+# shellcheck shell=dash #source
+
+___x_update(){
+    meta_path=$(find $(x wsroot)/src/*/$1/meta.yml)
+
+    cat $meta_path | x y2j | x ja t "\t" > $___X_CMD_PKG_BASE_PATH/raw/*/$1/meta.tt.json
+    pkg:info "update success"
+}
+
+___x_update $@
