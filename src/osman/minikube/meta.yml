@@ -25,9 +25,9 @@ rule:
 
 
   "*/darwin/x64":
-    zipname:    minikube-linux-amd64.tar.xz
+    zipname:    minikube-darwin-amd64.tar.xz
   "*/darwin/arm64":
-    zipname:    minikube-linux-arm64.tar.xz
+    zipname:    minikube-darwin-arm64.tar.xz
   "*/linux/x64":
     zipname:    minikube-linux-amd64.tar.xz
   "*/linux/arm64":

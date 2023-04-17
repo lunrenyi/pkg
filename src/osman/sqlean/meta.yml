@@ -30,6 +30,8 @@ rule:
     zipname:    sqlean-macos-x86.tar.xz
   "*/linux/x64":
     zipname:    sqlean-linux-x86.tar.xz
+  "*/linux/arm64":
+    zipname:    sqlean-linux-x86.tar.xz
   "*/win/x64":
     zipname:    sqlean-win-x64.tar.xz
     bin_suffix: .exe

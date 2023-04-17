@@ -30,3 +30,5 @@ rule:
     zipname:    mirrord_linux_aarch64.tar.xz
   "*/darwin/x64":
     zipname:    mirrord_mac_universal.tar.xz
+  "*/darwin/arm64":
+    zipname:    mirrord_mac_universal.tar.xz

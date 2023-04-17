@@ -34,5 +34,4 @@ rule:
     zipname:    lazygit_0.37.0_Linux_arm64.tar.xz
   "*/win/x64":
     zipname:    lazygit_0.37.0_Windows_x86_64.tar.xz
-
     bin_suffix: .exe

@@ -33,5 +33,4 @@ rule:
     zipname:    helix-23.03-aarch64-linux.tar.xz
   "*/win/x64":
     zipname:    helix-23.03-x86_64-windows.tar.xz
-
     bin_suffix: .exe

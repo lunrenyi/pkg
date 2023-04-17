@@ -33,5 +33,4 @@ rule:
     zipname:    micro-2.0.11-linux-arm64.tar.xz
   "*/win/x64":
     zipname:    micro-2.0.11-win64.tar.xz
-
     bin_suffix: .exe

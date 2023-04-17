@@ -2,15 +2,15 @@ homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
-gh_url: https://github.com/x-cmd-build/kubectx/download/%{version}
-gc_url: https://gitcode.net/x-cmd-build/kubectx/-/releases/%{version}/downloads
+gh_url: https://github.com/x-cmd-build/kube-capacity/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/kube-capacity/-/releases/%{version}/downloads
 file_suffix: tar.xz
 url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  kubectx: kubectx.%{os}.%{arch}%{bin_suffix}
+  kube-capacity: kube-capacity.%{os}.%{arch}%{bin_suffix}
 
 
 rule:
@@ -34,5 +34,4 @@ rule:
     zipname:    kube-capacity_v0.7.4_linux_arm64.tar.xz
   "*/win/x64":
     zipname:    kube-capacity_v0.7.4_windows_x86_64.tar.xz
-
     bin_suffix: .exe
