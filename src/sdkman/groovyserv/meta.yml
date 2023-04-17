@@ -1,0 +1,35 @@
+homepage: https://kobo.github.io/groovyserv/download.html
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://bitbucket.org/kobo/groovyserv-mirror/downloads/groovyserv-%{version}-bin.zip"
+  cn: "https://bitbucket.org/kobo/groovyserv-mirror/downloads/groovyserv-%{version}-bin.zip"
+unpack_way: unpack_copy_to_target_dir
+xbin:
+  groovyserver: bin/groovyserver
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: 1.2.0
+
+  latest/*:
+    version: 1.2.0
+
+  "*/linux/arm64":
+
+  "*/darwin/arm64":
+
+  "*/linux/x64":
+
+  "*/darwin/x64":
+
+  "*/win/x64":
+
+
+
+

@@ -1,0 +1,42 @@
+homepage: https://repo.spring.io/ui/native/snapshot/org/springframework/boot/spring-boot-cli/
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://dlcdn.apache.org/tomcat/tomcat-11/v%{version}/bin/apache-tomcat-%{version}.zip"
+  cn: "https://dlcdn.apache.org/tomcat/tomcat-11/v%{version}/bin/apache-tomcat-%{version}.zip"
+unpack_way: unpack_copy_to_target_dir
+
+xbin:
+  springboot: bin/spring
+  spring: bin/spring
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: "11.0.0-M4"
+
+  latest/*:
+    version: "11.0.0-M4"
+
+  "*/linux/arm64":
+
+
+  "*/darwin/arm64":
+
+
+  "*/linux/x64":
+
+
+  "*/darwin/x64":
+
+
+  "*/win/x64":
+    url:
+      internet: "https://dlcdn.apache.org/tomcat/tomcat-11/%{version}/bin/apache-tomcat-%{version}-windows-x64.zip"
+      cn: "https://dlcdn.apache.org/tomcat/tomcat-11/%{version}/bin/apache-tomcat-%{version}-windows-x64.zip"
+
