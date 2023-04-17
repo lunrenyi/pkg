@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Bundle:
+  test-xbin:
     runs-on: ubuntu-latest
     timeout-minutes: 100
     env:
@@ -24,7 +24,7 @@ jobs:
         uses: x-cmd/action@main
         with:
           code: |
-            xrc pkg &&  xws table internet && xws xbin_test internet && xws push test
+            xrc pkg && xws xbin_test internet && xws push test
 
 
 
