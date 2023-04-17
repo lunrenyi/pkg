@@ -7,7 +7,7 @@ generate_xbin_test_mdtable(){
     for dir in "$(x wsroot)"/src/*; do
         category="${dir##*/}"
         case $category in
-            lang) continue;;
+            lang|sdkman|media|plugin) continue;;
         esac
         [ -d "$dir" ] || continue
         for pkg in "$dir"/*; do
@@ -18,6 +18,9 @@ generate_xbin_test_mdtable(){
             printf "|%s/%s " "$category" "$pkg"
 
             for osarch in  linux/x64 linux/arm64 darwin/x64 darwin/arm64 win/x64; do
+                # case $pkg in
+                #     nping|nmap|ncat|bandwhich|smartctl) continue;;
+                # esac
                 url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
                 [ -n "$url" ] || { printf "| %s " "-"; count_num "$category" unsupport; continue;}
                 eval "$(curl -sSI --max-time 10 -o /dev/null -w "http_code=%{http_code} ; time_total=%{time_total}" "$url")"
