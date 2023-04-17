@@ -1,4 +1,4 @@
-# shellcheck shell=sh disable=SC2154,SC2164,2046,2106,3043 #source
+# shellcheck shell=sh disable=SC2154,SC2164,2046,2106,3043,2091 #source
 generate_xbin_test_mdtable(){
     printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 |"
     printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- |"
@@ -11,12 +11,16 @@ generate_xbin_test_mdtable(){
         esac
         [ -d "$dir" ] || continue
         for pkg in "$dir"/*; do
+
             pkg="${pkg##*/}"
             x:info "$category/$pkg" >&2
             version="$(___x_cmd_pkg_default_version "$pkg")"
             printf "|%s/%s " "$category" "$pkg"
 
-            for osarch in linux/x64 linux/arm64 darwin/x64 darwin/arm64 win/x64; do
+            for osarch in  linux/x64 linux/arm64 darwin/x64 darwin/arm64 win/x64; do
+                # case $pkg in
+                #     nping|nmap|ncat|bandwhich|smartctl) continue;;
+                # esac
                 url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
                 [ -n "$url" ] || { printf "| %s " "-"; count_num "$category" unsupport; continue;}
                 eval "$(curl -sSI --max-time 10 -o /dev/null -w "http_code=%{http_code} ; time_total=%{time_total}" "$url")"
@@ -74,7 +78,8 @@ test_xbin(){
 
             if [ "$unpack_way" = "unpack_copy_to_target_dir" ]; then
                 local unpack_dir="$___X_CMD_PKG_DOWNLOAD_PATH/$name/$version"
-                x uz "$ball" "$unpack_dir" 1>/dev/null || {
+                $(___X_CMD_OS_NAME_="linux" ; ___X_CMD__NAME_="x64"
+                $( x uz "$ball" "$tgt" >/dev/null) )  || {
                 printf "| %s(%s)" "❌" "Fail to unzip"
                 x:error "pkg: $name, os/arch: $osarch   Fail to unzip1"
                 count_num "$category" error
@@ -91,7 +96,8 @@ test_xbin(){
                 mv -f "$ball"/* "$tgt"
             else
                 pkg:info "Unpack - '$ball to $tgt'"
-                x uz "$ball" "$tgt"  ||  {
+                $(___X_CMD_OS_NAME_="linux" ; ___X_CMD__NAME_="x64"
+                $( x uz "$ball" "$tgt" >/dev/null) ) ||  {
                 printf "| %s(%s)" "❌" "Fail to unzip"
                 x:error "pkg: $name, os/arch: $osarch   Fail to unzip2"
                 count_num "$category" error
