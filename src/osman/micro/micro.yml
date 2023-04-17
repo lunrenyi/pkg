@@ -1,0 +1,37 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+rely: []
+
+gh_url: https://github.com/x-cmd-build/micro/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/micro/-/releases/%{version}/downloads
+file_suffix: tar.gz
+url:
+  internet: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  micro: micro%{bin_suffix}
+
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.0.0
+
+  latest/*:
+    version: v0.0.0
+
+  "*/darwin/arm64":
+    zipname:    micro-2.0.11-macos-arm64.tar.gz
+  "*/darwin/x64":
+    zipname:    micro-2.0.11-osx.tar.gz
+  "*/linux/x64":
+    zipname:    micro-2.0.11-linux64.tar.gz
+  "*/linux/arm64":
+    zipname:    micro-2.0.11-linux-arm64.tar.gz
+  "*/win/x64":
+    zipname:    micro-2.0.11-win64.zip
+    file_suffix: zip
+    bin_suffix: .exe

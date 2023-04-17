@@ -1,0 +1,35 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+rely: []
+
+gh_url: https://github.com/x-cmd-build/sqlean/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/sqlean/-/releases/%{version}/downloads
+file_suffix: zip
+url:
+  internet: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  sqlean: sqlean.%{os}.%{arch}%{bin_suffix}
+
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.0.0
+
+  latest/*:
+    version: v0.0.0
+
+
+  "*/darwin/x64":
+    zipname:    sqlean-macos-arm64.zip
+  "*/darwin/arm64":
+    zipname:    sqlean-macos-x86.zip
+  "*/linux/x64":
+    zipname:    sqlean-linux-x86.zip
+  "*/win/x64":
+    zipname:    sqlean-win-x64.zip
+    bin_suffix: .exe

@@ -1,0 +1,32 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+rely: []
+
+gh_url: https://github.com/x-cmd-build/kube-linter/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/kube-linter/-/releases/%{version}/downloads
+file_suffix: 7z
+url:
+  internet: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  kube-linter: kube-linter.{bin_suffix}
+
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.0.0
+
+  latest/*:
+    version: v0.0.0
+
+  "*/darwin":
+    zipname:    kube-linter-darwin
+  "*/linux":
+    zipname:    kube-linter-linux
+  "*/win":
+    zipname:    kube-linter.exe
+    bin_suffix: .exe

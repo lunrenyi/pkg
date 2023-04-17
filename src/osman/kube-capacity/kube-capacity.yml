@@ -1,0 +1,38 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+rely: []
+
+gh_url: https://github.com/x-cmd-build/kubectx/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/kubectx/-/releases/%{version}/downloads
+file_suffix: tar.gz
+url:
+  internet: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  kubectx: kubectx.%{os}.%{arch}%{bin_suffix}
+
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.0.0
+
+  latest/*:
+    version: v0.0.0
+
+
+  "*/darwin/x64":
+    zipname:    kube-capacity_v0.7.4_darwin_x86_64.tar.gz
+  "*/darwin/arm64":
+    zipname:    kube-capacity_v0.7.4_darwin_arm64.tar.gz
+  "*/linux/x64":
+    zipname:    kube-capacity_v0.7.4_linux_x86_64.tar.gz
+  "*/linux/arm64":
+    zipname:    kube-capacity_v0.7.4_linux_arm64.tar.gz
+  "*/win/x64":
+    zipname:    kube-capacity_v0.7.4_windows_x86_64.zip
+    file_suffix: zip
+    bin_suffix: .exe

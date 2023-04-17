@@ -1,0 +1,36 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+rely: []
+
+gh_url: https://github.com/x-cmd-build/rclone/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/rclone/-/releases/%{version}/downloads
+file_suffix: zip
+url:
+  internet: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  rclone: rclone.%{os}.%{arch}%{bin_suffix}
+
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.0.0
+
+  latest/*:
+    version: v0.0.0
+
+  "*/darwin/arm64":
+    zipname:    rclone-v1.62.2-osx-arm64.zip
+  "*/darwin/x64":
+    zipname:    rclone-v1.62.2-osx-amd64.zip
+  "*/linux/x64":
+    zipname:    rclone-v1.62.2-linux-amd64.zip
+  "*/linux/arm64":
+    zipname:    rclone-v1.62.2-linux-arm64.zip
+  "*/win/x64":
+    zipname:    rclone-v1.62.2-windows-amd64.zip
+    bin_suffix: .exe

@@ -1,0 +1,32 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+rely: []
+
+gh_url: https://github.com/x-cmd-build/mirrord/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/mirrord/-/releases/%{version}/downloads
+file_suffix: zip
+url:
+  internet: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  mirrord: mirrord%{bin_suffix}
+
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.0.0
+
+  latest/*:
+    version: v0.0.0
+
+
+  "*/linux/x64":
+    zipname:    mirrord_linux_x86_64.zip
+  "*/linux/arm64":
+    zipname:    mirrord_linux_aarch64.zip
+  "*/darwin/x64":
+    zipname:    mirrord_mac_universal.zip

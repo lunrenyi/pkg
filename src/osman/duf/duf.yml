@@ -1,0 +1,37 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+rely: []
+
+gh_url: https://github.com/x-cmd-build/duf/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/duf/-/releases/%{version}/downloads
+file_suffix: tar.gz
+url:
+  internet: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  duf: duf%{bin_suffix}
+
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.0.0
+
+  latest/*:
+    version: v0.0.0
+
+  "*/darwin/arm64":
+    zipname:    duf_0.8.1_Darwin_arm64.tar.gz
+  "*/darwin/x64":
+    zipname:    duf_0.8.1_Darwin_x86_64.tar.gz
+  "*/linux/x64":
+    zipname:    duf_0.8.1_linux_x86_64.tar.gz
+  "*/linux/arm64":
+    zipname:    duf_0.8.1_linux_arm64.tar.gz
+  "*/win/x64":
+    zipname:    duf_0.8.1_Windows_x86_64.zip
+    file_suffix: zip
+    bin_suffix: .exe

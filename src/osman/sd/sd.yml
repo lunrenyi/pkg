@@ -1,0 +1,30 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+rely: []
+
+gh_url: https://github.com/x-cmd-build/sd/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/sd/-/releases/%{version}/downloads
+file_suffix: 7z
+url:
+  internet: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  sd: sd%{bin_suffix}
+
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.0.0
+
+  latest/*:
+    version: v0.0.0
+
+
+  "*/darwin/x64":
+    zipname:    sd-v0.7.6-x86_64-apple-darwin
+  "*/linux/x64":
+    zipname:    sd-v0.7.6-x86_64-unknown-linux-gnu

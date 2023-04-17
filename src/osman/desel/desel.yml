@@ -1,0 +1,36 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+rely: []
+
+gh_url: https://github.com/x-cmd-build/desel/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/desel/-/releases/%{version}/downloads
+file_suffix: gz
+url:
+  internet: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  desel: desel.%{os}.%{arch}%{bin_suffix}
+
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.0.0
+
+  latest/*:
+    version: v0.0.0
+
+  "*/darwin/arm64":
+    zipname:    dasel_darwin_amd64.gz
+  "*/darwin/x64":
+    zipname:    dasel_darwin_arm64.gz
+  "*/linux/x64":
+    zipname:    dasel_linux_amd64.gz
+  "*/linux/arm64":
+    zipname:    dasel_linux_arm64.gz
+  "*/win/x64":
+    zipname:    dasel_windows_amd64.exe.gz
+    bin_suffix: .exe
