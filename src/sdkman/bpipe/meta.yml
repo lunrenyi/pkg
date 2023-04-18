@@ -4,8 +4,8 @@ rely: []
 
 file_suffix: tar.gz
 url:
-  internet: "https://github.com/ssadedin/bpipe/releases/download/%{version}bpipe-%{version}.tar.gz"
-  cn: "https://github.com/ssadedin/bpipe/releases/download/%{version}bpipe-%{version}.tar.gz"
+  internet: "https://github.com/ssadedin/bpipe/releases/download/%{version}/bpipe-%{version}.tar.gz"
+  cn: "https://github.com/ssadedin/bpipe/releases/download/%{version}/bpipe-%{version}.tar.gz"
 
 xbin:
   bpipe: bin/bpipe
