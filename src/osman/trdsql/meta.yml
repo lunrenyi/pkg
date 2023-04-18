@@ -9,6 +9,8 @@ url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
+unpack_way: unpack_copy_to_target_dir
+
 xbin:
   trdsql: trdsql%{bin_suffix}
 
