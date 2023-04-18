@@ -1,0 +1,40 @@
+homepage: https://repo.spring.io/ui/native/snapshot/org/springframework/boot/spring-boot-cli/
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: tar.gz
+url:
+  internet: "https://repo.spring.io/artifactory/snapshot/org/springframework/boot/spring-boot-cli/%{version}-SNAPSHOT/spring-boot-cli-%{version}-20230415.145506-166-bin.tar.gz"
+  cn: "https://repo.spring.io/artifactory/snapshot/org/springframework/boot/spring-boot-cli/%{version}-SNAPSHOT/spring-boot-cli-%{version}-20230415.145506-166-bin.tar.gz"
+unpack_way: unpack_copy_to_target_dir
+
+xbin:
+  springboot: bin/spring
+  spring: bin/spring
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: "3.1.0"
+
+  latest/*:
+    version: "3.1.0"
+
+  "*/linux/arm64":
+
+
+  "*/darwin/arm64":
+
+
+  "*/linux/x64":
+
+
+  "*/darwin/x64":
+
+
+  "*/win/x64":
+
+

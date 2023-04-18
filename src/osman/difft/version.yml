@@ -1,0 +1,11 @@
+v0.0.0:
+  linux/x64:
+    sha256: a72e873ede347302a6915d192fdb010c9e9563a624a3d43329c62d19d706533b
+  linux/arm64:
+    sha256: a72e873ede347302a6915d192fdb010c9e9563a624a3d43329c62d19d706533b
+  darwin/x64:
+    sha256: cafbf33abc5fc832db2921c0a18ea5c76113feda03ab4f7dace01f6ee9915163
+  darwin/arm64:
+    sha256: cafbf33abc5fc832db2921c0a18ea5c76113feda03ab4f7dace01f6ee9915163
+  win/x64:
+    sha256: fb08d5d3f93bb105afa00e6a9addd1e6b54debc583c23d76ddefc63abcd7f03f

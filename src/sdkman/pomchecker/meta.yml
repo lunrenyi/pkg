@@ -17,26 +17,23 @@ rule:
     version: stable
 
   stable/*:
-    version: 2.2.2
+    version: 1.9.0
 
   latest/*:
-    version: 2.2.2
+    version: 1.9.0
 
   "*/linux/arm64":
-    _arch: amd64
+
 
   "*/darwin/arm64":
-    _os: osx
-    _arch: amd64
+
 
   "*/linux/x64":
-    _arch: amd64
+
 
   "*/darwin/x64":
-    _os: osx
-    _arch: amd64
+
 
   "*/win/x64":
-    _os: windows
-    _arch: amd64
+
 

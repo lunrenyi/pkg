@@ -1,0 +1,42 @@
+homepage: https://github.com/quarkusio/quarkus
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: gz
+url:
+  internet: "https://github.com/VirtusLab/scala-cli/releases/download/v1.0.0-RC1/scala-cli-%{_arch}-%{_os}.%{file_suffix}"
+  cn: "https://github.com/VirtusLab/scala-cli/releases/download/v1.0.0-RC1/scala-cli-%{_arch}-%{_os}.%{file_suffix}"
+
+
+xbin: scala-cli-%{_arch}-%{_os}
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: "v1.0.0-RC1"
+
+  latest/*:
+    version: "v1.0.0-RC1"
+
+  "*/linux/arm64":
+    _arch: aarch64
+    _os: pc-linux
+  "*/darwin/arm64":
+    _arch: aarch64
+    _os: applr-darwin
+
+  "*/linux/x64":
+    _os: pc-linux
+    _arch: x86_64
+
+  "*/darwin/x64":
+    _os: applr-darwin
+    _arch: x86_64
+  "*/win/x64":
+    file_suffix: zip
+    _arch: x86_64
+    _os: pc-win32
+

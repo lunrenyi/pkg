@@ -1,0 +1,33 @@
+homepage: https://gitee.com/organizations/static-build/projects
+license: MIT
+rely: []
+
+gh_url: https://github.com/x-cmd-build/zenith/releases/download/%{version}
+gc_url: https://gitcode.net/x-cmd-build/zenith/-/releases/%{version}/downloads
+file_suffix: tar.xz
+url:
+  internet: "%{gh_url}/%{zipname}"
+  cn: "%{gc_url}/%{zipname}"
+
+xbin:
+  zenith: zenith%{bin_suffix}
+
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: v0.0.0
+
+  latest/*:
+    version: v0.0.0
+
+  "*/darwin/arm64":
+    zipname:    zenith.aarch64-apple-darwin.tar.xz
+  "*/darwin/x64":
+    zipname:    zenith.x86_64-apple-darwin.tar.xz
+  "*/linux/x64":
+    zipname:    zenith.x86_64-unknown-linux-musl.tar.xz
+  "*/linux/arm64":
+    zipname:    zenith.x86_64-unknown-linux-musl.tar.xz

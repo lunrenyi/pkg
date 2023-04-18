@@ -1,5 +1,5 @@
 
-name: Bundle x-cmd pkg
+name: TEST x-cmd pkg
 on:
   # push:
   #   branches:
