@@ -10,7 +10,7 @@ url:
   internet: '%{github_source}/v%{version}/kotlin-%{_os}-%{_arch}-%{version}.%{file_suffix}'
   cn: '%{github_source}/v%{version}/kotlin-%{_os}-%{_arch}-%{version}.%{file_suffix}'
 xbin:
-  kotlin: kotlin%{bin_suffix}
+  kotlin: bin/kotlinc%{bin_suffix}
 hook:
   activate: activate.sh
   deactivate: deactivate.sh
