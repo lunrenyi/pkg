@@ -26,16 +26,13 @@ rule:
 
   "*/darwin/arm64":
     zipname:    brook_darwin_arm64.tar.xz
-
   "*/darwin/x64":
     zipname:    brook_darwin_amd64.tar.xz
-
   "*/linux/x64":
     zipname:    brook_linux_amd64.tar.xz
     _arch: amd64
   "*/linux/arm64":
     zipname:    brook_linux_arm64.tar.xz
-
   "*/win/x64":
     zipname:    brook_windows_amd64.tar.xz
     xbin:       brook.exe
