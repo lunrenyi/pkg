@@ -1,5 +1,5 @@
 
-name: test default url
+name: test default url and xbin_linux
 on:
   # push:
   #   branches:
@@ -9,9 +9,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-default-url:
+  test-xbin:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 100
     env:
       ___X_CMD_GHACTION_X: x1
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -24,7 +24,8 @@ jobs:
         uses: x-cmd/action@main
         with:
           code: |
-            xrc pkg &&  xws table internet && xws push test
+            xrc pkg && xws table internet && \
+            xws xbin_test linux/x64 linux/arm64 && xws push test
 
 
 
