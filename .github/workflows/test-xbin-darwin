@@ -1,5 +1,5 @@
 
-name: test xbin
+name: test xbin darwin
 on:
   # push:
   #   branches:

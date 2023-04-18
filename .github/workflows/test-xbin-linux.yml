@@ -1,5 +1,5 @@
 
-name: test xbin
+name: test xbin linux
 on:
   # push:
   #   branches:
