@@ -10,7 +10,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  sqlean: sqlean.%{os}.%{arch}%{bin_suffix}
+  sqlean: sqlean%{bin_suffix}
 
 
 rule:

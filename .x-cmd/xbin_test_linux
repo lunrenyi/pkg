@@ -153,11 +153,7 @@ count_num(){
     x sdict put pkg_xbin_test "$category/$stat" "$((num+1))"
 }
 
-if [ "$#" -eq 0 ] ; then
-    set -- "cn"
-fi
-
-local network="$1"
+local network="${1:-"cn"}"
 local result_path; result_path="$(x wsroot)/doc/xbin_test/$network.md"
 x touch "$result_path"
 

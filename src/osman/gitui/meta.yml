@@ -10,7 +10,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  gitui: gitui.%{os}.%{arch}%{bin_suffix}
+  gitui: gitui%{bin_suffix}
 
 
 rule:

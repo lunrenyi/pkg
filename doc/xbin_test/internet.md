@@ -7,36 +7,69 @@
 |osman/7za | ✅(438K) | ❌(Fail to unzip)| ❌(Fail to unzip)| ❌(Fail to unzip)| ❌(Fail to unzip)|
 |osman/aliyun | ✅(5.8M) | ✅(2.7M) | ✅(5.6M) | ✅(3.0M) | ✅(5.8M) |
 |osman/bat | ✅(2.4M) | ✅(2.3M) | ✅(1.9M) | ✅(1.8M) | ✅(2.7M) |
+|osman/bit | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/brook | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |osman/bun | ❌(Not found path)| ❌(Not found path)| ❌(File corrupted.)| ❌(Not found path)| ❌(404)|
 |osman/bwrap | ❌(Fail to unzip)| ❌(Fail to unzip)| - | - | - |
+|osman/chatgpt | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |osman/curl | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
+|osman/difft | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/duf | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |osman/dust | ✅(702K) | ✅(668K) | ✅(320K) | ✅(300K) | ✅(620K) |
 |osman/exa | ✅(1.1M) | ✅(989K) | ✅(490K) | ✅(454K) | ✅(729K) |
 |osman/fd | ✅(1.1M) | ✅(994K) | ✅(955K) | ✅(955K) | ✅(975K) |
+|osman/ffuf | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |osman/fzf | ✅(1.1M) | ✅(953K) | ✅(1.1M) | ✅(1013K) | ✅(1.3M) |
 |osman/gh | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
+|osman/gitea | - | - | - | - | - |
+|osman/gitleaks | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/gitui | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/goreleaser | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |osman/gost | ✅(9.7M) | ✅(8.8M) | ✅(9.5M) | ✅(9.1M) | ✅(9.2M) |
+|osman/gotop | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/grex | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |osman/gum | ✅(4.5M) | ✅(4.2M) | ✅(4.6M) | ✅(4.6M) | ✅(4.6M) |
+|osman/helix | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |osman/helm | ✅(14M) | ✅(13M) | ✅(14M) | ✅(14M) | ✅(14M) |
+|osman/hyperfine | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |osman/jq | ✅(1.1M) | ✅(918K) | ✅(242K) | ✅(242K) | ✅(730K) |
+|osman/k3d | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/kind | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/kube-capacity | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/kube-linter | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/kube-score | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/kubectx | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/lazygit | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/micro | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/minikube | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/mirrord | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |osman/mosquitto | ✅(1.5M) | ✅(1.5M) | ✅(875K) | ✅(875K) | ✅(1.5M) |
 |osman/pandoc | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
 |osman/procs | ✅(1.6M) | ✅(1.5M) | ✅(1.1M) | ✅(1.1M) | ✅(882K) |
 |osman/proot | ❌(File corrupted.)| ❌(Fail to unzip)| - | - | - |
 |osman/qrencode | ✅(44K) | ✅(44K) | ✅(32K) | ✅(29K) | ✅(162K) |
+|osman/rclone | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |osman/rg | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
 |osman/sodium | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
+|osman/sqlean | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/termshark | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
 |osman/terraform | ✅(19M) | ✅(18M) | ✅(21M) | ✅(20M) | ✅(20M) |
 |osman/tig | ✅(372K) | ✅(372K) | ✅(341K) | ✅(195K) | ❌(404)|
 |osman/tmux | ✅(430K) | ✅(430K) | ✅(313K) | ✅(349K) | ✅(363K) |
+|osman/tokei | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/trdsql | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |osman/ucloud | ✅(5.3M) | ❌(Not found path)| ✅(5.2M) | ✅(4.9M) | ✅(5.2M) |
+|osman/usql | ✅(27M) | ✅(27M) | ✅(21M) | ✅(19M) | ✅(24M) |
+|osman/ws4sqlite | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|osman/xsv | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |osman/yq | ✅(2.6M) | ✅(2.4M) | ✅(1.9M) | ✅(1.9M) | ✅(1.8M) |
 |osman/zellij | ✅(4.7M) | ✅(4.4M) | ✅(4.5M) | ✅(4.1M) | ❌(404)|
+|osman/zenith | ✅(582K) | ✅(582K) | ✅(510K) | ✅(108) | ❌(404)|
 |plugin/zsh-plugin | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
 |sdkman/activemq | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
 |sdkman/ant | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
 |sdkman/asciidoctorj | ✅(274K) | ✅(274K) | ✅(274K) | ✅(274K) | ✅(274K) |
-|sdkman/ballerina-todo | - | - | - | - | - |
+|sdkman/ballerina | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
 |sdkman/bpipe | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |sdkman/btrace | ✅(2.4M) | ✅(2.4M) | ✅(2.4M) | ✅(2.4M) | ✅(2.4M) |
 |sdkman/concurnas | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
@@ -50,9 +83,9 @@
 |sdkman/gradle profiler-todo | - | - | - | - | - |
 |sdkman/grails | ❌(Not found path)| ❌(404)| ❌(404)| ❌(Not found path)| ❌(Not found path)|
 |sdkman/groovy | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
-|sdkman/groovyserv-todo | - | - | - | - | - |
+|sdkman/groovyserv | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
 |sdkman/hadoop | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
-|sdkman/helido_cli-todo | - | - | - | - | - |
+|sdkman/helido_cli-todo | ❌(File corrupted.)| ❌(File corrupted.)| ❌(File corrupted.)| ❌(File corrupted.)| ❌(File corrupted.)|
 |sdkman/http4k-todo | - | - | - | - | - |
 |sdkman/infrastructor | - | - | - | - | - |
 |sdkman/jarviz | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
@@ -77,15 +110,22 @@
 |sdkman/mybatis_migrations | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
 |sdkman/neo4j_migrations | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
 |sdkman/pierrot | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
-|sdkman/pomchecker | - | - | - | - | - |
-|sdkman/quarkus_cli | - | - | - | - | - |
-|sdkman/sbt | - | - | - | - | - |
-|sdkman/scala_cli | - | - | - | - | - |
-|sdkman/schemacrawler | - | - | - | - | - |
-|sdkman/skeletal | - | - | - | - | - |
-|sdkman/spark | - | - | - | - | - |
-|sdkman/spingboot | - | - | - | - | - |
-|sdkman/sshoogr | - | - | - | - | - |
+|sdkman/pomchecker | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
+|sdkman/quarkus | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
+|sdkman/sbt | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
+|sdkman/scala_cli | ❌(Not found path)| ❌(Not found path)| ❌(404)| ❌(404)| ❌(Not found path)|
+|sdkman/schemacrawler | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
+|sdkman/skeletal | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
+|sdkman/spark | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
+|sdkman/spingboot | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|sdkman/sshoogr-todo | - | - | - | - | - |
+|sdkman/taxi-todo | - | - | - | - | - |
+|sdkman/tomcat | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(404)|
+|sdkman/toolkit | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
+|sdkman/vert.x-todo | - | - | - | - | - |
+|sdkman/visualVM | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
+|sdkman/webtau | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
+|sdkman/znai | ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)| ❌(Not found path)|
 |security/bandwhich | ❌(404)| ❌(404)| ❌(404)| ❌(404)| ❌(404)|
 |security/ncat | ✅(5.1M) | ✅(5.1M) | ✅(3.8M) | ✅(3.4M) | ❌(400)|
 |security/nmap | ✅(9.2M) | ✅(9.2M) | ✅(6.7M) | ✅(5.9M) | ❌(400)|
@@ -97,7 +137,7 @@
 
 lang: total=0 pass=0 unsupport=0 error=0  
 media: total=20 pass=17 unsupport=0 error=3  
-osman: total=140 pass=93 unsupport=6 error=41  
+osman: total=305 pass=102 unsupport=11 error=192  
 plugin: total=5 pass=0 unsupport=0 error=5  
-sdkman: total=265 pass=10 unsupport=85 error=170  
+sdkman: total=300 pass=10 unsupport=40 error=250  
 security: total=35 pass=24 unsupport=3 error=8  
