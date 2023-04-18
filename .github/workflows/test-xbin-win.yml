@@ -1,0 +1,30 @@
+
+name: test xbin
+on:
+  # push:
+  #   branches:
+  #     - main
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  test-xbin:
+    runs-on: windows-latest
+    timeout-minutes: 100
+    env:
+      ___X_CMD_GHACTION_X: x1
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
+      git_user: agent-zero
+      git_email: 0@x-cmd.com
+      CONCURRENCY: 10
+    steps:
+      - name: main
+        uses: x-cmd/action@main
+        with:
+          code: |
+            xrc pkg && xws xbin_test win/x64
+
+
+
