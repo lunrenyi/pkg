@@ -1,0 +1,38 @@
+homepage: https://testingisdocumenting.org/webtau/getting-started/installation#groovy-runner
+license: Apache License
+rely: []
+_os: "%{os}"
+_arch: "%{arch}"
+file_suffix: zip
+url:
+  internet: "https://repo.maven.apache.org/maven2/org/testingisdocumenting/webtau/webtau-dist/%{version}/webtau-dist-%{version}-webtau.zip"
+  cn: "https://repo.maven.apache.org/maven2/org/testingisdocumenting/webtau/webtau-dist/%{version}/webtau-dist-%{version}-webtau.zip"
+unpack_way: unpack_copy_to_target_dir
+
+xbin:
+  webtau: dist/webtau
+
+rule:
+  /*:
+    version: stable
+
+  stable/*:
+    version: "1.51"
+
+  latest/*:
+    version: "1.51"
+
+  "*/linux/arm64":
+
+
+  "*/darwin/arm64":
+
+
+  "*/linux/x64":
+
+
+  "*/darwin/x64":
+
+
+  "*/win/x64":
+

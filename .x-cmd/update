@@ -1,4 +1,4 @@
-# shellcheck shell=dash #source
+# shellcheck shell=dash disable=SC3031,2046,2086#source
 
 ___x_update(){
     meta_path=$(find $(x wsroot)/src/*/$1/meta.yml)
@@ -7,4 +7,4 @@ ___x_update(){
     pkg:info "update success"
 }
 
-___x_update $@
+___x_update $1
