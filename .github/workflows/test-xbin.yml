@@ -1,5 +1,5 @@
 
-name: TEST x-cmd pkg
+name: test xbin
 on:
   # push:
   #   branches:

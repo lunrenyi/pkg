@@ -1,5 +1,5 @@
 
-name: Bundle x-cmd pkg
+name: test default url
 on:
   # push:
   #   branches:
