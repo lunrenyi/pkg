@@ -99,6 +99,7 @@ count_num(){
 xbin_test_begin(){
     local network
     local title=${2%/*}
+    ! [ -z "$2" ] ||  title=${1%/*}
     if [ "$1" = "cn" ] || [ "$1" = "internet" ]; then
         network="$1";  shift
     else
