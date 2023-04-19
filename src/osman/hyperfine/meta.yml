@@ -37,5 +37,5 @@ rule:
   "*/win/x64":
     zipname:    hyperfine-v1.16.1-x86_64-pc-windows-gnu.tar.xz
     xbin:
-      brook: hyperfine-v1.16.1-x86_64-pc-windows-gnu
+      hyperfine: hyperfine-v1.16.1-x86_64-pc-windows-gnu
     bin_suffix: .exe
