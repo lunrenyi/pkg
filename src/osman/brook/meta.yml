@@ -35,6 +35,7 @@ rule:
     zipname:    brook_linux_arm64.tar.xz
   "*/win/x64":
     zipname:    brook_windows_amd64.tar.xz
-    xbin:       brook.exe
+    xbin:
+      brook: brook_windows_amd64
     bin_suffix: .exe
 
