@@ -33,4 +33,6 @@ rule:
     zipname:    tokei-aarch64-unknown-linux-gnu.tar.xz
   "*/win/x64":
     zipname:    tokei-x86_64-pc-windows-msvc.tar.xz
+    xbin:
+      tokei: tokei-x86_64-pc-windows-msvc
     bin_suffix: .exe
