@@ -10,7 +10,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 unpack_way: unpack_copy_to_target_dir
 xbin:
-  pandoc: "bin/pandoc"
+  pandoc: "bin/pandoc%{bin_suffix}"
 
 rule:
   /*:
