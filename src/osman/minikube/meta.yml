@@ -38,4 +38,6 @@ rule:
     zipname:    minikube-linux-arm64.tar.xz
   "*/win/x64":
     zipname:    minikube-windows-amd64.tar.xz
+    xbin:
+      minikube: out/minikube-windows-amd64
     bin_suffix: .exe
