@@ -35,4 +35,6 @@ rule:
     zipname:    rclone-v1.62.2-linux-arm64.tar.xz
   "*/win/x64":
     zipname:    rclone-v1.62.2-windows-amd64.tar.xz
+    xbin:
+      rclone: rclone
     bin_suffix: .exe
