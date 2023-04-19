@@ -36,3 +36,6 @@ rule:
     zipname:    kind-linux-arm64.tar.xz
   "*/win/x64":
     zipname:    kind-windows-amd64.tar.xz
+    xbin:
+      kind: kind-windows-amd64
+    bin_suffix: .exe
