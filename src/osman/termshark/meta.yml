@@ -35,4 +35,6 @@ rule:
     zipname:    termshark_2.4.0_linux_x64.tar.xz
   "*/win/x64":
     zipname:    termshark_2.4.0_windows_x64.tar.xz
+    xbin:
+      termshark: termshark
     bin_suffix: .exe
