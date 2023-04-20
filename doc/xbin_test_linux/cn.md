@@ -1,5 +1,16 @@
 | candidate \ osarch | linux/x64 | linux/arm64 | | 
 | ------------------ | ----------- | ------------ | ---------- | 
+|lang/deno | ✅(86M) | ✅(86M) |
+|lang/go | ✅(14M) | ✅(14M) |
+|lang/java | ❌(timeout)| ❌(timeout)|
+|lang/julia | ✅(22K) | ✅(16K) |
+|lang/kotlin | ✅(677) | ✅(677) |
+|lang/lua | ✅(302K) | - |
+|lang/node | ❌(Not found path)| ❌(Not found path)|
+|lang/perl | ❌(Not found path)| ❌(Not found path)|
+|lang/python | - | - |
+|lang/rust | ✅(2.9M) | ✅(15K) |
+|lang/scala | ✅(1.8K) | ✅(1.8K) |
 |media/agg | ✅(8.6M) | ❌(Not found path)|
 |media/ffmpeg | ✅(75M) | ✅(48M) |
 |media/magick | ✅(4.4M) | ✅(4.4M) |
@@ -22,7 +33,7 @@
 |osman/fzf | ✅(2.3M) | ✅(2.4M) |
 |osman/gh | ✅(39M) | ✅(38M) |
 |osman/gitea | - | - |
-|osman/gitleaks | ❌(File corrupted.)| ❌(timeout)|
+|osman/gitleaks | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/gitui | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/goreleaser | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/gost | ✅(27M) | ✅(26M) |
@@ -55,11 +66,11 @@
 |osman/termshark | ✅(15M) | ✅(15M) |
 |osman/terraform | ✅(60M) | ✅(58M) |
 |osman/tig | ✅(1.1M) | ✅(1.1M) |
-|osman/tmux | ✅(1.2M) | ❌(timeout)|
+|osman/tmux | ✅(1.2M) | ✅(1.2M) |
 |osman/tokei | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/trdsql | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/ucloud | ✅(14M) | ❌(Not found path)|
-|osman/usql | ✅(28M) | ❌(timeout)|
+|osman/usql | ✅(28M) | ✅(28M) |
 |osman/ws4sqlite | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/xsv | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/yq | ✅(8.9M) | ✅(8.5M) |
@@ -78,12 +89,12 @@
 |sdkman/doctoolchain | ✅(944) | ✅(944) |
 |sdkman/flink | ✅(2.4K) | ✅(2.4K) |
 |sdkman/gaiden | ✅(9.1K) | ✅(9.1K) |
-|sdkman/gradle | ❌(301)| ❌(301)|
+|sdkman/gradle | ❌(File corrupted.)| ❌(File corrupted.)|
 |sdkman/gradle profiler-todo | - | - |
 |sdkman/grails | ✅(11K) | ❌(404)|
 |sdkman/groovy | ✅(1.9K) | ✅(1.9K) |
 |sdkman/groovyserv | ❌(Not found path)| ❌(Not found path)|
-|sdkman/hadoop | ✅(8.9K) | ❌(timeout)|
+|sdkman/hadoop | ✅(8.9K) | ✅(8.9K) |
 |sdkman/helido_cli-todo | - | - |
 |sdkman/http4k-todo | - | - |
 |sdkman/infrastructor | - | - |
@@ -119,24 +130,24 @@
 |sdkman/spingboot | ❌(404)| ❌(404)|
 |sdkman/sshoogr-todo | - | - |
 |sdkman/taxi-todo | - | - |
-|sdkman/tomcat | ❌(Not found path)| ❌(Not found path)|
-|sdkman/toolkit | ❌(Not found path)| ❌(Not found path)|
+|sdkman/tomcat | ✅(21K) | ✅(21K) |
+|sdkman/toolkit | ✅(17M) | ✅(16M) |
 |sdkman/vert.x-todo | - | - |
-|sdkman/visualVM | ❌(Not found path)| ❌(Not found path)|
+|sdkman/visualvm | ✅(6.2K) | ✅(6.2K) |
 |sdkman/webtau | ❌(Not found path)| ❌(Not found path)|
 |sdkman/znai | ❌(Not found path)| ❌(Not found path)|
 |security/bandwhich | ❌(404)| ❌(404)|
 |security/ncat | ✅(5.1M) | ✅(5.1M) |
-|security/nmap | ❌(timeout)| ✅(9.2M) |
+|security/nmap | ✅(9.2M) | ✅(9.2M) |
 |security/nping | ✅(5.3M) | ✅(5.3M) |
 |security/openssl | ✅(5.1M) | ✅(5.1M) |
 |security/smartctl | ✅(2.0M) | ✅(2.0M) |
 |security/traceroute | ✅(124K) | ✅(124K) |
 
 
-lang: total=0 pass=0 unsupport=0 error=0  
+lang: total=22 pass=13 unsupport=3 error=6  
 media: total=8 pass=7 unsupport=0 error=1  
-osman: total=120 pass=53 unsupport=2 error=65  
+osman: total=120 pass=55 unsupport=2 error=63  
 plugin: total=0 pass=0 unsupport=0 error=0  
-sdkman: total=120 pass=60 unsupport=18 error=42  
-security: total=14 pass=11 unsupport=0 error=3  
+sdkman: total=120 pass=67 unsupport=18 error=35  
+security: total=14 pass=12 unsupport=0 error=2  
