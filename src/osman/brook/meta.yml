@@ -1,7 +1,8 @@
 homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
-
+_os: "%{os}"
+_arch: "%{arch}"
 gh_url: https://github.com/x-cmd-build/brook/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/brook/-/releases/%{version}/downloads
 file_suffix: tar.xz
@@ -10,7 +11,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  brook: brook%{bin_suffix}
+  brook: brook_%{_os}_%{_arch}
 
 
 rule:
@@ -29,8 +30,12 @@ rule:
     zipname:    brook_darwin_amd64.tar.xz
   "*/linux/x64":
     zipname:    brook_linux_amd64.tar.xz
+    _arch: amd64
   "*/linux/arm64":
     zipname:    brook_linux_arm64.tar.xz
   "*/win/x64":
     zipname:    brook_windows_amd64.tar.xz
+    xbin:
+      brook: brook_windows_amd64
     bin_suffix: .exe
+

@@ -1,7 +1,8 @@
 homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
-
+_os: "%{os}"
+_arch: "%{arch}"
 gh_url: https://github.com/x-cmd-build/minikube/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/minikube/-/releases/%{version}/downloads
 file_suffix: tar.xz
@@ -9,8 +10,10 @@ url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
+unpack_way: unpack_copy_to_target_dir
+
 xbin:
-  minikube: minikube%{bin_suffix}
+  minikube: minikube-%{_os}-%{_arch}
 
 
 rule:
@@ -30,8 +33,11 @@ rule:
     zipname:    minikube-darwin-arm64.tar.xz
   "*/linux/x64":
     zipname:    minikube-linux-amd64.tar.xz
+    _arch: amd64
   "*/linux/arm64":
     zipname:    minikube-linux-arm64.tar.xz
   "*/win/x64":
     zipname:    minikube-windows-amd64.tar.xz
+    xbin:
+      minikube: minikube-windows-amd64
     bin_suffix: .exe

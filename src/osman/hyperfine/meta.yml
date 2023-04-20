@@ -9,6 +9,8 @@ url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
+unpack_way: unpack_copy_to_target_dir
+
 xbin:
   hyperfine: hyperfine%{bin_suffix}
 
@@ -34,4 +36,6 @@ rule:
     zipname:    hyperfine-v1.16.1-aarch64-unknown-linux-gnu.tar.xz
   "*/win/x64":
     zipname:    hyperfine-v1.16.1-x86_64-pc-windows-gnu.tar.xz
+    xbin:
+      hyperfine: hyperfine
     bin_suffix: .exe

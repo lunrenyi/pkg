@@ -9,6 +9,8 @@ url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
+unpack_way: unpack_copy_to_target_dir
+
 xbin:
   trdsql: trdsql%{bin_suffix}
 
@@ -32,4 +34,6 @@ rule:
     zipname:    trdsql_v0.11.1_linux_arm64.tar.xz
   "*/win/x64":
     zipname:    trdsql_v0.11.1_windows_amd64.tar.xz
+    xbin:
+      trdsql: trdsql
     bin_suffix: .exe1
