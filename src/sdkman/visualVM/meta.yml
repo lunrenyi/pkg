@@ -18,10 +18,10 @@ rule:
     version: stable
 
   stable/*:
-    version: "11.0.0-M4"
+    version: "2.1.5"
 
   latest/*:
-    version: "11.0.0-M4"
+    version: "2.1.5"
 
   "*/linux/arm64":
 

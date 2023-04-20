@@ -140,6 +140,7 @@ pkg_yml2json()(
 
 pkg_install(){
     pkg_yml2json
+    pkg_json2binmod
     pkg_ins
 }
 
