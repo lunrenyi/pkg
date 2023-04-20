@@ -1,6 +1,6 @@
 
 name: test xbin linux
-# on:
+on:
   # push:
   #   branches:
   #     - main
