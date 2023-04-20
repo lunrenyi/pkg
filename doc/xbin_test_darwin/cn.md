@@ -1,31 +1,21 @@
 | candidate \ osarch | darwin/x64 | darwin/arm64 | | 
 | ------------------ | ----------- | ------------ | ---------- | 
+|lang/deno | ✅(80M) | ❌(File corrupted.)|
+|lang/go | ❌(File corrupted.)| ✅(14M) |
+|lang/java | ❌(timeout)| ❌(timeout)|
+|lang/julia | ❌(File corrupted.)| ❌(File corrupted.)|
+|lang/kotlin | ✅(677B) | ✅(677B) |
+|lang/lua | ❌(Not found path)| ❌(Not found path)|
+|lang/node | ❌(Not found path)| ❌(Not found path)|
+|lang/perl | ❌(404)| ❌(Not found path)|
+|lang/python | - | - |
+|lang/rust | ✅(488K) | ✅(468K) |
+|lang/scala | ✅(1.8K) | ❌(File corrupted.)|
 |media/agg | ✅(7.5M) | ✅(7.4M) |
 |media/ffmpeg | ❌(404)| ❌(File corrupted.)|
 |media/magick | ✅(5.3M) | ❌(File corrupted.)|
 |media/sqlite3 | ✅(1.3M) | ❌(File corrupted.)|
-|osman/7za | ✅(2.8M) 
-7-Zip [64] 17.05 : Copyright (c) 1999-2021 Igor Pavlov : 2017-08-28
-p7zip Version 17.05 (locale=utf8,Utf16=on,HugeFiles=on,64 bits,3 CPUs x64)
-
-Scanning the drive for archives:
-1 file, 877706 bytes (858 KiB)
-
-Extracting archive: /Users/runner/.x-cmd.root/local/data/r/DEFAULT/pkg/installed/7za/v0.0.0/7za.7z
---
-Path = /Users/runner/.x-cmd.root/local/data/r/DEFAULT/pkg/installed/7za/v0.0.0/7za.7z
-Type = 7z
-Physical Size = 877706
-Headers Size = 138
-Method = LZMA2:3m
-Solid = -
-Blocks = 1
-
-Everything is Ok
-
-Size:       2818752
-Compressed: 877706
-| ✅(2.7M) |
+|osman/7za |
 |osman/aliyun | ✅(19M) | ❌(File corrupted.)|
 |osman/bat | ✅(5.0M) | ❌(File corrupted.)|
 |osman/bit | ❌(File corrupted.)| ❌(File corrupted.)|
@@ -73,43 +63,38 @@ Compressed: 877706
 |osman/rg | ✅(4.4M) | ✅(4.4M) |
 |osman/sodium | ✅(50K) | ❌(File corrupted.)|
 |osman/sqlean | ❌(File corrupted.)| ❌(File corrupted.)|
-|osman/termshark /usr/local/bin/xz
-| ❌(Not found path)/usr/local/bin/xz
-| ❌(Not found path)|
+|osman/termshark | ✅(16M) | ✅(16M) |
 |osman/terraform | ✅(67M) | ❌(File corrupted.)|
 |osman/tig | ✅(1.3M) | ❌(File corrupted.)|
 |osman/tmux | ✅(757K) | ❌(File corrupted.)|
 |osman/tokei | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/trdsql | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/ucloud | ✅(13M) | ❌(File corrupted.)|
-|osman/usql | ❌(File corrupted.)/usr/local/bin/xz
-| ✅(96M) |
+|osman/usql | ✅(99M) | ✅(96M) |
 |osman/ws4sqlite | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/xsv | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/yq | ✅(6.6M) | ❌(File corrupted.)|
 |osman/zellij | ✅(11M) | ✅(9.6M) |
-|osman/zenith /usr/local/bin/xz
-| ✅(1.7M) /usr/local/bin/xz
-| ❌(Not found path)|
+|osman/zenith | ✅(1.7M) | ❌(Not found path)|
 |sdkman/activemq | ✅(27K) | ✅(27K) |
 |sdkman/ant | ✅(12K) | ✅(12K) |
 |sdkman/asciidoctorj | ✅(274K) | ✅(274K) |
 |sdkman/ballerina | ❌(Not found path)| ❌(File corrupted.)|
-|sdkman/bpipe | ❌(404)| ❌(404)|
+|sdkman/bpipe | ✅(25K) | ✅(25K) |
 |sdkman/btrace | ✅(2.5K) | ✅(2.5K) |
 |sdkman/concurnas | ❌(Not found path)| ❌(File corrupted.)|
-|sdkman/connor | ❌(404)| ❌(404)|
+|sdkman/connor | ✅(42M) | ❌(File corrupted.)|
 |sdkman/coursier | ❌(Not found path)| ❌(File corrupted.)|
 |sdkman/cxf | ❌(Not found path)| ❌(Not found path)|
 |sdkman/doctoolchain | ✅(944B) | ❌(File corrupted.)|
 |sdkman/flink | ✅(2.3K) | ✅(2.3K) |
 |sdkman/gaiden | ✅(9.0K) | ❌(File corrupted.)|
-|sdkman/gradle | ❌(301)| ❌(301)|
+|sdkman/gradle | ❌(File corrupted.)| ❌(File corrupted.)|
 |sdkman/gradle profiler-todo | - | - |
 |sdkman/grails | ❌(404)| ❌(File corrupted.)|
 |sdkman/groovy | ✅(1.9K) | ❌(File corrupted.)|
 |sdkman/groovyserv | ❌(Not found path)| ❌(File corrupted.)|
-|sdkman/hadoop | ✅(8.8K) | ✅(8.8K) |
+|sdkman/hadoop | ✅(8.8K) | ❌(timeout)|
 |sdkman/helido_cli-todo | - | - |
 |sdkman/http4k-todo | - | - |
 |sdkman/infrastructor | - | - |
@@ -142,13 +127,13 @@ Compressed: 877706
 |sdkman/schemacrawler | ❌(Not found path)| ❌(File corrupted.)|
 |sdkman/skeletal | ✅(10K) | ❌(File corrupted.)|
 |sdkman/spark | ❌(Not found path)| ❌(File corrupted.)|
-|sdkman/spingboot | ❌(404)| ❌(404)|
+|sdkman/spring | ✅(3.3K) | ✅(3.3K) |
 |sdkman/sshoogr-todo | - | - |
 |sdkman/taxi-todo | - | - |
-|sdkman/tomcat | ❌(Not found path)| ❌(File corrupted.)|
-|sdkman/toolkit | ❌(Not found path)| ❌(File corrupted.)|
+|sdkman/tomcat | ✅(21K) | ❌(File corrupted.)|
+|sdkman/toolkit | ✅(16M) | ❌(File corrupted.)|
 |sdkman/vert.x-todo | - | - |
-|sdkman/visualVM | ❌(404)| ❌(404)|
+|sdkman/visualvm | ✅(6.2K) | ❌(File corrupted.)|
 |sdkman/webtau | ❌(Not found path)| ❌(File corrupted.)|
 |sdkman/znai | ❌(Not found path)| ❌(File corrupted.)|
 |security/bandwhich | ❌(404)| ❌(404)|
@@ -160,9 +145,9 @@ Compressed: 877706
 |security/traceroute | - | - |
 
 
-lang: total=0 pass=0 unsupport=0 error=0  
+lang: total=22 pass=7 unsupport=2 error=13  
 media: total=8 pass=4 unsupport=0 error=4  
-osman: total=122 pass=35 unsupport=6 error=81  
+osman: total=120 pass=36 unsupport=6 error=78  
 plugin: total=0 pass=0 unsupport=0 error=0  
-sdkman: total=120 pass=34 unsupport=18 error=68  
+sdkman: total=120 pass=41 unsupport=18 error=61  
 security: total=14 pass=8 unsupport=2 error=4  
