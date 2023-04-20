@@ -7,7 +7,7 @@ generate_xbin_test_mdtable(){
     for dir in "$(x wsroot)"/src/*; do
         category="${dir##*/}"
         case $category in
-            lang | plugin) continue;;
+            plugin) continue;;
         esac
         [ -d "$dir" ] || continue
         for pkg in "$dir"/*; do

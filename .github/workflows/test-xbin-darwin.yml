@@ -1,6 +1,6 @@
 
 name: test xbin darwin
-on:
+# on:
   # push:
   #   branches:
   #     - main
