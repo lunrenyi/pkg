@@ -26,13 +26,13 @@ generate_xbin_test_mdtable(){
                 [ -n "$url" ] || { printf "| %s " "-"; count_num "$category" unsupport; continue;}
                 eval "$(curl -sSI --max-time 10 -o /dev/null -w "http_code=%{http_code} ; time_total=%{time_total}" "$url")"
                 case $http_code in
-                    200|302|304)    test_xbin "$pkg" "$version" "$osarch" "$url";;
-                    000)            printf "| ❌(timeout)"
-                                    count_num "$category" error
-                                    x:error "url: $url, http_code: timeout";;
-                    *)              printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
-                                    count_num "$category" error
-                                    x:error "url: $url, http_code: $http_code";;
+                    200|302|304|301)    test_xbin "$pkg" "$version" "$osarch" "$url";;
+                    000)                printf "| ❌(timeout)"
+                                        count_num "$category" error
+                                        x:error "url: $url, http_code: timeout";;
+                    *)                  printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
+                                        count_num "$category" error
+                                        x:error "url: $url, http_code: $http_code";;
                 esac
                 x pkg uninstall "$pkg"
             done

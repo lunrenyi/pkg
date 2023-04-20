@@ -10,8 +10,7 @@ url:
 unpack_way: unpack_copy_to_target_dir
 
 xbin:
-  springboot: bin/spring
-  spring: bin/spring
+  visualvm: bin/visualvm
 
 rule:
   /*:
@@ -36,5 +35,6 @@ rule:
 
 
   "*/win/x64":
-
+    xbin:
+      visualvm: bin/visualvm.exe
 
