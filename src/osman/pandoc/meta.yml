@@ -31,5 +31,7 @@ rule:
   "*/darwin/x64":
     zipname:    pandoc-3.1.2-x86_64-macOS.tar.xz
   "*/win/x64":
+    xbin:
+      pandoc: "pandoc%{bin_suffix}"
     zipname:    pandoc-3.1.2-windows-x86_64.tar.xz
     bin_suffix: .exe

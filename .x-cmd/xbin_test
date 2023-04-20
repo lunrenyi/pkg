@@ -7,7 +7,7 @@ generate_xbin_test_mdtable(){
     for dir in "$(x wsroot)"/src/*; do
         category="${dir##*/}"
         case $category in
-            lang | plugin) continue;;
+            plugin) continue;;
         esac
         [ -d "$dir" ] || continue
         for pkg in "$dir"/*; do
@@ -18,21 +18,21 @@ generate_xbin_test_mdtable(){
             printf "|%s/%s " "$category" "$pkg"
 
             for osarch in "$@"; do
-                # case $pkg in
-                #     nping|nmap|ncat|bandwhich|smartctl) continue;;
-                # esac
-                echo "$pkg" "$version" "$osarch" "url.$network" >&2
+                case $pkg in
+                    7za) continue;;
+                esac
+
                 url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
                 [ -n "$url" ] || { printf "| %s " "-"; count_num "$category" unsupport; continue;}
                 eval "$(curl -sSI --max-time 10 -o /dev/null -w "http_code=%{http_code} ; time_total=%{time_total}" "$url")"
                 case $http_code in
-                    200|302|304)    test_xbin "$pkg" "$version" "$osarch" "$url";;
-                    000)            printf "| ❌(timeout)"
-                                    count_num "$category" error
-                                    x:error "url: $url, http_code: timeout";;
-                    *)              printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
-                                    count_num "$category" error
-                                    x:error "url: $url, http_code: $http_code";;
+                    200|302|304|301)    test_xbin "$pkg" "$version" "$osarch" "$url";;
+                    000)                printf "| ❌(timeout)"
+                                        count_num "$category" error
+                                        x:error "url: $url, http_code: timeout";;
+                    *)                  printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
+                                        count_num "$category" error
+                                        x:error "url: $url, http_code: $http_code";;
                 esac
                 x pkg uninstall "$pkg"
             done
@@ -48,8 +48,8 @@ test_xbin(){
     ___X_CMD_OS_NAME_=$os; ___X_CMD_OS_ARCH_=$arch;
 
     {
-        if x pkg install "$name"; then
-            bin_path=$(x pkg xbin path $name)
+        if x pkg install "$name" >&2 ; then
+            bin_path=$(x pkg xbin path $name 2>/dev/null )
             if [ -f "$bin_path" ]; then
                 size=$(ls -lh $bin_path | awk '{printf("%s", $5)}')
                 printf "| %s(%s) " "✅" "$size"; count_num "$category" pass

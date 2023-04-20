@@ -5,13 +5,13 @@ _os: "%{os}"
 _arch: "%{arch}"
 file_suffix: tar.gz
 url:
-  internet: "https://repo.spring.io/artifactory/snapshot/org/springframework/boot/spring-boot-cli/%{version}-SNAPSHOT/spring-boot-cli-%{version}-20230415.145506-166-bin.tar.gz"
-  cn: "https://repo.spring.io/artifactory/snapshot/org/springframework/boot/spring-boot-cli/%{version}-SNAPSHOT/spring-boot-cli-%{version}-20230415.145506-166-bin.tar.gz"
+  internet: "https://repo.spring.io/artifactory/snapshot/org/springframework/boot/spring-boot-cli/%{version}-SNAPSHOT/spring-boot-cli-%{version}-20230419.192216-186-bin.tar.gz"
+  cn: "https://repo.spring.io/artifactory/snapshot/org/springframework/boot/spring-boot-cli/%{version}-SNAPSHOT/spring-boot-cli-%{version}-20230419.192216-186-bin.tar.gz"
 unpack_way: unpack_copy_to_target_dir
 
 xbin:
-  springboot: bin/spring
-  spring: bin/spring
+  springboot: "/bin/spring"
+  spring: "/bin/spring"
 
 rule:
   /*:

@@ -9,8 +9,11 @@ url:
   internet: "%{gh_url}/%{zipname}"
   cn: "%{gc_url}/%{zipname}"
 
+unpack_way: unpack_copy_to_target_dir
+
 xbin:
-  hx: hx%{bin_suffix}
+  helix: hx
+  hx: hx
 
 
 rule:
@@ -25,16 +28,16 @@ rule:
 
   "*/darwin/arm64":
     zipname:    helix-23.03-aarch64-macos.tar.xz
-    xbin: helix-23.03-aarch64-macos/hx
+
   "*/darwin/x64":
     zipname:    helix-23.03-x86_64-macos.tar.xz
-    xbin: helix-23.03-x86_64-macos/hx
+
   "*/linux/x64":
     zipname:    helix-23.03-x86_64-linux.tar.xz
   "*/linux/arm64":
     zipname:    helix-23.03-aarch64-linux.tar.xz
-    xbin: helix-23.03-aarch64-linux/hx
+
   "*/win/x64":
     zipname:    helix-23.03-x86_64-windows.tar.xz
-    xbin: helix-23.03-x86_64-windows/hx.exe
+    xbin: hx.exe
     bin_suffix: .exe
