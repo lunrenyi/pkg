@@ -57,18 +57,18 @@ begin==1 &&(($0 ~"<td><a href=.*</a></td>" ) || ($0 ~"<td>[0-9a-z]{64}<\\/td>" )
 
 }'
 
-# curl -H "Accept-Encoding: gzip" https://downloads.python.org/pypy/ 2>/dev/null | gunzip | more | awk ' match($0, "pypy[0-9.]+" "-" "v[0-9.]+" "-" "[a-z0-9]+" ){
-#   a = substr($0,RSTART,RLENGTH)
-#   split(a,b,"-")
-#   gsub("linux64","linux/x64",b[3])
-#   gsub("linux32","linux/x32",b[3])
-#   gsub("win32","win/x32",b[3])
-#   gsub("win64","win/x64",b[3])
-#   gsub("aarch64","darwin/arm64",b[3])
-#   gsub("osx64","darwin/x64",b[3])
+curl -H "Accept-Encoding: gzip" https://downloads.python.org/pypy/ 2>/dev/null | gunzip | more | awk ' match($0, "pypy[0-9.]+" "-" "v[0-9.]+" "-" "[a-z0-9]+" ){
+  a = substr($0,RSTART,RLENGTH)
+  split(a,b,"-")
+  gsub("linux64","linux/x64",b[3])
+  gsub("linux32","linux/x32",b[3])
+  gsub("win32","win/x32",b[3])
+  gsub("win64","win/x64",b[3])
+  gsub("aarch64","darwin/arm64",b[3])
+  gsub("osx64","darwin/x64",b[3])
 
-#   if(b[3] != "src"){print b[1] "-" b[2] ":\n  " b[3] ":\n    sha:" }
-# } '
+  if(b[3] != "src"){print b[1] "-" b[2] ":\n  " b[3] ":\n    sha:" }
+} '
 }
 
 get_py_version
