@@ -1,31 +1,10 @@
 | candidate \ osarch | linux/x64 | linux/arm64 | | 
 | ------------------ | ----------- | ------------ | ---------- | 
-|media/agg | - | - |
-|media/ffmpeg | ❌(File corrupted.)| ❌(File corrupted.)|
+|media/agg | ✅(8.6M) | ❌(Not found path)|
+|media/ffmpeg | ✅(75M) | ✅(48M) |
 |media/magick | ✅(4.4M) | ✅(4.4M) |
 |media/sqlite3 | ✅(1.5M) | ✅(1.5M) |
-|osman/7za | ❌(Not found path)
-7-Zip [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
-p7zip Version 16.02 (locale=C.UTF-8,Utf16=on,HugeFiles=on,64 bits,2 CPUs Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz (606A6),ASM,AES-NI)
-
-Scanning the drive for archives:
-1 file, 447635 bytes (438 KiB)
-
-Extracting archive: /home/runner/.x-cmd.root/local/data/r/DEFAULT/pkg/installed/7za/v0.0.0/7za.7z
---
-Path = /home/runner/.x-cmd.root/local/data/r/DEFAULT/pkg/installed/7za/v0.0.0/7za.7z
-Type = 7z
-Physical Size = 447635
-Headers Size = 138
-Method = LZMA2:1536k BCJ
-Solid = -
-Blocks = 1
-
-Everything is Ok
-
-Size:       1281600
-Compressed: 447635
-| ✅(1.3M) |
+|osman/7za |
 |osman/aliyun | ✅(19M) | ✅(16M) |
 |osman/bat | ✅(7.0M) | ✅(6.8M) |
 |osman/bit | ❌(File corrupted.)| ❌(File corrupted.)|
@@ -35,15 +14,15 @@ Compressed: 447635
 |osman/chatgpt | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/curl | ❌(Not found path)| ❌(Not found path)|
 |osman/difft | ❌(File corrupted.)| ❌(File corrupted.)|
-|osman/duf | ❌(File corrupted.)| ❌(500)|
+|osman/duf | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/dust | ✅(2.8M) | ✅(2.8M) |
 |osman/exa | ✅(3.5M) | ✅(3.5M) |
 |osman/fd | ✅(2.3M) | ✅(2.0M) |
-|osman/ffuf | ❌(File corrupted.)| ❌(500)|
+|osman/ffuf | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/fzf | ✅(2.3M) | ✅(2.4M) |
 |osman/gh | ✅(39M) | ✅(38M) |
 |osman/gitea | - | - |
-|osman/gitleaks | ❌(File corrupted.)| ❌(File corrupted.)|
+|osman/gitleaks | ❌(File corrupted.)| ❌(timeout)|
 |osman/gitui | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/goreleaser | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/gost | ✅(27M) | ✅(26M) |
@@ -60,7 +39,7 @@ Compressed: 447635
 |osman/kube-linter | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/kube-score | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/kubectx | ❌(File corrupted.)| ❌(File corrupted.)|
-|osman/lazygit | ❌(File corrupted.)| ❌(500)|
+|osman/lazygit | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/micro | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/minikube | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/mirrord | ❌(File corrupted.)| ❌(File corrupted.)|
@@ -73,68 +52,62 @@ Compressed: 447635
 |osman/rg | ✅(5.1M) | ✅(5.1M) |
 |osman/sodium | ✅(804K) | ✅(804K) |
 |osman/sqlean | ❌(File corrupted.)| ❌(File corrupted.)|
-|osman/termshark /usr/bin/xz
-| ❌(Not found path)/usr/bin/xz
-| ❌(Not found path)|
+|osman/termshark | ✅(15M) | ✅(15M) |
 |osman/terraform | ✅(60M) | ✅(58M) |
 |osman/tig | ✅(1.1M) | ✅(1.1M) |
-|osman/tmux | ✅(1.2M) | ✅(1.2M) |
+|osman/tmux | ✅(1.2M) | ❌(timeout)|
 |osman/tokei | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/trdsql | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/ucloud | ✅(14M) | ❌(Not found path)|
-|osman/usql /usr/bin/xz
-| ✅(28M) /usr/bin/xz
-| ✅(28M) |
+|osman/usql | ✅(28M) | ❌(timeout)|
 |osman/ws4sqlite | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/xsv | ❌(File corrupted.)| ❌(File corrupted.)|
 |osman/yq | ✅(8.9M) | ✅(8.5M) |
 |osman/zellij | ✅(12M) | ✅(11M) |
-|osman/zenith /usr/bin/xz
-| ✅(1.8M) /usr/bin/xz
-| ✅(1.8M) |
+|osman/zenith | ✅(1.8M) | ✅(1.8M) |
 |sdkman/activemq | ✅(27K) | ✅(27K) |
 |sdkman/ant | ✅(12K) | ✅(12K) |
 |sdkman/asciidoctorj | ✅(274K) | ✅(274K) |
 |sdkman/ballerina | ❌(Not found path)| ❌(Not found path)|
-|sdkman/bpipe | - | - |
-|sdkman/btrace | - | - |
-|sdkman/concurnas | - | - |
+|sdkman/bpipe | ✅(25K) | ✅(25K) |
+|sdkman/btrace | ✅(2.6K) | ✅(2.6K) |
+|sdkman/concurnas | ❌(Not found path)| ❌(Not found path)|
 |sdkman/connor | ✅(45M) | ❌(File corrupted.)|
-|sdkman/coursier | - | - |
+|sdkman/coursier | ❌(Not found path)| ❌(Not found path)|
 |sdkman/cxf | ❌(Not found path)| ❌(Not found path)|
-|sdkman/doctoolchain | - | - |
+|sdkman/doctoolchain | ✅(944) | ✅(944) |
 |sdkman/flink | ✅(2.4K) | ✅(2.4K) |
-|sdkman/gaiden | - | - |
-|sdkman/gradle | - | - |
+|sdkman/gaiden | ✅(9.1K) | ✅(9.1K) |
+|sdkman/gradle | ❌(301)| ❌(301)|
 |sdkman/gradle profiler-todo | - | - |
-|sdkman/grails | - | - |
-|sdkman/groovy | - | - |
+|sdkman/grails | ✅(11K) | ❌(404)|
+|sdkman/groovy | ✅(1.9K) | ✅(1.9K) |
 |sdkman/groovyserv | ❌(Not found path)| ❌(Not found path)|
 |sdkman/hadoop | ✅(8.9K) | ❌(timeout)|
 |sdkman/helido_cli-todo | - | - |
 |sdkman/http4k-todo | - | - |
 |sdkman/infrastructor | - | - |
-|sdkman/jarviz | - | - |
-|sdkman/jbake | - | - |
+|sdkman/jarviz | ✅(132) | ✅(132) |
+|sdkman/jbake | ✅(5.7K) | ✅(5.7K) |
 |sdkman/jdk-mission-control | ❌(File corrupted.)| ❌(File corrupted.)|
 |sdkman/jmeter | ✅(8.5K) | ✅(8.5K) |
 |sdkman/joern-todo | - | - |
 |sdkman/jreleaser | ✅(3.4K) | ✅(3.4K) |
 |sdkman/karaf | ✅(13K) | ✅(13K) |
-|sdkman/kcctl | - | - |
+|sdkman/kcctl | ✅(44M) | ✅(44M) |
 |sdkman/ki | ✅(1.1K) | ✅(1.1K) |
 |sdkman/kobweb | ❌(File corrupted.)| ✅(8.6K) |
-|sdkman/kscript | - | - |
-|sdkman/ktx | - | - |
+|sdkman/kscript | ✅(2.6K) | ✅(2.6K) |
+|sdkman/ktx | ✅(9.9K) | ✅(9.9K) |
 |sdkman/layrry | ✅(3.7K) | ✅(3.7K) |
 |sdkman/leiningen-todo | - | - |
 |sdkman/maven | ✅(5.8K) | ✅(5.8K) |
 |sdkman/maven_mvnd | ❌(File corrupted.)| ❌(File corrupted.)|
 |sdkman/mcs | ✅(33M) | ✅(33M) |
-|sdkman/micronaut | - | - |
+|sdkman/micronaut | ✅(63M) | ✅(63M) |
 |sdkman/mulefd | ✅(8.6K) | ✅(8.6K) |
 |sdkman/mybatis_migrations | ✅(3.7K) | ✅(3.7K) |
-|sdkman/neo4j_migrations | - | - |
+|sdkman/neo4j_migrations | ❌(Not found path)| ❌(Not found path)|
 |sdkman/pierrot | ✅(54M) | ✅(54M) |
 |sdkman/pomchecker | ✅(5.4K) | ✅(5.4K) |
 |sdkman/quarkus | ✅(3.7K) | ✅(3.7K) |
@@ -149,12 +122,12 @@ Compressed: 447635
 |sdkman/tomcat | ❌(Not found path)| ❌(Not found path)|
 |sdkman/toolkit | ❌(Not found path)| ❌(Not found path)|
 |sdkman/vert.x-todo | - | - |
-|sdkman/visualVM | - | - |
+|sdkman/visualVM | ❌(Not found path)| ❌(Not found path)|
 |sdkman/webtau | ❌(Not found path)| ❌(Not found path)|
 |sdkman/znai | ❌(Not found path)| ❌(Not found path)|
 |security/bandwhich | ❌(404)| ❌(404)|
 |security/ncat | ✅(5.1M) | ✅(5.1M) |
-|security/nmap | ✅(9.2M) | ✅(9.2M) |
+|security/nmap | ❌(timeout)| ✅(9.2M) |
 |security/nping | ✅(5.3M) | ✅(5.3M) |
 |security/openssl | ✅(5.1M) | ✅(5.1M) |
 |security/smartctl | ✅(2.0M) | ✅(2.0M) |
@@ -162,8 +135,8 @@ Compressed: 447635
 
 
 lang: total=0 pass=0 unsupport=0 error=0  
-media: total=8 pass=4 unsupport=2 error=2  
-osman: total=122 pass=54 unsupport=2 error=66  
+media: total=8 pass=7 unsupport=0 error=1  
+osman: total=120 pass=53 unsupport=2 error=65  
 plugin: total=0 pass=0 unsupport=0 error=0  
-sdkman: total=120 pass=37 unsupport=52 error=31  
-security: total=14 pass=12 unsupport=0 error=2  
+sdkman: total=120 pass=60 unsupport=18 error=42  
+security: total=14 pass=11 unsupport=0 error=3  
