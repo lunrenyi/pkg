@@ -49,7 +49,8 @@ begin==1 &&(($0 ~"<td><a href=.*</a></td>" ) || ($0 ~"<td>[0-9a-z]{64}<\\/td>" )
     if( arr[sha256] != "") contiune
     sha256 = substr($0,RATART+11,RLENGTH-9);
     if(sha_available == 0){
-      print "    sha256: "sha256
+      # print "    sha256: "sha256
+      print "    sha256: "null
       sha_available = 1
     }
     arr[sha256] = sha256
