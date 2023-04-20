@@ -48,8 +48,8 @@ test_xbin(){
     ___X_CMD_OS_NAME_=$os; ___X_CMD_OS_ARCH_=$arch;
 
     {
-        if x pkg install "$name"; then
-            bin_path=$(x pkg xbin path $name)
+        if x pkg install "$name" >&2 ; then
+            bin_path=$(x pkg xbin path $name 2>/dev/null )
             if [ -f "$bin_path" ]; then
                 size=$(ls -lh $bin_path | awk '{printf("%s", $5)}')
                 printf "| %s(%s) " "✅" "$size"; count_num "$category" pass
