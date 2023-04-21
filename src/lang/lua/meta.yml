@@ -77,8 +77,6 @@ rule:
       internet: "https://sourceforge.net/projects/luabinaries/files/5.3.5/Other%20Libraries/lua-5.3.5_MacOS1013_lib.tar.gz/download"
       cn: "https://sourceforge.net/projects/luabinaries/files/5.3.5/Other%20Libraries/lua-5.3.5_MacOS1013_lib.tar.gz/download"
 
-
-
   5.4*/linux/*:
     xbin: lua54
   5.4*/win/*:
