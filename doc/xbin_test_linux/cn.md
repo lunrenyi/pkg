@@ -8,7 +8,7 @@
 |lang/lua | ✅(302K) | - |
 |lang/node | ❌(Not found path)| ❌(Not found path)|
 |lang/perl | ❌(Not found path)| ❌(Not found path)|
-|lang/python | ❌(404)| ❌(404)|
+|lang/python | - | - |
 |lang/rust | ✅(2.9M) | ✅(15K) |
 |lang/scala | ✅(1.8K) | ✅(1.8K) |
 |media/agg | ✅(8.6M) | ❌(Not found path)|
@@ -82,7 +82,7 @@
 |sdkman/ballerina | ❌(Not found path)| ❌(Not found path)|
 |sdkman/bpipe | ✅(25K) | ✅(25K) |
 |sdkman/btrace | ✅(2.6K) | ✅(2.6K) |
-|sdkman/concurnas | ❌(Not found path)| ❌(Not found path)|
+|sdkman/concurnas | ✅(4.5K) | ✅(4.5K) |
 |sdkman/connor | ✅(45M) | ❌(File corrupted.)|
 |sdkman/coursier | ❌(Not found path)| ❌(Not found path)|
 |sdkman/cxf | ❌(Not found path)| ❌(Not found path)|
@@ -95,7 +95,7 @@
 |sdkman/groovy | ✅(1.9K) | ✅(1.9K) |
 |sdkman/groovyserv | ❌(Not found path)| ❌(Not found path)|
 |sdkman/hadoop | ✅(8.9K) | ✅(8.9K) |
-|sdkman/helido_cli-todo | ❌(File corrupted.)| ❌(File corrupted.)|
+|sdkman/helido_cli-todo | - | - |
 |sdkman/http4k-todo | - | - |
 |sdkman/infrastructor | - | - |
 |sdkman/jarviz | ✅(132) | ✅(132) |
@@ -126,7 +126,7 @@
 |sdkman/scala_cli | ❌(Not found path)| ❌(Not found path)|
 |sdkman/schemacrawler | ❌(Not found path)| ❌(Not found path)|
 |sdkman/skeletal | ✅(11K) | ✅(11K) |
-|sdkman/spark | ❌(Not found path)| ❌(Not found path)|
+|sdkman/spark | ✅(411M) | ✅(411M) |
 |sdkman/spring | ✅(3.3K) | ✅(3.3K) |
 |sdkman/sshoogr-todo | - | - |
 |sdkman/taxi-todo | - | - |
@@ -145,9 +145,9 @@
 |security/traceroute | ✅(124K) | ✅(124K) |
 
 
-lang: total=22 pass=13 unsupport=1 error=8  
+lang: total=22 pass=13 unsupport=3 error=6  
 media: total=8 pass=7 unsupport=0 error=1  
 osman: total=120 pass=55 unsupport=2 error=63  
 plugin: total=0 pass=0 unsupport=0 error=0  
-sdkman: total=120 pass=69 unsupport=16 error=35  
+sdkman: total=120 pass=73 unsupport=18 error=29  
 security: total=14 pass=12 unsupport=0 error=2  
