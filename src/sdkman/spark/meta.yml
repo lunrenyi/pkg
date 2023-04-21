@@ -7,10 +7,9 @@ file_suffix: zip
 url:
   internet: "https://dlcdn.apache.org/spark/spark-%{version}/spark-%{version}-bin-hadoop3.tgz"
   cn: "https://dlcdn.apache.org/spark/spark-%{version}/spark-%{version}-bin-hadoop3.tgz"
-unpack_way: unpack_copy_to_target_dir
 
 xbin:
-  spark: bin/spark
+  spark: "%{version}"
 
 rule:
   /*:
