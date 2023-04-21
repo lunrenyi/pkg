@@ -5,10 +5,10 @@
 |lang/java | ❌(timeout)| ❌(timeout)|
 |lang/julia | ✅(22K) | ✅(16K) |
 |lang/kotlin | ✅(677) | ✅(677) |
-|lang/lua | ✅(302K) | - |
+|lang/lua | ✅(302K) | ✅(302K) |
 |lang/node | ❌(Not found path)| ❌(Not found path)|
 |lang/perl | ❌(Not found path)| ❌(Not found path)|
-|lang/python | - | - |
+|lang/python | ✅(10) | ❌(404)|
 |lang/rust | ✅(2.9M) | ✅(15K) |
 |lang/scala | ✅(1.8K) | ✅(1.8K) |
 |media/agg | ✅(8.6M) | ❌(Not found path)|
@@ -122,12 +122,12 @@
 |sdkman/pierrot | ✅(54M) | ✅(54M) |
 |sdkman/pomchecker | ✅(5.4K) | ✅(5.4K) |
 |sdkman/quarkus | ✅(3.7K) | ✅(3.7K) |
-|sdkman/sbt | ❌(Not found path)| ❌(Not found path)|
+|sdkman/sbt | ✅(28K) | ✅(28K) |
 |sdkman/scala_cli | ❌(Not found path)| ❌(Not found path)|
 |sdkman/schemacrawler | ❌(Not found path)| ❌(Not found path)|
 |sdkman/skeletal | ✅(11K) | ✅(11K) |
 |sdkman/spark | ✅(411M) | ✅(411M) |
-|sdkman/spring | ✅(3.3K) | ✅(3.3K) |
+|sdkman/spring | ❌(404)| ❌(404)|
 |sdkman/sshoogr-todo | - | - |
 |sdkman/taxi-todo | - | - |
 |sdkman/tomcat | ✅(21K) | ✅(21K) |
@@ -145,7 +145,7 @@
 |security/traceroute | ✅(124K) | ✅(124K) |
 
 
-lang: total=22 pass=13 unsupport=3 error=6  
+lang: total=22 pass=15 unsupport=0 error=7  
 media: total=8 pass=7 unsupport=0 error=1  
 osman: total=120 pass=55 unsupport=2 error=63  
 plugin: total=0 pass=0 unsupport=0 error=0  
