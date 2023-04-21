@@ -24,8 +24,8 @@ jobs:
         uses: x-cmd/action@main
         with:
           code: |
-            xws pkg yml2tgz
-            xws push all 
+            # xws pkg yml2tgz
+            xws push all
 
 
 
