@@ -8,7 +8,10 @@ url:
   internet: "https://dlcdn.apache.org/cxf/%{version}/apache-cxf-%{version}.%{file_suffix}"
   cn: "https://dlcdn.apache.org/cxf/%{version}/apache-cxf-%{version}.%{file_suffix}"
 unpack_way: unpack_copy_to_target_dir
-
+hook:
+  activate: activate.sh
+  deactivate: deactivate.sh
+#无主二进制文件； bin目录下保存了CXF提供的一些小工具，这些工具的主要作用是完成根据WSDL代码生成java代码，以及根据WSDL代码生成javascript代码等代码生成任务，因此用hook添加到path里
 rule:
   /*:
     version: stable
