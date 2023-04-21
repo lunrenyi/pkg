@@ -1,7 +1,7 @@
 # shellcheck shell=dash
 
-pkg_json2binmod2()(
-    cd "$(x wsroot)/.tmp/sdkman" || return
+list_xbin()(
+    cd "$(x wsroot)/.tmp/$1" || return
     find . -name meta.tt.json | while read -r line; do
         pkg_name="${line%/meta.tt.json}"
         pkg_name="${pkg_name##*/}"
@@ -14,7 +14,7 @@ pkg_json2binmod2()(
                 _name = ( D == 1 ) ? NAME : k()
                 if(uq[ _name ] == "") {
                     print _name
-                    uq[ _name ] = _name
+                    uq[ _name ] = 1
                 }
 
             }
@@ -23,9 +23,25 @@ pkg_json2binmod2()(
     done
 )
 
-pkg_json2binmod2 "" | while read -r line; do
-    x:info "$line"
-    if x pkg xbin init "$line" ; then
-        echo "$line" >> uuu
+printf "" >sdkman.suc.list
+printf "" >sdkman.fail.list
+
+list_xbin "sdkman" | while read -r xbin; do
+    echo
+    x:info "========= $xbin =============="
+
+    if x pkg xbin init "$xbin" && [ -n "$(x pkg xbin path "$xbin")" ] ; then
+        echo "$xbin" >> sdkman.suc.list
+        bin_dir="$(x pkg xbin path "$xbin")"
+        bin_dir="${bin_dir%/*}"
+        x:info "$xbin -> $bin_dir"
+
+        find "$bin_dir" -type f | while read -r bin_path; do
+            if [ -x "$bin_path" ]; then
+                echo "${bin_path##*/}"
+            fi
+        done
+    else
+        echo "$xbin" >> sdkman.fail.list
     fi
 done
