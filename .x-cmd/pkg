@@ -178,6 +178,30 @@ pkg_json2binmod()(
     done > binmod.txt
 )
 
+# pkg_json2binmod2()(
+#     x:info "Generate binmod.txt file"
+#     cd "$(x wsroot)/.tmp/sdkman" || return
+#     find . -name meta.tt.json | while read -r line; do
+#         pkg_name="${line%/meta.tt.json}"
+#         pkg_name="${pkg_name##*/}"
+#         cat "$line" | x ja -v NAME="$pkg_name" '{
+#             if (k()=="static-build") {
+#                 _idx = index(v(), "/")
+#                 NAME=substr(v(), _idx+1)
+#             }
+#             if ((O[1]=="\"xbin\"") && (v() !~ /^[\{}]$/)) {
+#                 _name = ( D == 1 ) ? NAME : k()
+#                 if(uq[ _name ] == "") {
+#                     print ":" _name ":" NAME
+#                     uq[ _name ] = _name
+#                 }
+
+#             }
+#         }
+#         '
+#     done
+# )
+
 
 [ "$#" -gt 0 ] && pkg "$@"
 

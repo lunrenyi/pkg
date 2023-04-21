@@ -10,7 +10,6 @@ perl_url: https://github.com/skaji/relocatable-perl/releases/download/
 url:
   internet: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
   cn: https://github.com/skaji/relocatable-perl/releases/download/%{version}/perl-%{_os}-%{_arch}.tar.gz
-file_suffix: tar.gz
 hook:
   activate: activate.sh
   deactivate: deactivate.sh
