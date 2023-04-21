@@ -25,7 +25,7 @@ rule:
   /*:
     version: latest
   latest/*:
-    version: py310_23.1.0
+    version: py310_23.1.0-1
 
   "*/*/x64":
     _arch: x86_64

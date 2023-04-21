@@ -166,7 +166,7 @@ pkg_json2binmod()(
                 NAME=substr(v(), _idx+1)
             }
             if ((O[1]=="\"xbin\"") && (v() !~ /^[\{}]$/)) {
-                _name = ( D == 1 ) ? NAME"dd" : k()
+                _name = ( D == 1 ) ? NAME : k()
                 if(uq[ _name ] == "") {
                     print ":" _name ":" NAME
                     uq[ _name ] = _name
