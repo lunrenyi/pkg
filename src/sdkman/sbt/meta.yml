@@ -1,26 +1,26 @@
-homepage: https://github.com/quarkusio/quarkus
+homepage: https://www.scala-sbt.org/download.html
 license: Apache License
 rely: []
 _os: "%{os}"
 _arch: "%{arch}"
 file_suffix: zip
 url:
-  internet: "https://github.com/quarkusio/quarkus/releases/download/%{version}/quarkus-cli-%{version}.zip"
-  cn: "https://github.com/quarkusio/quarkus/releases/download/%{version}/quarkus-cli-%{version}.zip"
+  internet: "https://github.com/sbt/sbt/releases/download/v%{version}/sbt-%{version}.zip"
+  cn: "https://github.com/sbt/sbt/releases/download/v%{version}/sbt-%{version}.zip"
 unpack_way: unpack_copy_to_target_dir
 
 xbin:
-  quarkus: bin/quarkus
+  sbt: bin/sbt
 
 rule:
   /*:
     version: stable
 
   stable/*:
-    version: "2.16.6.Final"
+    version: "1.8.2"
 
   latest/*:
-    version: "2.16.6.Final"
+    version: "1.8.2"
 
   "*/linux/arm64":
 

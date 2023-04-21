@@ -1,4 +1,4 @@
-homepage: https://github.com/kobo/gaiden/releases
+homepage: https://gradle.org/install/#manually
 license: Apache License
 rely: []
 _os: "%{os}"
