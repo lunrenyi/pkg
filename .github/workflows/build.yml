@@ -25,7 +25,7 @@ jobs:
         with:
           code: |
             xws pkg yml2tgz
-            xws push all
+            xws push all 
 
 
 
