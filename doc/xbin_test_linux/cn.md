@@ -87,7 +87,7 @@
 |sdkman/coursier | ❌(Not found path)| ❌(Not found path)|
 |sdkman/cxf | ❌(Not found path)| ❌(Not found path)|
 |sdkman/doctoolchain | ✅(944) | ✅(944) |
-|sdkman/flink | ✅(2.4K) | ✅(2.4K) |
+|sdkman/flink | ❌(timeout)| ✅(2.4K) |
 |sdkman/gaiden | ✅(9.1K) | ✅(9.1K) |
 |sdkman/gradle | ❌(File corrupted.)| ❌(File corrupted.)|
 |sdkman/gradle profiler-todo | - | - |
@@ -149,5 +149,5 @@ lang: total=22 pass=15 unsupport=0 error=7
 media: total=8 pass=7 unsupport=0 error=1  
 osman: total=120 pass=55 unsupport=2 error=63  
 plugin: total=0 pass=0 unsupport=0 error=0  
-sdkman: total=120 pass=73 unsupport=18 error=29  
+sdkman: total=120 pass=72 unsupport=18 error=30  
 security: total=14 pass=12 unsupport=0 error=2  
