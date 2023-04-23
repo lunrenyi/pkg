@@ -154,4 +154,8 @@
 | lang/go/go | ✅ |
 | lang/go/gofmt | ❌ ||
 | lang/python/python | ✅ |
-| lang/perl/perl 
+| lang/perl/perl | ❌ ||
+| lang/rust/rust | ✅ |
+| lang/rust/rustc | ❌ ||
+| lang/java/java | ✅ |
+| lang/kotlin/kotlin 
