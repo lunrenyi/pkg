@@ -32,7 +32,7 @@ generate_mdtable_online(){
         time_total=$(awk 'BEGIN{printf("%d\n",'"$time_total"'*1000)}')
 
         case $http_code in
-            200|302|304)    printf "| %s(%sms) " "✅" "$(awk 'BEGIN{printf("%d\n",'"$time_total"'*1000)}')"                 ;;
+            200|302|304)    printf "| %s(%sms) " "✅" "$time_total"                 ;;
             000)            printf "| ❌(timeout)"
                             x:error "url: $url, http_code: timeout"                 ;;
             *)              printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
