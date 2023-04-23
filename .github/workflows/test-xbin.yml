@@ -1,5 +1,5 @@
 
-name: test xbin darwin
+name: test xbin
 on:
   schedule:
     - cron: '0 13 * * *'
@@ -26,8 +26,7 @@ jobs:
         uses: x-cmd/action@main
         with:
           code: |
-            x ls && git pull && x os name && x os arch
-            # xrc pkg && xws test_xbin linux/x64 linux/arm64 && xws push test
+            xrc pkg && xws test_xbin && git pull && xws push test
 
 
 
