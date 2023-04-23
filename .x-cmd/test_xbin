@@ -3,6 +3,8 @@
 generate_xbin_list()(
     x:info "Generate binmod.txt file"
     x pkg update
+    ls "$___X_CMD_ROOT_DATA"
+    ls "$___X_CMD_ROOT_DATA/pkg"
     ls "$___X_CMD_ROOT_DATA/pkg/raw/"
     cd "$___X_CMD_ROOT_DATA/pkg/raw/" || return
     find . -name meta.tt.json | while read -r line; do
