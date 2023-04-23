@@ -3,7 +3,7 @@ license: MIT
 rely: []
 _os: "%{os}"
 _arch: "%{arch}"
-gh_url: https://github.com/x-cmd-build/k3d/download/%{version}
+gh_url: https://github.com/x-cmd-build/k3d/releases/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/k3d/-/releases/%{version}/downloads
 file_suffix: tar.xz
 url:

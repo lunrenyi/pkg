@@ -1,9 +1,7 @@
 homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
-_os: "%{os}"
-_arch: "%{arch}"
-gh_url: https://github.com/x-cmd-build/brook/download/%{version}
+gh_url: https://github.com/x-cmd-build/brook/releases/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/brook/-/releases/%{version}/downloads
 file_suffix: tar.xz
 url:
@@ -11,7 +9,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  brook: brook_%{_os}_%{_arch}
+  brook: brook_%{os}_%{arch}
 
 
 rule:

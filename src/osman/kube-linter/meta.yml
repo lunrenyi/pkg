@@ -3,7 +3,7 @@ license: MIT
 rely: []
 _os: "%{os}"
 
-gh_url: https://github.com/x-cmd-build/kube-linter/download/%{version}
+gh_url: https://github.com/x-cmd-build/kube-linter/releases/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/kube-linter/-/releases/%{version}/downloads
 file_suffix: tar.xz
 url:

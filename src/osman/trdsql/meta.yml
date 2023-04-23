@@ -2,7 +2,7 @@ homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
-gh_url: https://github.com/x-cmd-build/trdsql/download/%{version}
+gh_url: https://github.com/x-cmd-build/trdsql/releases/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/trdsql/-/releases/%{version}/downloads
 file_suffix: tar.xz
 url:

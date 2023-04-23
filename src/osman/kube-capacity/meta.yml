@@ -2,7 +2,7 @@ homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
-gh_url: https://github.com/x-cmd-build/kube-capacity/download/%{version}
+gh_url: https://github.com/x-cmd-build/kube-capacity/releases/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/kube-capacity/-/releases/%{version}/downloads
 file_suffix: tar.xz
 url:

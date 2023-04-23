@@ -2,7 +2,7 @@ homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
-gh_url: https://github.com/x-cmd-build/grex/download/%{version}
+gh_url: https://github.com/x-cmd-build/grex/releases/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/grex/-/releases/%{version}/downloads
 file_suffix: tar.xz
 url:
@@ -33,5 +33,4 @@ rule:
     zipname:    grex-v1.4.1-x86_64-unknown-linux-musl.tar.xz
   "*/win/x64":
     zipname:    grex-v1.4.1-x86_64-pc-windows-msvc.tar.xz
-
     bin_suffix: .exe

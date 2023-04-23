@@ -2,7 +2,7 @@ homepage: https://gitee.com/organizations/static-build/projects
 license: MIT
 rely: []
 
-gh_url: https://github.com/x-cmd-build/lazygit/download/%{version}
+gh_url: https://github.com/x-cmd-build/lazygit/releases/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/lazygit/-/releases/%{version}/downloads
 file_suffix: tar.xz
 url:

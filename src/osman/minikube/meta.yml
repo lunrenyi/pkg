@@ -3,7 +3,7 @@ license: MIT
 rely: []
 _os: "%{os}"
 _arch: "%{arch}"
-gh_url: https://github.com/x-cmd-build/minikube/download/%{version}
+gh_url: https://github.com/x-cmd-build/minikube/releases/download/%{version}
 gc_url: https://gitcode.net/x-cmd-build/minikube/-/releases/%{version}/downloads
 file_suffix: tar.xz
 url:
