@@ -88,11 +88,7 @@ generate_sammury(){
     printf "total:%s  total pass :%s  total unsupport:%s  total error:%s  success rate:%s%% "  "$total" "$total_pass" "$total_unsuport" "$total_error" "$success_rate"
 }
 
-if [ "$#" -eq 0 ] ; then
-    set -- "cn"
-fi
-
-local network="$1"
+local network="${1:-"cn"}"
 local result_path; result_path="$(x wsroot)/doc/default_url/$network.md"
 x touch "$result_path"
 
