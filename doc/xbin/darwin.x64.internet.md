@@ -85,7 +85,7 @@
 | security/openssl/ssl | ❌ ||
 | sdkman/activemq/activemq | ✅ |
 | sdkman/ant/ant | ✅ |
-| sdkman/quarkus/quarkus | ✅ |
+| sdkman/quarkus/quarkus | ❌ ||
 | sdkman/karaf/karaf | ✅ |
 | sdkman/kscript/kscript | ✅ |
 | sdkman/btrace/btrace | ✅ |
@@ -105,7 +105,7 @@
 | sdkman/mybatis_migrations/mybatis_migrations | ✅ |
 | sdkman/mybatis_migrations/migrate | ❌ ||
 | sdkman/schemacrawler/schemacrawler | ❌ ||
-| sdkman/schemacrawler/quarkus | ✅ |
+| sdkman/schemacrawler/quarkus | ❌ ||
 | sdkman/kcctl/kcctl | ✅ |
 | sdkman/znai/znai | ❌ ||
 | sdkman/jdk-mission-control/jdk-mission-control | ❌ ||
@@ -136,6 +136,8 @@
 | sdkman/concurnas/conc | ❌ ||
 | sdkman/ballerina/ballerina | ❌ ||
 | sdkman/ballerina/bal | ❌ ||
+| sdkman/helido_cli-todo/helido_cli-todo | ❌ ||
+| sdkman/helido_cli-todo/helidon | ❌ ||
 | sdkman/pierrot/pierrot | ❌ ||
 | sdkman/toolkit/toolkit | ✅ |
 | sdkman/spark/spark | ✅ |
