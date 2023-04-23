@@ -158,4 +158,12 @@
 | lang/rust/rust | ✅ |
 | lang/rust/rustc | ❌ ||
 | lang/java/java | ✅ |
-| lang/kotlin/kotlin 
+| lang/kotlin/kotlin | ✅ |
+| lang/lua/lua | ❌ ||
+| lang/scala/scala | ✅ |
+| lang/scala/scaladoc | ❌ ||
+| lang/julia/julia | ✅ |
+| media/agg/agg | ✅ |
+| media/ffmpeg/ffmpeg | ✅ |
+| media/sqlite3/sqlite3 | ✅ |
+| media/magick/magick | ✅ |
