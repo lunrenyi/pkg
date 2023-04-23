@@ -1,11 +1,8 @@
 
 name: test xbin win
 on:
-  # push:
-  #   branches:
-  #     - main
   schedule:
-    - cron: '0 12 * * *'
+    - cron: '0 15 * * *'
   workflow_dispatch:
 
 jobs:
