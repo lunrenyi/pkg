@@ -10,7 +10,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  du: curl.%{os}.%{arch}%{bin_suffix}
+  curl: curl.%{os}.%{arch}%{bin_suffix}
 
 rule:
   /*:

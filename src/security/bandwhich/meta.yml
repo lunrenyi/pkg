@@ -30,26 +30,6 @@ rule:
     version: stable
 
   stable/*:
-    version: 4.0.0
-
-  latest/*:
-    version: 4.0.0
-
-  "*/linux/arm64":
-
-  "*/darwin/arm64":
-
-  "*/linux/x64":
-
-  "*/darwin/x64":
-
-  "*/win/x64":
-    file_suffix: zip
-
-
-
-
-  stable/*:
     version: v0.0.0
 
   latest/*:
