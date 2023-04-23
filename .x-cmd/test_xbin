@@ -1,119 +1,53 @@
-# shellcheck shell=sh disable=SC2154,SC2164,2046,2106,3043,2091 #source
-generate_xbin_test_mdtable(){
-    printf "%s\n" "| candidate \\ osarch | $1 | $2 |$3 | "
-    printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | "
+# shellcheck shell=sh disable=SC2154,SC2164,2046,2106,3043 #source
+generate_mdtable(){
+    printf "%s\n" "| candidate \\ osarch | linux/x64 | linux/arm64 | darwin/x64 | darwin/arm64 | win/x64 |"
+    printf "%s\n" "| ------------------ | ----------- | ------------ | ---------- | --------- | ------- |"
 
-    local dir ; local pkg ; local version ; local osarch ; local url ; local http_code ; local time_total ; local category;
+    local dir ; local pkg ; local version ;  local category;
     for dir in "$(x wsroot)"/src/*; do
         category="${dir##*/}"
-        case $category in
-            plugin) continue;;
-        esac
+
         [ -d "$dir" ] || continue
         for pkg in "$dir"/*; do
-
             pkg="${pkg##*/}"
-            x:info "$category/$pkg" >&2
+            x:info "$category/$pkg"
             version="$(___x_cmd_pkg_default_version "$pkg")"
-            printf "|%s/%s " "$category" "$pkg"
-
-            for osarch in "$@"; do
-                case $pkg in
-                    7za) continue;;
-                esac
-
-                url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)"
-                [ -n "$url" ] || { printf "| %s " "-"; count_num "$category" unsupport; continue;}
-                eval "$(curl -sSI --max-time 10 -o /dev/null -w "http_code=%{http_code} ; time_total=%{time_total}" "$url")"
-                case $http_code in
-                    200|302|304|301)    test_xbin "$pkg" "$version" "$osarch" "$url";;
-                    000)                printf "| ❌(timeout)"
-                                        count_num "$category" error
-                                        x:error "url: $url, http_code: timeout";;
-                    *)                  printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
-                                        count_num "$category" error
-                                        x:error "url: $url, http_code: $http_code";;
-                esac
-                x pkg uninstall "$pkg"
-            done
-            printf "|\n"
+            generate_mdtable_online "$category" "$pkg" "$version" "$network"
         done
-        x:info "$(generate_result_one "$category")"
     done
 }
 
-test_xbin(){
-    local name="$1" ; local version="$2" ; local osarch="$3" ; local url="$4" ; local os; local arch ; local bin_path; local size
-    arch=${osarch#*/} ; os=${osarch%/*}
-    ___X_CMD_OS_NAME_=$os; ___X_CMD_OS_ARCH_=$arch;
+generate_mdtable_online(){
+    local category="$1"; local pkg="$2"; local version="$3"; local network="$4"
 
-    {
-        if x pkg install "$name" >&2 ; then
-            bin_path=$(x pkg xbin path $name 2>/dev/null )
-            if [ -f "$bin_path" ]; then
-                size=$(ls -lh $bin_path | awk '{printf("%s", $5)}')
-                printf "| %s(%s) " "✅" "$size"; count_num "$category" pass
-                return
-            else
-                printf "| %s(%s)" "❌" "Not found path"
-                x:error "pkg: $name, os/arch: $osarch  Not found path"
-                count_num "$category" error
-                return
-            fi
-        else
-            printf "| %s(%s)" "❌" "File corrupted."
-            count_num "$category" error
-            return
+    printf "|%s/%s " "$category" "$pkg"
+    local url ; local http_code ; local time_total ; local osarch
+    for osarch in linux/x64 linux/arm64 darwin/x64 darwin/arm64 win/x64; do
+        if ! url="$(___x_cmd_pkg___list "$pkg" "$version" "$osarch" "url.$network"  2>/dev/null)" || [ -z "$url" ]; then
+            printf "| %s " "-"
+            continue
         fi
-    }
-}
 
-generate_result(){
-    printf "\n\n"
-    local dir ; local category;
-    for dir in "$(x wsroot)"/src/*; do
-        category="${dir##*/}"
-        generate_result_one "$category"
+        eval "$(curl -sSI --max-time 10 -o /dev/null -w "http_code=%{http_code} ; time_total=%{time_total}" "$url")"
+        time_total=$(awk 'BEGIN{printf("%d\n",'"$time_total"'*1000)}')
+
+        case $http_code in
+            200|302|304)    printf "| %s(%sms) " "✅" "$time_total"                 ;;
+            000)            printf "| ❌(timeout)"
+                            x:error "url: $url, http_code: timeout"                 ;;
+            *)              printf "| %s(%s)" "❌" "${http_code:-"timeout"}"
+                            x:error "url: $url, http_code: $http_code"              ;;
+        esac
     done
+    printf "|\n"
 }
 
-generate_result_one(){
-    local pass ; local unsupport ; local error
-    local category="$1"
-    pass="$(x sdict get pkg_xbin_test "$category/pass")"
-    unsupport="$(x sdict get pkg_xbin_test "$category/unsupport")"
-    error="$(x sdict get pkg_xbin_test "$category/error")"
-    printf "%s: total=%s pass=%s unsupport=%s error=%s  \n" \
-        "$category" "$((${pass:-0}+${unsupport:-0}+${error:-0}))" "${pass:-0}" "${unsupport:-0}" "${error:-0}"
-}
+local network="${1:-"cn"}"
+local osarch; osarch="$(x os name)$(x os arch)"
+local result_path; result_path="$(x wsroot)/doc/default_url/$osarch.$network.md"
+x touch "$result_path"
 
-
-count_num(){
-    local category="$1"
-    local stat="$2"
-    local num=""; num="$(x sdict get pkg_xbin_test "$category/$stat")"
-    [ -n "$num" ] || num=0
-    x sdict put pkg_xbin_test "$category/$stat" "$((num+1))"
-}
-
-xbin_test_begin(){
-    local network
-    local title=${2%/*}
-    ! [ -z "$2" ] ||  title=${1%/*}
-    if [ "$1" = "cn" ] || [ "$1" = "internet" ]; then
-        network="$1";  shift
-    else
-        network="cn"
-    fi
-
-    local result_path; result_path="$(x wsroot)/doc/xbin_test_$title/$network.md"
-    x touch "$result_path"
-
-    x:info "Generate: markdown table for $network network"
-    (
-        generate_xbin_test_mdtable "$@" >"$result_path"
-        generate_result  >>"$result_path"
-    )
-}
-
-xbin_test_begin "$@"
+x:info "Generate => markdown table for $network network, osarch => $osarch"
+(
+    generate_mdtable "$network" >"$result_path"
+)
