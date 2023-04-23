@@ -2,10 +2,11 @@
 
 generate_xbin_list()(
     x:info "Generate binmod.txt file"
+    x log +pkg +x
     x pkg update
     ls "$___X_CMD_ROOT_DATA" >&2
-    ls "$___X_CMD_ROOT_DATA/pkg"
-    ls "$___X_CMD_ROOT_DATA/pkg/raw/"
+    ls "$___X_CMD_ROOT_DATA/pkg" >&2
+    ls "$___X_CMD_ROOT_DATA/pkg/raw/" >&2
     cd "$___X_CMD_ROOT_DATA/pkg/raw/" || return
     find . -name meta.tt.json | while read -r line; do
         pkg_name="${line%/meta.tt.json}"
