@@ -26,8 +26,4 @@ jobs:
         uses: x-cmd/action@main
         with:
           code: |
-            xrc pkg && xws test_xbin && git pull && xws push test
-
-
-
-
+            xrc pkg && xws test_xbin internet && git pull && xws push test

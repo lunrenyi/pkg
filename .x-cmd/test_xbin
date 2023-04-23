@@ -1,13 +1,9 @@
 # shellcheck shell=sh disable=SC2154,SC2164,2046,2106,3043 #source
 
 generate_xbin_list()(
-    # step 1: list all json
-    # step 2: get xbin attribute
     x:info "Generate binmod.txt file"
-    [ -d "$(x wsroot)/.tmp" ] || xws install
-    cd "$(x wsroot)/.tmp" || return
+    cd "$___X_CMD_ROOT_DATA/pkg/raw/" || return
     find . -name meta.tt.json | while read -r line; do
-        # TODO: if it is a value.
         pkg_name="${line%/meta.tt.json}"
         category="${pkg_name%/*}"
         category="${category##*/}"
