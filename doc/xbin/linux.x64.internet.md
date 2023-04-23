@@ -15,7 +15,7 @@
 | sdkman/kscript/kscript | ✅ |
 | sdkman/kobweb/kobweb | ❌ ||
 | sdkman/schemacrawler/schemacrawler | ❌ ||
-| sdkman/schemacrawler/quarkus | ✅ |
+| sdkman/schemacrawler/quarkus | ❌ ||
 | sdkman/concurnas/concurnas | ✅ |
 | sdkman/concurnas/conc | ❌ ||
 | sdkman/toolkit/toolkit | ✅ |
@@ -52,7 +52,7 @@
 | sdkman/ki/ki | ✅ |
 | sdkman/mcs/mcs | ✅ |
 | sdkman/doctoolchain/doctoolchain | ✅ |
-| sdkman/quarkus/quarkus | ✅ |
+| sdkman/quarkus/quarkus | ❌ ||
 | sdkman/pomchecker/pomchecker | ✅ |
 | sdkman/jmeter/jmeter | ✅ |
 | sdkman/hadoop/hadoop | ✅ |
@@ -69,6 +69,8 @@
 | sdkman/groovyserv/groovyserver | ❌ ||
 | sdkman/tomcat/tomcat | ✅ |
 | sdkman/spark/spark | ✅ |
+| sdkman/helido_cli-todo/helido_cli-todo | ❌ ||
+| sdkman/helido_cli-todo/helidon | ❌ ||
 | sdkman/jbake/jbake | ✅ |
 | osman/7za/7za | ✅ |
 | osman/7za/p7zip | ❌ ||

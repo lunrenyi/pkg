@@ -13,7 +13,7 @@ jobs:
         os: [ windows-2019, ubuntu-latest, macos-latest ]
         # os: [ gentoo ]
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 100
+    timeout-minutes: 30
     env:
       ___X_CMD_GHACTION_X: x1
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
