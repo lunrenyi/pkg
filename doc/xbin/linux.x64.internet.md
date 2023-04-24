@@ -84,7 +84,7 @@
 | osman/termshark/termshark | ✅ |
 | osman/grex/grex | ✅ |
 | osman/ws4sqlite/ws4sqlite | ✅ |
-| osman/brook/brook | ❌ ||
+| osman/brook/brook | ✅ |
 | osman/aliyun/aliyun | ✅ |
 | osman/rclone/rclone | ✅ |
 | osman/duf/duf | ✅ |
@@ -111,7 +111,6 @@
 | osman/bat/bat | ✅ |
 | osman/lazygit/lazygit | ✅ |
 | osman/gum/gum | ✅ |
-| osman/gum/gumcli | ✅ |
 | osman/kind/kind | ✅ |
 | osman/helm/helm | ✅ |
 | osman/k3d/k3d | ✅ |
@@ -122,7 +121,7 @@
 | osman/mosquitto/mosquitto_rr | ✅ |
 | osman/mosquitto/mosquitto_sub | ✅ |
 | osman/mosquitto/mosquitto_ctrl | ✅ |
-| osman/bwrap/bwrap | ✅ |
+| osman/bwrap/bwrap | ❌ ||
 | osman/minikube/minikube | ✅ |
 | osman/xsv/xsv | ✅ |
 | osman/bit/bit | ✅ |
@@ -151,7 +150,7 @@
 | media/sqlite3/sqlite3 | ✅ |
 | media/ffmpeg/ffmpeg | ✅ |
 | lang/python/python | ✅ |
-| lang/lua/lua | ❌ ||
+| lang/lua/lua | ✅ |
 | lang/scala/scala | ✅ |
 | lang/scala/scaladoc | ✅ |
 | lang/java/java | ✅ |
