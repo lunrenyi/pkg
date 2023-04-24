@@ -1,4 +1,4 @@
-"0.6.5"
+"0.6.5":
   linux/x64:
     sha256: ba26cbfd7eb179f4eaab8ba857225f40beccc10862ad19bb76b38aa1bd003016
   linux/arm64:
