@@ -26,7 +26,6 @@
 | osman/sqlean/sqlean | ❌ ||
 | osman/k3d/k3d | ❌ ||
 | osman/gum/gum | ✅ |
-| osman/gum/gumcli | ✅ |
 | osman/gh/gh | ✅ |
 | osman/gh/ghcli | ✅ |
 | osman/bit/bit | ✅ |
@@ -48,14 +47,14 @@
 | osman/rg/rg | ✅ |
 | osman/grex/grex | ✅ |
 | osman/bun/bun | ❌ ||
-| osman/kind/kind | ❌ ||
+| osman/kind/kind | ✅ |
 | osman/goreleaser/goreleaser | ✅ |
 | osman/procs/procs | ✅ |
 | osman/zenith/zenith | ✅ |
 | osman/curl/curl | ✅ |
 | osman/zellij/zellij | ✅ |
 | osman/ffuf/ffuf | ✅ |
-| osman/brook/brook | ❌ ||
+| osman/brook/brook | ✅ |
 | osman/difft/difft | ✅ |
 | osman/tmux/tmux | ✅ |
 | osman/trdsql/trdsql | ✅ |
