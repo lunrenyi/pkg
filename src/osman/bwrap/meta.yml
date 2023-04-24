@@ -24,7 +24,7 @@ rule:
 
   "*/linux/arm64":
     zipname:    bwrap.linux.arm64.7z
-    xbin:       bin/bwrap.linux.arm64
+    xbin:       bwrap.linux.arm64/bin/bwrap.linux.arm64
   "*/linux/x64":
     zipname:    bwrap.linux.x64.7z
-    xbin:       bin/bwrap.linux.x64
+    xbin:       bwrap.linux.x64/bin/bwrap.linux.x64

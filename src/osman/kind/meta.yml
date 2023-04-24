@@ -11,7 +11,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  kind: kind-%{_os}-%{_arch}
+  kind: kind-%{_os}-%{_arch}%{bin_suffix}
 
 
 rule:
@@ -27,6 +27,7 @@ rule:
 
   "*/darwin/x64":
     zipname:    kind-darwin-amd64.tar.xz
+    _arch: amd64
   "*/darwin/arm64":
     zipname:    kind-darwin-arm64.tar.xz
   "*/linux/x64":
@@ -37,5 +38,4 @@ rule:
   "*/win/x64":
     zipname:    kind-windows-amd64.tar.xz
     xbin:
-      kind: kind-windows-amd64
-    bin_suffix: .exe
+      kind: kind-windows-amd64.exe

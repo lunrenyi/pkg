@@ -36,5 +36,4 @@ rule:
   "*/win/x64":
     zipname:    kube-linter.tar.xz
     xbin:
-      kube-linter: kube-linter
-    bin_suffix: .exe
+      kube-linter: kube-linter.exe

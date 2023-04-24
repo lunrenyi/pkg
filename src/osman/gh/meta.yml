@@ -9,7 +9,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 unpack_way: unpack_copy_to_target_dir
 xbin:
-  ghcli: gh
+  ghcli: bin/gh%{bin_suffix}
 
 rule:
   /*:
@@ -40,4 +40,5 @@ rule:
   "*/win/x64":
     zipname:    gh_2.25.1_windows_amd64.zip
     xbin:       bin/gh.exe
+    bin_suffix: .exe
     file_suffix: zip

@@ -39,5 +39,5 @@ rule:
   "*/win/x64":
     zipname:    minikube-windows-amd64.tar.xz
     xbin:
-      minikube: minikube-windows-amd64
+      minikube: minikube-windows-amd64%{bin_suffix}
     bin_suffix: .exe

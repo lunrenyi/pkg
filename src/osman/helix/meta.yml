@@ -12,8 +12,8 @@ url:
 unpack_way: unpack_copy_to_target_dir
 
 xbin:
-  helix: hx
-  hx: hx
+  helix: hx%{bin_suffix}
+  hx: hx%{bin_suffix}
 
 
 rule:
@@ -39,5 +39,4 @@ rule:
 
   "*/win/x64":
     zipname:    helix-23.03-x86_64-windows.tar.xz
-    xbin: hx.exe
     bin_suffix: .exe

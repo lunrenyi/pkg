@@ -10,13 +10,13 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  mosquitto: mosquitto
-  mqtt: mosquitto
-  mosquitto_passwd: mosquitto_passwd
-  mosquitto_pub: mosquitto_pub
-  mosquitto_rr: mosquitto_rr
-  mosquitto_sub: mosquitto_sub
-  mosquitto_ctrl: mosquitto_ctrl
+  mosquitto: mosquitto%{bin_suffix}
+  mqtt: mosquitto%{bin_suffix}
+  mosquitto_passwd: mosquitto_passwd%{bin_suffix}
+  mosquitto_pub: mosquitto_pub%{bin_suffix}
+  mosquitto_rr: mosquitto_rr%{bin_suffix}
+  mosquitto_sub: mosquitto_sub%{bin_suffix}
+  mosquitto_ctrl: mosquitto_ctrl%{bin_suffix}
 
 rule:
   /*:

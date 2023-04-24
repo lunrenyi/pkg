@@ -11,7 +11,7 @@ url:
   cn: "%{gc_url}/%{zipname}"
 
 xbin:
-  k3d: k3d-%{_os}-%{_arch}
+  k3d: k3d-%{_os}-%{_arch}%{bin_suffix}
 
 
 rule:
