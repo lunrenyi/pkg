@@ -20,10 +20,8 @@ jobs:
     steps:
       - name: main
         uses: actions/checkout@v2
-        with:
-          code: |
-            xws pkg yml2tgz
-            xws push all
+        - run: xws pkg yml2tgz
+        - run: xws push all
 
 
 
