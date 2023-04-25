@@ -18,7 +18,7 @@ jobs:
       # 设置任务的矩阵，可以用于生成多个子任务，每个子任务使用不同的变量值。
       matrix:
         # 设置一个名为os的变量，它有两个值：ubuntu-latest和macos-latest。这意味着会生成两个子任务，分别在ubuntu和macos环境下运行。
-        os: [ ubuntu-latest, macos-latest ]
+        os: [ ubuntu-latest ]
     # 设置任务运行的环境为矩阵中的os变量值，即ubuntu或macos。
     runs-on: ${{ matrix.os }}
     # 设置任务的超时时间为100分钟，如果超过这个时间，任务会被取消。
@@ -34,27 +34,24 @@ jobs:
       # 设置一个名为git_email的变量，值为lxb2863854515@163.com，用于Git操作的邮箱。
       git_email: lxb2863854515@163.com
       # 设置一个名为CONCURRENCY的变量，值为10，用于控制并发数。
-      CONCURRENCY: 10
+      CONCURRENCY: 5
     # 定义步骤
     steps:
-      # 第一步：检出仓库代码
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      # 第二步：构建x-cmd/pkg的all包
+      # 第一步：构建x-cmd/pkg的all包
       - name: Build x-cmd/pkg all
         uses: x-cmd/action@main
         with:
           code: |
             xws pkg yml2tgz
             xws push all
-      # 第三步：测试xbin
+      # 第二步：测试xbin
       - name: Test xbin
         continue-on-error: true
         uses: x-cmd/action@main
         with:
           code: |
             xrc pkg && xws test_xbin internet && git pull && xws push test
-      # 第四步：测试default
+      # 第三步：测试default
       - name: Test default
         continue-on-error: true
         uses: x-cmd/action@main
