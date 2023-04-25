@@ -65,7 +65,5 @@ jobs:
         # 构造消息内容，这里假设每个build都有一个输出参数叫result，可以根据实际情况修改
         run: |
           MESSAGE="Build result:\n"
-          MESSAGE+="Build1: ${jobs.build.outputs.result}\n"
-          MESSAGE+="Build2: ${jobs.test-xbin.outputs.result}\n"
-          MESSAGE+="Build3: ${jobs.test-default.outputs.result}\n"
+          MESSAGE+="Build1: ${jobs.build-and-test.outputs.result}\n"
           echo $MESSAGE
