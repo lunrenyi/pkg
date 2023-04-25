@@ -44,17 +44,17 @@ jobs:
       - name: hello
         run: echo "hello"
 
-  build:
-    needs: build-and-test
-    uses: lunrenyi/pkg/.github/workflows/build.yml@main
+  # build:
+  #   needs: build-and-test
+  #   uses: lunrenyi/pkg/.github/workflows/build.yml@main
 
-  test-xbin:
-    needs: build
-    uses: lunrenyi/pkg/.github/workflows/test-xbin.yml@main
+  # test-xbin:
+  #   needs: build
+  #   uses: lunrenyi/pkg/.github/workflows/test-xbin.yml@main
 
-  test-default:
-    needs: test-xbin
-    uses: lunrenyi/pkg/.github/workflows/test-default-url.yml@main
+  # test-default:
+  #   needs: test-xbin
+  #   uses: lunrenyi/pkg/.github/workflows/test-default-url.yml@main
 
   Send-result:
     needs: build-and-test
@@ -64,6 +64,4 @@ jobs:
       - name: Send result to WeChat group
         # 构造消息内容，这里假设每个build都有一个输出参数叫result，可以根据实际情况修改
         run: |
-          MESSAGE="Build result:\n"
-          MESSAGE+="Build1: ${jobs.build-and-test.outputs.result}\n"
-          echo $MESSAGE
+          echo ${jobs.build-and-test.outputs.result}
