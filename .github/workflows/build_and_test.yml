@@ -37,14 +37,12 @@ jobs:
       CONCURRENCY: 5
     # 定义步骤
     steps:
-      - name: main
-        uses: actions/checkout@v2
-      - name: hello
-        run: echo "hello"
       - name: Send result to WeChat group
+      - uses: x-cmd/action@main
         # 调用curl命令发送消息到webhook地址，这里假设消息类型是文本
         run: |
-          curl -X POST -H 'Content-Type: application/json' -d "{\"msgtype\": \"text\", \"text\": {\"content\": \"hello!\"}}" $WEBHOOK_URL
+          x qywx webhook $WEBHOOK_URL
+          x qywx send text "hello world!"
 
   # build:
   #   needs: build-and-test
