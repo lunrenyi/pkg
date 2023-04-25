@@ -43,7 +43,8 @@ jobs:
         run: echo "hello"
       - name: Send result to WeChat group
         # 调用curl命令发送消息到webhook地址，这里假设消息类型是文本
-        run: curl -X POST -H 'Content-Type: application/json' -d "{\"msgtype\": \"text\", \"text\": {\"content\": \"hello!\"}}" $WEBHOOK_URL
+        run: |
+          curl -X POST -H 'Content-Type: application/json' -d "{\"msgtype\": \"text\", \"text\": {\"content\": \"hello!\"}}" $WEBHOOK_URL
 
   # build:
   #   needs: build-and-test
