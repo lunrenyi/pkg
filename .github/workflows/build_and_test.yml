@@ -43,8 +43,8 @@ jobs:
         # 这里假设消息类型是文本
         with:
           code: |
-          x qywx webhook $WEBHOOK_URL
-          x qywx send text "hello world!"
+            x qywx webhook $WEBHOOK_URL
+            x qywx send text "hello world!"
 
   # build:
   #   needs: build-and-test
