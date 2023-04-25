@@ -57,7 +57,7 @@ jobs:
     uses: lunrenyi/pkg/.github/workflows/test-default-url.yml@main
 
   Send-result:
-    needs: test-default
+    needs: build-and-test
     runs-on: ubuntu-latest
     # 定义步骤
     steps:
