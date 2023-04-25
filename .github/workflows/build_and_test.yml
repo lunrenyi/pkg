@@ -57,11 +57,14 @@ jobs:
     uses: lunrenyi/pkg/.github/workflows/test-default-url.yml@main
 
   Send result:
-    - name: Send result to WeChat group
-      # 构造消息内容，这里假设每个build都有一个输出参数叫result，可以根据实际情况修改
-      run: |
-        MESSAGE="Build result:\n"
-        MESSAGE+="Build1: ${jobs.build.outputs.result}\n"
-        MESSAGE+="Build2: ${jobs.test-xbin.outputs.result}\n"
-        MESSAGE+="Build3: ${jobs.test-default.outputs.result}\n"
-        echo $MESSAGE
+    runs-on: ubuntu-latest
+    # 定义步骤
+    steps:
+      - name: Send result to WeChat group
+        # 构造消息内容，这里假设每个build都有一个输出参数叫result，可以根据实际情况修改
+        run: |
+          MESSAGE="Build result:\n"
+          MESSAGE+="Build1: ${jobs.build.outputs.result}\n"
+          MESSAGE+="Build2: ${jobs.test-xbin.outputs.result}\n"
+          MESSAGE+="Build3: ${jobs.test-default.outputs.result}\n"
+          echo $MESSAGE
