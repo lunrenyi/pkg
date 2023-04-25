@@ -21,9 +21,10 @@ jobs:
       CONCURRENCY: 10
     steps:
       - name: main
-        uses: lunrenyi/pkg@main
-      - name: build
-        run: xws pkg yml2tgz
+        uses: actions/checkout@v2
+        with:
+          code: |
+            xws pkg yml2tgz
 
 
 
