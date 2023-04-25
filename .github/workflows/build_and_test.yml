@@ -39,21 +39,4 @@ jobs:
     steps:
       - name: main
         uses: actions/checkout@v2
-      # 第一步：构建x-cmd/pkg的all包
-      - name: Build x-cmd/pkg all
-        uses: ./.github/workflows/build.yml
-      # # 第二步：测试xbin
-      # - name: Test xbin
-      #   continue-on-error: true
-      #   uses: ./.github/workflows/test-xbin.yml
-      #   with:
-      #     # 可以传递一些输入参数，例如要构建的包名
-      #     package: x-cmd/pkg
-      # # 第三步：测试default
-      # - name: Test default
-      #   continue-on-error: true
-      #   uses: ./.github/workflows/test-default-url.yml
-      #   with:
-      #     # 可以传递一些输入参数，例如要构建的包名
-      #     package: x-cmd/pkg
-      # # 第五步：使用企业微信机器人发送测试结果到微信群上
+        run: echo "hello"
