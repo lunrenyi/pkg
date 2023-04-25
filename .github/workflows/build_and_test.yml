@@ -39,4 +39,5 @@ jobs:
     steps:
       - name: main
         uses: actions/checkout@v2
+      - name: hello
         run: echo "hello"
