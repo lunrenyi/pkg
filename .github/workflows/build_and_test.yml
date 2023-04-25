@@ -37,6 +37,9 @@ jobs:
       CONCURRENCY: 5
     # 定义步骤
     steps:
+      # 第一步：检出仓库代码
+      - name: Checkout repository
+        uses: actions/checkout@v2
       # 第一步：构建x-cmd/pkg的all包
       - name: Build x-cmd/pkg all
         uses: ./.github/workflows/build.yml
