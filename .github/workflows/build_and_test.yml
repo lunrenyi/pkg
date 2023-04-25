@@ -69,4 +69,4 @@ jobs:
       - name: Send result to WeChat group
         # 构造消息内容，这里假设每个build都有一个输出参数叫result，可以根据实际情况修改
         run: |
-          echo ${jobs.build-and-test.outputs.result}
+          echo ${{jobs.build-and-test.outputs.result}}
