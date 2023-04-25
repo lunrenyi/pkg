@@ -1,6 +1,8 @@
-name: Bundle x-cmd pkg
 
+name: Bundle x-cmd pkg
 on:
+  schedule:
+    - cron: '0 11 * * *'
   workflow_dispatch:
 
 jobs:
@@ -8,9 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 100
     env:
-      # 设置一个名为GITHUB_TOKEN的变量，值为仓库中的一个密钥，用于访问GitHub API。
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # 设置一个名为ssh_key的变量，值为仓库中的一个密钥，用于SSH连接。
       ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
       # 设置一个名为git_user的变量，值为lunrenyi，用于Git操作的用户名。
       git_user: lunrenyi
@@ -19,9 +19,11 @@ jobs:
       CONCURRENCY: 10
     steps:
       - name: main
-        uses: actions/checkout@v2
-        - run: xws pkg yml2tgz
-        - run: xws push all
+        uses: lunrenyi/pkg@main
+        with:
+          code: |
+            xws pkg yml2tgz
+
 
 
 
