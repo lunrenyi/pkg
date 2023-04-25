@@ -38,7 +38,7 @@ jobs:
     # 定义步骤
     steps:
       - name: Send result to WeChat group
-      - uses: x-cmd/action@main
+        uses: x-cmd/action@main
         # 调用curl命令发送消息到webhook地址，这里假设消息类型是文本
         run: |
           x qywx webhook $WEBHOOK_URL
