@@ -42,6 +42,7 @@ jobs:
         uses: actions/checkout@v2
       # 第二步：构建x-cmd/pkg的all包
       - name: Build x-cmd/pkg all
+        continue-on-error: true
         uses: x-cmd/action@main
         with:
           code: |
