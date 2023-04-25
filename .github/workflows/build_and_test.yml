@@ -46,15 +46,15 @@ jobs:
         run: |
           curl -X POST -H 'Content-Type: application/json' -d "{\"msgtype\": \"text\", \"text\": {\"content\": \"hello!\"}}" $WEBHOOK_URL
 
-  # build:
-  #   needs: build-and-test
-  #   uses: lunrenyi/pkg/.github/workflows/build.yml@main
+  build:
+    # needs: build-and-test
+    uses: lunrenyi/pkg/.github/workflows/build.yml@main
 
-  # test-xbin:
-  #   needs: build
-  #   uses: lunrenyi/pkg/.github/workflows/test-xbin.yml@main
+  test-xbin:
+    # needs: build
+    uses: lunrenyi/pkg/.github/workflows/test-xbin.yml@main
 
-  # test-default:
-  #   needs: test-xbin
-  #   uses: lunrenyi/pkg/.github/workflows/test-default-url.yml@main
+  test-default:
+    # needs: test-xbin
+    uses: lunrenyi/pkg/.github/workflows/test-default-url.yml@main
 
