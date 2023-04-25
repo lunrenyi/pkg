@@ -15,15 +15,18 @@ jobs:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 30
     env:
-      ___X_CMD_GHACTION_X: x1
+      # 设置一个名为GITHUB_TOKEN的变量，值为仓库中的一个密钥，用于访问GitHub API。
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # 设置一个名为ssh_key的变量，值为仓库中的一个密钥，用于SSH连接。
       ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
-      git_user: agent-zero
-      git_email: 0@x-cmd.com
+      # 设置一个名为git_user的变量，值为lunrenyi，用于Git操作的用户名。
+      git_user: lunrenyi
+      # 设置一个名为git_email的变量，值为lxb2863854515@163.com，用于Git操作的邮箱。
+      git_email: lxb2863854515@163.com
       CONCURRENCY: 10
     steps:
       - name: main
-        uses: x-cmd/action@main
+        uses: lunrenyi/pkg@main
         with:
           code: |
             xrc pkg && xws test_xbin internet && git pull && xws push test

@@ -21,10 +21,11 @@ jobs:
       CONCURRENCY: 10
     steps:
       - name: main
-        uses: x-cmd/action@main
+        uses: lunrenyi/pkg@main
         with:
           code: |
             xws pkg yml2tgz
+            xws push all
 
 
 
