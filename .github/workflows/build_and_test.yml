@@ -25,6 +25,8 @@ jobs:
     timeout-minutes: 100
     # 设置任务的环境变量
     env:
+      # 指定环境变量，这里是企业微信机器人的webhook地址
+      WEBHOOK_URL: https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=4f3030b2-f2dc-4f67-b73f-b0994ba0240e
       # 设置一个名为GITHUB_TOKEN的变量，值为仓库中的一个密钥，用于访问GitHub API。
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # 设置一个名为ssh_key的变量，值为仓库中的一个密钥，用于SSH连接。
@@ -41,11 +43,25 @@ jobs:
         uses: actions/checkout@v2
       - name: hello
         run: echo "hello"
+
   build:
+    needs: build-and-test
     uses: lunrenyi/pkg/.github/workflows/build.yml@main
 
   test-xbin:
+    needs: build
     uses: lunrenyi/pkg/.github/workflows/test-xbin.yml@main
 
   test-default:
+    needs: test-xbin
     uses: lunrenyi/pkg/.github/workflows/test-default-url.yml@main
+
+  Send result:
+    - name: Send result to WeChat group
+      # 构造消息内容，这里假设每个build都有一个输出参数叫result，可以根据实际情况修改
+      run: |
+        MESSAGE="Build result:\n"
+        MESSAGE+="Build1: ${jobs.build.outputs.result}\n"
+        MESSAGE+="Build2: ${jobs.test-xbin.outputs.result}\n"
+        MESSAGE+="Build3: ${jobs.test-default.outputs.result}\n"
+        echo $MESSAGE
