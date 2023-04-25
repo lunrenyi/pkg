@@ -41,3 +41,12 @@ jobs:
         uses: actions/checkout@v2
       - name: hello
         run: echo "hello"
+      - name: Run build
+        uses: lunrenyi/pkg/.github/workflows/build@main
+        id: build
+      - name: Run test-xbin
+        uses: lunrenyi/pkg/.github/workflows/test-xbin@main
+        id: test-xbin
+      - name: Run test-default-url
+        uses: lunrenyi/pkg/.github/workflows/test-default-url@main
+        id: test-default-url
