@@ -24,7 +24,7 @@ jobs:
     # 设置任务的环境变量
     env:
       # 指定环境变量，这里是企业微信机器人的webhook地址
-      WEBHOOK_URL: https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=4f3030b2-f2dc-4f67-b73f-b0994ba0240e
+      WEBHOOK_URL:  ${{ secrets.WEBHOOK_URL }}
       # 设置一个名为GITHUB_TOKEN的变量，值为仓库中的一个密钥，用于访问GitHub API。
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # 设置一个名为ssh_key的变量，值为仓库中的一个密钥，用于SSH连接。
