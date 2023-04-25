@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 100
     env:
-      ___X_CMD_GHACTION_X: x1
       # 设置一个名为GITHUB_TOKEN的变量，值为仓库中的一个密钥，用于访问GitHub API。
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # 设置一个名为ssh_key的变量，值为仓库中的一个密钥，用于SSH连接。
@@ -23,9 +22,8 @@ jobs:
     steps:
       - name: main
         uses: lunrenyi/pkg@main
-        with:
-          code: |
-            xws pkg yml2tgz
+      - name: build
+        run: xws pkg yml2tgz
 
 
 
