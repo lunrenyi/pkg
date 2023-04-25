@@ -31,10 +31,10 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # 设置一个名为ssh_key的变量，值为仓库中的一个密钥，用于SSH连接。
       ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
-      # 设置一个名为git_user的变量，值为agent-zero，用于Git操作的用户名。
-      git_user: agent-zero
-      # 设置一个名为git_email的变量，值为0@x-cmd.com，用于Git操作的邮箱。
-      git_email: 0@x-cmd.com
+      # 设置一个名为git_user的变量，值为lunrenyi，用于Git操作的用户名。
+      git_user: lunrenyi
+      # 设置一个名为git_email的变量，值为lxb2863854515@163.com，用于Git操作的邮箱。
+      git_email: lxb2863854515@163.com
       # 设置一个名为CONCURRENCY的变量，值为10，用于控制并发数。
       CONCURRENCY: 10
     # 定义步骤
@@ -42,24 +42,22 @@ jobs:
       # 第一步：检出仓库代码
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: install x-cmd
-        run: eval "$(curl https://get.x-cmd.com)"
       # 第二步：构建x-cmd/pkg的all包
       - name: Build x-cmd/pkg all
-        uses: x-cmd/action@main
+        uses: lunrenyi/action@main
         with:
           code: |
             xws pkg yml2tgz
             xws push all
       # 第三步：测试xbin
       - name: Test xbin
-        uses: x-cmd/action@main
+        uses: lunrenyi/action@main
         with:
           code: |
             xrc pkg && xws test_xbin internet && git pull && xws push test
       # 第四步：测试default
       - name: Test default
-        uses: x-cmd/action@main
+        uses: lunrenyi/action@main
         with:
           code: |
             xrc pkg &&  xws test_default_url internet && xws push test
