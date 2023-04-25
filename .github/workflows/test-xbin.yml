@@ -1,10 +1,12 @@
 
 name: test xbin
 on:
-  schedule:
-    - cron: '0 13 * * *'
+  workflow_run:
+    workflows: ["Bundle x-cmd pkg"]
+    types:
+      - completed
   workflow_dispatch:
-  workflow_call:
+  # workflow_call:
 
 jobs:
   test-linux:

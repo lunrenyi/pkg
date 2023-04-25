@@ -13,9 +13,6 @@ on:
 jobs:
   # 定义一个名为build-and-test的任务
   build-and-test:
-    outputs:
-      output1: ${{ steps.step1.outputs.test }}
-      output2: ${{ steps.step2.outputs.test }}
     # 设置任务的策略，可以控制任务的并行执行和失败处理。
     strategy:
       # 设置任务的矩阵，可以用于生成多个子任务，每个子任务使用不同的变量值。
@@ -24,8 +21,6 @@ jobs:
         os: [ ubuntu-latest ]
     # 设置任务运行的环境为矩阵中的os变量值，即ubuntu或macos。
     runs-on: ${{ matrix.os }}
-    # 设置任务的超时时间为100分钟，如果超过这个时间，任务会被取消。
-    timeout-minutes: 100
     # 设置任务的环境变量
     env:
       # 指定环境变量，这里是企业微信机器人的webhook地址
@@ -43,11 +38,12 @@ jobs:
     # 定义步骤
     steps:
       - name: main
-        id: step1
         uses: actions/checkout@v2
       - name: hello
-        id: step2
         run: echo "hello"
+      - name: Send result to WeChat group
+        # 调用curl命令发送消息到webhook地址，这里假设消息类型是文本
+        run: curl -X POST -H 'Content-Type: application/json' -d "{\"msgtype\": \"text\", \"text\": {\"content\": \"hello!\"}}" $WEBHOOK_URL
 
   # build:
   #   needs: build-and-test
@@ -61,14 +57,3 @@ jobs:
   #   needs: test-xbin
   #   uses: lunrenyi/pkg/.github/workflows/test-default-url.yml@main
 
-  Send-result:
-    needs: build-and-test
-    runs-on: ubuntu-latest
-    # 定义步骤
-    steps:
-      - name: Send result to WeChat group
-        env:
-          OUTPUT1: ${{jobs.build-and-test.outputs.result}}
-        # 构造消息内容，这里假设每个build都有一个输出参数叫result，可以根据实际情况修改
-        run: |
-          echo "$OUTPUT1"

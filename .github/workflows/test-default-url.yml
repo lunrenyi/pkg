@@ -1,10 +1,13 @@
 
 name: test default url
 on:
-  schedule:
-    - cron: '0 12 * * *'
+  workflow_run:
+    workflows: ["test xbin"]
+    types:
+      - completed
   workflow_dispatch:
-  workflow_call:
+  # workflow_call:
+
 
 jobs:
   test-default-url:
