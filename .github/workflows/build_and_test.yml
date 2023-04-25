@@ -13,6 +13,9 @@ on:
 jobs:
   # 定义一个名为build-and-test的任务
   build-and-test:
+    outputs:
+      output1: ${{ steps.step1.outputs.test }}
+      output2: ${{ steps.step2.outputs.test }}
     # 设置任务的策略，可以控制任务的并行执行和失败处理。
     strategy:
       # 设置任务的矩阵，可以用于生成多个子任务，每个子任务使用不同的变量值。
@@ -40,8 +43,10 @@ jobs:
     # 定义步骤
     steps:
       - name: main
+        id: step1
         uses: actions/checkout@v2
       - name: hello
+        id: step2
         run: echo "hello"
 
   # build:
