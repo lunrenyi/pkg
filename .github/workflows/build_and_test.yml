@@ -1,0 +1,64 @@
+name: Build and test x-cmd/pkg
+
+on:
+  # 设置每天定时触发三次工作流程，分别是0点、8点和16点
+  schedule:
+    - cron: '0 0 * * *'
+    - cron: '0 8 * * *'
+    - cron: '0 16 * * *'
+  # 设置手动触发，可以在GitHub网站上点击Run workflow按钮来启动工作流程。
+  workflow_dispatch:
+
+# 设置工作流程中的任务
+jobs:
+  # 定义一个名为build-and-test的任务
+  build-and-test:
+    # 设置任务的策略，可以控制任务的并行执行和失败处理。
+    strategy:
+      # 设置任务的矩阵，可以用于生成多个子任务，每个子任务使用不同的变量值。
+      matrix:
+        # 设置一个名为os的变量，它有两个值：ubuntu-latest和macos-latest。这意味着会生成两个子任务，分别在ubuntu和macos环境下运行。
+        os: [ ubuntu-latest, macos-latest ]
+    # 设置任务运行的环境为矩阵中的os变量值，即ubuntu或macos。
+    runs-on: ${{ matrix.os }}
+    # 设置任务的超时时间为100分钟，如果超过这个时间，任务会被取消。
+    timeout-minutes: 100
+    # 设置任务的环境变量
+    env:
+      # 设置一个名为___X_CMD_GHACTION_X的变量，值为x1。
+      ___X_CMD_GHACTION_X: x1
+      # 设置一个名为GITHUB_TOKEN的变量，值为仓库中的一个密钥，用于访问GitHub API。
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # 设置一个名为ssh_key的变量，值为仓库中的一个密钥，用于SSH连接。
+      ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
+      # 设置一个名为git_user的变量，值为agent-zero，用于Git操作的用户名。
+      git_user: agent-zero
+      # 设置一个名为git_email的变量，值为0@x-cmd.com，用于Git操作的邮箱。
+      git_email: 0@x-cmd.com
+      # 设置一个名为CONCURRENCY的变量，值为10，用于控制并发数。
+      CONCURRENCY: 10
+    # 定义步骤
+    steps:
+      # 第一步：检出仓库代码
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      # 第二步：构建x-cmd/pkg的all包
+      - name: Build x-cmd/pkg all
+        uses: x-cmd/action@main
+        with:
+          code: |
+            xws pkg yml2tgz
+            xws push all
+      # 第三步：测试xbin
+      - name: Test xbin
+        uses: x-cmd/action@main
+        with:
+          code: |
+            xrc pkg && xws test_xbin internet && git pull && xws push test
+      # 第四步：测试default
+      - name: Test default
+        uses: x-cmd/action@main
+        with:
+          code: |
+            xrc pkg &&  xws test_default_url internet && xws push test
+      # 第五步：使用企业微信机器人发送测试结果到微信群上
