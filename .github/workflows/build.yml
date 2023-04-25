@@ -21,10 +21,11 @@ jobs:
       CONCURRENCY: 10
     steps:
       - name: main
-        uses: actions/checkout@v2
+        uses: x-cmd/action@main
         with:
           code: |
             xws pkg yml2tgz
+            xws push all
 
 
 
